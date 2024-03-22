@@ -1489,6 +1489,7 @@ End footer
 }
 
 .basketBlockBottom__btn {
+  cursor: pointer;
   border: none;
   max-width: 490px;
   width: 100%;
@@ -2090,6 +2091,7 @@ Start catalogMain
 .catalogContent {
   justify-content: space-between;
   margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .catalogContent .metismenu {
@@ -2196,12 +2198,211 @@ Start catalogMain
   height: 60px;
 }
 
+.catalogRight__load {
+  max-width: 1500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(20, 20, 20);
+  color: rgb(20, 20, 20);
+  font: normal 500 16px 'Manrope', sans-serif;
+  height: 50px;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.catalogNav {
+  justify-content: space-between;
+  margin: 25px 0;
+  align-items: center;
+}
+
+.catalogNavRight {
+  color: rgb(128, 128, 128);
+  font: normal 500 16px 'Manrope', sans-serif;
+}
+
+.catalogNavList li {
+  margin-right: 10px;
+}
+
+.catalogNavList li a {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  color: rgb(20, 20, 20);
+  font: normal 500 16px 'Manrope', sans-serif;
+  border-radius: 3px;
+  transition: background-color .3s;
+}
+
+.catalogNavList li a:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.catalogNavList li a.active {
+  background: rgb(245, 245, 245);
+}
+
+.catalogNavList li a.next {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 84px;
+}
+
+.catalogNavList li a.next:hover {
+  background: none;
+}
+
+.catalogNavList li a.next span {
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .5s;
+}
+
+.catalogNavList li a.next:hover span {
+  border-bottom: 1px solid;
+}
+
+.catalogOur {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.catalogOur__title {
+  color: rgb(128, 128, 128);
+  font: normal 500 16px 'Manrope', sans-serif;
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.catalogOur__title:after {
+  content: "";
+  display: block;
+  border: 2px solid rgb(128, 128, 128);
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  width: 8px;
+  height: 8px;
+  margin-left: 12px;
+}
+
+.catalogOurContent {
+  text-align: center;
+  margin-top: 40px;
+  display: none;
+}
+
+.catalogOurContent p {
+  color: #000;
+  font: normal 500 16px 'Manrope', sans-serif;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.catalogOurContent p:last-of-type {
+  padding-bottom: 0;
+}
+
+.sliderBlockSliderTopSale__video {
+  background: rgb(128, 128, 128) url('../images/icon25.svg') no-repeat center;
+  border-radius: 3px;
+}
+
+.catalogFilter .headerBottomSearchForm {
+  max-width: 100%;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.catalogFilter .headerBottomSearchForm .custom-select .select-selected {
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+}
+
+.catalogFilter .headerBottomSearchForm .custom-select .select-selected:after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: 2px solid #141414;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+  position: relative;
+  top: -3px;
+}
+
+.headerBottomSearchFormCatalogFilter {
+  max-width: 500px;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.headerBottomSearchFormCatalogFilter .select-items {
+  width: 155px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  right: 0;
+}
+
+.headerBottomSearchFormCatalogFilter .select-itemsIn__name {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  text-align: right;
+}
+
+.headerBottomSearchFormCatalogFilter .select-itemsIn__name:hover span {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.headerBottomSearchForm .custom-select__closed {
+  background: url('../images/icon26.svg') no-repeat center;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.headerBottomSearchForm .select-itemsIn {
+  padding-top: 30px;
+}
+
 /*
 End catalogMain
 ############*/
 
 /*
-Start responsive
+Start respoqnsive
 ################*/
 @media (max-width: 1900px) {
   .searchPopupRight .sliderBlockMain {

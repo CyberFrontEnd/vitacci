@@ -119,4 +119,15 @@ $(document).ready(function () {
     $('.select-itemsForm input').val('');
   });
 
+  // Start catalogOur
+  $('.catalogOur__title').on('click', () => {
+    $('.catalogOurContent').slideToggle();
+  });
+
+  // Start catalog filter closed
+  $('.custom-select__closed').on('click', (e)=> {
+    e.preventDefault();
+    $(".select-items").slideUp();
+  });
+
 });
