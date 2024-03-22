@@ -40,6 +40,7 @@ $(document).ready(function () {
 
   // Start metis menu mobil
   $("#menu1").metisMenu();
+  $("#menu2").metisMenu();
 
   // Start menu 
   $('.headerMiddleMobil').on('click', function () {
