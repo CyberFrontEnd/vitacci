@@ -627,10 +627,6 @@ Start collectionTop
   display: block;
 }
 
-.collectionTopRight__item a:hover span {
-  color: #007aff;
-}
-
 .collectionTopLeft {
   max-width: 1390px;
   width: 100%;
@@ -697,10 +693,6 @@ Start collectionTop
   transition: all, 0.5s;
 }
 
-.collectionTopLeftItem a:hover span {
-  color: #007aff;
-}
-
 .collectionTopLeftItem .slick-slide img {
   display: block;
   max-width: 100%;
@@ -725,10 +717,6 @@ Start sliderItemBlock
 
 .sliderItem a {
   position: relative;
-}
-
-.sliderItem a:hover span {
-  color: #007aff;
 }
 
 .sliderItem__title {
@@ -815,10 +803,6 @@ Start sliderBlock
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
-}
-
-.sliderBlock__href:hover {
-  color: #007aff;
 }
 
 .sliderBlock__href:after {
@@ -932,10 +916,6 @@ Start sliderBlock
   top: -4px;
   right: 3px;
   z-index: 1;
-}
-
-.sliderBlockSliderPrice__title:hover {
-  color: #007aff;
 }
 
 .sliderBlockSliderPrice__un {
@@ -1245,10 +1225,6 @@ Start footer
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
-}
-
-.footerTopInLeftBlock__list li a:hover {
-  color: #007aff;
 }
 
 /*
