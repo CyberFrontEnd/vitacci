@@ -102,7 +102,7 @@ $(document).ready(function () {
   });
 
   // Start search
-  $('.headerBottomSearchForm__input input, .headerMiddleRight__search').on('click', (event) => {
+  $('.headerBottomSearchForm__input input, .headerMiddleRight__search, .headerBottomSearchForm__btn').on('click', (event) => {
     event.preventDefault();
     $('.searchPopup, .bgClick').addClass('active');
     $('body').addClass('hide');
