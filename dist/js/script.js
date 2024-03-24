@@ -125,7 +125,7 @@ $(document).ready(function () {
   });
 
   // Start catalog filter closed
-  $('.custom-select__closed').on('click', (e)=> {
+  $('.custom-select__closed').on('click', (e) => {
     e.preventDefault();
     $(".select-items").slideUp();
   });

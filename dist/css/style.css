@@ -2052,6 +2052,7 @@ Start catalogMain
 .catalogMain__title {
   color: rgb(20, 20, 20);
   font: normal bold 24px 'Manrope', sans-serif;
+  margin-bottom: 20px;
 }
 
 .catalogLeft {
@@ -2315,7 +2316,7 @@ Start catalogMain
 .catalogFilter .headerBottomSearchForm {
   max-width: 100%;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .catalogFilter .headerBottomSearchForm .custom-select .select-selected {
@@ -2371,6 +2372,7 @@ Start catalogMain
 
 .headerBottomSearchForm .select-itemsIn {
   padding-top: 30px;
+  padding-bottom: 5px;
 }
 
 .headerBottomSearchFormCatalogFilter .select-selected:before {
@@ -2380,7 +2382,47 @@ Start catalogMain
 /*
 End catalogMain
 ############*/
+.headerBottomSearchFormLeftMobil__btn {
+  background: url('../images/icon27.svg') no-repeat center;
+  width: 25px;
+  height: 25px;
+}
 
+.headerBottomSearchFormLeftMobilFilter {
+  background: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 9999999;
+  max-width: 100%;
+  width: 100%;
+}
+
+.headerBottomSearchFormLeftMobilFilterTop {
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.headerBottomSearchFormLeftMobilFilterTop__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 16px 'Manrope', sans-serif;
+}
+
+.headerBottomSearchFormLeftMobilFilterTop__restart {
+  color: rgb(20, 20, 20);
+  font: normal 500 10px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+}
+
+.headerBottomSearchFormLeftMobilFilterTop__title:before {
+  content: "";
+  display: block;
+  background: url('../images/icon28.svg') no-repeat center;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
 
 /*
 Start respoqnsive
@@ -3489,7 +3531,7 @@ Start respoqnsive
     color: #ffffff;
   }
 
-  .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href{
+  .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
     height: 40px;
   }
 }
