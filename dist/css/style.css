@@ -2401,7 +2401,7 @@ End catalogMain
 
 .headerBottomSearchFormLeftMobilFilterTop {
   justify-content: space-between;
-  padding: 10px;
+  padding: 15px 20px;
 }
 
 .headerBottomSearchFormLeftMobilFilterTop__title {
@@ -2422,6 +2422,70 @@ End catalogMain
   width: 24px;
   height: 24px;
   margin-right: 5px;
+}
+
+.headerBottomSearchFormLeftMobilFilterSize__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 13px 'Manrope', sans-serif;
+}
+
+.headerBottomSearchFormLeftMobilFilterBody {
+  margin: 30px auto 0;
+  max-width: 97%;
+  width: 100%;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock {
+  border: none;
+  border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock__checkbox {
+  width: 50px;
+  height: 50px;
+  background: rgb(245, 245, 245);
+  border-radius: 4px;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock__text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock__text span {
+  color: rgb(20,20,20);
+  font: normal 500 14px 'Manrope', sans-serif;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock__checkbox .checkmark {
+  width: 100%;
+  height: 100%;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlock__checkbox .checkmark:after {
+  display: none !important;
+}
+
+.blockCheckbox input:checked ~ .checkmark {
+  background: #000;
+  border-radius: 4px;
+}
+
+.blockCheckbox input:checked ~ .checkmark span {
+  color: #ffffff;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlockList {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.headerBottomSearchFormLeftMobilFilterBlockList li {
+  margin-right: 10px;
 }
 
 /*
