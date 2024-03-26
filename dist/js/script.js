@@ -130,4 +130,13 @@ $(document).ready(function () {
     $(".select-items").slideUp();
   });
 
+  $('.headerBottomSearchFormLeftMobil__btn').on('click', function () {
+    $('.headerBottomSearchFormLeftMobilFilter').addClass('active');
+    $('body').addClass('hide');
+  });
+
+  $('.headerBottomSearchFormLeftMobilFilterTop__title').on('click', function () {
+    $('.headerBottomSearchFormLeftMobilFilter').removeClass('active');
+    $('body').removeClass('hide');
+  });
 });
