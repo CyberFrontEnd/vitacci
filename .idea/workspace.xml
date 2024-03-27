@@ -3822,6 +3822,7 @@
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
     </list>
@@ -3867,7 +3868,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/template&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Lessons/algorithms&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -3938,7 +3939,8 @@
       <workItem from="1711281388831" duration="934000" />
       <workItem from="1711285053695" duration="3602000" />
       <workItem from="1711337383824" duration="6042000" />
-      <workItem from="1711438033899" duration="635000" />
+      <workItem from="1711438033899" duration="6303000" />
+      <workItem from="1711461104967" duration="13609000" />
     </task>
     <servers />
   </component>

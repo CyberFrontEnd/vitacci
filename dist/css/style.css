@@ -229,22 +229,22 @@ Start header
   font: normal 400 16px 'Manrope', sans-serif;
 }
 
-.select-itemsIn {
+.headerTopIn .select-itemsIn {
   max-height: 200px;
   overflow: auto;
 }
 
-.select-itemsIn::-webkit-scrollbar-track {
+.headerTopIn .select-itemsIn::-webkit-scrollbar-track {
   border-radius: 0;
   background: rgba(128, 128, 128, 1);
 }
 
-.select-itemsIn::-webkit-scrollbar {
+.headerTopIn .select-itemsIn::-webkit-scrollbar {
   width: 4px;
   background: rgba(128, 128, 128, 1);
 }
 
-.select-itemsIn::-webkit-scrollbar-thumb {
+.headerTopIn .select-itemsIn::-webkit-scrollbar-thumb {
   background-color: #ffffff;
 }
 
@@ -978,11 +978,11 @@ Start sliderBlock
 }
 
 .checkmark.red {
-  background: red;
+  background: red !important;
 }
 
 .checkmark.black {
-  background: black;
+  background: black !important;
 }
 
 .radioList {
@@ -2663,6 +2663,125 @@ End catalogMain
 
 .headerBottomSearchFormLeftMobilFilterBlock:first-of-type {
   margin-top: 0;
+}
+
+.headerBottomSearchFormLeft .select-selected:before {
+  display: none;
+}
+
+.headerBottomSearchFormLeft .custom-select {
+  border: 1px solid rgb(245, 245, 245);
+  border-radius: 3px;
+  padding: 5px 15px;
+}
+
+.headerBottomSearchFormLeft .select-itemsIn {
+  background: #ffffff;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.headerBottomSearchFormLeft .select-itemsIn__name span {
+  color: #000;
+}
+
+.select-itemsInScroll__reset {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  cursor: pointer;
+  position: relative;
+  padding-left: 15px;
+}
+
+.select-itemsInScroll__reset:before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 1px;
+  background: rgb(20, 20, 20);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+}
+
+.select-itemsInScroll__reset:after {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 1px;
+  background: rgb(20, 20, 20);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 0;
+}
+
+.select-itemsInScroll__reset span {
+  position: absolute;
+  top: -10px;
+  margin-left: 21px;
+}
+
+.headerBottomSearchFormLeft .select-items {
+  left: 0;
+}
+
+.select-itemsInScrollContent {
+  max-height: 170px;
+  max-width: 100%;
+  margin-top: 20px;
+  overflow: auto;
+  padding-left: 15px;
+  width: 96%;
+  padding-top: 10px;
+}
+
+.select-itemsInScrollContent::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+
+.select-itemsInScrollContent::-webkit-scrollbar {
+  width: 4px;
+  background-color: #F5F5F5;
+}
+
+.select-itemsInScrollContent::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #555;
+}
+
+.select-itemsInScroll__title {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  position: relative;
+  top: -2px;
+  height: 20px;
+  display: inline-block;
+  overflow: hidden;
+  width: 97%;
+}
+
+.result {
+  color: rgb(20, 20, 20);
+  font: normal none 16px 'Manrope', sans-serif;
+  padding-left: 5px;
+}
+
+.headerBottomSearchFormLeft .custom-select.active {
+  background: rgb(20,20,20);
+  border-radius: 4px;
+}
+
+.catalogFilter .headerBottomSearchForm .custom-select.active .select-selected {
+  color: #ffffff;
+}
+
+.catalogFilter .headerBottomSearchForm .custom-select.active .result {
+  color: rgb(161,161,161);
+}
+
+.catalogFilter .headerBottomSearchForm .custom-select.active .select-selected:after {
+  display: none;
 }
 
 /*

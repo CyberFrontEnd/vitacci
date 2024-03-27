@@ -130,13 +130,47 @@ $(document).ready(function () {
     $(".select-items").slideUp();
   });
 
-  $('.headerBottomSearchFormLeftMobil__btn').on('click', function () {
+  $('.headerBottomSearchFormLeftMobil__btn').on('click', () => {
     $('.headerBottomSearchFormLeftMobilFilter').addClass('active');
     $('body').addClass('hide');
   });
 
-  $('.headerBottomSearchFormLeftMobilFilterTop__title').on('click', function () {
+  $('.headerBottomSearchFormLeftMobilFilterTop__title').on('click', () => {
     $('.headerBottomSearchFormLeftMobilFilter').removeClass('active');
     $('body').removeClass('hide');
   });
+
+  // Start checkbox
+  let result = $('.result');
+  let counts = {};
+
+  function updateCount(groupId) {
+    $(result).filter('[data-group="' + groupId + '"]').text(counts[groupId] === 0 ? '' : counts[groupId]);
+  }
+
+  $('.select-itemsInScroll input').on('click', function() {
+    let groupId = $(this).closest('.custom-select').data('group');
+    counts[groupId] = counts[groupId] || 0;
+    if ($(this).is(':checked')) {
+      counts[groupId]++;
+    } else {
+      counts[groupId]--;
+    }
+    updateCount(groupId);
+  });
+
+
+  $('.select-itemsInScroll__reset').on('click', function() {
+    let groupId = $(this).closest('.custom-select').data('group');
+    counts[groupId] = 0;
+    $(this).parents('.custom-select').find('input').prop('checked', false);
+    // $(this).parents('.custom-select').removeClass('active');
+    updateCount(groupId);
+  });
+
+
+  // $('.select-itemsInScrollContent input').on('click', function () {
+  //   $(this).parents('.custom-select').addClass('active');
+  // });
+
 });
