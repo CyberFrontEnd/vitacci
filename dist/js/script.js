@@ -164,13 +164,24 @@ $(document).ready(function () {
     let groupId = $(this).closest('.custom-select').data('group');
     counts[groupId] = 0;
     $(this).parents('.custom-select').find('input').prop('checked', false);
-    // $(this).parents('.custom-select').removeClass('active');
     updateCount(groupId);
+    $(this).parents('.custom-select').removeClass('active');
   });
 
 
-  // $('.select-itemsInScrollContent input').on('click', function () {
-  //   $(this).parents('.custom-select').addClass('active');
-  // });
+  $('.select-items__btn').on('click', function () {
+    $(this).parents('.select-items').slideUp();
+    $(this).parents('.custom-select').addClass('active');
+    $(this).parents('.custom-select').find('.select-selected_closed').addClass('active');
+  });
+
+  $('.select-selected_closed').on('click', function () {
+    $(this).removeClass('active');
+    let groupId = $(this).closest('.custom-select').data('group');
+    counts[groupId] = 0;
+    $(this).parents('.custom-select').find('input').prop('checked', false);
+    updateCount(groupId);
+    $(this).parents('.custom-select').removeClass('active');
+  });
 
 });
