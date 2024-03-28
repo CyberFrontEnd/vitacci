@@ -2863,6 +2863,103 @@ End catalogMain
 }
 
 /*
+Start item
+##########*/
+.item {
+  max-width: 1860px;
+  width: 100%;
+  margin: 20px auto 0;
+  justify-content: space-between;
+}
+
+.itemLeft {
+  max-width: 1220px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.itemRight {
+  max-width: 550px;
+  width: 100%;
+}
+
+.itemLeft__item {
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.itemLeft__href {
+  display: block;
+  width: 100%;
+  height: 800px;
+}
+
+.itemLeft__video {
+  position: relative;
+  display: block;
+  height: 800px;
+  max-width: 600px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.itemLeft__href img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.itemLeft__play {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  cursor: pointer;
+  border: none;
+  background: url('../images/icon30.svg') no-repeat center;
+  width: 110px;
+  height: 115px;
+}
+
+video::-webkit-media-controls {
+  display:none !important;
+}
+
+/*
+End item
+########*/
+
+/*
+Start favorite
+#############*/
+.favorite {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto 80px;
+}
+
+.favorite__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  margin-bottom: 30px;
+}
+
+.sliderBlockSliderTopSale__new {
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+  background: #ffffff;
+  padding: 3px 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+End favorite
+############*/
+
+/*
 Start responsive
 ################*/
 @media (max-width: 1900px) {

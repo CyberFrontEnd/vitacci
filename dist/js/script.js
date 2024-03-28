@@ -148,7 +148,7 @@ $(document).ready(function () {
     $(result).filter('[data-group="' + groupId + '"]').text(counts[groupId] === 0 ? '' : counts[groupId]);
   }
 
-  $('.select-itemsInScroll input').on('click', function() {
+  $('.select-itemsInScroll input').on('click', function () {
     let groupId = $(this).closest('.custom-select').data('group');
     counts[groupId] = counts[groupId] || 0;
     if ($(this).is(':checked')) {
@@ -160,7 +160,7 @@ $(document).ready(function () {
   });
 
 
-  $('.select-itemsInScroll__reset').on('click', function() {
+  $('.select-itemsInScroll__reset').on('click', function () {
     let groupId = $(this).closest('.custom-select').data('group');
     counts[groupId] = 0;
     $(this).parents('.custom-select').find('input').prop('checked', false);
@@ -184,4 +184,16 @@ $(document).ready(function () {
     $(this).parents('.custom-select').removeClass('active');
   });
 
+
+// Start video button
+  $(".itemLeft__video").prop('controls', false);
+
+  $(".itemLeft__play").click(function () {
+    var video = $(".itemLeft__video").get(0);
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
 });
