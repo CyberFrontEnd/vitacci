@@ -1211,7 +1211,7 @@ Start footer
 }
 
 .footerTopMailing__btn:hover {
-  background: #007aff;
+  background: #808080;
   color: #ffffff;
 }
 
@@ -1233,11 +1233,17 @@ Start footer
   color: #ffffff;
   font: normal 500 14px 'Manrope', sans-serif;
   margin-bottom: 7px;
-  display: block;
+  border-bottom: 1px solid transparent;
+  display: inline-block;
   -webkit-transition: all, 0.5s;
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
+}
+
+
+.footerTopInLeftBlock__list li a:hover {
+  border-bottom: 1px solid;
 }
 
 /*
@@ -1372,7 +1378,7 @@ End footer
 }
 
 .metismenuIn li a {
-  color: rgba(161, 161, 161, 1);
+  color: rgba(80, 80, 80);
   font: normal 500 15px 'Manrope', sans-serif;
   -webkit-transition: all, 0.5s;
   -moz-transition: all, 0.5s;
@@ -1423,7 +1429,7 @@ End footer
   background-color: #fff;
   max-width: 530px;
   width: 100%;
-  height: 990px;
+  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
@@ -2870,6 +2876,7 @@ Start item
   width: 100%;
   margin: 20px auto 0;
   justify-content: space-between;
+  align-items: stretch;
 }
 
 .itemLeft {
@@ -2923,7 +2930,193 @@ Start item
 }
 
 video::-webkit-media-controls {
-  display:none !important;
+  display: none !important;
+}
+
+.itemRightBlock__title {
+  max-width: 80%;
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+}
+
+.itemRightBlock {
+  position: sticky;
+  top: 50px;
+  margin-top: 40px;
+}
+
+.itemRightBlock__big {
+  font: normal 500 14px 'Manrope', sans-serif;
+  color: #ffffff;
+  background: rgb(39, 174, 96);
+  padding: 3px 5px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  margin-left: 20px;
+}
+
+.itemRightBlockPrice {
+  margin-top: 20px;
+  align-items: center;
+}
+
+.itemRightBlockPrice__sale {
+  color: rgb(128, 128, 128);
+  font: normal 400 16px 'Manrope', sans-serif;
+  text-decoration: line-through;
+}
+
+.itemRightBlockPrice__price {
+  margin-left: 20px;
+  color: rgb(20, 20, 20);
+  font: normal bold 16px 'Manrope', sans-serif;
+}
+
+.itemRightBlockPrice .sliderBlockSliderTopSale__sale {
+  margin-left: 20px;
+}
+
+.itemRightBlockColor {
+  margin-top: 20px;
+}
+
+.itemRightBlockColor .radioList .checkmark + span {
+  display: none;
+}
+
+.itemRightBlockColor .radioList input[type="radio"]:checked + .checkmark + span {
+  display: inline;
+}
+
+.itemRightBlockColor .radioList input[type="radio"]:checked + .checkmark {
+  background-color: red;
+}
+
+.textToShow {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+}
+
+.itemRightBlockColor__articul {
+  color: rgb(128, 128, 128);
+  font: normal 400 12px 'Manrope', sans-serif;
+}
+
+.radioList li {
+  margin-right: 10px;
+}
+
+.itemRightBlockSize {
+  margin-top: 30px;
+}
+
+.itemRightBlockSize .headerBottomSearchFormLeftMobilFilterSize__title {
+  font-size: 16px;
+}
+
+.itemRightBlockTableSize {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+.itemRightBlockBtn__btn {
+  max-width: 280px;
+  width: 100%;
+  height: 50px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: rgb(20, 20, 20);
+  color: #ffffff;
+  font: normal 500 14px 'Manrope', sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemRightBlockBtn {
+  margin-top: 40px;
+  align-items: center;
+}
+
+.itemRightBlockBtn .sliderBlockSliderTopHeart {
+  margin-right: 0;
+  margin-left: 20px;
+}
+
+.itemRightBlock .catalogContent .metismenu > li:first-of-type {
+  padding-top: 0;
+}
+
+.itemRightBlock .catalogContent {
+  margin-top: 20px;
+}
+
+.itemRightBlock .catalogContent .metismenu > li {
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding: 20px 0;
+  margin-bottom: 0;
+}
+
+.metismenuIn2List li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.metismenuIn2List li span {
+  color: rgb(80, 80, 80);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.metismenuIn2 {
+  margin-top: 20px;
+}
+
+.itemLeftThree {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.itemLeft__item2 {
+  max-width: 395px;
+  width: 100%;
+  height: 520px;
+  margin-right: 17px;
+}
+
+.itemLeft__item2:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.itemLeft__href2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.itemLeft__href2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /*
@@ -2936,7 +3129,7 @@ Start favorite
 .favorite {
   max-width: 1860px;
   width: 100%;
-  margin: 0 auto 80px;
+  margin: 100px auto 80px;
 }
 
 .favorite__title {
@@ -2962,6 +3155,18 @@ End favorite
 /*
 Start responsive
 ################*/
+@media (min-width: 1920px) {
+  .basketBlockBottom {
+    position: absolute;
+    bottom: 20px;
+    background: #ffffff;
+  }
+
+  .basketBlockBody {
+    height: 78%;
+  }
+}
+
 @media (max-width: 1900px) {
   .searchPopupRight .sliderBlockMain {
     max-width: 24%;

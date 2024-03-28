@@ -3821,13 +3821,9 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/js/play.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3948,7 +3944,7 @@
       <workItem from="1711461104967" duration="13609000" />
       <workItem from="1711521316269" duration="12828000" />
       <workItem from="1711564407490" duration="74000" />
-      <workItem from="1711601699800" duration="5203000" />
+      <workItem from="1711601699800" duration="6911000" />
     </task>
     <servers />
   </component>

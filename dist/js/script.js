@@ -1,7 +1,8 @@
 $(document).ready(function () {
   // Start select
   $('.select-selected').on('click', function () {
-    $(this).parents('.custom-select').children('.select-items').slideDown();
+    $('.select-items').not($(this).parents('.custom-select').children('.select-items')).slideUp();
+    $(this).parents('.custom-select').children('.select-items').slideToggle();
   });
 
   $(document).click(function (e) {
