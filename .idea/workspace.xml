@@ -3821,7 +3821,12 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/item2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/tabSetting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3834,15 +3839,20 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="CSS File" />
         <option value="HTML File" />
-        <option value="JavaScript File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGulp">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\Program Files\php-7.4.22-nts-Win32-vc15-x64\php.exe" />
   <component name="ProblemsViewState">
@@ -3867,6 +3877,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
     "git-widget-placeholder": "master",
+    "js.buildTools.gulp.gulp_package_dir": "C:/projects/guram/vitacci/node_modules/gulp",
     "last_opened_file_path": "C:/projects/phpSettings",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -3879,6 +3890,17 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -3945,7 +3967,8 @@
       <workItem from="1711601699800" duration="17564000" />
       <workItem from="1711654507203" duration="1563000" />
       <workItem from="1711697562414" duration="22753000" />
-      <workItem from="1711771759114" duration="1139000" />
+      <workItem from="1711771759114" duration="6144000" />
+      <workItem from="1711786844074" duration="7246000" />
     </task>
     <servers />
   </component>
