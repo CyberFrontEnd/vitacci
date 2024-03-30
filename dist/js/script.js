@@ -84,7 +84,8 @@ $(document).ready(function () {
   });
 
   // Start basket
-  $('.basketHeader__btn').on('click', () => {
+  $('.basketHeader__btn').on('click', (e) => {
+    e.preventDefault();
     $('.basketBlock, .bgClick').addClass('active');
     $('.bgClick').addClass('basket');
     $('body').addClass('hide');
@@ -207,5 +208,22 @@ $(document).ready(function () {
   $('.itemRightBlockBtn .select-itemsIn__name').on('click', function () {
     $('body').removeClass('hide');
     $('.bgClick').removeClass('active');
+  });
+
+  //Start popup size
+  $('.itemRightBlockTableSize, .itemRightBlockBtn__popup').on('click', (e) => {
+    e.preventDefault();
+    $('.popupSize, .popupSizeText').addClass('active');
+    $('body').addClass('hide');
+  });
+
+  $('.popupSize__closed').on('click', () => {
+    $('.popupSize, .popupSizeText, .bgClick').removeClass('active');
+    $('body').removeClass('hide');
+  });
+
+  $('.popupSizeText').on('click', () => {
+    $('.popupSize, .popupSizeText').removeClass('active');
+    $('body').removeClass('hide');
   });
 });
