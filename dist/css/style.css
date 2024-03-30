@@ -3536,6 +3536,10 @@ Start popupSize
   display: block;
 }
 
+.popupSizeBodySizeTabTables2 li span:first-of-type {
+  padding-left: 50px;
+}
+
 /*
 End popupSize
 ############*/
