@@ -3140,6 +3140,36 @@ video::-webkit-media-controls {
   object-fit: cover;
 }
 
+.itemLeft__play.pause {
+  background: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 50px;
+}
+
+.itemLeft__play.pause:after,
+.itemLeft__play.pause:before {
+  content: "";
+  display: block;
+  height: 110px;
+  width: 10px;
+  background: #bcbcbc;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
 /*
 End item
 ########*/
@@ -3543,6 +3573,10 @@ Start popupSize
 /*
 End popupSize
 ############*/
+
+.hederMenuMobilTop_line{
+  display: none;
+}
 
 /*
 Start responsive

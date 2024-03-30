@@ -188,16 +188,16 @@ $(document).ready(function () {
 
 
 // Start video button
-  $(".itemLeft__video").prop('controls', false);
-
   $(".itemLeft__play").click(function () {
-    var video = $(".itemLeft__video").get(0);
+    const video = $(this).closest('.itemLeft').find(".itemLeft__video").get(0);
+    $(this).toggleClass('pause');
     if (video.paused) {
       video.play();
     } else {
       video.pause();
     }
   });
+
 
 // Start item mobil selects
   $('.itemRightBlockBtn .select-selected').on('click', function () {
@@ -212,7 +212,6 @@ $(document).ready(function () {
 
   //Start popup size
   $('.itemRightBlockTableSize, .itemRightBlockBtn__popup').on('click', (e) => {
-    e.preventDefault();
     $('.popupSize, .popupSizeText').addClass('active');
     $('body').addClass('hide');
   });
