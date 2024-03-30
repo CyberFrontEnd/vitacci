@@ -197,4 +197,15 @@ $(document).ready(function () {
       video.pause();
     }
   });
+
+// Start item mobil selects
+  $('.itemRightBlockBtn .select-selected').on('click', function () {
+    $('body').addClass('hide');
+    $('.bgClick').addClass('active');
+  });
+
+  $('.itemRightBlockBtn .select-itemsIn__name').on('click', function () {
+    $('body').removeClass('hide');
+    $('.bgClick').removeClass('active');
+  });
 });
