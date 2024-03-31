@@ -3821,9 +3821,10 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item3.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3870,6 +3871,7 @@
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;JavaScript Debug.list.html.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
@@ -3967,7 +3969,8 @@
       <workItem from="1711771759114" duration="6144000" />
       <workItem from="1711786844074" duration="8410000" />
       <workItem from="1711807402064" duration="597000" />
-      <workItem from="1711810898403" duration="5341000" />
+      <workItem from="1711810898403" duration="6219000" />
+      <workItem from="1711889311572" duration="2183000" />
     </task>
     <servers />
   </component>
