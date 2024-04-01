@@ -51,7 +51,7 @@ $(document).ready(function () {
 
   $('.bgClick').on('click', function () {
     $(this).removeClass('active');
-    $('.hederMenuMobil').removeClass('active');
+    $('.hederMenuMobil, .registerPopup').removeClass('active');
     $('body').removeClass('hide');
   });
 
@@ -224,5 +224,20 @@ $(document).ready(function () {
   $('.popupSizeText').on('click', () => {
     $('.popupSize, .popupSizeText').removeClass('active');
     $('body').removeClass('hide');
+  });
+  
+  // Start 
+  $('.formOrderTop__href').on('click', (e) => {
+    e.preventDefault();
+    $('.registerPopup, .bgClick').addClass('active');
+    $('body').addClass('hide');
+
+  });
+
+  $('.registerPopup__closed').on('click', (e) => {
+    e.preventDefault();
+    $('.registerPopup').removeClass('active');
+    $('body').removeClass('hide');
+    $('.bgClick').removeClass('active');
   });
 });

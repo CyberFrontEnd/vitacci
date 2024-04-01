@@ -3747,6 +3747,7 @@ Start order
 }
 
 .registerPopup__closed {
+  z-index: 99999;
   position: absolute;
   top: 18px;
   right: 20px;
@@ -3832,7 +3833,7 @@ Start order
   max-width: 90%;
   width: 100%;
   height: 50px;
-  margin: 0 auto;
+  margin: 40px auto 0;
   background: rgb(20, 20, 20);
   text-transform: uppercase;
   color: #ffffff;
@@ -3904,6 +3905,56 @@ Start order
   margin-top: 10px;
   display: inline-block;
   border-bottom: 1px solid;
+}
+
+.intl-tel-input .selected-flag {
+  padding: 0 !important;
+}
+
+.input-container label.phone_maskLabel {
+  left: 0;
+  top: -20px;
+  font-size: 12px;
+}
+
+.enterFormCheckbox__title a,
+.enterFormCheckbox__title {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+}
+
+.enterFormCheckbox .checkmark {
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 2px;
+  top: 6px;
+}
+
+.enterFormCheckbox .blockCheckbox input:checked ~ .checkmark:after {
+  display: none;
+}
+
+.enterFormCheckbox {
+  padding: 0 20px;
+  margin-top: -20px;
+}
+
+.enterFormCheckbox__title a {
+  border-bottom: 1px solid;
+}
+
+.input-container label.mistake {
+  color: rgb(255, 84, 84) !important;
+}
+
+.input-container input.mistake {
+  border-bottom: 1px solid rgb(255, 84, 84) !important;
+}
+
+.mistakeText {
+  color: rgb(255, 84, 84) !important;
+  font: normal 500 10px 'Manrope', sans-serif;
+  padding-left: 10px;
+  padding-top: 4px;
 }
 
 /*
