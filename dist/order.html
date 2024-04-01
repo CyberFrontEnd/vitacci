@@ -11,8 +11,7 @@
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/metis.css" rel="stylesheet">
-    <link href="css/fancybox.css" rel="stylesheet">
-
+    <link href="css/intlTelInput.css" rel="stylesheet">
 
 
     <title>оформление заказа - не авторизирован</title>
@@ -967,6 +966,67 @@
     </div>
 </div>
 
+<div class="registerPopup active">
+    <div class="registerPopup__closed"></div>
+
+    <div class="registerPopupTab" id="tab-container">
+        <ul class="etabs flex">
+            <li class="tab"><a href="#enter">Вход</a></li>
+            <li class="tab"><a href="#register">Регистрация</a></li>
+        </ul>
+
+        <div id="enter">
+            <form action="#" class="enterForm">
+                <div class="input-container">
+                    <input type="email" id="name" required>
+                    <label for="name">Введите ваш email</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <label for="password">Введите пароль</label>
+                    <a href="" class="rememberPassword">Я не помню пароль</a>
+                </div>
+
+                <button type="submit" class="enterForm__send flex">Войти</button>
+                <p class="enterForm__text">Нажимая на кнопку «Войти», Вы даете согласие на обработку персональных данных</p>
+            </form>
+        </div>
+
+        <div id="register">
+            <form action="#" class="enterForm">
+                <div class="input-container">
+                    <input type="email" id="name2" required>
+                    <label for="name2">Имя</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email" id="email" required>
+                    <label for="email">Еmail</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" class="phone_mask" id="tel">
+                    <label for="tel">Номер телефона</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password2" required>
+                    <label for="password2">Придумайте пароль</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password3" required>
+                    <label for="password3">Повторите пароль</label>
+                </div>
+
+                <button type="submit" class="enterForm__send flex">Зарегестироваться</button>
+                <p class="enterForm__text">Нажимая на кнопку «Зарегестироваться», Вы даете согласие на обработку персональных данных</p>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!--Start header-->
 <header class="header">
     <div class="headerTop">
@@ -1690,1016 +1750,321 @@
 </div>
 <!--End basketBlock-->
 
-<!--Start popupSize-->
-<div class="popupSize">
-    <div class="popupSizeTop flex">
-        <div class="basketBlockTop__basket flex">
-            <span class="popupSize__basketText">Таблица размеров женской обуви</span>
-        </div>
-        <button type="button" class="popupSize__closed"></button>
-    </div>
+<!--Start order-->
+<section class="order flex">
+    <div class="orderLeft">
+        <h2 class="orderLeft__title">Оформление заказа</h2>
 
-    <div class="popupSizeBody">
-        <ul class="popupSizeBodyList">
-            <li>
-                <span class="popupSizeBodyList__sm">Длина стопы в см</span>
-                <span class="popupSizeBodyList__ln">rus</span>
-                <span class="popupSizeBodyList__ln">EUR</span>
-                <span class="popupSizeBodyList__ln">UK</span>
-                <span class="popupSizeBodyList__ln">us</span>
-            </li>
-            <li>
-                <span class="popupSizeBodyList__sm">22,5</span>
-                <span class="popupSizeBodyList__ln">35</span>
-                <span class="popupSizeBodyList__ln">36</span>
-                <span class="popupSizeBodyList__ln">3,5</span>
-                <span class="popupSizeBodyList__ln">5,5</span>
-            </li>
-            <li>
-                <span class="popupSizeBodyList__sm">23</span>
-                <span class="popupSizeBodyList__ln">36</span>
-                <span class="popupSizeBodyList__ln">37</span>
-                <span class="popupSizeBodyList__ln">4</span>
-                <span class="popupSizeBodyList__ln">6</span>
-            </li>
-            <li>
-                <span class="popupSizeBodyList__sm">23,5</span>
-                <span class="popupSizeBodyList__ln">37</span>
-                <span class="popupSizeBodyList__ln">38</span>
-                <span class="popupSizeBodyList__ln">5</span>
-                <span class="popupSizeBodyList__ln">7</span>
-            </li>
-            <li>
-                <span class="popupSizeBodyList__sm">24,5</span>
-                <span class="popupSizeBodyList__ln">38</span>
-                <span class="popupSizeBodyList__ln">39</span>
-                <span class="popupSizeBodyList__ln">6</span>
-                <span class="popupSizeBodyList__ln">8</span>
-            </li>
-            <li>
-                <span class="popupSizeBodyList__sm">25</span>
-                <span class="popupSizeBodyList__ln">39</span>
-                <span class="popupSizeBodyList__ln">40</span>
-                <span class="popupSizeBodyList__ln">6,5</span>
-                <span class="popupSizeBodyList__ln">8,5</span>
-            </li>
-
-            <li>
-                <span class="popupSizeBodyList__sm">25,5</span>
-                <span class="popupSizeBodyList__ln">40</span>
-                <span class="popupSizeBodyList__ln">41</span>
-                <span class="popupSizeBodyList__ln">7,5</span>
-                <span class="popupSizeBodyList__ln">9,5</span>
-            </li>
-
-            <li>
-                <span class="popupSizeBodyList__sm">26,5</span>
-                <span class="popupSizeBodyList__ln">41</span>
-                <span class="popupSizeBodyList__ln">42</span>
-                <span class="popupSizeBodyList__ln">8</span>
-                <span class="popupSizeBodyList__ln">10</span>
-            </li>
-        </ul>
-
-
-        <p class="popupSizeBodyMobil">Поставьте ногу на чистый лист бумаги. Измерьте расстояние от основания пятки до крайней точки самого длинного пальца. Измерьте обе стопы и используйте наибольшее значение для определения размера. Стелька длиннее стопы на величину функционального припуска 0,5—1,5 см. При выборе размера ориентируйтесь на длину стопы.</p>
-    </div>
-</div>
-<div class="popupSizeText">
-    <p>Поставьте ногу на чистый лист бумаги. Измерьте расстояние от основания пятки до крайней точки самого длинного пальца. Измерьте обе стопы и используйте наибольшее значение
-        для определения размера. Стелька длиннее стопы на величину функционального припуска 0,5—1,5 см. При выборе размера ориентируйтесь на длину стопы.</p>
-</div>
-<!--End popupSize-->
-
-<!--Start mobilSlider-->
-<div class="mobilSlider">
-    <div class="slider sliderBlockSlider">
-        <div>
-            <a href="images/favorite4.jpg" data-fancybox="gallery">
-                <img src="images/favorite4.jpg" alt="">
-            </a>
-
-            <div class="sliderBlockSliderTop flex">
-                <div class="sliderBlockSliderTopSale flex">
-                    <div class="sliderBlockSliderTopSale__new">Новинка</div>
-                </div>
-
-                <div class="sliderBlockSliderTopHeart">
-                    <label class="blockCheckbox">
-                        <input type="checkbox" name="heart2">
-                        <span class="checkmark heart"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="itemLeft__item flex">
-                <video class="itemLeft__video" loop>
-                    <source src="video/video.mp4" type="video/mp4">
-                </video>
-
-                <button class="itemLeft__play"></button>
+        <form action="#" class="formOrder">
+            <div class="formOrderTop flex">
+                <div class="formOrderTop__title">Получатель</div>
+                <a href="#" class="formOrderTop__href">Авторизоваться</a>
             </div>
 
-            <div class="sliderBlockSliderTop flex">
-                <div class="sliderBlockSliderTopSale flex">
-                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                </div>
+            <a href="#" class="flex formOrder__data">Укажите данные получателя</a>
 
-                <div class="sliderBlockSliderTopHeart">
-                    <label class="blockCheckbox">
-                        <input type="checkbox" name="heart2">
-                        <span class="checkmark heart"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <a href="images/favorite2.jpg" data-fancybox="gallery">
-                <img src="images/favorite2.jpg" alt="">
-            </a>
-
-            <div class="sliderBlockSliderTop flex">
-                <div class="sliderBlockSliderTopSale flex">
-                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                </div>
-
-                <div class="sliderBlockSliderTopHeart">
-                    <label class="blockCheckbox">
-                        <input type="checkbox" name="heart2">
-                        <span class="checkmark heart"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <a href="images/favorite2.jpg" data-fancybox="gallery">
-                <img src="images/favorite2.jpg" alt="">
-            </a>
-
-            <div class="sliderBlockSliderTop flex">
-                <div class="sliderBlockSliderTopSale flex">
-                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                </div>
-
-                <div class="sliderBlockSliderTopHeart">
-                    <label class="blockCheckbox">
-                        <input type="checkbox" name="heart2">
-                        <span class="checkmark heart"></span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--End mobilSlider-->
-
-<!--Start item-->
-<section class="item flex">
-    <div class="itemLeft">
-        <div class="itemLeftTwo flex">
-            <div class="itemLeft__item flex">
-                <a href="images/favorite4.jpg" class="itemLeft__href" data-fancybox="gallery">
-                    <img src="images/favorite4.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="itemLeft__item flex">
-                <video class="itemLeft__video" loop>
-                    <source src="video/video.mp4" type="video/mp4">
-                </video>
-
-                <button class="itemLeft__play"></button>
-            </div>
-        </div>
-
-        <div class="itemLeftThree flex">
-            <div class="itemLeft__item2 flex">
-                <a href="images/favorite7.jpg" class="itemLeft__href2" data-fancybox="gallery">
-                    <img src="images/favorite7.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="itemLeft__item2 flex">
-                <a href="images/favorite7.jpg" class="itemLeft__href2" data-fancybox="gallery">
-                    <img src="images/favorite7.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="itemLeft__item2 flex">
-                <a href="images/favorite7.jpg" class="itemLeft__href2" data-fancybox="gallery">
-                    <img src="images/favorite7.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="itemLeft__item2 itemLeft__item2_mobil flex">
-                <a href="images/favorite7.jpg" class="itemLeft__href2" data-fancybox="gallery">
-                    <img src="images/favorite7.jpg" alt="">
-                </a>
-            </div>
-        </div>
-
-        <div class="itemLeftTwo flex">
-            <div class="itemLeft__item flex">
-                <a href="images/favorite5.jpg" class="itemLeft__href" data-fancybox="gallery">
-                    <img src="images/favorite5.jpg" alt="">
-                </a>
-            </div>
-
-            <div class="itemLeft__item flex">
-                <a href="images/favorite6.jpg" class="itemLeft__href" data-fancybox="gallery">
-                    <img src="images/favorite6.jpg" alt="">
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <div class="itemRight">
-        <div class="bread">
-            <ul class="breadList flex">
-                <li>
-                    <a href="#"><span>Каталог</span></a>
-                </li>
-
-                <li>
-                    <a href="#"><span>Одежда</span></a>
-                </li>
-
-                <li>
-                    <span>Платья</span>
-                </li>
-            </ul>
-        </div>
-
-        <div class="itemRightBlock">
-            <div class="itemRightBlockTop flex">
-                <h1 class="itemRightBlock__title">Куртка</h1>
-                <div class="itemRightBlock__big">Big size</div>
-            </div>
-
-            <div class="itemRightBlockPrice flex">
-                <h1 class="itemRightBlockPrice__sale">2999 ₽</h1>
-                <div class="itemRightBlockPrice__price">4 000 ₽</div>
-                <div class="sliderBlockSliderTopSale__sale">-30%</div>
-            </div>
-
-            <div class="itemRightBlockColor">
-                <div class="itemRightBlockColor__articul">Артикул: 3420624203-17</div>
-                <ul class="radioList flex">
+            <div class="formOrderPrice">
+                <ul class="formOrderPriceTopList">
                     <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item" checked="">
-                            <span class="checkmark red"></span>
-                            <span class="textToShow">Красный</span>
-                        </label>
+                        <span>6 Товаров на сумму</span>
+                        <span> 7 194 ₽</span>
                     </li>
-
                     <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item">
-                            <span class="checkmark black"></span>
-                            <span class="textToShow">Черный</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item">
-                            <span class="checkmark white"></span>
-                            <span class="textToShow">Белый</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item">
-                            <span class="checkmark yellow"></span>
-                            <span class="textToShow">Желтый</span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item">
-                            <span class="checkmark gray"></span>
-                            <span class="textToShow">Серый</span>
-                        </label>
+                        <span>Доставка</span>
+                        <span>449 ₽</span>
                     </li>
                 </ul>
-            </div>
 
-            <div class="itemRightBlockSize">
-                <div class="headerBottomSearchFormLeftMobilFilterSize__title">Размер</div>
-
-                <ul class="headerBottomSearchFormLeftMobilFilterBlockList flex">
-                    <li>
-                        <label class="blockCheckbox headerBottomSearchFormLeftMobilFilterBlock__checkbox">
-                            <input type="radio" name="size" checked="">
-                            <span class="checkmark">
-                                       <span class="headerBottomSearchFormLeftMobilFilterBlock__text flex">
-                                        <span>XS</span>
-                                        <span>42</span>
-                                       </span>
-                                    </span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox headerBottomSearchFormLeftMobilFilterBlock__checkbox">
-                            <input type="radio" name="size">
-                            <span class="checkmark">
-                                       <span class="headerBottomSearchFormLeftMobilFilterBlock__text flex">
-                                        <span>S</span>
-                                        <span>44</span>
-                                       </span>
-                                    </span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox headerBottomSearchFormLeftMobilFilterBlock__checkbox">
-                            <input type="radio" name="size">
-                            <span class="checkmark">
-                                       <span class="headerBottomSearchFormLeftMobilFilterBlock__text flex">
-                                        <span>M</span>
-                                        <span>46</span>
-                                       </span>
-                                    </span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox headerBottomSearchFormLeftMobilFilterBlock__checkbox">
-                            <input type="radio" name="size">
-                            <span class="checkmark">
-                                       <span class="headerBottomSearchFormLeftMobilFilterBlock__text flex">
-                                        <span>L</span>
-                                        <span>48</span>
-                                       </span>
-                                    </span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-
-            <a href="#" class="itemRightBlockTableSize">Таблица размеров</a>
-
-            <div class="itemRightBlockBtn flex">
-                <div class="itemRightBlockBtnText flex">
-                    <h1 class="itemRightBlockBtnText__title">Атласное платье</h1>
-
-                    <div class="itemRightBlockBtnTextPrice">
-                        <span class="itemRightBlockBtnTextPrice__sale">2399 ₽</span>
-                        <span class="itemRightBlockBtnTextPrice__price">2399 ₽</span>
-                    </div>
-
-                    <div class="mobilArticul">Артикул: 3420624203-17</div>
+                <div class="formOrderPriceTotal flex">
+                    <span class="formOrderPriceTotal__title">Итого</span>
+                    <span class="formOrderPriceTotal__price">7 194 ₽</span>
                 </div>
+                <div class="formOrderPriceError">Вы не авторизованы</div>
 
-                <div class="custom-select">
-                    <a href="#" class="select-selected">XS (42)</a>
-                    <div class="select-items">
-                        <div class="select-itemsIn">
-                            <div class="itemRightBlockBtnTop flex">
-                                <div class="itemRightBlockBtn__title">Выберите размер</div>
-                                <a href="#" class="itemRightBlockBtn__popup flex">Таблица размеров</a>
-                            </div>
+                <a href="#" class="formOrderPrice__send flex">Оформить заказ</a>
 
-                            <div class="select-itemsScroll">
-                                <span class="select-itemsIn__name">XS (42)</span>
+                <span class="formOrderPriceTotal__desc">Нажимая на кнопку «Оформить заказ», Вы даете согласие на обработку персональных данных</span>
+            </div>
+        </form>
+    </div>
 
-                                <span class="select-itemsIn__name">S (44)</span>
+    <div class="orderRight">
+        <h2 class="orderLeft__title">Товары в корзине</h2>
 
-                                <span class="select-itemsIn__name">M (46)</span>
+        <div class="orderBody">
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket.jpg" alt="">
+                    </a>
 
-                                <span class="select-itemsIn__name">L (48)</span>
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
 
-                                <span class="select-itemsIn__name">XS (42)</span>
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
 
-                                <span class="select-itemsIn__name">S (44)</span>
-
-                                <span class="select-itemsIn__name">M (46)</span>
-
-                                <span class="select-itemsIn__name">L (48)</span>
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <a href="#" class="itemRightBlockBtn__btn flex">В корзину</a>
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
 
-                <div class="sliderBlockSliderTopHeart">
-                    <label class="blockCheckbox">
-                        <input type="checkbox" name="heart" tabindex="0">
-                        <span class="checkmark heart"></span>
-                    </label>
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <div class="catalogContent">
-                <ul class="metismenu" id="menu2">
-                    <li>
-                        <a class="has-arrow" href="#">
-                            <span>Информация о товаре</span>
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket2.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
                         </a>
+                    </div>
+                </div>
+            </div>
 
-                        <ul>
-                            <li>
-                                <div class="metismenuIn2">
-                                    <ul class="metismenuIn2List">
-                                        <li>
-                                            <span>Цвет:</span>
-                                            <span>Зеленый</span>
-                                        </li>
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket3.jpg" alt="">
+                    </a>
 
-                                        <li>
-                                            <span>Материал верха: </span>
-                                            <span>98% Хлопок, 2% Лайкра 98% Хлопок, 2% Лайкра 98% Хлопок, 2% Лайкра</span>
-                                        </li>
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Джемпер</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color white flex">Белый</div>
 
-                                        <li>
-                                            <span>Пол: </span>
-                                            <span>Женский</span>
-                                        </li>
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
 
-                                        <li>
-                                            <span>Сезон: </span>
-                                            <span>Всесезон</span>
-                                        </li>
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                        <li>
-                                            <span>Длина рукава: Длина рукава:  Длина рукава:  Длина рукава: </span>
-                                            <span>49</span>
-                                        </li>
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
 
-                                        <li>
-                                            <span>Стиль:</span>
-                                            <span>Повседневный</span>
-                                        </li>
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
 
-                                        <li>
-                                            <span>Вид застежки: </span>
-                                            <span>Пуговицы</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a class="has-arrow" href="#">
-                            <span>Доставка</span>
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
                         </a>
+                    </div>
+                </div>
+            </div>
 
-                        <ul>
-                            <li>
-                                <div class="metismenuIn2">
-                                    <ul class="metismenuIn2List">
-                                        <li>
-                                            <span>Цвет:</span>
-                                            <span>Зеленый</span>
-                                        </li>
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket4.jpg" alt="">
+                    </a>
 
-                                        <li>
-                                            <span>Материал верха: </span>
-                                            <span>98% Хлопок, 2% Лайкра</span>
-                                        </li>
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color red flex">Красный</div>
 
-                                        <li>
-                                            <span>Пол: </span>
-                                            <span>Женский</span>
-                                        </li>
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
 
-                                        <li>
-                                            <span>Сезон: </span>
-                                            <span>Всесезон</span>
-                                        </li>
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                        <li>
-                                            <span>Длина рукава: </span>
-                                            <span>49</span>
-                                        </li>
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
 
-                                        <li>
-                                            <span>Стиль:</span>
-                                            <span>Повседневный</span>
-                                        </li>
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
 
-                                        <li>
-                                            <span>Вид застежки: </span>
-                                            <span>Пуговицы</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a class="has-arrow" href="#">
-                            <span>Оплата</span>
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
                         </a>
+                    </div>
+                </div>
+            </div>
 
-                        <ul>
-                            <li>
-                                <div class="metismenuIn2">
-                                    <ul class="metismenuIn2List">
-                                        <li>
-                                            <span>Цвет:</span>
-                                            <span>Зеленый</span>
-                                        </li>
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket.jpg" alt="">
+                    </a>
 
-                                        <li>
-                                            <span>Материал верха: </span>
-                                            <span>98% Хлопок, 2% Лайкра</span>
-                                        </li>
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
 
-                                        <li>
-                                            <span>Пол: </span>
-                                            <span>Женский</span>
-                                        </li>
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
 
-                                        <li>
-                                            <span>Сезон: </span>
-                                            <span>Всесезон</span>
-                                        </li>
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                                        <li>
-                                            <span>Длина рукава: </span>
-                                            <span>49</span>
-                                        </li>
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
 
-                                        <li>
-                                            <span>Стиль:</span>
-                                            <span>Повседневный</span>
-                                        </li>
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
 
-                                        <li>
-                                            <span>Вид застежки: </span>
-                                            <span>Пуговицы</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket2.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!--End item-->
-
-
-<!--Start favorite-->
-<section class="favorite">
-    <h2 class="favorite__title">Может понравиться</h2>
-
-    <div class="sliderBlockContent flex">
-        <div class="sliderBlockMain">
-            <div class="slider sliderBlockSlider">
-                <div>
-                    <a href="#">
-                        <img src="images/favorite.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/favorite.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/favorite.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/favorite.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sliderBlockSliderPrice">
-                <h2><a href="#" class="sliderBlockSliderPrice__title">Джемпер</a></h2>
-
-                <ul class="sliderBlockSliderPriceList flex">
-                    <li>
-                        <span class="sliderBlockSliderPrice__un">2399 ₽</span>
-                    </li>
-
-                    <li>
-                        <span class="sliderBlockSliderPrice__price">2399 ₽</span>
-                    </li>
-                </ul>
-
-                <ul class="radioList flex">
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio">
-                            <span class="checkmark red"></span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio" checked>
-                            <span class="checkmark black"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sliderBlockMain">
-            <div class="slider sliderBlockSlider">
-                <div>
-                    <a href="#">
-                        <img src="images/favorite2.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__new">Новинка</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart2">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/favorite2.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart2">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/favorite2.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart2">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/favorite2.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart2">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sliderBlockSliderPrice">
-                <h2><a href="#" class="sliderBlockSliderPrice__title">Шорты</a></h2>
-
-                <ul class="sliderBlockSliderPriceList flex">
-                    <li>
-                        <span class="sliderBlockSliderPrice__price">2399 ₽</span>
-                    </li>
-                </ul>
-
-                <ul class="radioList flex">
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio2">
-                            <span class="checkmark red"></span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio2" checked>
-                            <span class="checkmark black"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sliderBlockMain">
-            <div class="slider sliderBlockSlider">
-                <div>
-                    <a href="#">
-                        <img src="images/bag.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart3">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/bag.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart3">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/bag.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart3">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/bag.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart3">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sliderBlockSliderPrice">
-                <h2><a href="#" class="sliderBlockSliderPrice__title">Сумка</a></h2>
-
-                <ul class="sliderBlockSliderPriceList flex">
-                    <li>
-                        <span class="sliderBlockSliderPrice__price">2399 ₽</span>
-                    </li>
-                </ul>
-
-                <ul class="radioList flex">
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio3">
-                            <span class="checkmark red"></span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio3" checked>
-                            <span class="checkmark black"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="sliderBlockMain">
-            <div class="slider sliderBlockSlider">
-                <div>
-                    <a href="#">
-                        <img src="images/favorite3.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart4">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-                    <a href="#">
-                        <img src="images/favorite3.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart4">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/favorite3.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart4">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <div>
-
-                    <a href="#">
-                        <img src="images/favorite3.jpg" alt="">
-                    </a>
-
-                    <div class="sliderBlockSliderTop flex">
-                        <div class="sliderBlockSliderTopSale flex">
-                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
-                        </div>
-
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="heart4">
-                                <span class="checkmark heart"></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="sliderBlockSliderPrice">
-                <h2><a href="#" class="sliderBlockSliderPrice__title">Куртка</a></h2>
-
-                <ul class="sliderBlockSliderPriceList flex">
-                    <li>
-                        <span class="sliderBlockSliderPrice__price">2399 ₽</span>
-                    </li>
-                </ul>
-
-                <ul class="radioList flex">
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio4">
-                            <span class="checkmark red"></span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="radio4" checked>
-                            <span class="checkmark black"></span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-<!--End favorite-->
+<!--End order-->
 
 <!--Start footer-->
 <footer class="footer">
@@ -2985,8 +2350,13 @@
 <script src="js/slick.js"></script>
 <script src="js/slickSetting.js"></script>
 <script src="js/metis.js"></script>
-<script src="js/fancybox.js"></script>
-<script src="js/fancyboxSetting.js"></script>
+<script src="js/tab.js"></script>
+<script src="js/tabSetting.js"></script>
+<script src="js/form.js"></script>
+<script src="js/migrate.js"></script>
+<script src="js/intlTelInput.js"></script>
+<script src="js/intlTelInputSetting.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>

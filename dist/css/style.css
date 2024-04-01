@@ -1275,6 +1275,7 @@ End footer
   top: 3px;
 }
 
+.registerPopup,
 .hederMenuMobil {
   position: fixed;
   top: 0;
@@ -1292,8 +1293,20 @@ End footer
   transition: all, 0.5s;
 }
 
+.registerPopup.active,
 .hederMenuMobil.active {
   transform: translate(0);
+}
+
+.registerPopup {
+  left: auto;
+  right: 0;
+  transform: translate(0, -200%);
+  background: #ffffff;
+}
+
+.registerPopup.active {
+  transform: translate(0, 0);
 }
 
 .hederMenuMobilTop {
@@ -3574,9 +3587,328 @@ Start popupSize
 End popupSize
 ############*/
 
-.hederMenuMobilTop_line{
+.hederMenuMobilTop_line {
   display: none;
 }
+
+/*
+Start order
+###########*/
+.order {
+  max-width: 1540px;
+  width: 100%;
+  margin: 20px auto 120px;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.orderLeft {
+  max-width: 700px;
+  width: 100%;
+}
+
+.orderRight {
+  max-width: 800px;
+  width: 100%;
+  border-left: 1px solid rgb(245, 245, 245);
+  padding-left: 30px;
+}
+
+.orderLeft__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+}
+
+.orderRight .basketBlockBodyItem {
+  padding-left: 0;
+}
+
+.orderRight .basketBlockBodyItem:first-of-type {
+  margin-top: 50px;
+}
+
+.formOrder {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.formOrderTop {
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding-bottom: 20px;
+}
+
+.formOrderTop__title {
+  color: rgb(255, 84, 84);
+  font: normal bold 20px 'Manrope', sans-serif;
+}
+
+.formOrderTop__href {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  border-bottom: 1px solid rgb(20, 20, 20);
+}
+
+.formOrder__data {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 4px solid rgb(255, 84, 84);
+}
+
+.formOrder__data:after {
+  content: "";
+  display: block;
+  border: 2px solid rgb(188, 188, 188);
+  border-top: none;
+  border-left: none;
+  width: 8px;
+  height: 8px;
+  transform: rotate(-45deg);
+}
+
+.formOrderPrice {
+  margin-top: 40px;
+}
+
+.formOrderPriceTopList {
+  max-width: 100%;
+  width: 100%;
+  border-bottom: 1px solid rgb(245, 245, 245);
+}
+
+.formOrderPriceTopList li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.formOrderPriceTopList li span {
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+  line-height: 19px;
+}
+
+.formOrderPriceTotal {
+  justify-content: space-between;
+  margin-top: 23px;
+}
+
+.formOrderPriceTotal__title {
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+  text-transform: uppercase;
+}
+
+.formOrderPriceTotal__price {
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+}
+
+.formOrderPriceError {
+  color: rgb(255, 84, 84);
+  font: normal 400 12px 'Manrope', sans-serif;
+  margin-top: 10px;
+}
+
+.formOrderPrice__send {
+  max-width: 100%;
+  width: 100%;
+  height: 50px;
+  background: rgb(128, 128, 128);
+  text-transform: uppercase;
+  font: normal 500 14px 'Manrope', sans-serif;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  margin-top: 12px;
+}
+
+.formOrderPriceTotal__desc {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+  display: block;
+  margin-top: 15px;
+}
+
+.registerPopup__closed {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  cursor: pointer;
+  background: url('../images/icon31.svg') no-repeat center;
+  display: block;
+  width: 15px;
+  height: 15px;
+}
+
+.registerPopupTab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.registerPopupTab .etabs {
+  justify-content: space-between;
+  max-width: 85%;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+}
+
+.registerPopupTab .etabs li {
+  height: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  max-width: 50%;
+  width: 100%;
+}
+
+.registerPopupTab .etabs li a {
+  text-transform: uppercase;
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+}
+
+.registerPopupTab .etabs li:first-of-type {
+
+}
+
+.registerPopupTab .etabs li:last-of-type {
+  margin-right: 0;
+  border-right: 1px solid rgb(245, 245, 245);
+}
+
+.registerPopupTab .etabs li.active {
+  border-bottom: 1px solid rgb(20, 20, 20);
+}
+
+.enterForm__send {
+  justify-content: center;
+  align-items: center;
+  max-width: 90%;
+  width: 100%;
+  height: 50px;
+  margin: 0 auto;
+  background: rgb(20, 20, 20);
+  text-transform: uppercase;
+  color: #ffffff;
+  font: normal 500 14px 'Manrope', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.enterForm {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-top: 1px solid rgb(245, 245, 245);
+  padding-top: 40px;
+}
+
+.enterForm__text {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+  text-align: center;
+  padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.input-container {
+  position: relative;
+  margin: 20px 0 40px;
+  max-width: 90%;
+  width: 100%;
+  margin: 20px auto 40px;
+}
+
+.input-container input {
+  width: 100%;
+  padding-top: 0;
+  border: none;
+  border-bottom: 1px solid rgb(20, 20, 20);
+  font: normal 400 16px 'Manrope', sans-serif;
+  height: 40px;
+}
+
+.input-container label {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  color: #999;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:not(:placeholder-shown) + label {
+  top: 10px;
+  left: 0;
+  color: rgb(128, 128, 128);
+  font: normal 500 16px 'Manrope', sans-serif;
+}
+
+.input-container input:focus + label.active,
+.input-container input:not(:placeholder-shown) + label.active {
+  top: -15px;
+  font-size: 12px;
+}
+
+.rememberPassword {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+  margin-top: 10px;
+  display: inline-block;
+  border-bottom: 1px solid;
+}
+
+/*
+End order
+##########*/
 
 /*
 Start responsive
