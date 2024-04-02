@@ -3957,6 +3957,62 @@ Start order
   padding-top: 4px;
 }
 
+.formOrder__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding-bottom: 25px;
+  display: block;
+}
+
+.formOrder__data_modif {
+  border-bottom: 3px solid rgb(245, 245, 245);
+}
+
+.orderUser {
+  margin-top: 25px;
+}
+
+.orderUser__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+  margin-bottom: 20px;
+}
+
+.orderUserName {
+  border-top: 1px solid rgb(245, 245, 245);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid rgb(245, 245, 245);
+  position: relative;
+}
+
+.orderUserName__title {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.orderUserName__num {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+  margin-top: 10px;
+}
+
+.orderUserName__edit {
+  background: url('../images/icon32.svg') no-repeat center;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  display: block;
+  cursor: pointer;
+}
+
+.orderUserName__edit_yes {
+  background: url('../images/icon33.svg') no-repeat center;
+}
+
 /*
 End order
 ##########*/

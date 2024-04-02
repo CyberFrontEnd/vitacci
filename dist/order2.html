@@ -1695,12 +1695,21 @@
         <h2 class="orderLeft__title">Оформление заказа</h2>
 
         <form action="#" class="formOrder">
-            <div class="formOrderTop flex">
-                <div class="formOrderTop__title">Получатель</div>
-                <a href="#" class="formOrderTop__href">Авторизоваться</a>
+            <div class="">
+                <h3 class="formOrder__title">Способ доставки</h3>
             </div>
 
-            <a href="#" class="flex formOrder__data">Укажите данные получателя</a>
+            <a href="order3.html" class="flex formOrder__data formOrder__data_modif">Выберите способ доставки</a>
+
+            <div class="orderUser">
+                <div class="orderUser__title">Получатель</div>
+
+                <div class="orderUserName">
+                    <div class="orderUserName__title">Анна Петрова</div>
+                    <div class="orderUserName__num">+7 (916) 123-45-67</div>
+                    <div class="orderUserName__edit"></div>
+                </div>
+            </div>
 
             <div class="formOrderPrice">
                 <ul class="formOrderPriceTopList">
@@ -1718,7 +1727,6 @@
                     <span class="formOrderPriceTotal__title">Итого</span>
                     <span class="formOrderPriceTotal__price">7 194 ₽</span>
                 </div>
-                <div class="formOrderPriceError">Вы не авторизованы</div>
 
                 <a href="#" class="formOrderPrice__send flex">Оформить заказ</a>
 
