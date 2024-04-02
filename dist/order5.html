@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="оформление заказа - Способ доставки" name="description">
-    <meta content="оформление заказа, Способ доставки" name="keywords">
+    <meta content="оформление заказа - изменения получателя" name="description">
+    <meta content="оформление заказа, изменения получателя" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
@@ -1690,311 +1690,324 @@
 <!--End basketBlock-->
 
 <!--Start order-->
-<section class="order orderDeliver flex">
-    <a href="order3.html" class="orderDeliver__back"></a>
+<section class="order flex">
     <div class="orderLeft">
-        <h2 class="deliver__title">Способ доставки</h2>
+        <h2 class="orderLeft__title">Оформление заказа</h2>
 
-        <div class="orderDeliverTab" id="tab-container">
-            <ul class="etabs flex">
-                <li class="tab"><a href="#deliver">Доставка</a></li>
-                <li class="tab"><a href="#pickup">Самовывоз</a></li>
-            </ul>
-
-            <div id="deliver">
-                <form action="" class="deliverForm">
-                    <div class="orderDeliverTab__title">Сохраненные адреса</div>
-
-                    <div class="orderDeliverTabCheckbox flex">
-                        <label class="blockCheckbox">
-                            <input type="radio" name="size" checked="">
-                            <span class="checkmark"></span>
-                            <span class="blockCheckbox__title">Дом</span>
-                        </label>
-
-                        <label class="blockCheckbox">
-                            <input type="radio" name="size">
-                            <span class="checkmark"></span>
-                            <span class="blockCheckbox__title">Работа</span>
-                        </label>
-
-                        <label class="blockCheckbox">
-                            <input type="radio" name="size">
-                            <span class="checkmark"></span>
-                            <span class="blockCheckbox__title">Москва, Академика Янгеля ул., 36</span>
-                        </label>
-                    </div>
-
-                    <div class="deliverFormBlock">
-                        <div class="deliverFormBlock__title flex">Добавьте новый адрес</div>
-
-                        <div class="deliverFormBlockCity flex">
-                            <div class="deliverFormBlockCity__city">Москва</div>
-                            <div class="deliverFormBlockCity__redact">Изменить</div>
-                        </div>
-
-                        <div class="deliverFormBlockForm">
-                            <div class="input-container">
-                                <input type="email" id="street">
-                                <label for="street">Улица</label>
-                            </div>
-
-                            <div class="deliverFormBlockFormBottom flex">
-                                <div class="input-container">
-                                    <input type="email" id="dom">
-                                    <label for="dom">Дом</label>
-                                </div>
-
-                                <div class="input-container">
-                                    <input type="email" id="office">
-                                    <label for="office">Кв/офис</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <bottom type="submit" class="deliverFormBlockForm__btn flex">Доставить по этому адресу</bottom>
-                    </div>
-                </form>
+        <form action="#" class="formOrder">
+            <div class="">
+                <h3 class="formOrder__title">Способ доставки</h3>
             </div>
 
-            <div id="pickup">
-                <form action="" class="deliverForm">
-                    <div class="orderDeliverTab__title">Пункты выдачи</div>
+            <a href="order4.html" class="flex formOrder__data formOrder__data_modif">Выберите способ доставки</a>
 
-                    <div class="deliverFormBlock">
-                        <div class="deliverFormBlockForm">
-                            <div class="input-container input-container__search">
-                                <input type="text" id="search">
-                                <label for="search">Поиск</label>
-                            </div>
+            <div class="orderUser">
+                <div class="orderUser__title">Получатель</div>
 
-                            <div class="pickupSearch">
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 1</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 2</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 3</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 4</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 5</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 1</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 2</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 3</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 4</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 5</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 1</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 2</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 3</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 4</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-
-                                <div class="pickupSearch__block flex">
-                                    <label class="blockCheckbox">
-                                        <input type="radio" name="item">
-                                        <span class="checkmark"></span>
-
-                                        <span class="pickupSearchRadio">
-                                            <span class="pickupSearchRadio__title">Пункт № 5</span>
-                                            <span class="pickupSearchRadio__text">с 13 января, от 300 рублей</span>
-                                        </span>
-                                    </label>
-
-                                    <div class="pickupSearch__text">Доступны все товары</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <bottom type="submit" class="deliverFormBlockForm__btn flex">Доставить в этот пункт выдачи</bottom>
-                    </div>
-                </form>
+                <div class="orderUserName">
+                    <div class="orderUserName__title">Анна Петрова</div>
+                    <div class="orderUserName__num">+7 (916) 123-45-67</div>
+                    <div class="orderUserName__edit orderUserName__edit_yes"></div>
+                </div>
             </div>
-        </div>
+
+            <div class="formOrderPrice">
+                <ul class="formOrderPriceTopList">
+                    <li>
+                        <span>6 Товаров на сумму</span>
+                        <span> 7 194 ₽</span>
+                    </li>
+                    <li>
+                        <span>Доставка</span>
+                        <span>449 ₽</span>
+                    </li>
+                </ul>
+
+                <div class="formOrderPriceTotal flex">
+                    <span class="formOrderPriceTotal__title">Итого</span>
+                    <span class="formOrderPriceTotal__price">7 194 ₽</span>
+                </div>
+
+                <a href="#" class="formOrderPrice__send flex">Оформить заказ</a>
+
+                <span class="formOrderPriceTotal__desc">Нажимая на кнопку «Оформить заказ», Вы даете согласие на обработку персональных данных</span>
+            </div>
+        </form>
     </div>
 
     <div class="orderRight">
-        <div class="map">
-            <iframe
-                frameborder="0"
-                height="780"
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3Af17efa7935e64471df8c455be2eb6709223a57bad7f0a1ca965e7d222217cbe4&amp;source=constructor"
-                width="900"></iframe>
+        <h2 class="orderLeft__title">Товары в корзине</h2>
+
+        <div class="orderBody">
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket2.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket3.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Джемпер</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color white flex">Белый</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket4.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color red flex">Красный</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="basketBlockBodyItem flex">
+                <div class="basketBlockBodyItemLeft flex">
+                    <a href="#" class="basketBlockBodyItemLeft__href">
+                        <img src="images/basket2.jpg" alt="">
+                    </a>
+
+                    <div class="basketBlockBodyItemLeftRight">
+                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
+                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
+                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
+
+                        <div class="basketBlockBodyItemLeftRightSize flex">
+                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+
+                            <div class="basket__number flex">
+                                <span class="minus">-</span>
+                                <input type="text" value="1" minlength="0">
+                                <span class="plus">+</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="basketBlockBodyItemRight flex">
+                    <div class="basketBlockBodyItemRightTop flex">
+                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
+                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
+                    </div>
+
+                    <div class="basketBlockBodyItemRightBottom flex">
+                        <div class="sliderBlockSliderTopHeart">
+                            <label class="blockCheckbox">
+                                <input type="checkbox" name="basket__1">
+                                <span class="checkmark heart"></span>
+                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
+                            </label>
+                        </div>
+
+                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
+                            <span>Удалить</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -2284,9 +2297,6 @@
 <script src="js/slick.js"></script>
 <script src="js/slickSetting.js"></script>
 <script src="js/metis.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/tabSetting.js"></script>
-<script src="js/form.js"></script>
 <script src="js/script.js"></script>
 
 </body>
