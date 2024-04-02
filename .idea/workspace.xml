@@ -3821,12 +3821,12 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/order3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/qodana.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3879,7 +3879,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/projects/guram/vitacci/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/pluins/intlTellnput&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -3891,6 +3891,23 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="QodanaHighlightedReportService">
+    <option name="localRunNotPublishedPersistedInfo">
+      <LocalReportPersistedInfo>
+        <option name="path" value="C:\Users\user\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
+        <option name="reportGuid" value="8589d281-8743-4497-b505-50cb7c858e3d" />
+        <option name="reportName" value="vitacci/qodana/2024-04-02" />
+      </LocalReportPersistedInfo>
+    </option>
+  </component>
+  <component name="QodanaIsSelectedPersistenceService">
+    <option name="selectedOrLoading" value="true" />
+  </component>
+  <component name="QodanaReportsService">
+    <option name="descriptions">
+      <ReportDescription localRun="true" path="C:\Users\user\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8589d281-8743-4497-b505-50cb7c858e3d" reportId="vitacci/qodana/2024-04-02" />
+    </option>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
@@ -3977,7 +3994,9 @@
       <workItem from="1711957932879" duration="14869000" />
       <workItem from="1711991414870" duration="1006000" />
       <workItem from="1711997760118" duration="834000" />
-      <workItem from="1712040809489" duration="1921000" />
+      <workItem from="1712040809489" duration="5279000" />
+      <workItem from="1712048368595" duration="689000" />
+      <workItem from="1712049115445" duration="9066000" />
     </task>
     <servers />
   </component>
