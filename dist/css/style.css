@@ -4490,12 +4490,14 @@ Start brands
 .brands {
   max-width: 100%;
   width: 100%;
+  margin-top: 30px;
 }
 
 .brands__title {
   text-align: center;
   color: rgb(20, 20, 20);
   font: normal bold 40px 'Manrope', sans-serif;
+  padding-bottom: 40px;
 }
 
 .brandsImg {
@@ -4506,17 +4508,135 @@ Start brands
 .brandsIn {
   max-width: 840px;
   width: 100%;
+  margin: 30px auto 100px;
 }
 
 .brands__desc {
   color: #000;
   font: normal 400 16px 'Manrope', sans-serif;
   padding-bottom: 25px;
+  line-height: 28px;
 }
 
 /*
 End brands
 ##########*/
+
+/*
+Start news
+##########*/
+.news {
+  max-width: 840px;
+  width: 100%;
+  margin: 30px auto;
+}
+
+.brands__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+}
+
+.newsTopHref__href {
+  display: block;
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.newsTopHref__desc {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.newsTopHrefBottom {
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.newsTopHrefBottom__date {
+  color: rgb(128, 128, 128);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.newsTopHrefBottom__href {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+.newsTopHref {
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding-bottom: 25px;
+}
+
+.newsBlock {
+  max-width: 100%;
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  padding-bottom: 20px;
+  margin-top: 20px;
+}
+
+.newsBlock__img img,
+.newsBlock__img {
+  max-width: 410px;
+  width: 100%;
+  height: 260px;
+}
+
+.newsBlock__img img {
+  display: block;
+  object-fit: cover;
+}
+
+.newsContent {
+  margin-top: 20px;
+}
+
+.newsBlockRight {
+  max-width: 410px;
+  width: 100%;
+}
+
+.newsBlockRight__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+  line-height: 26px;
+}
+
+.newsBlockRight__desc {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  padding-top: 10px;
+}
+
+.newsBlockRight .newsTopHrefBottom {
+  position: absolute;
+  bottom: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.newsBlockRight {
+  position: relative;
+  height: 250px;
+}
+
+.news .catalogRight__load {
+  margin-top: 50px;
+}
+
+.news .catalogNav {
+  margin-bottom: 100px;
+}
+
+/*
+End news
+########*/
 
 /*
 Start responsive
