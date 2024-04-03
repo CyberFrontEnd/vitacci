@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="оформление заказа - изменения получателя" name="description">
-    <meta content="оформление заказа, изменения получателя" name="keywords">
+    <meta content="Способы оплаты  - изменения получателя" name="description">
+    <meta content="Способы оплаты, изменения получателя" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/metis.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
 
 
-    <title>оформление заказа</title>
+    <title>Способы оплаты</title>
 </head>
 <body>
 
@@ -1689,379 +1688,42 @@
 </div>
 <!--End basketBlock-->
 
-<!--Start order-->
-<section class="order flex">
-    <div class="orderLeft">
-        <h2 class="orderLeft__title">Оформление заказа</h2>
+<!--Start payment-->
+<section class="payment">
+    <h1 class="payment__title">Способы оплаты</h1>
 
-        <form action="#" class="formOrder">
-            <div class="">
-                <h3 class="formOrder__title">Способ доставки</h3>
-            </div>
+    <div class="paymentDesc">
+        <div class="paymentDesc__title">Способы оплаты</div>
 
-            <a href="order4.html" class="flex formOrder__data formOrder__data_address">
-                <span class="formOrder__data_addressText">
-                  <span class="formOrder__data_addressAddress">Самовывоз | Москва, ул. Пришвина, 32</span>
-                  <span class="formOrder__data_addressTime">пн-пт: 08:00-23:00, срок хранения заказа — 7 дней</span>
-                </span>
-            </a>
+        <ul class="paymentDescList">
+            <li>
+                <div class="paymentDescList__text">Оплата при получении</div>
+                <div class="paymentDescList__text2">Наличными или банковской картой</div>
+            </li>
 
-            <div class="termsDelivery">
-                <div class="formOrder__title">Условия доставки</div>
-
-                <div class="termsDeliveryBlock flex">
-                    <div class="termsDeliveryBlockContent">
-                        <div class="termsDeliveryBlock__text2">Без примерки</div>
-                        <div class="termsDeliveryBlockFree flex">
-                            <div class="termsDeliveryBlockFree__date">3 марта - 5 марта</div>
-                            <div class="termsDeliveryBlockFree__free">Бесплатно</div>
-                        </div>
-                        <div class="termsDeliveryBlock__text">Доставка бесплатная. В случае полного отказа стоимость доставки - 149 руб.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="termsDelivery paymentBlock">
-                <div class="formOrder__title">Способ оплаты</div>
-
-                <ul class="pickupSearch__block paymentContent">
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item" checked>
-                            <span class="checkmark"></span>
-
-                            <span class="pickupSearchRadio">
-                            <span class="pickupSearchRadio__title">При получении</span>
-                            <span class="pickupSearchRadio__text">Наличными или банковской картой</span>
-                        </span>
-                        </label>
-                    </li>
-
-                    <li>
-                        <label class="blockCheckbox">
-                            <input type="radio" name="item">
-                            <span class="checkmark"></span>
-
-                            <span class="pickupSearchRadio">
-                            <span class="pickupSearchRadio__title">Онлайн</span>
-                            <span class="pickupSearchRadio__text">Банковской картой</span>
-                        </span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="orderUser">
-                <div class="orderUser__title">Получатель</div>
-
-                <div class="orderUserName">
-                    <div class="orderUserName__title">Анна Петрова</div>
-                    <div class="orderUserName__num">+7 (916) 123-45-67</div>
-                    <div class="orderUserName__edit orderUserName__edit_yes"></div>
-                </div>
-            </div>
-
-            <div class="formOrderPrice">
-                <ul class="formOrderPriceTopList">
-                    <li>
-                        <span>6 Товаров на сумму</span>
-                        <span> 7 194 ₽</span>
-                    </li>
-                    <li>
-                        <span>Доставка</span>
-                        <span>449 ₽</span>
-                    </li>
-                </ul>
-
-                <div class="formOrderPriceTotal flex">
-                    <span class="formOrderPriceTotal__title">Итого</span>
-                    <span class="formOrderPriceTotal__price">7 194 ₽</span>
-                </div>
-
-                <a href="#" class="deliverFormBlockForm__btn flex">Оформить заказ</a>
-
-                <span class="formOrderPriceTotal__desc">Нажимая на кнопку «Оформить заказ», Вы даете согласие на обработку персональных данных</span>
-            </div>
-        </form>
+            <li>
+                <div class="paymentDescList__text">Оплата через CDEK</div>
+                <div class="paymentDescList__text2">Наличными или банковской картой</div>
+            </li>
+        </ul>
     </div>
 
-    <div class="orderRight">
-        <h2 class="orderLeft__title">Товары в корзине</h2>
+    <p class="paymentDesc__desc">Если вы выбираете доставку курьером до двери или в ПВЗ (пункт выдачи заказов) CDEK, у вас будет возможность оплатить товар при получении
+        заказа. Вы сможете
+        выбрать
+        наиболее удобный способ оплаты для себя - наличными или банковской картой, и осуществить оплату непосредственно при получении товара. Это позволяет вам удобно
+        контролировать процесс оплаты и быть уверенным в качестве товара перед тем, как произвести платеж.
+    </p>
 
-        <div class="orderBody">
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket.jpg" alt="">
-                    </a>
+    <h2 class="paymentDesc__title2">Информация об оплате</h2>
 
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
+    <p class="paymentDesc__desc2">Перед тем, как оформить заказ, просим Вас внимательно ознакомиться с правилами работы интернет-магазина. Если Вам потребуется помощь, наши
+        консультанты с удовольствием
+        ответят на Ваши вопросы по телефону 8 (495) 236-88-99.</p>
 
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket2.jpg" alt="">
-                    </a>
-
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
-
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket3.jpg" alt="">
-                    </a>
-
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Джемпер</a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color white flex">Белый</div>
-
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket4.jpg" alt="">
-                    </a>
-
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color red flex">Красный</div>
-
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket.jpg" alt="">
-                    </a>
-
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
-
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="basketBlockBodyItem flex">
-                <div class="basketBlockBodyItemLeft flex">
-                    <a href="#" class="basketBlockBodyItemLeft__href">
-                        <img src="images/basket2.jpg" alt="">
-                    </a>
-
-                    <div class="basketBlockBodyItemLeftRight">
-                        <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
-                        <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                        <div class="basketBlockBodyItemLeftRight__color green flex">Зеленый</div>
-
-                        <div class="basketBlockBodyItemLeftRightSize flex">
-                            <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                            <div class="basket__number flex">
-                                <span class="minus">-</span>
-                                <input type="text" value="1" minlength="0">
-                                <span class="plus">+</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="basketBlockBodyItemRight flex">
-                    <div class="basketBlockBodyItemRightTop flex">
-                        <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                        <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                    </div>
-
-                    <div class="basketBlockBodyItemRightBottom flex">
-                        <div class="sliderBlockSliderTopHeart">
-                            <label class="blockCheckbox">
-                                <input type="checkbox" name="basket__1">
-                                <span class="checkmark heart"></span>
-                                <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                            </label>
-                        </div>
-
-                        <a href="#" class="basketBlockBodyItemRightBottom__delete flex">
-                            <span>Удалить</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <img src="images/pay.svg" alt="" class="paymentImg">
 </section>
-<!--End order-->
+<!--End payment-->
 
 <!--Start footer-->
 <footer class="footer">
