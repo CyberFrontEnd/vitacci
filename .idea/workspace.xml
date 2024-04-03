@@ -3821,9 +3821,15 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/news.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/guarante.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/news2.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/question.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/user.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/slickSetting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/slickSetting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -3987,7 +3993,7 @@
       <workItem from="1712081547164" duration="633000" />
       <workItem from="1712082462425" duration="107000" />
       <workItem from="1712083665796" duration="19000" />
-      <workItem from="1712124310182" duration="8678000" />
+      <workItem from="1712124310182" duration="18233000" />
     </task>
     <servers />
   </component>

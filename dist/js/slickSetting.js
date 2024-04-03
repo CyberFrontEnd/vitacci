@@ -14,6 +14,14 @@ $(document).ready(function () {
     arrows: true,
   });
 
+  $('.newsSlider').slick({
+    dots: false,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+  });
+
 
   // Start top slider main page
   var $slider = $('.collectionTopLeftItem');
@@ -44,4 +52,6 @@ $(document).ready(function () {
       },
     ]
   });
+
+
 });

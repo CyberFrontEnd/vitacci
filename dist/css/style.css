@@ -4634,8 +4634,313 @@ Start news
   margin-bottom: 100px;
 }
 
+.news2 {
+  max-width: 840px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.news__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+}
+
+.news2Description p {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 28px;
+  padding-bottom: 20px;
+}
+
+.news2Article__item {
+  max-width: 265px;
+  width: 100%;
+  margin-right: 22px;
+  margin-bottom: 20px;
+}
+
+.news2Article__item:nth-child(3n+3) {
+  margin-right: 0;
+}
+
+.news2Article__href {
+  max-width: 265px;
+  width: 100%;
+  height: 265px;
+}
+
+.news2Article__href img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.news2Article__date {
+  color: rgb(128, 128, 128);
+  font: normal 400 14px 'Manrope', sans-serif;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.news2Article__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 16px 'Manrope', sans-serif;
+}
+
+.news2Article__item h2 {
+  line-height: 18px;
+}
+
+.news2Article__h2 {
+  color: rgb(20, 20, 20);
+  font: normal bold 20px 'Manrope', sans-serif;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+
+.newsSlider {
+  max-width: 100%;
+  width: 100%;
+  margin: 40px 0;
+}
+
+.newsSlider .slick-prev.slick-arrow {
+  text-indent: -9999999px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 200px;
+  left: -50px;
+  z-index: 999999;
+}
+
+.newsSlider .slick-prev.slick-arrow:before {
+  content: "";
+  display: block;
+  border: 3px solid #000000;
+  border-right: none;
+  border-top: none;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.newsSlider .slick-next.slick-arrow {
+  text-indent: -9999999px;
+  background: none;
+  border: none;
+  position: absolute;
+  top: 200px;
+  right: -30px;
+  z-index: 999999;
+}
+
+.newsSlider .slick-next.slick-arrow:before {
+  content: "";
+  display: block;
+  border: 3px solid #000000;
+  border-right: none;
+  border-top: none;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  transform: rotate(225deg);
+  cursor: pointer;
+}
+
+.newsSlider img {
+  max-width: 100%;
+  width: 100%;
+  height: 415px;
+  object-fit: cover;
+}
+
+.newsSlider__date {
+  color: rgb(128, 128, 128);
+  font: normal 400 14px 'Manrope', sans-serif;
+  text-align: right;
+  padding-top: 20px;
+}
+
 /*
 End news
+########*/
+
+/*
+Start 404
+#########*/
+.error {
+  max-width: 540px;
+  width: 100%;
+  margin: 100px auto 0;
+}
+
+.error__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.error__desc {
+  text-align: center;
+  color: rgb(20, 20, 20);
+  font: normal 400 16px 'Manrope', sans-serif;
+  margin-top: 20px;
+}
+
+.error__btn {
+  border: 1px solid rgb(20, 20, 20);
+  width: 215px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  color: rgb(20, 20, 20);
+  font: normal 500 16px 'Manrope', sans-serif;
+  margin: 50px auto 200px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/*
+End 404
+#######*/
+
+/*
+Start guarante
+#############*/
+.guarante {
+  max-width: 840px;
+  width: 100%;
+  margin: 45px auto 110px;
+}
+
+.guarante__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.guaranteMetis__title {
+  color: #000;
+  font: normal bold 24px 'Manrope', sans-serif;
+  text-align: center;
+  text-transform: none;
+  display: block;
+  border-bottom: 5px solid rgb(245, 245, 245);
+  padding-bottom: 15px;
+}
+
+.guaranteMetis {
+  margin-top: 80px;
+}
+
+.guaranteMetis .has-arrow::after {
+  color: #000;
+  width: 15px !important;
+  height: 15px !important;
+  right: 15em !important;
+  transform: rotate(133deg) !important;
+  top: 47% !important;
+}
+
+.guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+  right: 15em !important;
+  transform: rotate(223deg) !important;
+  top: 37% !important;
+}
+
+.guaranteMetisContent {
+  margin-top: 40px;
+}
+
+.guaranteMetisContent__title {
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.guaranteMetisContent__desc {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sezonne__title {
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sezonne p {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.sezonne {
+  margin: 0 auto 30px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.guaranteMetis > li {
+  margin-bottom: 60px;
+}
+
+/*
+End guarante
+############*/
+
+/*
+Start questionMetis
+###################*/
+.questionMetis {
+
+}
+
+.questionMetis .has-arrow::after {
+  width: 10px !important;
+  height: 10px !important;
+  right: 1em !important;
+}
+
+.questionMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+  right: 1em !important;
+}
+
+/*
+End questionMetis
+#################*/
+
+/*
+Start user
+##########*/
+.user .guarante__title {
+  max-width: 390px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.user__paragraf {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 27px;
+}
+
+.userContent {
+  margin-top: 50px;
+}
+
+/*
+End user
 ########*/
 
 /*
