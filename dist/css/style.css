@@ -4292,9 +4292,117 @@ Start order
   top: 15px;
 }
 
+.formOrder__data_addressAddress {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+  display: block;
+}
+
+.formOrder__data_addressTime {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+  display: block;
+  margin-top: 5px;
+}
+
+.formOrder__data_address:after {
+  position: relative;
+  top: 0;
+  right: -20px;
+}
+
+.formOrder__data_address:before {
+  content: "";
+  background: url('../images/icon35.svg') no-repeat center;
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.formOrder__data_addressText {
+  margin-left: 20px;
+  width: 90%;
+}
+
+.formOrder__data_address {
+  justify-content: flex-start;
+  border-bottom: 5px solid rgb(245, 245, 245);
+}
+
+.termsDelivery {
+  margin-top: 30px;
+  border-bottom: 5px solid rgb(245, 245, 245);
+  padding-bottom: 20px;
+}
+
+.termsDeliveryBlock:before {
+  content: "";
+  background: url('../images/icon36.svg') no-repeat center;
+  width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.termsDeliveryBlock__text {
+  color: rgb(128, 128, 128);
+  font: normal 500 12px 'Manrope', sans-serif;
+}
+
+.termsDeliveryBlockContent {
+  max-width: 90%;
+  width: 100%;
+  margin-left: 20px;
+}
+
+.termsDeliveryBlock {
+  margin-top: 20px;
+}
+
+.termsDeliveryBlock__text2 {
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.termsDeliveryBlockFree {
+  margin: 10px 0;
+}
+
+.termsDeliveryBlockFree__date {
+  border: 1px solid rgba(0, 0, 0, .6);
+  padding: 5px 10px;
+  color: rgb(20, 20, 20);
+  font: normal 400 14px 'Manrope', sans-serif;
+}
+
+.termsDeliveryBlockFree__free {
+  background: rgb(239, 255, 246);
+  color: rgb(39, 174, 96);
+  font: normal 400 14px 'Manrope', sans-serif;
+  padding: 5px 20px;
+  margin-left: 10px;
+}
+
+.paymentContent {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+.paymentContent li {
+  border-bottom: 1px solid rgb(245, 245, 245);
+  margin-bottom: 20px;
+}
+
+.paymentContent li:last-of-type {
+  margin-bottom: 0;
+}
+
+.paymentBlock .formOrder__title {
+  border-bottom: none;
+}
+
 /*
 End order
-##########*/
+#########*/
 
 
 /*
