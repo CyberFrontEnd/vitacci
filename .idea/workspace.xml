@@ -3821,9 +3821,13 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/status.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/status.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3877,7 +3881,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/projects/guram/vitacci/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Lessons/javascript vanilla&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/guram/lave&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -3987,7 +3991,10 @@
       <workItem from="1712082462425" duration="107000" />
       <workItem from="1712083665796" duration="19000" />
       <workItem from="1712124310182" duration="18983000" />
-      <workItem from="1712215404286" duration="5205000" />
+      <workItem from="1712215404286" duration="8451000" />
+      <workItem from="1712237222774" duration="83000" />
+      <workItem from="1712238452523" duration="1706000" />
+      <workItem from="1712299635504" duration="9339000" />
     </task>
     <servers />
   </component>

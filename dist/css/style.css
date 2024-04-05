@@ -30,6 +30,10 @@ ul {
   list-style: none;
 }
 
+button {
+  border: none !important;
+}
+
 a:hover {
   text-decoration: none !important;
 }
@@ -335,12 +339,15 @@ Start header
 }
 
 .headerMiddleRightProfileSelects__name {
-  color: #141414;
-  font: normal 500 14px 'Manrope', sans-serif;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   margin-top: 2px;
+}
+
+.headerMiddleRightProfileSelects__name span {
+  color: #141414;
+  font: normal 500 14px 'Manrope', sans-serif;
 }
 
 .headerMiddleRightProfileSelects__name:before {
@@ -3727,6 +3734,8 @@ Start order
 }
 
 .formOrderPrice__send {
+  cursor: pointer;
+  border: none;
   max-width: 100%;
   width: 100%;
   height: 50px;
@@ -4955,6 +4964,157 @@ End user
 ########*/
 
 /*
+Start status
+############*/
+.status {
+  max-width: 840px;
+  width: 100%;
+  margin: 40px auto 100px;
+}
+
+.status__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.status__desc {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+  margin-top: 40px;
+}
+
+.statusFormInput {
+  max-width: 100%;
+  width: 100%;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
+.statusFormInput input {
+  max-width: 410px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgb(20, 20, 20);
+  padding-left: 20px;
+  color: rgb(128, 128, 128);
+  font: normal 400 16px 'Manrope', sans-serif;
+  padding-right: 20px;
+}
+
+.statusFormInput input[type="text"]::-moz-placeholder {
+  color: rgb(128, 128, 128);
+  font: normal 400 16px 'Manrope', sans-serif;
+}
+
+.statusFormInput input[type="text"]::-webkit-input-placeholder {
+  color: rgb(128, 128, 128);
+  font: normal 400 16px 'Manrope', sans-serif;
+}
+
+.statusFormInput input[type="text"]:-ms-input-placeholder {
+  color: rgb(128, 128, 128);
+  font: normal 400 16px 'Manrope', sans-serif;
+}
+
+.statusForm__btn {
+  max-width: 280px;
+  width: 100%;
+  height: 50px;
+  background: rgb(20, 20, 20);
+  justify-content: center;
+  align-items: center;
+  font: normal 500 14px 'Manrope', sans-serif;
+  color: #ffffff;
+  margin-top: 40px;
+}
+
+.statusFormInput .input-container {
+  margin: 0;
+  max-width: 410px;
+  padding-left: 0;
+}
+
+.statusFormInput .flag-dropdown {
+  width: 60px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+.statusFormBottom__text {
+  color: #000;
+  font: normal 500 12px 'Manrope', sans-serif;
+}
+
+.statusFormBottom__text a {
+  color: #000;
+  font: normal 500 12px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+}
+
+.statusFormBottom {
+  margin-top: 30px;
+}
+
+.statusFormBottom .enterFormCheckbox {
+  padding: 0;
+}
+
+.contacts__title {
+  text-align: center;
+  width: 100%;
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.orderText {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 28px;
+}
+
+.contacts__name {
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+  margin-top: 30px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contactsList {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.contactsList__info a,
+.contactsList__info {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 28px;
+}
+
+
+/*
+End status
+##########*/
+.mapMobil {
+  display: none;
+}
+
+/*
 Start responsive
 ################*/
 @media (min-width: 1920px) {
@@ -4999,6 +5159,18 @@ Start responsive
 }
 
 @media (max-width: 1880px) {
+  .map iframe {
+    width: 112%;
+  }
+
+  .orderDeliver__back {
+    left: -93px;
+  }
+
+  .orderDeliver .orderLeft {
+    max-width: 47%;
+  }
+
   .catalogMain,
   .bread {
     max-width: 97%;
@@ -5191,7 +5363,47 @@ Start responsive
   }
 }
 
+@media (max-width: 1780px) {
+  .map iframe {
+    width: 105%;
+  }
+
+  .orderDeliver__back {
+    left: -4%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .orderDeliver__back {
+    left: -2%;
+  }
+
+  .map iframe {
+    width: 98%;
+  }
+
+  .orderDeliver {
+    max-width: 93%;
+  }
+
+  .orderRight {
+    max-width: 50%;
+  }
+
+  .orderDeliver .orderLeft {
+    max-width: 48%;
+  }
+
+  .map iframe {
+    width: 100%;
+  }
+}
+
 @media (max-width: 1600px) {
+  .orderDeliver .orderLeft {
+    max-width: 49%;
+  }
+
   .sliderBlockSlider .slick-slide,
   .sliderBlockSlider .slick-slide a,
   .headerBottomMenuListContent .sliderBlockSlider {
@@ -5212,6 +5424,18 @@ Start responsive
 
   .popupSizeText p {
     margin-left: 5%;
+  }
+
+  .order {
+    max-width: 96%;
+  }
+
+  .orderLeft {
+    max-width: 50%;
+  }
+
+  .orderRight {
+    max-width: 48%;
   }
 }
 
@@ -5368,6 +5592,51 @@ Start responsive
 }
 
 @media (max-width: 1270px) {
+  .deliver__title {
+    font-size: 30px;
+  }
+
+  .orderDeliver .orderLeft {
+    margin-left: 1%;
+  }
+
+  .orderDeliver__back {
+    top: 6px;
+  }
+
+  .basketBlockBodyItemLeftRight {
+    width: 55%;
+    margin-left: 10%;
+  }
+
+  .basketBlockBodyItemLeft {
+    max-width: 58%;
+    width: 100%;
+  }
+
+  .basketBlockBodyItemRight {
+    width: 42%;
+  }
+
+  .sliderBlockSliderTopHeart {
+    margin-right: 1%;
+  }
+
+  .basketBlockBodyItemRightBottom {
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .basketBlockBodyItemLeft__href {
+    width: 35%;
+  }
+
+
+  .orderLeft__title {
+    font-size: 30px;
+  }
+
   .itemLeft__play {
     top: 33%;
   }
@@ -5387,6 +5656,14 @@ Start responsive
 }
 
 @media (max-width: 1130px) {
+  .orderDeliver .orderLeft {
+    max-width: 47%;
+  }
+
+  .orderDeliverTab .etabs li a {
+    font-size: 20px;
+  }
+
   .popupSizeBodySizeTab .etabs li a {
     width: 75px;
   }
@@ -5516,9 +5793,39 @@ Start responsive
   .itemLeft__item {
     height: 450px;
   }
+
+  .orderLeft {
+    max-width: 48%;
+  }
+
+  .orderRight {
+    max-width: 50%;
+    padding-left: 2%;
+  }
+
+  .orderRight .basketBlockBodyItem {
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 1050px) {
+  .orderDeliver .orderLeft {
+    max-width: 43%;
+  }
+
+  .orderRight {
+    max-width: 48%;
+  }
+
+  .orderDeliverTabCheckbox .blockCheckbox {
+    margin-top: 6px;
+    margin-right: 3%;
+  }
+
+  .blockCheckbox__title {
+    font-size: 13px;
+  }
+
   .popupSizeBodySizeTabTables {
     max-width: 90%;
     margin: 10px auto;
@@ -5572,6 +5879,14 @@ Start responsive
 }
 
 @media (max-width: 970px) {
+  .orderLeft {
+    max-width: 45%;
+  }
+
+  .orderRight {
+    max-width: 53%;
+  }
+
   .popupSizeText p {
     max-width: 400px;
     font-size: 14px;
@@ -5966,9 +6281,59 @@ Start responsive
   .favorite__title {
     font-size: 30px;
   }
+
+  .orderLeft__title {
+    font-size: 25px;
+  }
+
+  .orderLeft {
+    max-width: 50%;
+  }
+
+  .orderRight {
+    max-width: 57%;
+  }
+
+  .basketBlockBodyItemLeftRight {
+    width: 60%;
+    margin-left: 5%;
+  }
+
+  .basketBlockBodyItemLeft {
+    max-width: 55%;
+  }
+
+  .basketBlockBodyItemRight {
+    width: 45%;
+  }
+
+  .orderRight {
+    max-width: 46%;
+  }
+
+  .deliver__title {
+    font-size: 25px;
+  }
+
+  .orderDeliver .orderLeft {
+    margin-left: 5%;
+    max-width: 46%;
+  }
 }
 
 @media (max-width: 810px) {
+  .orderLeft {
+    max-width: 100%;
+  }
+
+  .formOrder__data_address:after {
+    right: 0;
+  }
+
+  .formOrder__data_addressText {
+    width: 70%;
+  }
+
   .popupSizeText p {
     display: none;
   }
@@ -5985,9 +6350,66 @@ Start responsive
   .popupSizeBodySizeTabTables {
     max-width: 90%;
   }
+
+  .orderDeliver .orderLeft {
+    max-width: 95%;
+    margin-left: 2%;
+  }
+
+  .mapMobil {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .mapMobil iframe {
+    height: 300px;
+  }
+
+  .orderDeliver__back {
+    background: url('../images/icon37.svg') no-repeat center;
+    margin-left: 3%;
+    top: -6px;
+  }
+
+  .orderRight {
+    display: none;
+  }
+
+  .deliver__title {
+    margin-left: 3%;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+  .orderDeliverTab__title {
+    font-size: 16px;
+  }
+
+  .deliverFormBlock__title {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 780px) {
+  .formOrder__data_address {
+    position: relative;
+  }
+
+  .formOrder__data_address:after {
+    position: absolute;
+    right: 0;
+    top: 50px;
+  }
+
+  .orderRight {
+    display: none;
+  }
+
+  .orderLeft {
+    max-width: 100%;
+  }
+
   .itemLeftThree {
     margin-bottom: 0;
   }
@@ -6362,9 +6784,54 @@ Start responsive
   .itemLeft__play {
     top: 30%;
   }
+
+  .deliverFormBlock {
+    margin-top: 0;
+  }
+
+  #pickup .orderDeliverTab__title {
+    margin-top: 10px;
+    background: url('../images/icon37.svg') no-repeat 0 4px;
+    padding: 1px 0 10px 25px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+  }
+
+  .input-container input {
+    font-size: 13px;
+    height: 30px;
+  }
+
+  .input-container input:focus + label, .input-container input:not(:placeholder-shown) + label {
+    top: 6px;
+  }
+
+  .pickupSearch__text {
+    font-size: 12px;
+  }
+
+  .pickupSearchRadio__title {
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 690px) {
+  .orderLeft__title {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .formOrderTop__title {
+    font-size: 14px;
+  }
+
+  .formOrderTop__href {
+    font-size: 12px;
+  }
+
+  .formOrder__data {
+    font-size: 13px;
+  }
+
   .favorite__title {
     font-size: 20px;
     margin-bottom: 20px;
@@ -6902,6 +7369,32 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .orderDeliverTab .etabs li a {
+    font-size: 14px;
+    height: 40px;
+  }
+
+  .blockCheckbox__title {
+    font-size: 12px;
+  }
+
+  .orderDeliverTabCheckbox .blockCheckbox {
+    height: 30px;
+    padding: 0 5px;
+  }
+
+  .deliver__title {
+    margin-left: 7%;
+  }
+
+  .deliverForm .input-container {
+    margin: 15px auto 0;
+  }
+
+  .deliverFormBlockCity {
+    margin-bottom: 20px;
+  }
+
   .popupSizeBodySizeTab .etabs li a {
     width: 60px;
     height: 30px;

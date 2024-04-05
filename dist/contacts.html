@@ -4,16 +4,16 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="Пользовательское соглашение - изменения получателя" name="description">
-    <meta content="Гарантия и уход, оплаты, изменения получателя" name="keywords">
+    <meta content="Контакты" name="description">
+    <meta content="Контакты" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
     <link href="css/fonts.css" rel="stylesheet">
     <link href="css/slick.css" rel="stylesheet">
     <link href="css/metis.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
 
-    <title>Статус доставки</title>
+
+    <title>Контакты</title>
 </head>
 <body>
 
@@ -974,7 +974,7 @@
                     <div class="select-selected">Москва</div>
 
                     <div class="select-items">
-                        <form action="#" class="select-itemsForm">
+                        <form action="" class="select-itemsForm">
                             <input placeholder="Поиск" type="text">
                             <button type="button" class="select-itemsForm__clear"></button>
                         </form>
@@ -1688,42 +1688,50 @@
 </div>
 <!--End basketBlock-->
 
-<!--Start status-->
-<section class="status">
-    <h1 class="status__title">Статус доставки</h1>
-    <p class="status__desc">Проверте статус доставки по номеру вашего заказа. Номер заказа вы можете найти в письме, которое вы получили по электронной почте, SMS-подтверждении
-        заказа и в личном
-        кабинете.</p>
+<!--Start order-->
+<section class="order orderDeliver contacts flex">
+    <h1 class="contacts__title">Контакты</h1>
 
-    <form action="#" class="statusForm">
-        <div class="statusFormInput flex">
-            <input placeholder="MS-123456" type="text">
+    <div class="orderLeft">
+        <p class="orderText">Одной из ключевых задач менеджеров Интернет-магазина является предоставление оперативной поддержки покупателя на протяжении всего процесса совершения
+            покупки. Они готовы помочь Вам начиная от момента оформления заказа на сайте и до его окончательного выполнения. Важно отметить, что менеджеры поддерживают постоянную
+            связь с покупателем, будь то по телефону или электронной почте, и информируют его о любых изменениях или отклонениях в ходе исполнения заказа. Если у вас возникли
+            вопросы или проблемы, связанные сработой Интернет-магазина, вы всегда можете обратиться к нам по следующим контактным данным:</p>
 
-            <div class="input-container">
-                <input type="text" class="phone_mask">
-            </div>
+        <b class="contacts__name">Телефоны:</b>
+        <ul class="contactsList">
+            <li>
+                <p class="contactsList__info">Единая справочная служба: <a href="tel:8 495 236-88-99">8 495 236-88-99</a> (ежедневно с 09:00 до 18:00)</p>
+            </li>
+
+            <li>
+                <p class="contactsList__info">Телефоны Интернет-магазина: <a href="tel:8 495 236-88-99">8 495 236-88-99</a></p>
+            </li>
+        </ul>
+
+        <b class="contacts__name">Электронная почта:</b>
+        <ul>
+            <li>
+                <p class="contactsList__info">Менеджеры Интернет-магазина готовы ответить на ваши письма и вопросы. Для связи по электронной почте используйте адрес: <a href="mailto:shop@vitacci.ru">shop@vitacci.ru.</a> Мы
+                    стараемся отвечать на все письма в течение текущего или следующего рабочего дня.</p>
+            </li>
+        </ul>
+
+        <p class="contactsList__info">Наша команда менеджеров готова предоставить вам необходимую помощь и ответить на все ваши вопросы. Мы уделяем особое внимание качеству обслуживания покупателей,
+            поэтому не стесняйтесь обращаться к нам, если у вас возникнут любые вопросы или затруднения. Мы делаем все возможное, чтобы ваше покупательское испытание в нашем Интернет-магазине было приятным и безопасным.</p>
+    </div>
+
+    <div class="orderRight">
+        <div class="map">
+            <iframe
+                frameborder="0"
+                height="780"
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3Af17efa7935e64471df8c455be2eb6709223a57bad7f0a1ca965e7d222217cbe4&amp;source=constructor"
+                width="900"></iframe>
         </div>
-        
-        
-        <div class="statusFormBottom">
-            <div class="enterFormCheckbox">
-                <label class="blockCheckbox">
-                    <span class="enterFormCheckbox__title">Я соглашаюсь на <a href="#" target="_blank">Обработку персональных данных</a> в соответствии с <a href="user.html" target="_blank">Политикой
-                        конфиденциальности</a></span>
-
-                    <input type="checkbox" name="" tabindex="0">
-                    <span class="checkmark heart"></span>
-                </label>
-            </div>
-
-            <div class="statusFormBottom__text">
-                <a href="#">Войдите</a> в ваш аккаунт с помощью логина и пароля, чтобы получить доступ к полной истории заказов и вашему избранному.</div>
-        </div>
-
-        <a href="#" class="statusForm__btn flex">Проверить статус</a>
-    </form>
+    </div>
 </section>
-<!--End status-->
+<!--End order-->
 
 <!--Start footer-->
 <footer class="footer">
@@ -2009,9 +2017,6 @@
 <script src="js/slick.js"></script>
 <script src="js/slickSetting.js"></script>
 <script src="js/metis.js"></script>
-<script src="js/migrate.js"></script>
-<script src="js/intlTelInput.js"></script>
-<script src="js/intlTelInputSetting.js"></script>
 <script src="js/script.js"></script>
 
 </body>
