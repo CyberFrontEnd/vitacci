@@ -5351,6 +5351,8 @@ Start status
 }
 
 .statusForm__btn {
+  cursor: pointer;
+  border: none;
   max-width: 280px;
   width: 100%;
   height: 50px;
@@ -5446,6 +5448,90 @@ End status
 .mapMobil {
   display: none;
 }
+
+.menuMobil {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+.menuMobil__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 16px 'Manrope', sans-serif;
+  margin-bottom: 10px;
+}
+
+.menuMobilSelect {
+  max-width: 100%;
+  width: 100%;
+  border: 1px solid rgb(20, 20, 20);
+  height: 40px;
+  color: rgb(20, 20, 20);
+  font: normal bold 16px 'Manrope', sans-serif;
+  padding: 10px;
+  line-height: 1em;
+  position: relative;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.menuMobilSelect:before {
+  content: "";
+  display: block;
+  border: 3px solid rgb(20, 20, 20);
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg);
+}
+
+.menuMobilSelectContent {
+  border: 1px solid rgb(20, 20, 20);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  padding: 20px;
+  margin-top: 20px;
+  position: absolute;
+  width: 95%;
+  background: #ffffff;
+  display: none;
+  z-index: 99999;
+}
+
+.menuMobilSelectContent li {
+  margin-bottom: 20px;
+}
+
+.menuMobilSelectContent li:last-of-type {
+  margin-bottom: 0;
+}
+
+.menuMobilSelectContent li a {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.menuMobilSelectContent li a span {
+  color: rgb(128, 128, 128);
+  font: normal bold 16px 'Manrope', sans-serif;
+}
+
+.menuMobilSelectContent li a:hover span {
+  color: rgb(20, 20, 20);
+  border-bottom: 1px solid;
+}
+
+.menuMobil {
+  display: none;
+}
+
 
 
 /*
@@ -6147,6 +6233,14 @@ Start responsive
 }
 
 @media (max-width: 1050px) {
+  .news2 {
+    max-width: 80%;
+  }
+
+  .news__title {
+    font-size: 30px;
+  }
+
   .formOrder__data_addressText {
     margin-left: 4%;
     width: 80%;
@@ -6239,6 +6333,20 @@ Start responsive
 }
 
 @media (max-width: 970px) {
+  .brandsImg {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .brandsIn {
+    max-width: 90%;
+  }
+
+  .brands__desc {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .orderLeft {
     max-width: 45%;
   }
@@ -6391,6 +6499,85 @@ Start responsive
 }
 
 @media (max-width: 880px) {
+  .status,
+  .guarante {
+    max-width: 90%;
+  }
+
+  .guaranteMetis__title {
+    font-size: 18px;
+  }
+
+  .guarante__title {
+    font-size: 30px;
+  }
+
+  .guaranteMetis .has-arrow::after {
+    width: 10px !important;
+    height: 10px !important;
+  }
+
+  .guaranteMetisContent__title {
+    font-size: 13px;
+  }
+
+  .guaranteMetisContent__desc {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 15em !important;
+  }
+
+  .guaranteMetis {
+    margin-top: 40px;
+  }
+
+  .news {
+    max-width: 95%;
+  }
+
+  .newsBlock__img {
+    max-width: 48%;
+  }
+
+  .newsBlockRight h2 {
+    line-height: 1em;
+  }
+
+  .newsBlockRight__desc {
+    font-size: 13px;
+  }
+
+  .newsBlock__img img {
+    height: 200px;
+  }
+
+  .newsBlockRight {
+    height: 200px;
+  }
+
+  .newsBlock {
+    height: 230px;
+  }
+
+  .newsBlockRight__title {
+    font-size: 16px;
+  }
+
+  .newsBlockRight {
+    max-width: 48%;
+  }
+
+  .payment__title {
+    font-size: 30px;
+  }
+
+  .paymentDesc__desc2, .paymentDesc__desc {
+    padding: 0 20px;
+  }
+
   .headerMiddleRightProfileSelectsIn {
     top: 105px;
     right: 13px;
@@ -6683,6 +6870,14 @@ Start responsive
   .termsDeliveryBlockContent {
     max-width: 88%;
   }
+
+  .statusFormInput > input {
+    max-width: 48%;
+  }
+
+  .statusFormInput .input-container {
+    max-width: 48%;
+  }
 }
 
 @media (max-width: 810px) {
@@ -6756,6 +6951,60 @@ Start responsive
 }
 
 @media (max-width: 780px) {
+  .guaranteMetis .has-arrow::after {
+    top: 43% !important;
+    right: 10em !important;
+  }
+
+  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 10em !important;
+  }
+
+  .newsSlider .slick-next.slick-arrow {
+    top: 145px;
+    right: -20px;
+  }
+
+  .newsSlider .slick-prev.slick-arrow {
+    top: 145px;
+    left: -25px;
+  }
+
+  .news2Description p {
+    line-height: 20px;
+    font-size: 14px;
+  }
+
+  .news__title {
+    font-size: 25px;
+  }
+
+  .news2Article__item {
+    max-width: 31%;
+    margin-right: 3%;
+  }
+
+  .news2Article__item h2 {
+    line-height: 0;
+  }
+
+  .news2Article__title {
+    font-size: 13px;
+  }
+
+  .news2Article__date {
+    font-size: 12px;
+  }
+
+  .news2Article__href {
+    display: block;
+    height: auto;
+  }
+
+  .news2Article__h2 {
+    margin-top: 20px;
+  }
+
   .formOrder__data_address {
     position: relative;
   }
@@ -7176,9 +7425,70 @@ Start responsive
   .pickupSearchRadio__title {
     margin-bottom: 0;
   }
+
+  .statusFormInput input {
+    height: 50px;
+  }
 }
 
 @media (max-width: 690px) {
+  .guarante__title {
+    display: none;
+  }
+
+  .news2 {
+    max-width: 86%;
+  }
+
+  .news .menuMobil {
+    max-width: 100%;
+  }
+
+  .newsTopHref__href {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .newsBlockRight h2 {
+    line-height: 0;
+  }
+
+  .newsBlockRight__title {
+    line-height: 20px;
+  }
+
+  .newsTopHrefBottom__date,
+  .newsTopHrefBottom__href,
+  .newsTopHref__desc {
+    font-size: 13px;
+  }
+
+  .menuMobil {
+    display: block;
+  }
+
+  .guarante .menuMobil {
+    max-width: 100%;
+  }
+
+  .user__paragraf {
+    font-size: 13px;
+    line-height: 22px;
+  }
+
+  .userContent {
+    margin-top: 30px;
+  }
+
+  .brands__title,
+  .payment__title {
+    display: none;
+  }
+
+  .brandsImg {
+    height: 220px;
+  }
+
   .orderLeft__title {
     font-weight: normal;
     font-size: 14px;
@@ -7645,9 +7955,56 @@ Start responsive
   .catalogContent .metismenu > li > a > span {
     font-size: 16px;
   }
+
+  .statusFormInput {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .statusFormInput > input {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .status__desc {
+    font-size: 13px;
+    margin-top: 20px;
+  }
+
+  .statusFormInput {
+    margin-top: 20px;
+  }
+
+  .statusFormInput .input-container {
+    max-width: 300px;
+  }
+
+  .statusFormBottom__text a,
+  .enterFormCheckbox__title a,
+  .enterFormCheckbox__title,
+  .statusFormBottom__text {
+    font-size: 10px;
+  }
+
+  .status__title {
+    display: none;
+  }
+
+  .status .menuMobil {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 620px) {
+  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after,
+  .guaranteMetis .has-arrow::after {
+    right: 6em !important;
+  }
+
+  .newsSlider .slick-next.slick-arrow {
+    right: -9px;
+  }
+
   .footerBottomMobilTop .footerTopMailing {
     margin-right: 0;
     max-width: 250px;
@@ -7733,6 +8090,58 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .guaranteMetisContent__title {
+    font-size: 13px;
+  }
+
+  .guaranteMetis {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after,
+  .guaranteMetis .has-arrow::after {
+    right: 2em !important;
+  }
+
+  .error__title {
+    font-size: 20px;
+  }
+
+  .error__desc {
+    font-size: 13px;
+    padding: 0 20px;
+  }
+
+  .error__btn {
+    background: rgb(20, 20, 20);
+    color: #ffffff;
+    height: 50px;
+    font-size: 12px;
+  }
+
+  .news2Article__item {
+    max-width: 47%;
+  }
+
+  .brands__desc {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .brandsImg {
+    height: 110px;
+  }
+
+  .payment__title {
+    display: none;
+  }
+
+  .paymentDesc__desc2, .paymentDesc__desc {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
   .orderDeliverTab .etabs li a {
     font-size: 14px;
     height: 40px;
@@ -8344,6 +8753,29 @@ Start responsive
 }
 
 @media (max-width: 440px) {
+  .guaranteMetis__title {
+    font-size: 16px;
+  }
+
+  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after, .guaranteMetis .has-arrow::after {
+    right: 0 !important;
+  }
+
+  .newsBlock__img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .newsBlockRight {
+    max-width: 100%;
+    margin-top: 20px;
+    height: 130px;
+  }
+
+  .newsBlock {
+    height: auto;
+  }
+
   .itemRightBlock {
     margin-top: 10px;
   }
@@ -8386,6 +8818,41 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .news__title {
+    font-size: 20px;
+  }
+
+  .slick-slide img {
+    height: 200px;
+  }
+
+  .newsSlider .slick-next.slick-arrow {
+    top: 102px;
+    right: -2px;
+  }
+
+  .newsSlider .slick-prev.slick-arrow {
+    top: 102px;
+    left: -15px;
+  }
+
+  .newsSlider {
+    margin: 20px auto;
+  }
+
+  .news2Article__item {
+    max-width: 100%;
+  }
+
+  .news2Article__href {
+    max-width: 100%;
+  }
+
+  .news2Article__href img {
+    width: 100%;
+    display: block;
+  }
+
   .mobilSlider .sliderBlockSlider .slick-slide img,
   .mobilSlider .itemLeft__video,
   .mobilSlider .sliderBlockSlider {

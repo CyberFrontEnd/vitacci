@@ -241,4 +241,16 @@ $(document).ready(function () {
     $('body').removeClass('hide');
     $('.bgClick').removeClass('active');
   });
+
+  // Start menuMobilSelect
+  $('.menuMobilSelect').on('click', function () {
+    $('.menuMobilSelectContent').slideToggle();
+  });
+
+  $(document).click(function (e) {
+    let container = $(".menuMobilSelect");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      $(".menuMobilSelectContent").slideUp();
+    }
+  });
 });
