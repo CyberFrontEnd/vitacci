@@ -3821,13 +3821,17 @@
       <change afterPath="$PROJECT_DIR$/../einer/reliz/style30,08,2023.rar" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gulpfile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/status.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/status.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order5.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order5.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -3870,29 +3874,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;JavaScript Debug.list.html.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/projects/guram/vitacci/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/guram/lave&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editing.templates&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript Debug.list.html.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "true",
+    "git-widget-placeholder": "master",
+    "js.buildTools.gulp.gulp_package_dir": "C:/projects/guram/vitacci/node_modules/gulp",
+    "last_opened_file_path": "C:/jsprojects",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "editing.templates",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\user\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8589d281-8743-4497-b505-50cb7c858e3d" reportId="vitacci/qodana/2024-04-02" />
@@ -3995,6 +3999,9 @@
       <workItem from="1712237222774" duration="83000" />
       <workItem from="1712238452523" duration="1706000" />
       <workItem from="1712299635504" duration="9339000" />
+      <workItem from="1712324495922" duration="119000" />
+      <workItem from="1712382943079" duration="785000" />
+      <workItem from="1712391033173" duration="3494000" />
     </task>
     <servers />
   </component>

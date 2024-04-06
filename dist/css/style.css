@@ -1,3 +1,336 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Bold.eot');
+  src: url('../fonts/Manrope-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-Bold.woff2') format('woff2'),
+  url('../fonts/Manrope-Bold.woff') format('woff'),
+  url('../fonts/Manrope-Bold.ttf') format('truetype'),
+  url('../fonts/Manrope-Bold.svg#Manrope-Bold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-ExtraBold.eot');
+  src: url('../fonts/Manrope-ExtraBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-ExtraBold.woff2') format('woff2'),
+  url('../fonts/Manrope-ExtraBold.woff') format('woff'),
+  url('../fonts/Manrope-ExtraBold.ttf') format('truetype'),
+  url('../fonts/Manrope-ExtraBold.svg#Manrope-ExtraBold') format('svg');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-SemiBold.eot');
+  src: url('../fonts/Manrope-SemiBold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-SemiBold.woff2') format('woff2'),
+  url('../fonts/Manrope-SemiBold.woff') format('woff'),
+  url('../fonts/Manrope-SemiBold.ttf') format('truetype'),
+  url('../fonts/Manrope-SemiBold.svg#Manrope-SemiBold') format('svg');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-ExtraLight.eot');
+  src: url('../fonts/Manrope-ExtraLight.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-ExtraLight.woff2') format('woff2'),
+  url('../fonts/Manrope-ExtraLight.woff') format('woff'),
+  url('../fonts/Manrope-ExtraLight.ttf') format('truetype'),
+  url('../fonts/Manrope-ExtraLight.svg#Manrope-ExtraLight') format('svg');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Light.eot');
+  src: url('../fonts/Manrope-Light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-Light.woff2') format('woff2'),
+  url('../fonts/Manrope-Light.woff') format('woff'),
+  url('../fonts/Manrope-Light.ttf') format('truetype'),
+  url('../fonts/Manrope-Light.svg#Manrope-Light') format('svg');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Medium.eot');
+  src: url('../fonts/Manrope-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-Medium.woff2') format('woff2'),
+  url('../fonts/Manrope-Medium.woff') format('woff'),
+  url('../fonts/Manrope-Medium.ttf') format('truetype'),
+  url('../fonts/Manrope-Medium.svg#Manrope-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Regular.eot');
+  src: url('../fonts/Manrope-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Manrope-Regular.woff2') format('woff2'),
+  url('../fonts/Manrope-Regular.woff') format('woff'),
+  url('../fonts/Manrope-Regular.ttf') format('truetype'),
+  url('../fonts/Manrope-Regular.svg#Manrope-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/*!
+* metismenu https://github.com/onokumus/metismenu#readme
+* A collapsible jQuery menu plugin
+* @version 3.0.6
+* @author Osman Nuri Okumus <onokumus@gmail.com> (https://github.com/onokumus)
+* @license: MIT
+*/
+.metismenu .arrow {
+  float: right;
+  line-height: 1.42857
+}
+
+*[dir=rtl] .metismenu .arrow {
+  float: left
+}
+
+.metismenu .glyphicon.arrow:before {
+  content: ""
+}
+
+.metismenu .mm-active > a > .glyphicon.arrow:before {
+  content: ""
+}
+
+.metismenu .fa.arrow:before {
+  content: ""
+}
+
+.metismenu .mm-active > a > .fa.arrow:before {
+  content: ""
+}
+
+.metismenu .ion.arrow:before {
+  content: ""
+}
+
+.metismenu .mm-active > a > .ion.arrow:before {
+  content: ""
+}
+
+.metismenu .plus-times {
+  float: right
+}
+
+*[dir=rtl] .metismenu .plus-times {
+  float: left
+}
+
+.metismenu .fa.plus-times:before {
+  content: ""
+}
+
+.metismenu .mm-active > a > .fa.plus-times {
+  transform: rotate(45deg)
+}
+
+.metismenu .plus-minus {
+  float: right
+}
+
+*[dir=rtl] .metismenu .plus-minus {
+  float: left
+}
+
+.metismenu .fa.plus-minus:before {
+  content: ""
+}
+
+.metismenu .mm-active > a > .fa.plus-minus:before {
+  content: ""
+}
+
+.metismenu .mm-collapse:not(.mm-show) {
+  display: none
+}
+
+.metismenu .mm-collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition-timing-function: ease;
+  transition-duration: .35s;
+  transition-property: height, visibility
+}
+
+.metismenu .has-arrow {
+  position: relative
+}
+
+.metismenu .has-arrow::after {
+  position: absolute;
+  content: "";
+  width: .5em;
+  height: .5em;
+  border-width: 1px 0 0 1px;
+  border-style: solid;
+  border-color: initial;
+  right: 1em;
+  transform: rotate(-45deg) translate(0, -50%);
+  transform-origin: top;
+  top: 50%;
+  transition: all .3s ease-out
+}
+
+*[dir=rtl] .metismenu .has-arrow::after {
+  right: auto;
+  left: 1em;
+  transform: rotate(135deg) translate(0, -50%)
+}
+
+.metismenu .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
+  transform: rotate(-135deg) translate(0, -50%)
+}
+
+*[dir=rtl] .metismenu .mm-active > .has-arrow::after, *[dir=rtl] .metismenu .has-arrow[aria-expanded=true]::after {
+  transform: rotate(225deg) translate(0, -50%)
+}
+
+/*# sourceMappingURL=metisMenu.min.css.map */
+
+
+/* Slider */
+.slick-slider {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+
+  display: block;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before,
+.slick-track:after {
+  display: table;
+
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+
+  height: auto;
+
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+
+/*
+Start castom css
+#################*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5114,6 +5447,7 @@ End status
   display: none;
 }
 
+
 /*
 Start responsive
 ################*/
@@ -5592,6 +5926,10 @@ Start responsive
 }
 
 @media (max-width: 1270px) {
+  .formOrder__data_address:after {
+    right: 0;
+  }
+
   .deliver__title {
     font-size: 30px;
   }
@@ -5809,6 +6147,28 @@ Start responsive
 }
 
 @media (max-width: 1050px) {
+  .formOrder__data_addressText {
+    margin-left: 4%;
+    width: 80%;
+  }
+
+  .orderLeft {
+    max-width: 50%;
+  }
+
+  .formOrder__data_address {
+    position: relative;
+  }
+
+  .formOrder__data_address:after {
+    position: absolute;
+    top: 50px;
+  }
+
+  .termsDeliveryBlockContent {
+    margin-left: 4%;
+  }
+
   .orderDeliver .orderLeft {
     max-width: 43%;
   }
@@ -6287,7 +6647,7 @@ Start responsive
   }
 
   .orderLeft {
-    max-width: 50%;
+    max-width: 43%;
   }
 
   .orderRight {
@@ -6307,17 +6667,21 @@ Start responsive
     width: 45%;
   }
 
-  .orderRight {
-    max-width: 46%;
-  }
-
   .deliver__title {
     font-size: 25px;
+  }
+
+  .orderLeft {
+    max-width: 39%;
   }
 
   .orderDeliver .orderLeft {
     margin-left: 5%;
     max-width: 46%;
+  }
+
+  .termsDeliveryBlockContent {
+    max-width: 88%;
   }
 }
 
