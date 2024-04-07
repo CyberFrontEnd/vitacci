@@ -5533,7 +5533,6 @@ End status
 }
 
 
-
 /*
 Start responsive
 ################*/
@@ -6080,6 +6079,11 @@ Start responsive
 }
 
 @media (max-width: 1130px) {
+  .orderText {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
   .orderDeliver .orderLeft {
     max-width: 47%;
   }
@@ -6233,6 +6237,17 @@ Start responsive
 }
 
 @media (max-width: 1050px) {
+  .orderText {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  .contactsList__info a,
+  .contactsList__info {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
   .news2 {
     max-width: 80%;
   }
@@ -6499,6 +6514,10 @@ Start responsive
 }
 
 @media (max-width: 880px) {
+  .contacts__title {
+    font-size: 30px;
+  }
+
   .status,
   .guarante {
     max-width: 90%;
@@ -6877,6 +6896,20 @@ Start responsive
 
   .statusFormInput .input-container {
     max-width: 48%;
+  }
+
+  .contacts .orderLeft {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contacts .orderRight {
+    margin-top: 20px;
+    max-width: 100%;
+  }
+
+  .contacts .map iframe {
+    height: 490px;
   }
 }
 
@@ -7992,6 +8025,22 @@ Start responsive
 
   .status .menuMobil {
     max-width: 100%;
+  }
+
+  .contacts .contacts__title {
+    display: none;
+  }
+
+  .contacts .orderRight {
+    display: block;
+  }
+
+  .contacts .map iframe {
+    height: 300px;
+  }
+
+  .contacts__name {
+    font-size: 14px;
   }
 }
 

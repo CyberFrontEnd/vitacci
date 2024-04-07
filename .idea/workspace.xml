@@ -3822,20 +3822,8 @@
       <change afterPath="$PROJECT_DIR$/../einer/search.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../einer/shipping.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/Gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/breand.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/breand.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/guarante.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/guarante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/status.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -4006,7 +3994,8 @@
       <workItem from="1712324495922" duration="119000" />
       <workItem from="1712382943079" duration="785000" />
       <workItem from="1712391033173" duration="3494000" />
-      <workItem from="1712398377772" duration="12603000" />
+      <workItem from="1712398377772" duration="13437000" />
+      <workItem from="1712489365966" duration="2780000" />
     </task>
     <servers />
   </component>
