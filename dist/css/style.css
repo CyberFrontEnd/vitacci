@@ -5532,6 +5532,66 @@ End status
   display: none;
 }
 
+.arrangeListNum {
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.arrangeListNum li span {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+}
+
+.arrangeListNum li span span {
+  font-weight: bold;
+}
+
+.arrangeListDisc {
+  list-style: disc;
+  margin-left: 20px;
+  font-size: 10px;
+  margin-bottom: 15px;
+}
+
+.arrangeListNum li img {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.refundContent {
+  margin-top: 40px;
+}
+
+.refund__text {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+  margin-top: 20px;
+  line-height: 27px;
+}
+
+.refundUl {
+  list-style: disc;
+  font-size: 10px;
+  margin-left: 30px;
+}
+
+.refundUl li span {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+  line-height: 27px;
+}
+
+.refund__name {
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+}
+
+.refundUl li a {
+  color: #000;
+  font: normal normal 14px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+
+}
 
 /*
 Start responsive
