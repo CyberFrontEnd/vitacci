@@ -7085,6 +7085,10 @@ Start responsive
 }
 
 @media (max-width: 780px) {
+  .arrangeListNum li span {
+    font-size: 13px;
+  }
+
   .guaranteMetis .has-arrow::after {
     top: 43% !important;
     right: 10em !important;
@@ -7566,6 +7570,28 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .menuMobilSelectContent {
+    width: 90%;
+  }
+
+  .refund__name {
+    font-size: 14px;
+  }
+
+  .refundContent b {
+    font-size: 13px;
+  }
+
+  .refundUl li span,
+  .refund__text {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .arrangeListNum {
+    margin-top: 0;
+  }
+
   .guarante__title {
     display: none;
   }
