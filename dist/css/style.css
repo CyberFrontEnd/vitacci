@@ -5600,6 +5600,7 @@ End status
   max-width: 100%;
   width: 100%;
   justify-content: center;
+  margin-bottom: 40px;
 }
 
 .lookBookTab .etabs li a {
@@ -5617,6 +5618,18 @@ End status
   right: 0;
 }
 
+.lookBookTab .etabs li:first-of-type a:before {
+  content: "";
+  height: 55px;
+  width: 220px;
+  display: block;
+  position: absolute;
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.752) 52.5%, rgba(255, 255, 255, 0.3) 100%);
+  right: auto;
+  left: 0;
+  transform: rotate(-180deg);
+}
+
 .lookBookTab .etabs li {
   margin-left: 30px;
   position: relative;
@@ -5631,7 +5644,7 @@ End status
 }
 
 .lookBookTab .etabs li.active:last-of-type {
-  margin-right: 250px;
+  margin-right: 180px;
 }
 
 .programm__title {
@@ -5720,7 +5733,39 @@ End status
   margin-bottom: 10px;
 }
 
+.size {
+  max-width: 840px;
+  width: 100%;
+  margin: 40px auto 0;
+}
 
+.size__title {
+  text-align: center;
+  color: #141414;
+  font: normal bold 40px 'Manrope', sans-serif;
+}
+
+.size__paragraf {
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  line-height: 27px;
+}
+
+.size__paragraf b {
+  color: #000;
+  font: normal 700 16px 'Manrope', sans-serif;
+}
+
+.size__h4 {
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+  margin: 20px 0;
+}
+
+.sizeImg {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
 
 /*
 Start responsive
