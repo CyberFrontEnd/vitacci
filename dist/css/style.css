@@ -5634,6 +5634,92 @@ End status
   margin-right: 250px;
 }
 
+.programm__title {
+  text-transform: uppercase;
+  color: #000;
+  font: normal bold 16px 'Manrope', sans-serif;
+  margin-top: 20px;
+}
+
+.programmList {
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.programmList > li {
+  max-width: 110px;
+  width: 100%;
+}
+
+.programmList__title {
+  text-transform: uppercase;
+  color: #000;
+  font: normal bold 20px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.programmList__paragraf {
+  text-align: center;
+  color: #000;
+  font: normal 400 16px 'Manrope', sans-serif;
+  padding-top: 30px;
+  line-height: 30px;
+}
+
+.programmList > li:last-of-type {
+  max-width: 180px;
+}
+
+.programmList2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.programmList2 li {
+  margin-bottom: 10px;
+}
+
+.programmList2 li span {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+}
+
+.programmList > li.programmListCenter {
+  max-width: 550px;
+  width: 100%;
+  text-align: center;
+}
+
+.programmListCenterIn li span {
+  color: #000;
+  font: normal normal 16px 'Manrope', sans-serif;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.programmListCenterIn {
+  margin-top: 30px;
+}
+
+.programmListCenterIn li {
+  margin-bottom: 10px;
+}
+
 /*
 Start responsive
 ################*/
@@ -6615,6 +6701,33 @@ Start responsive
 }
 
 @media (max-width: 880px) {
+  .programmList > li.programmListCenter {
+    max-width: 56%;
+  }
+
+  .programmList > li:last-of-type {
+    max-width: 29%;
+  }
+
+  .programmList > li {
+    max-width: 15%;
+  }
+
+  .programmList__title {
+    font-size: 18px;
+  }
+
+  .refund__text,
+  .programmList__paragraf,
+  .programmList2 li span,
+  .programmListCenterIn li span {
+    font-size: 14px;
+  }
+
+  .refund__text {
+    line-height: 24px;
+  }
+
   .contacts__title {
     font-size: 30px;
   }
@@ -7570,6 +7683,14 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .programm__title {
+    font-size: 14px;
+  }
+
+  .programmList {
+    display: none;
+  }
+
   .menuMobilSelectContent {
     width: 90%;
   }
@@ -8266,6 +8387,10 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .programm {
+    margin-top: 0;
+  }
+
   .guaranteMetisContent__title {
     font-size: 13px;
   }
