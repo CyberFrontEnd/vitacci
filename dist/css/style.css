@@ -5590,7 +5590,48 @@ End status
   color: #000;
   font: normal normal 14px 'Manrope', sans-serif;
   border-bottom: 1px solid;
+}
 
+.lookBookTab {
+  margin-top: 40px;
+}
+
+.lookBookTab .etabs {
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+}
+
+.lookBookTab .etabs li a {
+  color: #141414;
+  font: normal bold 40px 'Manrope', sans-serif;
+}
+
+.lookBookTab .etabs li:last-of-type a:before {
+  content: "";
+  height: 50px;
+  width: 220px;
+  display: block;
+  position: absolute;
+  background: linear-gradient(270deg, #FFFFFF 0%, rgba(255, 255, 255, 0.752) 52.5%, rgba(255, 255, 255, 0.3) 100%);
+  right: 0;
+}
+
+.lookBookTab .etabs li {
+  margin-left: 30px;
+  position: relative;
+}
+
+.lookBookTab .etabs li.active a:before {
+  display: none;
+}
+
+.lookBookTab .etabs li.active:first-of-type {
+  margin-left: 250px;
+}
+
+.lookBookTab .etabs li.active:last-of-type {
+  margin-right: 250px;
 }
 
 /*
