@@ -5767,6 +5767,41 @@ End status
   margin-bottom: 100px;
 }
 
+.lookBookContent li {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.lookBookContent li:nth-child(4n+4) {
+  margin-right: 0;
+}
+
+.lookBookContent li a {
+  display: block;
+  max-width: 440px;
+  width: 100%;
+  height: 660px;
+}
+
+.lookBookContent li a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lookBookContent {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
+.trends {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto 100px;
+}
+
 /*
 Start responsive
 ################*/
@@ -5812,6 +5847,22 @@ Start responsive
 }
 
 @media (max-width: 1880px) {
+  .lookBookContent {
+    max-width: 96%;
+  }
+
+  .lookBookContent li {
+    margin-right: 1.4%;
+    margin-bottom: 1.4%;
+    max-width: 23.95%;
+    width: 100%;
+  }
+
+  .lookBookContent li a {
+    max-width: 100%;
+    height: 60%;
+  }
+
   .map iframe {
     width: 112%;
   }
@@ -6582,6 +6633,36 @@ Start responsive
 }
 
 @media (max-width: 970px) {
+  .size {
+    max-width: 90%;
+  }
+
+  .lookBookTab .etabs li.active:first-of-type {
+    margin-left: 50px;
+  }
+
+  .lookBookTab .etabs li a {
+    font-size: 30px;
+  }
+
+  .lookBookTab .etabs li:first-of-type a:before,
+  .lookBookTab .etabs li:last-of-type a:before {
+    width: 140px;
+  }
+
+  .size__paragraf {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .size__h4 {
+    font-size: 14px;
+  }
+
+  .size__title {
+    font-size: 30px;
+  }
+
   .brandsImg {
     height: 300px;
     object-fit: cover;
@@ -7242,9 +7323,25 @@ Start responsive
   .deliverFormBlock__title {
     font-size: 16px;
   }
+
+  .lookBookContent li {
+    max-width: 32.4%;
+  }
+
+  .lookBookContent li:nth-child(4n+4) {
+    margin-right: 1.4%;
+  }
+
+  .lookBookContent li:nth-child(3n+3) {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 780px) {
+  .lookBookTab {
+    margin-top: 20px;
+  }
+
   .arrangeListNum li span {
     font-size: 13px;
   }
@@ -7730,6 +7827,24 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .lookBook .menuMobil {
+    max-width: 96%;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .lookBook .menuMobil .menuMobilSelectContent {
+    width: 96%;
+  }
+
+  .size__title {
+    display: none;
+  }
+
+  .menuMobil {
+    max-width: 100%;
+  }
+
   .programm__title {
     font-size: 14px;
   }
@@ -8434,6 +8549,16 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .lookBookContent {
+    justify-content: space-between;
+  }
+
+  .lookBookContent li {
+    max-width: 48.4%;
+    margin-right: 0 !important;
+    margin-bottom: 3%;
+  }
+
   .programm {
     margin-top: 0;
   }
@@ -9097,6 +9222,43 @@ Start responsive
 
   .itemRightBlockBtn .custom-select {
     display: block;
+  }
+
+  .size__paragraf {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .size__paragraf b {
+    font-size: 13px;
+  }
+
+  .lookBookTab .etabs li.active:first-of-type {
+    margin-left: 0;
+  }
+
+  .lookBookTab .etabs li:first-of-type a:before, .lookBookTab .etabs li:last-of-type a:before {
+    width: 130px;
+  }
+
+  .lookBookTab .etabs li a {
+    font-size: 24px;
+  }
+
+  .lookBookTab .etabs {
+    margin: 0 auto 30px;
+  }
+
+  .lookBookTab .etabs li:first-of-type a:before, .lookBookTab .etabs li:last-of-type a:before {
+    height: 40px;
+  }
+
+  .lookBookTab .etabs li.active:last-of-type {
+    margin-right: 0;
+  }
+
+  .lookBookTab .etabs li:first-of-type {
+    margin-left: 0;
   }
 }
 
