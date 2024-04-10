@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="Способы доставки" name="description">
-    <meta content="Способы доставки" name="keywords">
+    <meta content="Личный кабинет" name="description">
+    <meta content="Личный кабинет" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
 
-    <title>Способы доставки</title>
+    <title>Личный кабинет</title>
 </head>
 <body>
 
@@ -17,9 +17,9 @@
 
 <div class="searchPopup">
     <form action="#" class="searchPopupForm flex">
-        <input placeholder="Поиск" type="text">
-        <button type="submit" class="searchPopupForm__submit">Найти</button>
-        <button type="button" class="searchPopup__closed"></button>
+        <input placeholder="Поиск" type="text" aria-label="search">
+        <button type="submit" class="searchPopupForm__submit" aria-label="Btn search">Найти</button>
+        <button type="button" class="searchPopup__closed" aria-label="closed"></button>
     </form>
 
     <div class="searchPopupContent flex">
@@ -971,8 +971,8 @@
 
                     <div class="select-items">
                         <form action="#" class="select-itemsForm">
-                            <input placeholder="Поиск" type="text">
-                            <button type="button" class="select-itemsForm__clear"></button>
+                            <input placeholder="Поиск" type="text" aria-label="input Search">
+                            <button type="button" class="select-itemsForm__clear" aria-label="clear selects"></button>
                         </form>
 
                         <div class="select-itemsIn">
@@ -1029,7 +1029,7 @@
     </div>
 
     <div class="headerMiddle flex">
-        <button type="button" class="headerMiddleMobil">
+        <button type="button" class="headerMiddleMobil" aria-label="Closed">
             <span></span>
             <span></span>
             <span></span>
@@ -1113,7 +1113,7 @@
 <!--Start hederMenuMobil-->
 <div class="hederMenuMobil">
     <div class="hederMenuMobilTop flex">
-        <button type="button" class="hederMenuMobil__closed"></button>
+        <button type="button" class="hederMenuMobil__closed" aria-label="closed menu"></button>
 
         <a href="#" class="hederMenuMobilTop__logo">
             <img src="images/logoMobil.svg" alt="">
@@ -1301,7 +1301,7 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed"></button>
+        <button type="button" class="basketBlockTop__closed" aria-label="Closed basket"></button>
     </div>
 
     <div class="basketBlockBody">
@@ -1679,164 +1679,528 @@
             <div class="basketBlockBottomTotal__right">7 194 ₽</div>
         </div>
 
-        <button type="submit" class="basketBlockBottom__btn flex">Оформить заказ</button>
+        <button type="submit" class="basketBlockBottom__btn flex" aria-label="Оформить заказ">Оформить заказ</button>
     </div>
 </div>
 <!--End basketBlock-->
 
-<!--Start lookBook-->
-<section class="lookBook">
-    <div class="menuMobil">
-        <h2 class="menuMobil__title">О компании</h2>
+<!--Start personal-->
+<section class="personal">
+    <div class="personalTop flex">
+        <h1 class="personalTop__title">Личный кабинет</h1>
 
-        <div class="menuMobilSelect">Lookbook</div>
-
-        <ul class="menuMobilSelectContent">
-            <li>
-                <a href=""><span>Как оформить заказ</span></a>
-            </li>
-
-            <li>
-                <a href=""><span>Как выбрать размер</span></a>
-            </li>
-
-            <li>
-                <a href=""><span>Гарантия и уход</span></a>
-            </li>
-
-            <li>
-                <a href=""><span>Часто задаваемые вопросы</span></a>
-            </li>
-
-            <li>
-                <a href=""><span>Программа лояльности</span></a>
-            </li>
-
-            <li>
-                <a href=""><span>Публичная оферта</span></a>
-            </li>
-
-            <li>
-                <a href="user.html"><span>Пользовательское соглашение</span></a>
-            </li>
-        </ul>
+        <a href="#" class="personalTop__href">Выйти из аккаунта</a>
     </div>
 
-    <div class="lookBookTab" id="tab-container">
-        <ul class="etabs flex">
-            <li class="tab"><a href="#lookbook">Lookbook</a></li>
-            <li class="tab"><a href="#trendbook">Trendbook</a></li>
-        </ul>
+    <div class="tabs flex">
+        <div class="tab" data-tab="1">Заказы</div>
+        <div class="tab" data-tab="2">Мои данные</div>
+        <div class="tab" data-tab="3">Мои адреса</div>
+        <div class="tab" data-tab="4">Избранное</div>
+        <div class="tab" data-tab="5">Личная скидка</div>
+    </div>
 
-        <div id="lookbook">
-            <ul class="lookBookContent flex">
-                <li>
-                    <a href="#">
-                        <img src="images/look.jpg" alt="">
-                    </a>
-                </li>
+    <div class="contents">
+        <div class="content active" data-tab="1"></div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look2.jpg" alt="">
-                    </a>
-                </li>
+        <div class="content" data-tab="2"></div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look3.jpg" alt="">
-                    </a>
-                </li>
+        <div class="content" data-tab="3"></div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look4.jpg" alt="">
-                    </a>
-                </li>
+        <div class="content" data-tab="4">
+            <div class="sliderBlockContent flex">
+                <div class="sliderBlockMain">
+                    <div class="slider sliderBlockSlider">
+                        <div>
+                            <a href="#">
+                                <img src="images/slider.jpg" alt="">
+                            </a>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look2.jpg" alt="">
-                    </a>
-                </li>
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look3.jpg" alt="">
-                    </a>
-                </li>
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look4.jpg" alt="">
-                    </a>
-                </li>
+                        <div>
+                            <a href="#">
+                                <img src="images/slider.jpg" alt="">
+                            </a>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look.jpg" alt="">
-                    </a>
-                </li>
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
 
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look.jpg" alt="">
-                    </a>
-                </li>
+                        <div>
+                            <a href="#">
+                                <img src="images/slider.jpg" alt="">
+                            </a>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look2.jpg" alt="">
-                    </a>
-                </li>
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look3.jpg" alt="">
-                    </a>
-                </li>
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look4.jpg" alt="">
-                    </a>
-                </li>
+                        <div>
+                            <a href="#">
+                                <img src="images/slider.jpg" alt="">
+                            </a>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look2.jpg" alt="">
-                    </a>
-                </li>
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look3.jpg" alt="">
-                    </a>
-                </li>
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look4.jpg" alt="">
-                    </a>
-                </li>
+                    <div class="sliderBlockSliderPrice">
+                        <h2><a href="#" class="sliderBlockSliderPrice__title">Джемпер</a></h2>
 
-                <li>
-                    <a href="#">
-                        <img src="images/look.jpg" alt="">
-                    </a>
-                </li>
-            </ul>
-        </div>
+                        <ul class="sliderBlockSliderPriceList flex">
+                            <li>
+                                <span class="sliderBlockSliderPrice__un">2399 ₽</span>
+                            </li>
 
-        <div id="trendbook">
-            <div class="trends">
-                <img src="images/trends.png" alt="">
+                            <li>
+                                <span class="sliderBlockSliderPrice__price">2399 ₽</span>
+                            </li>
+                        </ul>
+
+                        <ul class="radioList flex">
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio">
+                                    <span class="checkmark red"></span>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio" checked>
+                                    <span class="checkmark black"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sliderBlockMain">
+                    <div class="slider sliderBlockSlider">
+                        <div>
+                            <a href="#">
+                                <img src="images/shorty.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart2">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <img src="images/shorty.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart2">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/shorty.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart2">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/shorty.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart2">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliderBlockSliderPrice">
+                        <h2><a href="#" class="sliderBlockSliderPrice__title">Шорты</a></h2>
+
+                        <ul class="sliderBlockSliderPriceList flex">
+                            <li>
+                                <span class="sliderBlockSliderPrice__price">2399 ₽</span>
+                            </li>
+                        </ul>
+
+                        <ul class="radioList flex">
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio2">
+                                    <span class="checkmark red"></span>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio2" checked>
+                                    <span class="checkmark black"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sliderBlockMain">
+                    <div class="slider sliderBlockSlider">
+                        <div>
+                            <a href="#">
+                                <img src="images/bag.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart3">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <img src="images/bag.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart3">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/bag.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart3">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/bag.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart3">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliderBlockSliderPrice">
+                        <h2><a href="#" class="sliderBlockSliderPrice__title">Сумка</a></h2>
+
+                        <ul class="sliderBlockSliderPriceList flex">
+                            <li>
+                                <span class="sliderBlockSliderPrice__price">2399 ₽</span>
+                            </li>
+                        </ul>
+
+                        <ul class="radioList flex">
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio3">
+                                    <span class="checkmark red"></span>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio3" checked>
+                                    <span class="checkmark black"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="sliderBlockMain">
+                    <div class="slider sliderBlockSlider">
+                        <div>
+                            <a href="#">
+                                <img src="images/cos.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart4">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <img src="images/cos.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart4">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/cos.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart4">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <a href="#">
+                                <img src="images/cos.jpg" alt="">
+                            </a>
+
+                            <div class="sliderBlockSliderTop flex">
+                                <div class="sliderBlockSliderTopSale flex">
+                                    <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                </div>
+
+                                <div class="sliderBlockSliderTopHeart">
+                                    <label class="blockCheckbox">
+                                        <input type="checkbox" name="heart4">
+                                        <span class="checkmark heart"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="sliderBlockSliderBottom">
+                                <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sliderBlockSliderPrice">
+                        <h2><a href="#" class="sliderBlockSliderPrice__title">Куртка</a></h2>
+
+                        <ul class="sliderBlockSliderPriceList flex">
+                            <li>
+                                <span class="sliderBlockSliderPrice__price">2399 ₽</span>
+                            </li>
+                        </ul>
+
+                        <ul class="radioList flex">
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio4">
+                                    <span class="checkmark red"></span>
+                                </label>
+                            </li>
+
+                            <li>
+                                <label class="blockCheckbox">
+                                    <input type="radio" name="radio4" checked>
+                                    <span class="checkmark black"></span>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="content" data-tab="5"></div>
     </div>
 </section>
-<!--End lookBook-->
+<!--End personal-->
 
 <!--Start footer-->
 <footer class="footer">

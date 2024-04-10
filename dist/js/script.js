@@ -319,4 +319,20 @@ $(document).ready(function () {
       $(".menuMobilSelectContent").slideUp();
     }
   });
+
+
+  //Start tab personal
+  $('.personal .tabs .tab').click(function () {
+    var tabNumber = $(this).data('tab');
+
+    // Hide all contents
+    $('.personal .contents .content').removeClass('active');
+
+    // Show the selected content
+    $('.personal .contents .content[data-tab="' + tabNumber + '"]').addClass('active');
+
+    // Update active tab
+    $('.personal .tabs .tab').removeClass('active');
+    $(this).addClass('active');
+  });
 });

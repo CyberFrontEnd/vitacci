@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var loadPlugins  = require('gulp-load-plugins')();
+var gzip  = require('node-gzip')();
 var browserSync  = require('browser-sync').create();
 
 
