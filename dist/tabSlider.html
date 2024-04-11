@@ -1692,16 +1692,15 @@
         <a href="#" class="personalTop__href">Выйти из аккаунта</a>
     </div>
 
-
-        <ul class="tabs flex">
-            <li class="tab active"><a href="">Заказы</a></li>
-            <li class="tab"><a href="myData.html">Мои данные</a></li>
-            <li class="tab"><a href="myAddress.html">Мои адреса</a></li>
-            <li class="tab"><a href="favorite.html">Избранное</a></li>
+    <div id="ajax-tab-container">
+        <ul class="etabs flex tabs">
+            <li class="tab"><a href="#order">Заказы</a></li>
+            <li class="tab"><a href="#myData">Мои данные</a></li>
+            <li class="tab"><a href="favorite.html">tabSlider</a></li>
         </ul>
 
         <div class='panel-container'>
-            <div class="content">
+            <div id="order" class="content">
                 <div class="orderNumber">
                     <h2 class="orderNumber__title">Заказ номер №5 от 9 ноября 2023</h2>
                     <button type="button" class="orderNumber__closed" aria-label="Закрыть"></button>
@@ -1920,121 +1919,121 @@
                 </div>
             </div>
 
-<!--            <div class="content">-->
-<!--                <form enctype="text/plain" action="#" class="myData">-->
-<!--                    <div class="myDataRedact">-->
-<!--                        <ul class="myDataRedactList flex">-->
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Имя</div>-->
-<!--                                <div class="myDataRedactList__info">Анна</div>-->
-<!--                            </li>-->
+            <div id="myData" class="content">
+                <form enctype="text/plain" action="#" class="myData">
+                    <div class="myDataRedact">
+                        <ul class="myDataRedactList flex">
+                            <li>
+                                <div class="myDataRedactList__name">Имя</div>
+                                <div class="myDataRedactList__info">Анна</div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Фамилия</div>-->
-<!--                                <div class="myDataRedactList__info">Авдеева</div>-->
-<!--                            </li>-->
+                            <li>
+                                <div class="myDataRedactList__name">Фамилия</div>
+                                <div class="myDataRedactList__info">Авдеева</div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">E-mail</div>-->
-<!--                                <div class="myDataRedactList__info">- - -</div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
+                            <li>
+                                <div class="myDataRedactList__name">E-mail</div>
+                                <div class="myDataRedactList__info">- - -</div>
+                            </li>
+                        </ul>
 
-<!--                        <ul class="myDataRedactList flex">-->
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Пол</div>-->
-<!--                                <div class="myDataRedactList__info">Женский</div>-->
-<!--                            </li>-->
+                        <ul class="myDataRedactList flex">
+                            <li>
+                                <div class="myDataRedactList__name">Пол</div>
+                                <div class="myDataRedactList__info">Женский</div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Дата рождения</div>-->
-<!--                                <div class="myDataRedactList__info">01.01.1965</div>-->
-<!--                            </li>-->
+                            <li>
+                                <div class="myDataRedactList__name">Дата рождения</div>
+                                <div class="myDataRedactList__info">01.01.1965</div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Номер телефона</div>-->
-<!--                                <div class="myDataRedactList__info">+7 (999) 999-99-99</div>-->
-<!--                            </li>-->
+                            <li>
+                                <div class="myDataRedactList__name">Номер телефона</div>
+                                <div class="myDataRedactList__info">+7 (999) 999-99-99</div>
+                            </li>
 
-<!--                            <li class="myDataRedactList__password">-->
-<!--                                <div class="myDataRedactList__name">Пароль</div>-->
-<!--                                <div class="myDataRedactList__info">*******************</div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
+                            <li class="myDataRedactList__password">
+                                <div class="myDataRedactList__name">Пароль</div>
+                                <div class="myDataRedactList__info">*******************</div>
+                            </li>
+                        </ul>
 
-<!--                        <button type="button" class="myDataRedact__redact flex" aria-label="Редактировать">Редактировать</button>-->
-<!--                    </div>-->
+                        <button type="button" class="myDataRedact__redact flex" aria-label="Редактировать">Редактировать</button>
+                    </div>
 
-<!--                    <div class="myDataSave">-->
-<!--                        <ul class="myDataSaveList flex">-->
-<!--                            <li>-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" id="name" required>-->
-<!--                                    <label for="name">Имя</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                    <div class="myDataSave">
+                        <ul class="myDataSaveList flex">
+                            <li>
+                                <div class="input-container">
+                                    <input type="text" id="name" required>
+                                    <label for="name">Имя</label>
+                                </div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" id="surname" required>-->
-<!--                                    <label for="surname">Фамилия</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                            <li>
+                                <div class="input-container">
+                                    <input type="text" id="surname" required>
+                                    <label for="surname">Фамилия</label>
+                                </div>
+                            </li>
 
-<!--                            <li>-->
-<!--                                <div class="pol">Пол</div>-->
-<!--                                <div class="custom-select">-->
-<!--                                    <div class="select-selected">Женский</div>-->
+                            <li>
+                                <div class="pol">Пол</div>
+                                <div class="custom-select">
+                                    <div class="select-selected">Женский</div>
 
-<!--                                    <div class="select-items">-->
-<!--                                        <div class="select-itemsIn">-->
-<!--                                            <span class="select-itemsIn__name">Женский</span>-->
+                                    <div class="select-items">
+                                        <div class="select-itemsIn">
+                                            <span class="select-itemsIn__name">Женский</span>
 
-<!--                                            <span class="select-itemsIn__name">Мужской</span>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                                            <span class="select-itemsIn__name">Мужской</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
 
-<!--                            <li class="myDataSaveList__calendar">-->
-<!--                                <div class="pol">Дата рождения</div>-->
-<!--                                <input placeholder="14.04.1988" id="datepicker" type="text">-->
-<!--                            </li>-->
+                            <li class="myDataSaveList__calendar">
+                                <div class="pol">Дата рождения</div>
+                                <input placeholder="14.04.1988" id="datepicker" type="text">
+                            </li>
 
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" class="phone_mask" id="tel">-->
-<!--                                    <label for="tel" class="phone_maskLabel">Номер телефона</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                            <li class="myDataSaveListWidth">
+                                <div class="input-container">
+                                    <input type="text" class="phone_mask" id="tel">
+                                    <label for="tel" class="phone_maskLabel">Номер телефона</label>
+                                </div>
+                            </li>
 
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="email" id="email" required>-->
-<!--                                    <label for="email">E-mail</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                            <li class="myDataSaveListWidth">
+                                <div class="input-container">
+                                    <input type="email" id="email" required>
+                                    <label for="email">E-mail</label>
+                                </div>
+                            </li>
 
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="password" id="password" required>-->
-<!--                                    <label for="password">Пароль</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
+                            <li class="myDataSaveListWidth">
+                                <div class="input-container">
+                                    <input type="password" id="password" required>
+                                    <label for="password">Пароль</label>
+                                </div>
+                            </li>
 
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="password" id="passwordValid" required class="mistake">-->
-<!--                                    <label for="passwordValid" class="mistake">Повторите пароль</label>-->
-<!--                                    <div class="mistakeText">Пароли не совпадают</div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
+                            <li class="myDataSaveListWidth">
+                                <div class="input-container">
+                                    <input type="password" id="passwordValid" required class="mistake">
+                                    <label for="passwordValid" class="mistake">Повторите пароль</label>
+                                    <div class="mistakeText">Пароли не совпадают</div>
+                                </div>
+                            </li>
+                        </ul>
 
-<!--                        <button type="button" class="myDataSave__save flex" aria-label="Сохранить">Сохранить</button>-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
+                        <button type="button" class="myDataSave__save flex" aria-label="Сохранить">Сохранить</button>
+                    </div>
+                </form>
+            </div>
 
             <div id="tabSlider"></div>
         </div>

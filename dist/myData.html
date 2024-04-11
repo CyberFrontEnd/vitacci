@@ -1693,350 +1693,128 @@
     </div>
 
 
-        <ul class="tabs flex">
-            <li class="tab active"><a href="">Заказы</a></li>
-            <li class="tab"><a href="myData.html">Мои данные</a></li>
-            <li class="tab"><a href="myAddress.html">Мои адреса</a></li>
-            <li class="tab"><a href="favorite.html">Избранное</a></li>
-        </ul>
+    <ul class="tabs flex">
+        <li class="tab"><a href="personal.html">Заказы</a></li>
+        <li class="tab active"><a href="myData.html">Мои данные</a></li>
+        <li class="tab"><a href="myAddress.html">Мои адреса</a></li>
+        <li class="tab"><a href="favorite.html">Избранное</a></li>
+    </ul>
 
-        <div class='panel-container'>
-            <div class="content">
-                <div class="orderNumber">
-                    <h2 class="orderNumber__title">Заказ номер №5 от 9 ноября 2023</h2>
-                    <button type="button" class="orderNumber__closed" aria-label="Закрыть"></button>
+    <div class='panel-container'>
+        <div class="content">
+            <form enctype="text/plain" action="#" class="myData">
+                <div class="myDataRedact">
+                    <ul class="myDataRedactList flex">
+                        <li>
+                            <div class="myDataRedactList__name">Имя</div>
+                            <div class="myDataRedactList__info">Анна</div>
+                        </li>
 
-                    <div class="orderNumberContent">
-                        <div class="basketBlockBodyItem flex">
-                            <div class="basketBlockBodyItemLeft flex">
-                                <a href="#" class="basketBlockBodyItemLeft__href">
-                                    <img src="images/basket.jpg" alt="">
-                                </a>
+                        <li>
+                            <div class="myDataRedactList__name">Фамилия</div>
+                            <div class="myDataRedactList__info">Авдеева</div>
+                        </li>
 
-                                <div class="basketBlockBodyItemLeftRight">
-                                    <a href="#" class="basketBlockBodyItemLeftRight__title">Сумка</a>
-                                    <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                                    <div class="basketBlockBodyItemLeftRight__color black flex">Чёрный</div>
+                        <li>
+                            <div class="myDataRedactList__name">E-mail</div>
+                            <div class="myDataRedactList__info">- - -</div>
+                        </li>
+                    </ul>
 
-                                    <div class="basketBlockBodyItemLeftRightSize flex">
-                                        <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+                    <ul class="myDataRedactList flex">
+                        <li>
+                            <div class="myDataRedactList__name">Пол</div>
+                            <div class="myDataRedactList__info">Женский</div>
+                        </li>
 
-                                        <div class="orderNumber__num">1</div>
-                                    </div>
-                                </div>
-                            </div>
+                        <li>
+                            <div class="myDataRedactList__name">Дата рождения</div>
+                            <div class="myDataRedactList__info">01.01.1965</div>
+                        </li>
 
-                            <div class="basketBlockBodyItemRight flex">
-                                <div class="basketBlockBodyItemRightTop flex">
-                                    <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                                    <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                                </div>
+                        <li>
+                            <div class="myDataRedactList__name">Номер телефона</div>
+                            <div class="myDataRedactList__info">+7 (999) 999-99-99</div>
+                        </li>
 
-                                <div class="basketBlockBodyItemRightBottom flex">
-                                    <div class="sliderBlockSliderTopHeart">
-                                        <label class="blockCheckbox">
-                                            <input type="checkbox" name="basket__1">
-                                            <span class="checkmark heart"></span>
-                                            <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="basketBlockBodyItem flex">
-                            <div class="basketBlockBodyItemLeft flex">
-                                <a href="#" class="basketBlockBodyItemLeft__href">
-                                    <img src="images/basket4.jpg" alt="">
-                                </a>
+                        <li class="myDataRedactList__password">
+                            <div class="myDataRedactList__name">Пароль</div>
+                            <div class="myDataRedactList__info">*******************</div>
+                        </li>
+                    </ul>
 
-                                <div class="basketBlockBodyItemLeftRight">
-                                    <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка Куртка Куртка Куртка </a>
-                                    <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                                    <div class="basketBlockBodyItemLeftRight__color green flex">Зеленный</div>
-
-                                    <div class="basketBlockBodyItemLeftRightSize flex">
-                                        <div class="basketBlockBodyItemLeftRightSize__size">L (46)</div>
-
-                                        <div class="orderNumber__num">10</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="basketBlockBodyItemRight flex">
-                                <div class="basketBlockBodyItemRightTop flex">
-                                    <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                                    <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                                </div>
-
-                                <div class="basketBlockBodyItemRightBottom flex">
-                                    <div class="sliderBlockSliderTopHeart">
-                                        <label class="blockCheckbox">
-                                            <input type="checkbox" name="basket__1">
-                                            <span class="checkmark heart"></span>
-                                            <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="orderStatus flex">
-                        <div class="orderStatus__title">Статус</div>
-                        <div class="orderStatus__ends">Завершен</div>
-                    </div>
+                    <button type="button" class="myDataRedact__redact flex" aria-label="Редактировать">Редактировать</button>
                 </div>
-                <div class="orderNumber">
-                    <h2 class="orderNumber__title">Заказ №6 от 9 ноября 2023</h2>
-                    <button type="button" class="orderNumber__closed" aria-label="Закрыть"></button>
 
-                    <div class="orderNumberContent">
-                        <div class="basketBlockBodyItem flex">
-                            <div class="basketBlockBodyItemLeft flex">
-                                <a href="#" class="basketBlockBodyItemLeft__href">
-                                    <img src="images/basket5.jpg" alt="">
-                                </a>
+                <div class="myDataSave">
+                    <ul class="myDataSaveList flex">
+                        <li>
+                            <div class="input-container">
+                                <input type="text" id="name" required>
+                                <label for="name">Имя</label>
+                            </div>
+                        </li>
 
-                                <div class="basketBlockBodyItemLeftRight">
-                                    <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
-                                    <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                                    <div class="basketBlockBodyItemLeftRight__color red flex">Красный</div>
+                        <li>
+                            <div class="input-container">
+                                <input type="text" id="surname" required>
+                                <label for="surname">Фамилия</label>
+                            </div>
+                        </li>
 
-                                    <div class="basketBlockBodyItemLeftRightSize flex">
-                                        <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
+                        <li>
+                            <div class="pol">Пол</div>
+                            <div class="custom-select">
+                                <div class="select-selected">Женский</div>
 
-                                        <div class="orderNumber__num">1</div>
+                                <div class="select-items">
+                                    <div class="select-itemsIn">
+                                        <span class="select-itemsIn__name">Женский</span>
+
+                                        <span class="select-itemsIn__name">Мужской</span>
                                     </div>
                                 </div>
                             </div>
+                        </li>
 
-                            <div class="basketBlockBodyItemRight flex">
-                                <div class="basketBlockBodyItemRightTop flex">
-                                    <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                                    <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                                </div>
+                        <li class="myDataSaveList__calendar">
+                            <div class="pol">Дата рождения</div>
+                            <input placeholder="14.04.1988" id="datepicker" type="text">
+                        </li>
 
-                                <div class="basketBlockBodyItemRightBottom flex">
-                                    <div class="sliderBlockSliderTopHeart">
-                                        <label class="blockCheckbox">
-                                            <input type="checkbox" name="basket__1">
-                                            <span class="checkmark heart"></span>
-                                            <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                                        </label>
-                                    </div>
-                                </div>
+                        <li class="myDataSaveListWidth">
+                            <div class="input-container">
+                                <input type="text" class="phone_mask" id="tel">
+                                <label for="tel" class="phone_maskLabel">Номер телефона</label>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="basketBlockBodyItem flex">
-                            <div class="basketBlockBodyItemLeft flex">
-                                <a href="#" class="basketBlockBodyItemLeft__href">
-                                    <img src="images/basket6.jpg" alt="">
-                                </a>
-
-                                <div class="basketBlockBodyItemLeftRight">
-                                    <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
-                                    <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                                    <div class="basketBlockBodyItemLeftRight__color black flex">Черный</div>
-
-                                    <div class="basketBlockBodyItemLeftRightSize flex">
-                                        <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                                        <div class="orderNumber__num">3</div>
-                                    </div>
-                                </div>
+                        <li class="myDataSaveListWidth">
+                            <div class="input-container">
+                                <input type="email" id="email" required>
+                                <label for="email">E-mail</label>
                             </div>
+                        </li>
 
-                            <div class="basketBlockBodyItemRight flex">
-                                <div class="basketBlockBodyItemRightTop flex">
-                                    <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                                    <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                                </div>
-
-                                <div class="basketBlockBodyItemRightBottom flex">
-                                    <div class="sliderBlockSliderTopHeart">
-                                        <label class="blockCheckbox">
-                                            <input type="checkbox" name="basket__1">
-                                            <span class="checkmark heart"></span>
-                                            <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                                        </label>
-                                    </div>
-                                </div>
+                        <li class="myDataSaveListWidth">
+                            <div class="input-container">
+                                <input type="password" id="password" required>
+                                <label for="password">Пароль</label>
                             </div>
-                        </div>
+                        </li>
 
-                        <div class="basketBlockBodyItem flex">
-                            <div class="basketBlockBodyItemLeft flex">
-                                <a href="#" class="basketBlockBodyItemLeft__href">
-                                    <img src="images/basket6.jpg" alt="">
-                                </a>
-
-                                <div class="basketBlockBodyItemLeftRight">
-                                    <a href="#" class="basketBlockBodyItemLeftRight__title">Куртка</a>
-                                    <div class="basketBlockBodyItemLeftRight__article">Арт. 3420624203-17</div>
-                                    <div class="basketBlockBodyItemLeftRight__color black flex">Черный</div>
-
-                                    <div class="basketBlockBodyItemLeftRightSize flex">
-                                        <div class="basketBlockBodyItemLeftRightSize__size">M (46)</div>
-
-                                        <div class="orderNumber__num">3</div>
-                                    </div>
-                                </div>
+                        <li class="myDataSaveListWidth">
+                            <div class="input-container">
+                                <input type="password" id="passwordValid" required class="mistake">
+                                <label for="passwordValid" class="mistake">Повторите пароль</label>
+                                <div class="mistakeText">Пароли не совпадают</div>
                             </div>
+                        </li>
+                    </ul>
 
-                            <div class="basketBlockBodyItemRight flex">
-                                <div class="basketBlockBodyItemRightTop flex">
-                                    <div class="basketBlockBodyItemRight__price">599 ₽</div>
-                                    <div class="basketBlockBodyItemRight__sale">2 599 ₽</div>
-                                </div>
-
-                                <div class="basketBlockBodyItemRightBottom flex">
-                                    <div class="sliderBlockSliderTopHeart">
-                                        <label class="blockCheckbox">
-                                            <input type="checkbox" name="basket__1">
-                                            <span class="checkmark heart"></span>
-                                            <span class="basketBlockBodyItemRightBottom__name">В избранное</span>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="orderStatus flex">
-                        <div class="orderStatusBtn">
-                            <button type="button" aria-label="Показать все товары" class="orderStatusBtn__href flex">Показать все товары</button>
-                        </div>
-
-                        <div class="orderStatusBottom flex">
-                            <div class="orderStatusBottom__status flex">
-                                <div class="orderStatus__title">Статус</div>
-                                <div class="orderStatus__ends">В работе</div>
-                            </div>
-
-                            <a href="#" class="orderStatusBottom__href">Отменить заказ</a>
-                        </div>
-                    </div>
+                    <button type="button" class="myDataSave__save flex" aria-label="Сохранить">Сохранить</button>
                 </div>
-            </div>
-
-<!--            <div class="content">-->
-<!--                <form enctype="text/plain" action="#" class="myData">-->
-<!--                    <div class="myDataRedact">-->
-<!--                        <ul class="myDataRedactList flex">-->
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Имя</div>-->
-<!--                                <div class="myDataRedactList__info">Анна</div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Фамилия</div>-->
-<!--                                <div class="myDataRedactList__info">Авдеева</div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">E-mail</div>-->
-<!--                                <div class="myDataRedactList__info">- - -</div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-
-<!--                        <ul class="myDataRedactList flex">-->
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Пол</div>-->
-<!--                                <div class="myDataRedactList__info">Женский</div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Дата рождения</div>-->
-<!--                                <div class="myDataRedactList__info">01.01.1965</div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="myDataRedactList__name">Номер телефона</div>-->
-<!--                                <div class="myDataRedactList__info">+7 (999) 999-99-99</div>-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataRedactList__password">-->
-<!--                                <div class="myDataRedactList__name">Пароль</div>-->
-<!--                                <div class="myDataRedactList__info">*******************</div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-
-<!--                        <button type="button" class="myDataRedact__redact flex" aria-label="Редактировать">Редактировать</button>-->
-<!--                    </div>-->
-
-<!--                    <div class="myDataSave">-->
-<!--                        <ul class="myDataSaveList flex">-->
-<!--                            <li>-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" id="name" required>-->
-<!--                                    <label for="name">Имя</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" id="surname" required>-->
-<!--                                    <label for="surname">Фамилия</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li>-->
-<!--                                <div class="pol">Пол</div>-->
-<!--                                <div class="custom-select">-->
-<!--                                    <div class="select-selected">Женский</div>-->
-
-<!--                                    <div class="select-items">-->
-<!--                                        <div class="select-itemsIn">-->
-<!--                                            <span class="select-itemsIn__name">Женский</span>-->
-
-<!--                                            <span class="select-itemsIn__name">Мужской</span>-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataSaveList__calendar">-->
-<!--                                <div class="pol">Дата рождения</div>-->
-<!--                                <input placeholder="14.04.1988" id="datepicker" type="text">-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="text" class="phone_mask" id="tel">-->
-<!--                                    <label for="tel" class="phone_maskLabel">Номер телефона</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="email" id="email" required>-->
-<!--                                    <label for="email">E-mail</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="password" id="password" required>-->
-<!--                                    <label for="password">Пароль</label>-->
-<!--                                </div>-->
-<!--                            </li>-->
-
-<!--                            <li class="myDataSaveListWidth">-->
-<!--                                <div class="input-container">-->
-<!--                                    <input type="password" id="passwordValid" required class="mistake">-->
-<!--                                    <label for="passwordValid" class="mistake">Повторите пароль</label>-->
-<!--                                    <div class="mistakeText">Пароли не совпадают</div>-->
-<!--                                </div>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-
-<!--                        <button type="button" class="myDataSave__save flex" aria-label="Сохранить">Сохранить</button>-->
-<!--                    </div>-->
-<!--                </form>-->
-<!--            </div>-->
-
-            <div id="tabSlider"></div>
+            </form>
         </div>
     </div>
 </section>

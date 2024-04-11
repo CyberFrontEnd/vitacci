@@ -410,3 +410,4797 @@
 // Start migrate
 /*! jQuery Migrate v3.4.0 | (c) OpenJS Foundation and other contributors | jquery.org/license */
 "undefined"==typeof jQuery.migrateMute&&(jQuery.migrateMute=!0),function(t){"use strict";"function"==typeof define&&define.amd?define(["jquery"],function(e){return t(e,window)}):"object"==typeof module&&module.exports?module.exports=t(require("jquery"),window):t(jQuery,window)}(function(s,n){"use strict";function e(e){return 0<=function(e,t){for(var r=/^(\d+)\.(\d+)\.(\d+)/,n=r.exec(e)||[],o=r.exec(t)||[],a=1;a<=3;a++){if(+n[a]>+o[a])return 1;if(+n[a]<+o[a])return-1}return 0}(s.fn.jquery,e)}s.migrateVersion="3.4.0";var t=Object.create(null),o=(s.migrateDisablePatches=function(){for(var e=0;e<arguments.length;e++)t[arguments[e]]=!0},s.migrateEnablePatches=function(){for(var e=0;e<arguments.length;e++)delete t[arguments[e]]},s.migrateIsPatchEnabled=function(e){return!t[e]},n.console&&n.console.log&&(s&&e("3.0.0")||n.console.log("JQMIGRATE: jQuery 3.0.0+ REQUIRED"),s.migrateWarnings&&n.console.log("JQMIGRATE: Migrate plugin loaded multiple times"),n.console.log("JQMIGRATE: Migrate is installed"+(s.migrateMute?"":" with logging active")+", version "+s.migrateVersion)),{});function i(e,t){var r=n.console;!s.migrateIsPatchEnabled(e)||s.migrateDeduplicateWarnings&&o[t]||(o[t]=!0,s.migrateWarnings.push(t+" ["+e+"]"),r&&r.warn&&!s.migrateMute&&(r.warn("JQMIGRATE: "+t),s.migrateTrace&&r.trace&&r.trace()))}function r(e,t,r,n,o){Object.defineProperty(e,t,{configurable:!0,enumerable:!0,get:function(){return i(n,o),r},set:function(e){i(n,o),r=e}})}function a(e,t,r,n,o){var a=e[t];e[t]=function(){return o&&i(n,o),(s.migrateIsPatchEnabled(n)?r:a||s.noop).apply(this,arguments)}}function u(e,t,r,n,o){if(!o)throw new Error("No warning message provided");a(e,t,r,n,o)}function d(e,t,r,n){a(e,t,r,n)}s.migrateDeduplicateWarnings=!0,s.migrateWarnings=[],void 0===s.migrateTrace&&(s.migrateTrace=!0),s.migrateReset=function(){o={},s.migrateWarnings.length=0},"BackCompat"===n.document.compatMode&&i("quirks","jQuery is not compatible with Quirks Mode");var c,l,p,f={},m=s.fn.init,y=s.find,h=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/,g=/\[(\s*[-\w]+\s*)([~|^$*]?=)\s*([-\w#]*?#[-\w#]*)\s*\]/g,v=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;for(c in d(s.fn,"init",function(e){var t=Array.prototype.slice.call(arguments);return s.migrateIsPatchEnabled("selector-empty-id")&&"string"==typeof e&&"#"===e&&(i("selector-empty-id","jQuery( '#' ) is not a valid selector"),t[0]=[]),m.apply(this,t)},"selector-empty-id"),s.fn.init.prototype=s.fn,d(s,"find",function(t){var r=Array.prototype.slice.call(arguments);if("string"==typeof t&&h.test(t))try{n.document.querySelector(t)}catch(e){t=t.replace(g,function(e,t,r,n){return"["+t+r+'"'+n+'"]'});try{n.document.querySelector(t),i("selector-hash","Attribute selector with '#' must be quoted: "+r[0]),r[0]=t}catch(e){i("selector-hash","Attribute selector with '#' was not fixed: "+r[0])}}return y.apply(this,r)},"selector-hash"),y)Object.prototype.hasOwnProperty.call(y,c)&&(s.find[c]=y[c]);u(s.fn,"size",function(){return this.length},"size","jQuery.fn.size() is deprecated and removed; use the .length property"),u(s,"parseJSON",function(){return JSON.parse.apply(null,arguments)},"parseJSON","jQuery.parseJSON is deprecated; use JSON.parse"),u(s,"holdReady",s.holdReady,"holdReady","jQuery.holdReady is deprecated"),u(s,"unique",s.uniqueSort,"unique","jQuery.unique is deprecated; use jQuery.uniqueSort"),r(s.expr,"filters",s.expr.pseudos,"expr-pre-pseudos","jQuery.expr.filters is deprecated; use jQuery.expr.pseudos"),r(s.expr,":",s.expr.pseudos,"expr-pre-pseudos","jQuery.expr[':'] is deprecated; use jQuery.expr.pseudos"),e("3.1.1")&&u(s,"trim",function(e){return null==e?"":(e+"").replace(v,"")},"trim","jQuery.trim is deprecated; use String.prototype.trim"),e("3.2.0")&&(u(s,"nodeName",function(e,t){return e.nodeName&&e.nodeName.toLowerCase()===t.toLowerCase()},"nodeName","jQuery.nodeName is deprecated"),u(s,"isArray",Array.isArray,"isArray","jQuery.isArray is deprecated; use Array.isArray")),e("3.3.0")&&(u(s,"isNumeric",function(e){var t=typeof e;return("number"==t||"string"==t)&&!isNaN(e-parseFloat(e))},"isNumeric","jQuery.isNumeric() is deprecated"),s.each("Boolean Number String Function Array Date RegExp Object Error Symbol".split(" "),function(e,t){f["[object "+t+"]"]=t.toLowerCase()}),u(s,"type",function(e){return null==e?e+"":"object"==typeof e||"function"==typeof e?f[Object.prototype.toString.call(e)]||"object":typeof e},"type","jQuery.type is deprecated"),u(s,"isFunction",function(e){return"function"==typeof e},"isFunction","jQuery.isFunction() is deprecated"),u(s,"isWindow",function(e){return null!=e&&e===e.window},"isWindow","jQuery.isWindow() is deprecated")),s.ajax&&(l=s.ajax,p=/(=)\?(?=&|$)|\?\?/,d(s,"ajax",function(){var e=l.apply(this,arguments);return e.promise&&(u(e,"success",e.done,"jqXHR-methods","jQXHR.success is deprecated and removed"),u(e,"error",e.fail,"jqXHR-methods","jQXHR.error is deprecated and removed"),u(e,"complete",e.always,"jqXHR-methods","jQXHR.complete is deprecated and removed")),e},"jqXHR-methods"),e("4.0.0")||s.ajaxPrefilter("+json",function(e){!1!==e.jsonp&&(p.test(e.url)||"string"==typeof e.data&&0===(e.contentType||"").indexOf("application/x-www-form-urlencoded")&&p.test(e.data))&&i("jsonp-promotion","JSON-to-JSONP auto-promotion is deprecated")}));var j=s.fn.removeAttr,b=s.fn.toggleClass,w=/\S+/g;function Q(e){return e.replace(/-([a-z])/g,function(e,t){return t.toUpperCase()})}d(s.fn,"removeAttr",function(e){var r=this;return s.each(e.match(w),function(e,t){s.expr.match.bool.test(t)&&(i("removeAttr-bool","jQuery.fn.removeAttr no longer sets boolean properties: "+t),r.prop(t,!1))}),j.apply(this,arguments)},"removeAttr-bool"),d(s.fn,"toggleClass",function(t){return void 0!==t&&"boolean"!=typeof t?b.apply(this,arguments):(i("toggleClass-bool","jQuery.fn.toggleClass( boolean ) is deprecated"),this.each(function(){var e=this.getAttribute&&this.getAttribute("class")||"";e&&s.data(this,"__className__",e),this.setAttribute&&this.setAttribute("class",!e&&!1!==t&&s.data(this,"__className__")||"")}))},"toggleClass-bool");var x,A=!1,R=/^[a-z]/,T=/^(?:Border(?:Top|Right|Bottom|Left)?(?:Width|)|(?:Margin|Padding)?(?:Top|Right|Bottom|Left)?|(?:Min|Max)?(?:Width|Height))$/;s.swap&&s.each(["height","width","reliableMarginRight"],function(e,t){var r=s.cssHooks[t]&&s.cssHooks[t].get;r&&(s.cssHooks[t].get=function(){var e;return A=!0,e=r.apply(this,arguments),A=!1,e})}),d(s,"swap",function(e,t,r,n){var o,a={};for(o in A||i("swap","jQuery.swap() is undocumented and deprecated"),t)a[o]=e.style[o],e.style[o]=t[o];for(o in r=r.apply(e,n||[]),t)e.style[o]=a[o];return r},"swap"),e("3.4.0")&&"undefined"!=typeof Proxy&&(s.cssProps=new Proxy(s.cssProps||{},{set:function(){return i("cssProps","jQuery.cssProps is deprecated"),Reflect.set.apply(this,arguments)}})),e("4.0.0")&&"undefined"!=typeof Proxy&&(s.cssNumber=new Proxy({animationIterationCount:!0,columnCount:!0,fillOpacity:!0,flexGrow:!0,flexShrink:!0,fontWeight:!0,gridArea:!0,gridColumn:!0,gridColumnEnd:!0,gridColumnStart:!0,gridRow:!0,gridRowEnd:!0,gridRowStart:!0,lineHeight:!0,opacity:!0,order:!0,orphans:!0,widows:!0,zIndex:!0,zoom:!0},{get:function(){return i("css-number","jQuery.cssNumber is deprecated"),Reflect.get.apply(this,arguments)},set:function(){return i("css-number","jQuery.cssNumber is deprecated"),Reflect.set.apply(this,arguments)}})),x=s.fn.css,d(s.fn,"css",function(e,t){var r,n=this;return e&&"object"==typeof e&&!Array.isArray(e)?(s.each(e,function(e,t){s.fn.css.call(n,e,t)}),this):("number"==typeof t&&(t=Q(e),r=t,R.test(r)&&T.test(r[0].toUpperCase()+r.slice(1))||s.cssNumber[t]||i("css-number",'Number-typed values are deprecated for jQuery.fn.css( "'+e+'", value )')),x.apply(this,arguments))},"css-number");function C(e){var t=n.document.implementation.createHTMLDocument("");return t.body.innerHTML=e,t.body&&t.body.innerHTML}var S,N,P,k,H,E,M,q=s.data,D=(d(s,"data",function(e,t,r){var n,o,a;if(t&&"object"==typeof t&&2===arguments.length){for(a in n=s.hasData(e)&&q.call(this,e),o={},t)a!==Q(a)?(i("data-camelCase","jQuery.data() always sets/gets camelCased names: "+a),n[a]=t[a]):o[a]=t[a];return q.call(this,e,o),t}return t&&"string"==typeof t&&t!==Q(t)&&(n=s.hasData(e)&&q.call(this,e))&&t in n?(i("data-camelCase","jQuery.data() always sets/gets camelCased names: "+t),2<arguments.length&&(n[t]=r),n[t]):q.apply(this,arguments)},"data-camelCase"),s.fx&&(P=s.Tween.prototype.run,k=function(e){return e},d(s.Tween.prototype,"run",function(){1<s.easing[this.easing].length&&(i("easing-one-arg","'jQuery.easing."+this.easing.toString()+"' should use only one argument"),s.easing[this.easing]=k),P.apply(this,arguments)},"easing-one-arg"),S=s.fx.interval,N="jQuery.fx.interval is deprecated",n.requestAnimationFrame&&Object.defineProperty(s.fx,"interval",{configurable:!0,enumerable:!0,get:function(){return n.document.hidden||i("fx-interval",N),s.migrateIsPatchEnabled("fx-interval")&&void 0===S?13:S},set:function(e){i("fx-interval",N),S=e}})),s.fn.load),F=s.event.add,W=s.event.fix,O=(s.event.props=[],s.event.fixHooks={},r(s.event.props,"concat",s.event.props.concat,"event-old-patch","jQuery.event.props.concat() is deprecated and removed"),d(s.event,"fix",function(e){var t=e.type,r=this.fixHooks[t],n=s.event.props;if(n.length){i("event-old-patch","jQuery.event.props are deprecated and removed: "+n.join());while(n.length)s.event.addProp(n.pop())}if(r&&!r._migrated_&&(r._migrated_=!0,i("event-old-patch","jQuery.event.fixHooks are deprecated and removed: "+t),(n=r.props)&&n.length))while(n.length)s.event.addProp(n.pop());return t=W.call(this,e),r&&r.filter?r.filter(t,e):t},"event-old-patch"),d(s.event,"add",function(e,t){return e===n&&"load"===t&&"complete"===n.document.readyState&&i("load-after-event","jQuery(window).on('load'...) called after load event occurred"),F.apply(this,arguments)},"load-after-event"),s.each(["load","unload","error"],function(e,t){d(s.fn,t,function(){var e=Array.prototype.slice.call(arguments,0);return"load"===t&&"string"==typeof e[0]?D.apply(this,e):(i("shorthand-removed-v3","jQuery.fn."+t+"() is deprecated"),e.splice(0,0,t),arguments.length?this.on.apply(this,e):(this.triggerHandler.apply(this,e),this))},"shorthand-removed-v3")}),s.each("blur focus focusin focusout resize scroll click dblclick mousedown mouseup mousemove mouseover mouseout mouseenter mouseleave change select submit keydown keypress keyup contextmenu".split(" "),function(e,r){u(s.fn,r,function(e,t){return 0<arguments.length?this.on(r,null,e,t):this.trigger(r)},"shorthand-deprecated-v3","jQuery.fn."+r+"() event shorthand is deprecated")}),s(function(){s(n.document).triggerHandler("ready")}),s.event.special.ready={setup:function(){this===n.document&&i("ready-event","'ready' event is deprecated")}},u(s.fn,"bind",function(e,t,r){return this.on(e,null,t,r)},"pre-on-methods","jQuery.fn.bind() is deprecated"),u(s.fn,"unbind",function(e,t){return this.off(e,null,t)},"pre-on-methods","jQuery.fn.unbind() is deprecated"),u(s.fn,"delegate",function(e,t,r,n){return this.on(t,e,r,n)},"pre-on-methods","jQuery.fn.delegate() is deprecated"),u(s.fn,"undelegate",function(e,t,r){return 1===arguments.length?this.off(e,"**"):this.off(t,e||"**",r)},"pre-on-methods","jQuery.fn.undelegate() is deprecated"),u(s.fn,"hover",function(e,t){return this.on("mouseenter",e).on("mouseleave",t||e)},"pre-on-methods","jQuery.fn.hover() is deprecated"),/<(?!area|br|col|embed|hr|img|input|link|meta|param)(([a-z][^\/\0>\x20\t\r\n\f]*)[^>]*)\/>/gi),_=(s.UNSAFE_restoreLegacyHtmlPrefilter=function(){s.migrateEnablePatches("self-closed-tags")},d(s,"htmlPrefilter",function(e){var t,r;return(r=(t=e).replace(O,"<$1></$2>"))!==t&&C(t)!==C(r)&&i("self-closed-tags","HTML tags must be properly nested and closed: "+t),e.replace(O,"<$1></$2>")},"self-closed-tags"),s.migrateDisablePatches("self-closed-tags"),s.fn.offset);return d(s.fn,"offset",function(){var e=this[0];return!e||e.nodeType&&e.getBoundingClientRect?_.apply(this,arguments):(i("offset-valid-elem","jQuery.fn.offset() requires a valid DOM element"),arguments.length?this:void 0)},"offset-valid-elem"),s.ajax&&(H=s.param,d(s,"param",function(e,t){var r=s.ajaxSettings&&s.ajaxSettings.traditional;return void 0===t&&r&&(i("param-ajax-traditional","jQuery.param() no longer uses jQuery.ajaxSettings.traditional"),t=r),H.call(this,e,t)},"param-ajax-traditional")),u(s.fn,"andSelf",s.fn.addBack,"andSelf","jQuery.fn.andSelf() is deprecated and removed, use jQuery.fn.addBack()"),s.Deferred&&(E=s.Deferred,M=[["resolve","done",s.Callbacks("once memory"),s.Callbacks("once memory"),"resolved"],["reject","fail",s.Callbacks("once memory"),s.Callbacks("once memory"),"rejected"],["notify","progress",s.Callbacks("memory"),s.Callbacks("memory")]],d(s,"Deferred",function(e){var a=E(),i=a.promise();function t(){var o=arguments;return s.Deferred(function(n){s.each(M,function(e,t){var r="function"==typeof o[e]&&o[e];a[t[1]](function(){var e=r&&r.apply(this,arguments);e&&"function"==typeof e.promise?e.promise().done(n.resolve).fail(n.reject).progress(n.notify):n[t[0]+"With"](this===i?n.promise():this,r?[e]:arguments)})}),o=null}).promise()}return u(a,"pipe",t,"deferred-pipe","deferred.pipe() is deprecated"),u(i,"pipe",t,"deferred-pipe","deferred.pipe() is deprecated"),e&&e.call(a,a),a},"deferred-pipe"),s.Deferred.exceptionHook=E.exceptionHook),s});
+
+
+/*
+International Telephone Input v3.6.1
+https://github.com/Bluefieldscom/intl-tel-input.git
+*/
+// wrap in UMD - see https://github.com/umdjs/umd/blob/master/jqueryPlugin.js
+(function(factory) {
+  if (typeof define === "function" && define.amd) {
+    define([ "jquery" ], function($) {
+      factory($, window, document);
+    });
+  } else {
+    factory(jQuery, window, document);
+  }
+})(function($, window, document, undefined) {
+  "use strict";
+  var pluginName = "intlTelInput", id = 1, // give each instance it's own id for namespaced event handling
+    defaults = {
+      // automatically format the number according to the selected country
+      autoFormat: true,
+      // if there is just a dial code in the input: remove it on blur, and re-add it on focus
+      autoHideDialCode: true,
+      // default country
+      defaultCountry: "",
+      // don't insert international dial codes
+      nationalMode: false,
+      // number type to use for placeholders
+      numberType: "",
+      // display only these countries
+      onlyCountries: [],
+      // the countries at the top of the list. defaults to united states and united kingdom
+      preferredCountries: [ "ru" ],
+      // make the dropdown the same width as the input
+      responsiveDropdown: false,
+      // specify the path to the libphonenumber script to enable validation/formatting
+      utilsScript: ""
+    }, keys = {
+      UP: 38,
+      DOWN: 40,
+      ENTER: 13,
+      ESC: 27,
+      PLUS: 43,
+      A: 65,
+      Z: 90,
+      ZERO: 48,
+      NINE: 57,
+      SPACE: 32,
+      BSPACE: 8,
+      DEL: 46,
+      CTRL: 17,
+      CMD1: 91,
+      // Chrome
+      CMD2: 224
+    }, windowLoaded = false;
+  // keep track of if the window.load event has fired as impossible to check after the fact
+  $(window).load(function() {
+    windowLoaded = true;
+  });
+  function Plugin(element, options) {
+    this.element = element;
+    this.options = $.extend({}, defaults, options);
+    this._defaults = defaults;
+    // event namespace
+    this.ns = "." + pluginName + id++;
+    // Chrome, FF, Safari, IE9+
+    this.isGoodBrowser = Boolean(element.setSelectionRange);
+    this.hadInitialPlaceholder = Boolean($(element).attr("placeholder"));
+    this._name = pluginName;
+    this.init();
+  }
+  Plugin.prototype = {
+    init: function() {
+      var that = this;
+      // if defaultCountry is set to "auto", we must do a lookup first
+      if (this.options.defaultCountry == "auto") {
+        $.get("http://ipinfo.io", function(response) {
+          that.options.defaultCountry = response && response.country ? response.country.toLowerCase() : "";
+          that.ready();
+        }, "jsonp");
+      } else {
+        this.ready();
+      }
+    },
+    ready: function() {
+      // if in nationalMode, disable options relating to dial codes
+      if (this.options.nationalMode) {
+        this.options.autoHideDialCode = false;
+      }
+      // IE Mobile and Chrome for Android have issues with key events (see issues 56 and 68) which make autoFormat impossible
+      if (navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/Android/i) && navigator.userAgent.match(/Chrome/i)) {
+        this.options.autoFormat = false;
+      }
+      // auto enable responsiveDropdown mode on small screens (dropdown is currently set to 430px in CSS)
+      if (window.innerWidth < 500) {
+        this.options.responsiveDropdown = true;
+      }
+      // process all the data: onlyCounties, preferredCountries, defaultCountry etc
+      this._processCountryData();
+      // generate the markup
+      this._generateMarkup();
+      // set the initial state of the input value and the selected flag
+      this._setInitialState();
+      // start all of the event listeners: autoHideDialCode, input keydown, selectedFlag click
+      this._initListeners();
+    },
+    /********************
+     *  PRIVATE METHODS
+     ********************/
+    // prepare all of the country data, including onlyCountries, preferredCountries and
+    // defaultCountry options
+    _processCountryData: function() {
+      // set the instances country data objects
+      this._setInstanceCountryData();
+      // set the preferredCountries property
+      this._setPreferredCountries();
+    },
+    // add a country code to this.countryCodes
+    _addCountryCode: function(iso2, dialCode, priority) {
+      if (!(dialCode in this.countryCodes)) {
+        this.countryCodes[dialCode] = [];
+      }
+      var index = priority || 0;
+      this.countryCodes[dialCode][index] = iso2;
+    },
+    // process onlyCountries array if present, and generate the countryCodes map
+    _setInstanceCountryData: function() {
+      var i;
+      // process onlyCountries option
+      if (this.options.onlyCountries.length) {
+        this.countries = [];
+        for (i = 0; i < this.options.onlyCountries.length; i++) {
+          var countryData = this._getCountryData(this.options.onlyCountries[i], true, false);
+          if (countryData) {
+            this.countries.push(countryData);
+          }
+        }
+      } else {
+        this.countries = allCountries;
+      }
+      // generate countryCodes map
+      this.countryCodes = {};
+      for (i = 0; i < this.countries.length; i++) {
+        var c = this.countries[i];
+        this._addCountryCode(c.iso2, c.dialCode, c.priority);
+        // area codes
+        if (c.areaCodes) {
+          for (var j = 0; j < c.areaCodes.length; j++) {
+            // full dial code is country code + dial code
+            this._addCountryCode(c.iso2, c.dialCode + c.areaCodes[j]);
+          }
+        }
+      }
+    },
+    // process preferred countries - iterate through the preferences,
+    // fetching the country data for each one
+    _setPreferredCountries: function() {
+      this.preferredCountries = [];
+      for (var i = 0; i < this.options.preferredCountries.length; i++) {
+        var countryCode = this.options.preferredCountries[i], countryData = this._getCountryData(countryCode, false, true);
+        if (countryData) {
+          this.preferredCountries.push(countryData);
+        }
+      }
+    },
+    // generate all of the markup for the plugin: the selected flag overlay, and the dropdown
+    _generateMarkup: function() {
+      // telephone input
+      this.telInput = $(this.element);
+      // containers (mostly for positioning)
+      this.telInput.wrap($("<div>", {
+        "class": "intl-tel-input"
+      }));
+      var flagsContainer = $("<div>", {
+        "class": "flag-dropdown"
+      }).insertAfter(this.telInput);
+      // currently selected flag (displayed to left of input)
+      var selectedFlag = $("<div>", {
+        "class": "selected-flag"
+      }).appendTo(flagsContainer);
+      this.selectedFlagInner = $("<div>", {
+        "class": "flag"
+      }).appendTo(selectedFlag);
+      // CSS triangle
+      $("<div>", {
+        "class": "arrow"
+      }).appendTo(this.selectedFlagInner);
+      // country list contains: preferred countries, then divider, then all countries
+      this.countryList = $("<ul>", {
+        "class": "country-list v-hide"
+      }).appendTo(flagsContainer);
+      if (this.preferredCountries.length) {
+        this._appendListItems(this.preferredCountries, "preferred");
+        $("<li>", {
+          "class": "divider"
+        }).appendTo(this.countryList);
+      }
+      this._appendListItems(this.countries, "");
+      // now we can grab the dropdown height, and hide it properly
+      this.dropdownHeight = this.countryList.outerHeight();
+      this.countryList.removeClass("v-hide").addClass("hide");
+      // and set the width
+      if (this.options.responsiveDropdown) {
+        this.countryList.outerWidth(this.telInput.outerWidth());
+      }
+      // this is useful in lots of places
+      this.countryListItems = this.countryList.children(".country");
+    },
+    // add a country <li> to the countryList <ul> container
+    _appendListItems: function(countries, className) {
+      // we create so many DOM elements, I decided it was faster to build a temp string
+      // and then add everything to the DOM in one go at the end
+      var tmp = "";
+      // for each country
+      for (var i = 0; i < countries.length; i++) {
+        var c = countries[i];
+        // open the list item
+        tmp += "<li class='country " + className + "' data-dial-code='" + c.dialCode + "' data-country-code='" + c.iso2 + "'>";
+        // add the flag
+        tmp += "<div class='flag " + c.iso2 + "'></div>";
+        // and the country name and dial code
+        tmp += "<span class='country-name'>" + c.name + "</span>";
+        tmp += "<span class='dial-code'>+" + c.dialCode + "</span>";
+        // close the list item
+        tmp += "</li>";
+      }
+      this.countryList.append(tmp);
+    },
+    // set the initial state of the input value and the selected flag
+    _setInitialState: function() {
+      var val = this.telInput.val();
+      // if there is a number, and it's valid, we can go ahead and set the flag, else fall back to default
+      if (this._getDialCode(val)) {
+        this._updateFlagFromNumber(val);
+      } else {
+        var defaultCountry;
+        // check the defaultCountry option, else fall back to the first in the list
+        if (this.options.defaultCountry) {
+          defaultCountry = this._getCountryData(this.options.defaultCountry, false, false);
+        } else {
+          defaultCountry = this.preferredCountries.length ? this.preferredCountries[0] : this.countries[0];
+        }
+        this._selectFlag(defaultCountry.iso2);
+        // if empty, insert the default dial code (this function will check !nationalMode and !autoHideDialCode)
+        if (!val) {
+          this._updateDialCode(defaultCountry.dialCode, false);
+        }
+      }
+      // format
+      if (val) {
+        // this wont be run after _updateDialCode as that's only called if no val
+        this._updateVal(val, false);
+      }
+    },
+    // initialise the main event listeners: input keyup, and click selected flag
+    _initListeners: function() {
+      var that = this;
+      this._initKeyListeners();
+      // autoFormat prevents the change event from firing, so we need to check for changes between focus and blur in order to manually trigger it
+      if (this.options.autoHideDialCode || this.options.autoFormat) {
+        this._initFocusListeners();
+      }
+      // hack for input nested inside label: clicking the selected-flag to open the dropdown would then automatically trigger a 2nd click on the input which would close it again
+      var label = this.telInput.closest("label");
+      if (label.length) {
+        label.on("click" + this.ns, function(e) {
+          // if the dropdown is closed, then focus the input, else ignore the click
+          if (that.countryList.hasClass("hide")) {
+            that.telInput.focus();
+          } else {
+            e.preventDefault();
+          }
+        });
+      }
+      // toggle country dropdown on click
+      var selectedFlag = this.selectedFlagInner.parent();
+      selectedFlag.on("click" + this.ns, function(e) {
+        // only intercept this event if we're opening the dropdown
+        // else let it bubble up to the top ("click-off-to-close" listener)
+        // we cannot just stopPropagation as it may be needed to close another instance
+        if (that.countryList.hasClass("hide") && !that.telInput.prop("disabled")) {
+          that._showDropdown();
+        }
+      });
+      // if the user has specified the path to the utils script, fetch it on window.load
+      if (this.options.utilsScript) {
+        // if the plugin is being initialised after the window.load event has already been fired
+        if (windowLoaded) {
+          this.loadUtils();
+        } else {
+          // wait until the load event so we don't block any other requests e.g. the flags image
+          $(window).load(function() {
+            that.loadUtils();
+          });
+        }
+      }
+    },
+    _initKeyListeners: function() {
+      var that = this;
+      if (this.options.autoFormat) {
+        // format number and update flag on keypress
+        // use keypress event as we want to ignore all input except for a select few keys,
+        // but we dont want to ignore the navigation keys like the arrows etc.
+        // NOTE: no point in refactoring this to only bind these listeners on focus/blur because then you would need to have those 2 listeners running the whole time anyway...
+        this.telInput.on("keypress" + this.ns, function(e) {
+          // 32 is space, and after that it's all chars (not meta/nav keys)
+          // this fix is needed for Firefox, which triggers keypress event for some meta/nav keys
+          // Update: also ignore if this is a metaKey e.g. FF and Safari trigger keypress on the v of Ctrl+v
+          if (e.which >= keys.SPACE && !e.metaKey) {
+            e.preventDefault();
+            // allowed keys are just numeric keys and plus
+            // we must allow plus for the case where the user does select-all and then hits plus to start typing a new number. we could refine this logic to first check that the selection contains a plus, but that wont work in old browsers, and I think it's overkill anyway
+            var isAllowedKey = e.which >= keys.ZERO && e.which <= keys.NINE || e.which == keys.PLUS, input = that.telInput[0], noSelection = that.isGoodBrowser && input.selectionStart == input.selectionEnd, max = that.telInput.attr("maxlength"), // assumes that if max exists, it is >0
+              isBelowMax = max ? that.telInput.val().length < max : true;
+            // first: ensure we dont go over maxlength. we must do this here to prevent adding digits in the middle of the number
+            // still reformat even if not an allowed key as they could by typing a formatting char, but ignore if there's a selection as doesn't make sense to replace selection with illegal char and then immediately remove it
+            if (isBelowMax && (isAllowedKey || noSelection)) {
+              var newChar = isAllowedKey ? String.fromCharCode(e.which) : null;
+              that._handleInputKey(newChar, true);
+            }
+            if (!isAllowedKey) {
+              that.telInput.trigger("invalidkey");
+            }
+          }
+        });
+      }
+      // handle keyup event
+      // for autoFormat: we use keyup to catch delete events after the fact
+      this.telInput.on("keyup" + this.ns, function(e) {
+        // the "enter" key event from selecting a dropdown item is triggered here on the input, because the document.keydown handler that initially handles that event triggers a focus on the input, and so the keyup for that same key event gets triggered here. weird, but just make sure we dont bother doing any re-formatting in this case (we've already done preventDefault in the keydown handler, so it wont actually submit the form or anything).
+        if (e.which == keys.ENTER) {} else if (that.options.autoFormat) {
+          var isCtrl = e.which == keys.CTRL || e.which == keys.CMD1 || e.which == keys.CMD2, input = that.telInput[0], // noSelection defaults to false for bad browsers, else would be reformatting on all ctrl keys e.g. select-all/copy
+            noSelection = that.isGoodBrowser && input.selectionStart == input.selectionEnd, // cursorAtEnd defaults to false for bad browsers else they would never get a reformat on delete
+            cursorAtEnd = that.isGoodBrowser && input.selectionStart == that.telInput.val().length;
+          // if delete in the middle: reformat with no suffix (no need to reformat if delete at end)
+          // if backspace: reformat with no suffix (need to reformat if at end to remove any lingering suffix - this is a feature)
+          // if ctrl and no selection (i.e. could have just been a paste): reformat (if cursorAtEnd: add suffix)
+          if (e.which == keys.DEL && !cursorAtEnd || e.which == keys.BSPACE || isCtrl && noSelection) {
+            // important to remember never to add suffix on any delete key as can fuck up in ie8 so you can never delete a formatting char at the end
+            that._handleInputKey(null, isCtrl && cursorAtEnd);
+          }
+          // prevent deleting the plus (if not in nationalMode)
+          if (!that.options.nationalMode) {
+            var val = that.telInput.val();
+            if (val.substr(0, 1) != "+") {
+              // newCursorPos is current pos + 1 to account for the plus we are about to add
+              var newCursorPos = that.isGoodBrowser ? input.selectionStart + 1 : 0;
+              that.telInput.val("+" + val);
+              if (that.isGoodBrowser) {
+                input.setSelectionRange(newCursorPos, newCursorPos);
+              }
+            }
+          }
+        } else {
+          // if no autoFormat, just update flag
+          that._updateFlagFromNumber(that.telInput.val());
+        }
+      });
+    },
+    // when autoFormat is enabled: handle various key events on the input: the 2 main situations are 1) adding a new number character, which will replace any selection, reformat, and try to preserve the cursor position. and 2) reformatting on backspace, or paste event
+    _handleInputKey: function(newNumericChar, addSuffix) {
+      var val = this.telInput.val(), newCursor = null, cursorAtEnd = false, // raw DOM element
+        input = this.telInput[0];
+      if (this.isGoodBrowser) {
+        var selectionEnd = input.selectionEnd, originalLen = val.length;
+        cursorAtEnd = selectionEnd == originalLen;
+        // if handling a new number character: insert it in the right place and calculate the new cursor position
+        if (newNumericChar) {
+          // replace any selection they may have made with the new char
+          val = val.substr(0, input.selectionStart) + newNumericChar + val.substring(selectionEnd, originalLen);
+          // if the cursor was not at the end then calculate it's new pos
+          if (!cursorAtEnd) {
+            newCursor = selectionEnd + (val.length - originalLen);
+          }
+        } else {
+          // here we're not handling a new char, we're just doing a re-format, but we still need to maintain the cursor position
+          newCursor = input.selectionStart;
+        }
+      } else if (newNumericChar) {
+        val += newNumericChar;
+      }
+      // update the number and flag
+      this.setNumber(val, addSuffix);
+      // update the cursor position
+      if (this.isGoodBrowser) {
+        // if it was at the end, keep it there
+        if (cursorAtEnd) {
+          newCursor = this.telInput.val().length;
+        }
+        input.setSelectionRange(newCursor, newCursor);
+      }
+    },
+    // listen for focus and blur
+    _initFocusListeners: function() {
+      var that = this;
+      if (this.options.autoHideDialCode) {
+        // mousedown decides where the cursor goes, so if we're focusing we must preventDefault as we'll be inserting the dial code, and we want the cursor to be at the end no matter where they click
+        this.telInput.on("mousedown" + this.ns, function(e) {
+          if (!that.telInput.is(":focus") && !that.telInput.val()) {
+            e.preventDefault();
+            // but this also cancels the focus, so we must trigger that manually
+            that.telInput.focus();
+          }
+        });
+      }
+      this.telInput.on("focus" + this.ns, function() {
+        var value = that.telInput.val();
+        // save this to compare on blur
+        that.telInput.data("focusVal", value);
+        if (that.options.autoHideDialCode) {
+          // on focus: if empty, insert the dial code for the currently selected flag
+          if (!value) {
+            that._updateVal("+" + that.selectedCountryData.dialCode, true);
+            // after auto-inserting a dial code, if the first key they hit is '+' then assume they are entering a new number, so remove the dial code. use keypress instead of keydown because keydown gets triggered for the shift key (required to hit the + key), and instead of keyup because that shows the new '+' before removing the old one
+            that.telInput.one("keypress.plus" + that.ns, function(e) {
+              if (e.which == keys.PLUS) {
+                // if autoFormat is enabled, this key event will have already have been handled by another keypress listener (hence we need to add the "+"). if disabled, it will be handled after this by a keyup listener (hence no need to add the "+").
+                var newVal = that.options.autoFormat ? "+" : "";
+                that.telInput.val(newVal);
+              }
+            });
+            // after tabbing in, make sure the cursor is at the end we must use setTimeout to get outside of the focus handler as it seems the selection happens after that
+            setTimeout(function() {
+              var input = that.telInput[0];
+              if (that.isGoodBrowser) {
+                var len = that.telInput.val().length;
+                input.setSelectionRange(len, len);
+              }
+            });
+          }
+        }
+      });
+      this.telInput.on("blur" + this.ns, function() {
+        if (that.options.autoHideDialCode) {
+          // on blur: if just a dial code then remove it
+          var value = that.telInput.val(), startsPlus = value.substr(0, 1) == "+";
+          if (startsPlus) {
+            var numeric = that._getNumeric(value);
+            // if just a plus, or if just a dial code
+            if (!numeric || that.selectedCountryData.dialCode == numeric) {
+              that.telInput.val("");
+            }
+          }
+          // remove the keypress listener we added on focus
+          that.telInput.off("keypress.plus" + that.ns);
+        }
+        // manually trigger change event if value has changed
+        if (that.options.autoFormat && that.telInput.val() != that.telInput.data("focusVal")) {
+          that.telInput.trigger("change");
+        }
+      });
+    },
+    // extract the numeric digits from the given string
+    _getNumeric: function(s) {
+      return s.replace(/\D/g, "");
+    },
+    // show the dropdown
+    _showDropdown: function() {
+      this._setDropdownPosition();
+      // update highlighting and scroll to active list item
+      var activeListItem = this.countryList.children(".active");
+      this._highlightListItem(activeListItem);
+      // show it
+      this.countryList.removeClass("hide");
+      this._scrollTo(activeListItem);
+      // bind all the dropdown-related listeners: mouseover, click, click-off, keydown
+      this._bindDropdownListeners();
+      // update the arrow
+      this.selectedFlagInner.children(".arrow").addClass("up");
+    },
+    // decide where to position dropdown (depends on position within viewport, and scroll)
+    _setDropdownPosition: function() {
+      var inputTop = this.telInput.offset().top, windowTop = $(window).scrollTop(), // dropdownFitsBelow = (dropdownBottom < windowBottom)
+        dropdownFitsBelow = inputTop + this.telInput.outerHeight() + this.dropdownHeight < windowTop + $(window).height(), dropdownFitsAbove = inputTop - this.dropdownHeight > windowTop;
+      // dropdownHeight - 1 for border
+      var cssTop = !dropdownFitsBelow && dropdownFitsAbove ? "-" + (this.dropdownHeight - 1) + "px" : "";
+      this.countryList.css("top", cssTop);
+    },
+    // we only bind dropdown listeners when the dropdown is open
+    _bindDropdownListeners: function() {
+      var that = this;
+      // when mouse over a list item, just highlight that one
+      // we add the class "highlight", so if they hit "enter" we know which one to select
+      this.countryList.on("mouseover" + this.ns, ".country", function(e) {
+        that._highlightListItem($(this));
+      });
+      // listen for country selection
+      this.countryList.on("click" + this.ns, ".country", function(e) {
+        that._selectListItem($(this));
+      });
+      // click off to close
+      // (except when this initial opening click is bubbling up)
+      // we cannot just stopPropagation as it may be needed to close another instance
+      var isOpening = true;
+      $("html").on("click" + this.ns, function(e) {
+        if (!isOpening) {
+          that._closeDropdown();
+        }
+        isOpening = false;
+      });
+      // listen for up/down scrolling, enter to select, or letters to jump to country name.
+      // use keydown as keypress doesn't fire for non-char keys and we want to catch if they
+      // just hit down and hold it to scroll down (no keyup event).
+      // listen on the document because that's where key events are triggered if no input has focus
+      var query = "", queryTimer = null;
+      $(document).on("keydown" + this.ns, function(e) {
+        // prevent down key from scrolling the whole page,
+        // and enter key from submitting a form etc
+        e.preventDefault();
+        if (e.which == keys.UP || e.which == keys.DOWN) {
+          // up and down to navigate
+          that._handleUpDownKey(e.which);
+        } else if (e.which == keys.ENTER) {
+          // enter to select
+          that._handleEnterKey();
+        } else if (e.which == keys.ESC) {
+          // esc to close
+          that._closeDropdown();
+        } else if (e.which >= keys.A && e.which <= keys.Z || e.which == keys.SPACE) {
+          // upper case letters (note: keyup/keydown only return upper case letters)
+          // jump to countries that start with the query string
+          if (queryTimer) {
+            clearTimeout(queryTimer);
+          }
+          query += String.fromCharCode(e.which);
+          that._searchForCountry(query);
+          // if the timer hits 1 second, reset the query
+          queryTimer = setTimeout(function() {
+            query = "";
+          }, 1e3);
+        }
+      });
+    },
+    // highlight the next/prev item in the list (and ensure it is visible)
+    _handleUpDownKey: function(key) {
+      var current = this.countryList.children(".highlight").first();
+      var next = key == keys.UP ? current.prev() : current.next();
+      if (next.length) {
+        // skip the divider
+        if (next.hasClass("divider")) {
+          next = key == keys.UP ? next.prev() : next.next();
+        }
+        this._highlightListItem(next);
+        this._scrollTo(next);
+      }
+    },
+    // select the currently highlighted item
+    _handleEnterKey: function() {
+      var currentCountry = this.countryList.children(".highlight").first();
+      if (currentCountry.length) {
+        this._selectListItem(currentCountry);
+      }
+    },
+    // find the first list item whose name starts with the query string
+    _searchForCountry: function(query) {
+      for (var i = 0; i < this.countries.length; i++) {
+        if (this._startsWith(this.countries[i].name, query)) {
+          var listItem = this.countryList.children("[data-country-code=" + this.countries[i].iso2 + "]").not(".preferred");
+          // update highlighting and scroll
+          this._highlightListItem(listItem);
+          this._scrollTo(listItem, true);
+          break;
+        }
+      }
+    },
+    // check if (uppercase) string a starts with string b
+    _startsWith: function(a, b) {
+      return a.substr(0, b.length).toUpperCase() == b;
+    },
+    // update the input's value to the given val
+    // if autoFormat=true, format it first according to the country-specific formatting rules
+    _updateVal: function(val, addSuffix) {
+      var formatted;
+      if (this.options.autoFormat && window.intlTelInputUtils) {
+        formatted = intlTelInputUtils.formatNumber(val, this.selectedCountryData.iso2, addSuffix);
+        // ensure we dont go over maxlength. we must do this here to truncate any formatting suffix, and also handle paste events
+        var max = this.telInput.attr("maxlength");
+        if (max && formatted.length > max) {
+          formatted = formatted.substr(0, max);
+        }
+      } else {
+        // no autoFormat, so just insert the original value
+        formatted = val;
+      }
+      this.telInput.val(formatted);
+    },
+    // check if need to select a new flag based on the given number
+    _updateFlagFromNumber: function(number) {
+      // if we're in nationalMode and we're on US/Canada, make sure the number starts with a +1 so _getDialCode will be able to extract the area code
+      // update: if we dont yet have selectedCountryData, but we're here (trying to update the flag from the number), that means we're initialising the plugin with a number that already has a dial code, so fine to ignore this bit
+      if (this.options.nationalMode && this.selectedCountryData && this.selectedCountryData.dialCode == "1" && number.substr(0, 1) != "+") {
+        number = "+1" + number;
+      }
+      // try and extract valid dial code from input
+      var dialCode = this._getDialCode(number);
+      if (dialCode) {
+        // check if one of the matching countries is already selected
+        var countryCodes = this.countryCodes[this._getNumeric(dialCode)], alreadySelected = false;
+        if (this.selectedCountryData) {
+          for (var i = 0; i < countryCodes.length; i++) {
+            if (countryCodes[i] == this.selectedCountryData.iso2) {
+              alreadySelected = true;
+            }
+          }
+        }
+        // if a matching country is not already selected (or this is an unknown NANP area code): choose the first in the list
+        if (!alreadySelected || this._isUnknownNanp(number, dialCode)) {
+          // if using onlyCountries option, countryCodes[0] may be empty, so we must find the first non-empty index
+          for (var j = 0; j < countryCodes.length; j++) {
+            if (countryCodes[j]) {
+              this._selectFlag(countryCodes[j]);
+              break;
+            }
+          }
+        }
+      }
+    },
+    // check if the given number contains an unknown area code from the North American Numbering Plan i.e. the only dialCode that could be extracted was +1 but the actual number's length is >=4
+    _isUnknownNanp: function(number, dialCode) {
+      return dialCode == "+1" && this._getNumeric(number).length >= 4;
+    },
+    // remove highlighting from other list items and highlight the given item
+    _highlightListItem: function(listItem) {
+      this.countryListItems.removeClass("highlight");
+      listItem.addClass("highlight");
+    },
+    // find the country data for the given country code
+    // the ignoreOnlyCountriesOption is only used during init() while parsing the onlyCountries array
+    _getCountryData: function(countryCode, ignoreOnlyCountriesOption, allowFail) {
+      var countryList = ignoreOnlyCountriesOption ? allCountries : this.countries;
+      for (var i = 0; i < countryList.length; i++) {
+        if (countryList[i].iso2 == countryCode) {
+          return countryList[i];
+        }
+      }
+      if (allowFail) {
+        return null;
+      } else {
+        throw new Error("No country data for '" + countryCode + "'");
+      }
+    },
+    // select the given flag, update the placeholder and the active list item
+    _selectFlag: function(countryCode) {
+      // do this first as it will throw an error and stop if countryCode is invalid
+      this.selectedCountryData = this._getCountryData(countryCode, false, false);
+      this.selectedFlagInner.attr("class", "flag " + countryCode);
+      // update the selected country's title attribute
+      var title = this.selectedCountryData.name + ": +" + this.selectedCountryData.dialCode;
+      this.selectedFlagInner.parent().attr("title", title);
+      // and the input's placeholder
+      this._updatePlaceholder();
+      // update the active list item
+      var listItem = this.countryListItems.children(".flag." + countryCode).first().parent();
+      this.countryListItems.removeClass("active");
+      listItem.addClass("active");
+    },
+    // update the input placeholder to an example number from the currently selected country
+    _updatePlaceholder: function() {
+      if (window.intlTelInputUtils && !this.hadInitialPlaceholder) {
+        var iso2 = this.selectedCountryData.iso2, numberType = this.options.numberType ? intlTelInputUtils.numberType[this.options.numberType] : intlTelInputUtils.numberType.FIXED_LINE, placeholder = intlTelInputUtils.getExampleNumber(iso2, this.options.nationalMode, numberType);
+        this.telInput.attr("placeholder", placeholder);
+      }
+    },
+    // called when the user selects a list item from the dropdown
+    _selectListItem: function(listItem) {
+      // update selected flag and active list item
+      var countryCode = listItem.attr("data-country-code");
+      this._selectFlag(countryCode);
+      this._closeDropdown();
+      this._updateDialCode(listItem.attr("data-dial-code"), true);
+      // always fire the change event as even if nationalMode=true (and we haven't updated the input val), the system as a whole has still changed - see country-sync example. think of it as making a selection from a select element.
+      this.telInput.trigger("change");
+      // focus the input
+      this.telInput.focus();
+    },
+    // close the dropdown and unbind any listeners
+    _closeDropdown: function() {
+      this.countryList.addClass("hide");
+      // update the arrow
+      this.selectedFlagInner.children(".arrow").removeClass("up");
+      // unbind key events
+      $(document).off(this.ns);
+      // unbind click-off-to-close
+      $("html").off(this.ns);
+      // unbind hover and click listeners
+      this.countryList.off(this.ns);
+    },
+    // check if an element is visible within it's container, else scroll until it is
+    _scrollTo: function(element, middle) {
+      var container = this.countryList, containerHeight = container.height(), containerTop = container.offset().top, containerBottom = containerTop + containerHeight, elementHeight = element.outerHeight(), elementTop = element.offset().top, elementBottom = elementTop + elementHeight, newScrollTop = elementTop - containerTop + container.scrollTop(), middleOffset = containerHeight / 2 - elementHeight / 2;
+      if (elementTop < containerTop) {
+        // scroll up
+        if (middle) {
+          newScrollTop -= middleOffset;
+        }
+        container.scrollTop(newScrollTop);
+      } else if (elementBottom > containerBottom) {
+        // scroll down
+        if (middle) {
+          newScrollTop += middleOffset;
+        }
+        var heightDifference = containerHeight - elementHeight;
+        container.scrollTop(newScrollTop - heightDifference);
+      }
+    },
+    // replace any existing dial code with the new one (if not in nationalMode)
+    // also we need to know if we're focusing for a couple of reasons e.g. if so, we want to add any formatting suffix, also if the input is empty and we're not in nationalMode, then we want to insert the dial code
+    _updateDialCode: function(newDialCode, focusing) {
+      var inputVal = this.telInput.val(), newNumber;
+      // save having to pass this every time
+      newDialCode = "+" + newDialCode;
+      if (this.options.nationalMode && inputVal.substr(0, 1) != "+") {
+        // if nationalMode, we just want to re-format
+        newNumber = inputVal;
+      } else if (inputVal) {
+        // if the previous number contained a valid dial code, replace it
+        // (if more than just a plus character)
+        var prevDialCode = this._getDialCode(inputVal);
+        if (prevDialCode.length > 1) {
+          newNumber = inputVal.replace(prevDialCode, newDialCode);
+        } else {
+          // if the previous number didn't contain a dial code, we should persist it
+          var existingNumber = inputVal.substr(0, 1) != "+" ? $.trim(inputVal) : "";
+          newNumber = newDialCode + existingNumber;
+        }
+      } else {
+        newNumber = !this.options.autoHideDialCode || focusing ? newDialCode : "";
+      }
+      this._updateVal(newNumber, focusing);
+    },
+    // try and extract a valid international dial code from a full telephone number
+    // Note: returns the raw string inc plus character and any whitespace/dots etc
+    _getDialCode: function(number) {
+      var dialCode = "";
+      // only interested in international numbers (starting with a plus)
+      if (number.charAt(0) == "+") {
+        var numericChars = "";
+        // iterate over chars
+        for (var i = 0; i < number.length; i++) {
+          var c = number.charAt(i);
+          // if char is number
+          if ($.isNumeric(c)) {
+            numericChars += c;
+            // if current numericChars make a valid dial code
+            if (this.countryCodes[numericChars]) {
+              // store the actual raw string (useful for matching later)
+              dialCode = number.substr(0, i + 1);
+            }
+            // longest dial code is 4 chars
+            if (numericChars.length == 4) {
+              break;
+            }
+          }
+        }
+      }
+      return dialCode;
+    },
+    /********************
+     *  PUBLIC METHODS
+     ********************/
+    // remove plugin
+    destroy: function() {
+      // make sure the dropdown is closed (and unbind listeners)
+      this._closeDropdown();
+      // key events, and focus/blur events if autoHideDialCode=true
+      this.telInput.off(this.ns);
+      // click event to open dropdown
+      this.selectedFlagInner.parent().off(this.ns);
+      // label click hack
+      this.telInput.closest("label").off(this.ns);
+      // remove markup
+      var container = this.telInput.parent();
+      container.before(this.telInput).remove();
+    },
+    // format the number to E164
+    getCleanNumber: function() {
+      if (window.intlTelInputUtils) {
+        return intlTelInputUtils.formatNumberE164(this.telInput.val(), this.selectedCountryData.iso2);
+      }
+      return "";
+    },
+    // get the type of the entered number e.g. landline/mobile
+    getNumberType: function() {
+      if (window.intlTelInputUtils) {
+        return intlTelInputUtils.getNumberType(this.telInput.val(), this.selectedCountryData.iso2);
+      }
+      return -99;
+    },
+    // get the country data for the currently selected flag
+    getSelectedCountryData: function() {
+      // if this is undefined, the plugin will return it's instance instead, so in that case an empty object makes more sense
+      return this.selectedCountryData || {};
+    },
+    // get the validation error
+    getValidationError: function() {
+      if (window.intlTelInputUtils) {
+        return intlTelInputUtils.getValidationError(this.telInput.val(), this.selectedCountryData.iso2);
+      }
+      return -99;
+    },
+    // validate the input val - assumes the global function isValidNumber (from utilsScript)
+    isValidNumber: function() {
+      var val = $.trim(this.telInput.val()), countryCode = this.options.nationalMode ? this.selectedCountryData.iso2 : "", // libphonenumber allows alpha chars, but in order to allow that, we'd need a method to retrieve the processed number, with letters replaced with numbers
+        containsAlpha = /[a-zA-Z]/.test(val);
+      if (!containsAlpha && window.intlTelInputUtils) {
+        return intlTelInputUtils.isValidNumber(val, countryCode);
+      }
+      return false;
+    },
+    // load the utils script
+    loadUtils: function(path) {
+      var utilsScript = path || this.options.utilsScript;
+      if (!$.fn[pluginName].loadedUtilsScript && utilsScript) {
+        // don't do this twice! (dont just check if the global intlTelInputUtils exists as if init plugin multiple times in quick succession, it may not have finished loading yet)
+        $.fn[pluginName].loadedUtilsScript = true;
+        // dont use $.getScript as it prevents caching
+        $.ajax({
+          url: utilsScript,
+          success: function() {
+            // tell all instances the utils are ready
+            $(".intl-tel-input input").intlTelInput("utilsLoaded");
+          },
+          dataType: "script",
+          cache: true
+        });
+      }
+    },
+    // update the selected flag, and update the input val accordingly
+    selectCountry: function(countryCode) {
+      // check if already selected
+      if (!this.selectedFlagInner.hasClass(countryCode)) {
+        this._selectFlag(countryCode);
+        this._updateDialCode(this.selectedCountryData.dialCode, false);
+      }
+    },
+    // set the input value and update the flag
+    setNumber: function(number, addSuffix) {
+      // ensure starts with plus
+      if (!this.options.nationalMode && number.substr(0, 1) != "+") {
+        number = "+" + number;
+      }
+      // we must update the flag first, which updates this.selectedCountryData, which is used later for formatting the number before displaying it
+      this._updateFlagFromNumber(number);
+      this._updateVal(number, addSuffix);
+    },
+    // this is called when the utils are ready
+    utilsLoaded: function() {
+      // if autoFormat is enabled and there's an initial value in the input, then format it
+      if (this.options.autoFormat && this.telInput.val()) {
+        this._updateVal(this.telInput.val());
+      }
+      this._updatePlaceholder();
+    }
+  };
+  // adapted to allow public functions
+  // using https://github.com/jquery-boilerplate/jquery-boilerplate/wiki/Extending-jQuery-Boilerplate
+  $.fn[pluginName] = function(options) {
+    var args = arguments;
+    // Is the first parameter an object (options), or was omitted,
+    // instantiate a new instance of the plugin.
+    if (options === undefined || typeof options === "object") {
+      return this.each(function() {
+        if (!$.data(this, "plugin_" + pluginName)) {
+          $.data(this, "plugin_" + pluginName, new Plugin(this, options));
+        }
+      });
+    } else if (typeof options === "string" && options[0] !== "_" && options !== "init") {
+      // If the first parameter is a string and it doesn't start
+      // with an underscore or "contains" the `init`-function,
+      // treat this as a call to a public method.
+      // Cache the method call to make it possible to return a value
+      var returns;
+      this.each(function() {
+        var instance = $.data(this, "plugin_" + pluginName);
+        // Tests that there's already a plugin-instance
+        // and checks that the requested public method exists
+        if (instance instanceof Plugin && typeof instance[options] === "function") {
+          // Call the method of our plugin instance,
+          // and pass it the supplied arguments.
+          returns = instance[options].apply(instance, Array.prototype.slice.call(args, 1));
+        }
+        // Allow instances to be destroyed via the 'destroy' method
+        if (options === "destroy") {
+          $.data(this, "plugin_" + pluginName, null);
+        }
+      });
+      // If the earlier cached method gives a value back return the value,
+      // otherwise return this to preserve chainability.
+      return returns !== undefined ? returns : this;
+    }
+  };
+  /********************
+   *  STATIC METHODS
+   ********************/
+  // get the country data object
+  $.fn[pluginName].getCountryData = function() {
+    return allCountries;
+  };
+  // set the country data object
+  $.fn[pluginName].setCountryData = function(obj) {
+    allCountries = obj;
+  };
+  // Tell JSHint to ignore this warning: "character may get silently deleted by one or more browsers"
+  // jshint -W100
+  // Array of country objects for the flag dropdown.
+  // Each contains a name, country code (ISO 3166-1 alpha-2) and dial code.
+  // Originally from https://github.com/mledoze/countries
+  // then modified using the following JavaScript (NOW OUT OF DATE):
+  /*
+var result = [];
+_.each(countries, function(c) {
+// ignore countries without a dial code
+if (c.callingCode[0].length) {
+  result.push({
+    // var locals contains country names with localised versions in brackets
+    n: _.findWhere(locals, {
+      countryCode: c.cca2
+    }).name,
+    i: c.cca2.toLowerCase(),
+    d: c.callingCode[0]
+  });
+}
+});
+JSON.stringify(result);
+*/
+  // then with a couple of manual re-arrangements to be alphabetical
+  // then changed Kazakhstan from +76 to +7
+  // and Vatican City from +379 to +39 (see issue 50)
+  // and Caribean Netherlands from +5997 to +599
+  // and Curacao from +5999 to +599
+  // Removed: Г…land Islands, Christmas Island, Cocos Islands, Guernsey, Isle of Man, Jersey, Kosovo, Mayotte, Pitcairn Islands, South Georgia, Svalbard, Western Sahara
+  // Update: converted objects to arrays to save bytes!
+  // Update: added "priority" for countries with the same dialCode as others
+  // Update: added array of area codes for countries with the same dialCode as others
+  // So each country array has the following information:
+  // [
+  //    Country name,
+  //    iso2 code,
+  //    International dial code,
+  //    Order (if >1 country with same dial code),
+  //    Area codes (if >1 country with same dial code)
+  // ]
+  var allCountries = [ ["Afghanistan (‫افغانستان‬‎)", "af", "93"], ["Albania (Shqipëri)", "al", "355"], ["Algeria (‫الجزائر‬‎)", "dz", "213"], ["American Samoa", "as", "1", 5, ["684"]], ["Andorra", "ad", "376"], ["Angola", "ao", "244"], ["Anguilla", "ai", "1", 6, ["264"]], ["Antigua and Barbuda", "ag", "1", 7, ["268"]], ["Argentina", "ar", "54"], ["Armenia (Հայաստան)", "am", "374"], ["Aruba", "aw", "297"], ["Ascension Island", "ac", "247"], ["Australia", "au", "61", 0], ["Austria (Österreich)", "at", "43"], ["Azerbaijan (Azərbaycan)", "az", "994"], ["Bahamas", "bs", "1", 8, ["242"]], ["Bahrain (‫البحرين‬‎)", "bh", "973"], ["Bangladesh (বাংলাদেশ)", "bd", "880"], ["Barbados", "bb", "1", 9, ["246"]], ["Belarus (Беларусь)", "by", "375"], ["Belgium (België)", "be", "32"], ["Belize", "bz", "501"], ["Benin (Bénin)", "bj", "229"], ["Bermuda", "bm", "1", 10, ["441"]], ["Bhutan (འབྲུག)", "bt", "975"], ["Bolivia", "bo", "591"], ["Bosnia and Herzegovina (Босна и Херцеговина)", "ba", "387"], ["Botswana", "bw", "267"], ["Brazil (Brasil)", "br", "55"], ["British Indian Ocean Territory", "io", "246"], ["British Virgin Islands", "vg", "1", 11, ["284"]], ["Brunei", "bn", "673"], ["Bulgaria (България)", "bg", "359"], ["Burkina Faso", "bf", "226"], ["Burundi (Uburundi)", "bi", "257"], ["Cambodia (កម្ពុជា)", "kh", "855"], ["Cameroon (Cameroun)", "cm", "237"], ["Canada", "ca", "1", 1, ["204", "226", "236", "249", "250", "263", "289", "306", "343", "354", "365", "367", "368", "382", "387", "403", "416", "418", "428", "431", "437", "438", "450", "584", "468", "474", "506", "514", "519", "548", "579", "581", "584", "587", "604", "613", "639", "647", "672", "683", "705", "709", "742", "753", "778", "780", "782", "807", "819", "825", "867", "873", "902", "905"]], ["Cape Verde (Kabu Verdi)", "cv", "238"], ["Caribbean Netherlands", "bq", "599", 1, ["3", "4", "7"]], ["Cayman Islands", "ky", "1", 12, ["345"]], ["Central African Republic (République centrafricaine)", "cf", "236"], ["Chad (Tchad)", "td", "235"], ["Chile", "cl", "56"], ["China (中国)", "cn", "86"], ["Christmas Island", "cx", "61", 2, ["89164"]], ["Cocos (Keeling) Islands", "cc", "61", 1, ["89162"]], ["Colombia", "co", "57"], ["Comoros (‫جزر القمر‬‎)", "km", "269"], ["Congo (DRC) (Jamhuri ya Kidemokrasia ya Kongo)", "cd", "243"], ["Congo (Republic) (Congo-Brazzaville)", "cg", "242"], ["Cook Islands", "ck", "682"], ["Costa Rica", "cr", "506"], ["Côte d’Ivoire", "ci", "225"], ["Croatia (Hrvatska)", "hr", "385"], ["Cuba", "cu", "53"], ["Curaçao", "cw", "599", 0], ["Cyprus (Κύπρος)", "cy", "357"], ["Czech Republic (Česká republika)", "cz", "420"], ["Denmark (Danmark)", "dk", "45"], ["Djibouti", "dj", "253"], ["Dominica", "dm", "1", 13, ["767"]], ["Dominican Republic (República Dominicana)", "do", "1", 2, ["809", "829", "849"]], ["Ecuador", "ec", "593"], ["Egypt (‫مصر‬‎)", "eg", "20"], ["El Salvador", "sv", "503"], ["Equatorial Guinea (Guinea Ecuatorial)", "gq", "240"], ["Eritrea", "er", "291"], ["Estonia (Eesti)", "ee", "372"], ["Eswatini", "sz", "268"], ["Ethiopia", "et", "251"], ["Falkland Islands (Islas Malvinas)", "fk", "500"], ["Faroe Islands (Føroyar)", "fo", "298"], ["Fiji", "fj", "679"], ["Finland (Suomi)", "fi", "358", 0], ["France", "fr", "33"], ["French Guiana (Guyane française)", "gf", "594"], ["French Polynesia (Polynésie française)", "pf", "689"], ["Gabon", "ga", "241"], ["Gambia", "gm", "220"], ["Georgia (საქართველო)", "ge", "995"], ["Germany (Deutschland)", "de", "49"], ["Ghana (Gaana)", "gh", "233"], ["Gibraltar", "gi", "350"], ["Greece (Ελλάδα)", "gr", "30"], ["Greenland (Kalaallit Nunaat)", "gl", "299"], ["Grenada", "gd", "1", 14, ["473"]], ["Guadeloupe", "gp", "590", 0], ["Guam", "gu", "1", 15, ["671"]], ["Guatemala", "gt", "502"], ["Guernsey", "gg", "44", 1, ["1481", "7781", "7839", "7911"]], ["Guinea (Guinée)", "gn", "224"], ["Guinea-Bissau (Guiné Bissau)", "gw", "245"], ["Guyana", "gy", "592"], ["Haiti", "ht", "509"], ["Honduras", "hn", "504"], ["Hong Kong (香港)", "hk", "852"], ["Hungary (Magyarország)", "hu", "36"], ["Iceland (Ísland)", "is", "354"], ["India (भारत)", "in", "91"], ["Indonesia", "id", "62"], ["Iran (‫ایران‬‎)", "ir", "98"], ["Iraq (‫العراق‬‎)", "iq", "964"], ["Ireland", "ie", "353"], ["Isle of Man", "im", "44", 2, ["1624", "74576", "7524", "7924", "7624"]], ["Israel (‫ישראל‬‎)", "il", "972"], ["Italy (Italia)", "it", "39", 0], ["Jamaica", "jm", "1", 4, ["876", "658"]], ["Japan (日本)", "jp", "81"], ["Jersey", "je", "44", 3, ["1534", "7509", "7700", "7797", "7829", "7937"]], ["Jordan (‫الأردن‬‎)", "jo", "962"], ["Kazakhstan (Казахстан)", "kz", "7", 1, ["33", "7"]], ["Kenya", "ke", "254"], ["Kiribati", "ki", "686"], ["Kosovo", "xk", "383"], ["Kuwait (‫الكويت‬‎)", "kw", "965"], ["Kyrgyzstan (Кыргызстан)", "kg", "996"], ["Laos (ລາວ)", "la", "856"], ["Latvia (Latvija)", "lv", "371"], ["Lebanon (‫لبنان‬‎)", "lb", "961"], ["Lesotho", "ls", "266"], ["Liberia", "lr", "231"], ["Libya (‫ليبيا‬‎)", "ly", "218"], ["Liechtenstein", "li", "423"], ["Lithuania (Lietuva)", "lt", "370"], ["Luxembourg", "lu", "352"], ["Macau (澳門)", "mo", "853"], ["Madagascar (Madagasikara)", "mg", "261"], ["Malawi", "mw", "265"], ["Malaysia", "my", "60"], ["Maldives", "mv", "960"], ["Mali", "ml", "223"], ["Malta", "mt", "356"], ["Marshall Islands", "mh", "692"], ["Martinique", "mq", "596"], ["Mauritania (‫موريتانيا‬‎)", "mr", "222"], ["Mauritius (Moris)", "mu", "230"], ["Mayotte", "yt", "262", 1, ["269", "639"]], ["Mexico (México)", "mx", "52"], ["Micronesia", "fm", "691"], ["Moldova (Republica Moldova)", "md", "373"], ["Monaco", "mc", "377"], ["Mongolia (Монгол)", "mn", "976"], ["Montenegro (Crna Gora)", "me", "382"], ["Montserrat", "ms", "1", 16, ["664"]], ["Morocco (‫المغرب‬‎)", "ma", "212", 0], ["Mozambique (Moçambique)", "mz", "258"], ["Myanmar (Burma) (မြန်မာ)", "mm", "95"], ["Namibia (Namibië)", "na", "264"], ["Nauru", "nr", "674"], ["Nepal (नेपाल)", "np", "977"], ["Netherlands (Nederland)", "nl", "31"], ["New Caledonia (Nouvelle-Calédonie)", "nc", "687"], ["New Zealand", "nz", "64"], ["Nicaragua", "ni", "505"], ["Niger (Nijar)", "ne", "227"], ["Nigeria", "ng", "234"], ["Niue", "nu", "683"], ["Norfolk Island", "nf", "672"], ["North Korea (조선 민주주의 인민 공화국)", "kp", "850"], ["North Macedonia (Северна Македонија)", "mk", "389"], ["Northern Mariana Islands", "mp", "1", 17, ["670"]], ["Norway (Norge)", "no", "47", 0], ["Oman (‫عُمان‬‎)", "om", "968"], ["Pakistan (‫پاکستان‬‎)", "pk", "92"], ["Palau", "pw", "680"], ["Palestine (‫فلسطين‬‎)", "ps", "970"], ["Panama (Panamá)", "pa", "507"], ["Papua New Guinea", "pg", "675"], ["Paraguay", "py", "595"], ["Peru (Perú)", "pe", "51"], ["Philippines", "ph", "63"], ["Poland (Polska)", "pl", "48"], ["Portugal", "pt", "351"], ["Puerto Rico", "pr", "1", 3, ["787", "939"]], ["Qatar (‫قطر‬‎)", "qa", "974"], ["Réunion (La Réunion)", "re", "262", 0], ["Romania (România)", "ro", "40"], ["Russia (Россия)", "ru", "7", 0], ["Rwanda", "rw", "250"], ["Saint Barthélemy", "bl", "590", 1], ["Saint Helena", "sh", "290"], ["Saint Kitts and Nevis", "kn", "1", 18, ["869"]], ["Saint Lucia", "lc", "1", 19, ["758"]], ["Saint Martin (Saint-Martin (partie française))", "mf", "590", 2], ["Saint Pierre and Miquelon (Saint-Pierre-et-Miquelon)", "pm", "508"], ["Saint Vincent and the Grenadines", "vc", "1", 20, ["784"]], ["Samoa", "ws", "685"], ["San Marino", "sm", "378"], ["São Tomé and Príncipe (São Tomé e Príncipe)", "st", "239"], ["Saudi Arabia (‫المملكة العربية السعودية‬‎)", "sa", "966"], ["Senegal (Sénégal)", "sn", "221"], ["Serbia (Србија)", "rs", "381"], ["Seychelles", "sc", "248"], ["Sierra Leone", "sl", "232"], ["Singapore", "sg", "65"], ["Sint Maarten", "sx", "1", 21, ["721"]], ["Slovakia (Slovensko)", "sk", "421"], ["Slovenia (Slovenija)", "si", "386"], ["Solomon Islands", "sb", "677"], ["Somalia (Soomaaliya)", "so", "252"], ["South Africa", "za", "27"], ["South Korea (대한민국)", "kr", "82"], ["South Sudan (‫جنوب السودان‬‎)", "ss", "211"], ["Spain (España)", "es", "34"], ["Sri Lanka (ශ්‍රී ලංකාව)", "lk", "94"], ["Sudan (‫السودان‬‎)", "sd", "249"], ["Suriname", "sr", "597"], ["Svalbard and Jan Mayen", "sj", "47", 1, ["79"]], ["Sweden (Sverige)", "se", "46"], ["Switzerland (Schweiz)", "ch", "41"], ["Syria (‫سوريا‬‎)", "sy", "963"], ["Taiwan (台灣)", "tw", "886"], ["Tajikistan", "tj", "992"], ["Tanzania", "tz", "255"], ["Thailand (ไทย)", "th", "66"], ["Timor-Leste", "tl", "670"], ["Togo", "tg", "228"], ["Tokelau", "tk", "690"], ["Tonga", "to", "676"], ["Trinidad and Tobago", "tt", "1", 22, ["868"]], ["Tunisia (‫تونس‬‎)", "tn", "216"], ["Turkey (Türkiye)", "tr", "90"], ["Turkmenistan", "tm", "993"], ["Turks and Caicos Islands", "tc", "1", 23, ["649"]], ["Tuvalu", "tv", "688"], ["U.S. Virgin Islands", "vi", "1", 24, ["340"]], ["Uganda", "ug", "256"], ["Ukraine (Україна)", "ua", "380"], ["United Arab Emirates (‫الإمارات العربية المتحدة‬‎)", "ae", "971"], ["United Kingdom", "gb", "44", 0], ["United States", "us", "1", 0], ["Uruguay", "uy", "598"], ["Uzbekistan (Oʻzbekiston)", "uz", "998"], ["Vanuatu", "vu", "678"], ["Vatican City (Città del Vaticano)", "va", "39", 1, ["06698"]], ["Venezuela", "ve", "58"], ["Vietnam (Việt Nam)", "vn", "84"], ["Wallis and Futuna (Wallis-et-Futuna)", "wf", "681"], ["Western Sahara (‫الصحراء الغربية‬‎)", "eh", "212", 1, ["5288", "5289"]], ["Yemen (‫اليمن‬‎)", "ye", "967"], ["Zambia", "zm", "260"], ["Zimbabwe", "zw", "263"], ["Åland Islands", "ax", "358", 1, ["18"]] ];
+  // loop over all of the countries above
+  for (var i = 0; i < allCountries.length; i++) {
+    var c = allCountries[i];
+    allCountries[i] = {
+      name: c[0],
+      iso2: c[1],
+      dialCode: c[2],
+      priority: c[3] || 0,
+      areaCodes: c[4] || null
+    };
+  }
+});
+
+
+
+
+
+
+
+
+// Start calendar
+/*! jQuery UI - v1.12.1 - 2021-07-11
+* http://jqueryui.com
+* Includes: widget.js, position.js, data.js, disable-selection.js, focusable.js, form-reset-mixin.js, jquery-1-7.js, keycode.js, labels.js, scroll-parent.js, tabbable.js, unique-id.js, widgets/datepicker.js
+* Copyright jQuery Foundation and other contributors; Licensed MIT */
+
+(function( factory ) {
+  if ( typeof define === "function" && define.amd ) {
+
+    // AMD. Register as an anonymous module.
+    define([ "jquery" ], factory );
+  } else {
+
+    // Browser globals
+    factory( jQuery );
+  }
+}(function( $ ) {
+
+  $.ui = $.ui || {};
+
+  var version = $.ui.version = "1.12.1";
+
+
+  /*!
+ * jQuery UI Widget 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: Widget
+//>>group: Core
+//>>description: Provides a factory for creating stateful widgets with a common API.
+//>>docs: http://api.jqueryui.com/jQuery.widget/
+//>>demos: http://jqueryui.com/widget/
+
+
+
+  var widgetUuid = 0;
+  var widgetSlice = Array.prototype.slice;
+
+  $.cleanData = ( function( orig ) {
+    return function( elems ) {
+      var events, elem, i;
+      for ( i = 0; ( elem = elems[ i ] ) != null; i++ ) {
+        try {
+
+          // Only trigger remove when necessary to save time
+          events = $._data( elem, "events" );
+          if ( events && events.remove ) {
+            $( elem ).triggerHandler( "remove" );
+          }
+
+          // Http://bugs.jquery.com/ticket/8235
+        } catch ( e ) {}
+      }
+      orig( elems );
+    };
+  } )( $.cleanData );
+
+  $.widget = function( name, base, prototype ) {
+    var existingConstructor, constructor, basePrototype;
+
+    // ProxiedPrototype allows the provided prototype to remain unmodified
+    // so that it can be used as a mixin for multiple widgets (#8876)
+    var proxiedPrototype = {};
+
+    var namespace = name.split( "." )[ 0 ];
+    name = name.split( "." )[ 1 ];
+    var fullName = namespace + "-" + name;
+
+    if ( !prototype ) {
+      prototype = base;
+      base = $.Widget;
+    }
+
+    if ( $.isArray( prototype ) ) {
+      prototype = $.extend.apply( null, [ {} ].concat( prototype ) );
+    }
+
+    // Create selector for plugin
+    $.expr[ ":" ][ fullName.toLowerCase() ] = function( elem ) {
+      return !!$.data( elem, fullName );
+    };
+
+    $[ namespace ] = $[ namespace ] || {};
+    existingConstructor = $[ namespace ][ name ];
+    constructor = $[ namespace ][ name ] = function( options, element ) {
+
+      // Allow instantiation without "new" keyword
+      if ( !this._createWidget ) {
+        return new constructor( options, element );
+      }
+
+      // Allow instantiation without initializing for simple inheritance
+      // must use "new" keyword (the code above always passes args)
+      if ( arguments.length ) {
+        this._createWidget( options, element );
+      }
+    };
+
+    // Extend with the existing constructor to carry over any static properties
+    $.extend( constructor, existingConstructor, {
+      version: prototype.version,
+
+      // Copy the object used to create the prototype in case we need to
+      // redefine the widget later
+      _proto: $.extend( {}, prototype ),
+
+      // Track widgets that inherit from this widget in case this widget is
+      // redefined after a widget inherits from it
+      _childConstructors: []
+    } );
+
+    basePrototype = new base();
+
+    // We need to make the options hash a property directly on the new instance
+    // otherwise we'll modify the options hash on the prototype that we're
+    // inheriting from
+    basePrototype.options = $.widget.extend( {}, basePrototype.options );
+    $.each( prototype, function( prop, value ) {
+      if ( !$.isFunction( value ) ) {
+        proxiedPrototype[ prop ] = value;
+        return;
+      }
+      proxiedPrototype[ prop ] = ( function() {
+        function _super() {
+          return base.prototype[ prop ].apply( this, arguments );
+        }
+
+        function _superApply( args ) {
+          return base.prototype[ prop ].apply( this, args );
+        }
+
+        return function() {
+          var __super = this._super;
+          var __superApply = this._superApply;
+          var returnValue;
+
+          this._super = _super;
+          this._superApply = _superApply;
+
+          returnValue = value.apply( this, arguments );
+
+          this._super = __super;
+          this._superApply = __superApply;
+
+          return returnValue;
+        };
+      } )();
+    } );
+    constructor.prototype = $.widget.extend( basePrototype, {
+
+      // TODO: remove support for widgetEventPrefix
+      // always use the name + a colon as the prefix, e.g., draggable:start
+      // don't prefix for widgets that aren't DOM-based
+      widgetEventPrefix: existingConstructor ? ( basePrototype.widgetEventPrefix || name ) : name
+    }, proxiedPrototype, {
+      constructor: constructor,
+      namespace: namespace,
+      widgetName: name,
+      widgetFullName: fullName
+    } );
+
+    // If this widget is being redefined then we need to find all widgets that
+    // are inheriting from it and redefine all of them so that they inherit from
+    // the new version of this widget. We're essentially trying to replace one
+    // level in the prototype chain.
+    if ( existingConstructor ) {
+      $.each( existingConstructor._childConstructors, function( i, child ) {
+        var childPrototype = child.prototype;
+
+        // Redefine the child widget using the same prototype that was
+        // originally used, but inherit from the new version of the base
+        $.widget( childPrototype.namespace + "." + childPrototype.widgetName, constructor,
+          child._proto );
+      } );
+
+      // Remove the list of existing child constructors from the old constructor
+      // so the old child constructors can be garbage collected
+      delete existingConstructor._childConstructors;
+    } else {
+      base._childConstructors.push( constructor );
+    }
+
+    $.widget.bridge( name, constructor );
+
+    return constructor;
+  };
+
+  $.widget.extend = function( target ) {
+    var input = widgetSlice.call( arguments, 1 );
+    var inputIndex = 0;
+    var inputLength = input.length;
+    var key;
+    var value;
+
+    for ( ; inputIndex < inputLength; inputIndex++ ) {
+      for ( key in input[ inputIndex ] ) {
+        value = input[ inputIndex ][ key ];
+        if ( input[ inputIndex ].hasOwnProperty( key ) && value !== undefined ) {
+
+          // Clone objects
+          if ( $.isPlainObject( value ) ) {
+            target[ key ] = $.isPlainObject( target[ key ] ) ?
+              $.widget.extend( {}, target[ key ], value ) :
+
+              // Don't extend strings, arrays, etc. with objects
+              $.widget.extend( {}, value );
+
+            // Copy everything else by reference
+          } else {
+            target[ key ] = value;
+          }
+        }
+      }
+    }
+    return target;
+  };
+
+  $.widget.bridge = function( name, object ) {
+    var fullName = object.prototype.widgetFullName || name;
+    $.fn[ name ] = function( options ) {
+      var isMethodCall = typeof options === "string";
+      var args = widgetSlice.call( arguments, 1 );
+      var returnValue = this;
+
+      if ( isMethodCall ) {
+
+        // If this is an empty collection, we need to have the instance method
+        // return undefined instead of the jQuery instance
+        if ( !this.length && options === "instance" ) {
+          returnValue = undefined;
+        } else {
+          this.each( function() {
+            var methodValue;
+            var instance = $.data( this, fullName );
+
+            if ( options === "instance" ) {
+              returnValue = instance;
+              return false;
+            }
+
+            if ( !instance ) {
+              return $.error( "cannot call methods on " + name +
+                " prior to initialization; " +
+                "attempted to call method '" + options + "'" );
+            }
+
+            if ( !$.isFunction( instance[ options ] ) || options.charAt( 0 ) === "_" ) {
+              return $.error( "no such method '" + options + "' for " + name +
+                " widget instance" );
+            }
+
+            methodValue = instance[ options ].apply( instance, args );
+
+            if ( methodValue !== instance && methodValue !== undefined ) {
+              returnValue = methodValue && methodValue.jquery ?
+                returnValue.pushStack( methodValue.get() ) :
+                methodValue;
+              return false;
+            }
+          } );
+        }
+      } else {
+
+        // Allow multiple hashes to be passed on init
+        if ( args.length ) {
+          options = $.widget.extend.apply( null, [ options ].concat( args ) );
+        }
+
+        this.each( function() {
+          var instance = $.data( this, fullName );
+          if ( instance ) {
+            instance.option( options || {} );
+            if ( instance._init ) {
+              instance._init();
+            }
+          } else {
+            $.data( this, fullName, new object( options, this ) );
+          }
+        } );
+      }
+
+      return returnValue;
+    };
+  };
+
+  $.Widget = function( /* options, element */ ) {};
+  $.Widget._childConstructors = [];
+
+  $.Widget.prototype = {
+    widgetName: "widget",
+    widgetEventPrefix: "",
+    defaultElement: "<div>",
+
+    options: {
+      classes: {},
+      disabled: false,
+
+      // Callbacks
+      create: null
+    },
+
+    _createWidget: function( options, element ) {
+      element = $( element || this.defaultElement || this )[ 0 ];
+      this.element = $( element );
+      this.uuid = widgetUuid++;
+      this.eventNamespace = "." + this.widgetName + this.uuid;
+
+      this.bindings = $();
+      this.hoverable = $();
+      this.focusable = $();
+      this.classesElementLookup = {};
+
+      if ( element !== this ) {
+        $.data( element, this.widgetFullName, this );
+        this._on( true, this.element, {
+          remove: function( event ) {
+            if ( event.target === element ) {
+              this.destroy();
+            }
+          }
+        } );
+        this.document = $( element.style ?
+
+          // Element within the document
+          element.ownerDocument :
+
+          // Element is window or document
+          element.document || element );
+        this.window = $( this.document[ 0 ].defaultView || this.document[ 0 ].parentWindow );
+      }
+
+      this.options = $.widget.extend( {},
+        this.options,
+        this._getCreateOptions(),
+        options );
+
+      this._create();
+
+      if ( this.options.disabled ) {
+        this._setOptionDisabled( this.options.disabled );
+      }
+
+      this._trigger( "create", null, this._getCreateEventData() );
+      this._init();
+    },
+
+    _getCreateOptions: function() {
+      return {};
+    },
+
+    _getCreateEventData: $.noop,
+
+    _create: $.noop,
+
+    _init: $.noop,
+
+    destroy: function() {
+      var that = this;
+
+      this._destroy();
+      $.each( this.classesElementLookup, function( key, value ) {
+        that._removeClass( value, key );
+      } );
+
+      // We can probably remove the unbind calls in 2.0
+      // all event bindings should go through this._on()
+      this.element
+        .off( this.eventNamespace )
+        .removeData( this.widgetFullName );
+      this.widget()
+        .off( this.eventNamespace )
+        .removeAttr( "aria-disabled" );
+
+      // Clean up events and states
+      this.bindings.off( this.eventNamespace );
+    },
+
+    _destroy: $.noop,
+
+    widget: function() {
+      return this.element;
+    },
+
+    option: function( key, value ) {
+      var options = key;
+      var parts;
+      var curOption;
+      var i;
+
+      if ( arguments.length === 0 ) {
+
+        // Don't return a reference to the internal hash
+        return $.widget.extend( {}, this.options );
+      }
+
+      if ( typeof key === "string" ) {
+
+        // Handle nested keys, e.g., "foo.bar" => { foo: { bar: ___ } }
+        options = {};
+        parts = key.split( "." );
+        key = parts.shift();
+        if ( parts.length ) {
+          curOption = options[ key ] = $.widget.extend( {}, this.options[ key ] );
+          for ( i = 0; i < parts.length - 1; i++ ) {
+            curOption[ parts[ i ] ] = curOption[ parts[ i ] ] || {};
+            curOption = curOption[ parts[ i ] ];
+          }
+          key = parts.pop();
+          if ( arguments.length === 1 ) {
+            return curOption[ key ] === undefined ? null : curOption[ key ];
+          }
+          curOption[ key ] = value;
+        } else {
+          if ( arguments.length === 1 ) {
+            return this.options[ key ] === undefined ? null : this.options[ key ];
+          }
+          options[ key ] = value;
+        }
+      }
+
+      this._setOptions( options );
+
+      return this;
+    },
+
+    _setOptions: function( options ) {
+      var key;
+
+      for ( key in options ) {
+        this._setOption( key, options[ key ] );
+      }
+
+      return this;
+    },
+
+    _setOption: function( key, value ) {
+      if ( key === "classes" ) {
+        this._setOptionClasses( value );
+      }
+
+      this.options[ key ] = value;
+
+      if ( key === "disabled" ) {
+        this._setOptionDisabled( value );
+      }
+
+      return this;
+    },
+
+    _setOptionClasses: function( value ) {
+      var classKey, elements, currentElements;
+
+      for ( classKey in value ) {
+        currentElements = this.classesElementLookup[ classKey ];
+        if ( value[ classKey ] === this.options.classes[ classKey ] ||
+          !currentElements ||
+          !currentElements.length ) {
+          continue;
+        }
+
+        // We are doing this to create a new jQuery object because the _removeClass() call
+        // on the next line is going to destroy the reference to the current elements being
+        // tracked. We need to save a copy of this collection so that we can add the new classes
+        // below.
+        elements = $( currentElements.get() );
+        this._removeClass( currentElements, classKey );
+
+        // We don't use _addClass() here, because that uses this.options.classes
+        // for generating the string of classes. We want to use the value passed in from
+        // _setOption(), this is the new value of the classes option which was passed to
+        // _setOption(). We pass this value directly to _classes().
+        elements.addClass( this._classes( {
+          element: elements,
+          keys: classKey,
+          classes: value,
+          add: true
+        } ) );
+      }
+    },
+
+    _setOptionDisabled: function( value ) {
+      this._toggleClass( this.widget(), this.widgetFullName + "-disabled", null, !!value );
+
+      // If the widget is becoming disabled, then nothing is interactive
+      if ( value ) {
+        this._removeClass( this.hoverable, null, "ui-state-hover" );
+        this._removeClass( this.focusable, null, "ui-state-focus" );
+      }
+    },
+
+    enable: function() {
+      return this._setOptions( { disabled: false } );
+    },
+
+    disable: function() {
+      return this._setOptions( { disabled: true } );
+    },
+
+    _classes: function( options ) {
+      var full = [];
+      var that = this;
+
+      options = $.extend( {
+        element: this.element,
+        classes: this.options.classes || {}
+      }, options );
+
+      function processClassString( classes, checkOption ) {
+        var current, i;
+        for ( i = 0; i < classes.length; i++ ) {
+          current = that.classesElementLookup[ classes[ i ] ] || $();
+          if ( options.add ) {
+            current = $( $.unique( current.get().concat( options.element.get() ) ) );
+          } else {
+            current = $( current.not( options.element ).get() );
+          }
+          that.classesElementLookup[ classes[ i ] ] = current;
+          full.push( classes[ i ] );
+          if ( checkOption && options.classes[ classes[ i ] ] ) {
+            full.push( options.classes[ classes[ i ] ] );
+          }
+        }
+      }
+
+      this._on( options.element, {
+        "remove": "_untrackClassesElement"
+      } );
+
+      if ( options.keys ) {
+        processClassString( options.keys.match( /\S+/g ) || [], true );
+      }
+      if ( options.extra ) {
+        processClassString( options.extra.match( /\S+/g ) || [] );
+      }
+
+      return full.join( " " );
+    },
+
+    _untrackClassesElement: function( event ) {
+      var that = this;
+      $.each( that.classesElementLookup, function( key, value ) {
+        if ( $.inArray( event.target, value ) !== -1 ) {
+          that.classesElementLookup[ key ] = $( value.not( event.target ).get() );
+        }
+      } );
+    },
+
+    _removeClass: function( element, keys, extra ) {
+      return this._toggleClass( element, keys, extra, false );
+    },
+
+    _addClass: function( element, keys, extra ) {
+      return this._toggleClass( element, keys, extra, true );
+    },
+
+    _toggleClass: function( element, keys, extra, add ) {
+      add = ( typeof add === "boolean" ) ? add : extra;
+      var shift = ( typeof element === "string" || element === null ),
+        options = {
+          extra: shift ? keys : extra,
+          keys: shift ? element : keys,
+          element: shift ? this.element : element,
+          add: add
+        };
+      options.element.toggleClass( this._classes( options ), add );
+      return this;
+    },
+
+    _on: function( suppressDisabledCheck, element, handlers ) {
+      var delegateElement;
+      var instance = this;
+
+      // No suppressDisabledCheck flag, shuffle arguments
+      if ( typeof suppressDisabledCheck !== "boolean" ) {
+        handlers = element;
+        element = suppressDisabledCheck;
+        suppressDisabledCheck = false;
+      }
+
+      // No element argument, shuffle and use this.element
+      if ( !handlers ) {
+        handlers = element;
+        element = this.element;
+        delegateElement = this.widget();
+      } else {
+        element = delegateElement = $( element );
+        this.bindings = this.bindings.add( element );
+      }
+
+      $.each( handlers, function( event, handler ) {
+        function handlerProxy() {
+
+          // Allow widgets to customize the disabled handling
+          // - disabled as an array instead of boolean
+          // - disabled class as method for disabling individual parts
+          if ( !suppressDisabledCheck &&
+            ( instance.options.disabled === true ||
+              $( this ).hasClass( "ui-state-disabled" ) ) ) {
+            return;
+          }
+          return ( typeof handler === "string" ? instance[ handler ] : handler )
+            .apply( instance, arguments );
+        }
+
+        // Copy the guid so direct unbinding works
+        if ( typeof handler !== "string" ) {
+          handlerProxy.guid = handler.guid =
+            handler.guid || handlerProxy.guid || $.guid++;
+        }
+
+        var match = event.match( /^([\w:-]*)\s*(.*)$/ );
+        var eventName = match[ 1 ] + instance.eventNamespace;
+        var selector = match[ 2 ];
+
+        if ( selector ) {
+          delegateElement.on( eventName, selector, handlerProxy );
+        } else {
+          element.on( eventName, handlerProxy );
+        }
+      } );
+    },
+
+    _off: function( element, eventName ) {
+      eventName = ( eventName || "" ).split( " " ).join( this.eventNamespace + " " ) +
+        this.eventNamespace;
+      element.off( eventName ).off( eventName );
+
+      // Clear the stack to avoid memory leaks (#10056)
+      this.bindings = $( this.bindings.not( element ).get() );
+      this.focusable = $( this.focusable.not( element ).get() );
+      this.hoverable = $( this.hoverable.not( element ).get() );
+    },
+
+    _delay: function( handler, delay ) {
+      function handlerProxy() {
+        return ( typeof handler === "string" ? instance[ handler ] : handler )
+          .apply( instance, arguments );
+      }
+      var instance = this;
+      return setTimeout( handlerProxy, delay || 0 );
+    },
+
+    _hoverable: function( element ) {
+      this.hoverable = this.hoverable.add( element );
+      this._on( element, {
+        mouseenter: function( event ) {
+          this._addClass( $( event.currentTarget ), null, "ui-state-hover" );
+        },
+        mouseleave: function( event ) {
+          this._removeClass( $( event.currentTarget ), null, "ui-state-hover" );
+        }
+      } );
+    },
+
+    _focusable: function( element ) {
+      this.focusable = this.focusable.add( element );
+      this._on( element, {
+        focusin: function( event ) {
+          this._addClass( $( event.currentTarget ), null, "ui-state-focus" );
+        },
+        focusout: function( event ) {
+          this._removeClass( $( event.currentTarget ), null, "ui-state-focus" );
+        }
+      } );
+    },
+
+    _trigger: function( type, event, data ) {
+      var prop, orig;
+      var callback = this.options[ type ];
+
+      data = data || {};
+      event = $.Event( event );
+      event.type = ( type === this.widgetEventPrefix ?
+        type :
+        this.widgetEventPrefix + type ).toLowerCase();
+
+      // The original event may come from any element
+      // so we need to reset the target on the new event
+      event.target = this.element[ 0 ];
+
+      // Copy original event properties over to the new event
+      orig = event.originalEvent;
+      if ( orig ) {
+        for ( prop in orig ) {
+          if ( !( prop in event ) ) {
+            event[ prop ] = orig[ prop ];
+          }
+        }
+      }
+
+      this.element.trigger( event, data );
+      return !( $.isFunction( callback ) &&
+        callback.apply( this.element[ 0 ], [ event ].concat( data ) ) === false ||
+        event.isDefaultPrevented() );
+    }
+  };
+
+  $.each( { show: "fadeIn", hide: "fadeOut" }, function( method, defaultEffect ) {
+    $.Widget.prototype[ "_" + method ] = function( element, options, callback ) {
+      if ( typeof options === "string" ) {
+        options = { effect: options };
+      }
+
+      var hasOptions;
+      var effectName = !options ?
+        method :
+        options === true || typeof options === "number" ?
+          defaultEffect :
+          options.effect || defaultEffect;
+
+      options = options || {};
+      if ( typeof options === "number" ) {
+        options = { duration: options };
+      }
+
+      hasOptions = !$.isEmptyObject( options );
+      options.complete = callback;
+
+      if ( options.delay ) {
+        element.delay( options.delay );
+      }
+
+      if ( hasOptions && $.effects && $.effects.effect[ effectName ] ) {
+        element[ method ]( options );
+      } else if ( effectName !== method && element[ effectName ] ) {
+        element[ effectName ]( options.duration, options.easing, callback );
+      } else {
+        element.queue( function( next ) {
+          $( this )[ method ]();
+          if ( callback ) {
+            callback.call( element[ 0 ] );
+          }
+          next();
+        } );
+      }
+    };
+  } );
+
+  var widget = $.widget;
+
+
+  /*!
+ * jQuery UI Position 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ * http://api.jqueryui.com/position/
+ */
+
+//>>label: Position
+//>>group: Core
+//>>description: Positions elements relative to other elements.
+//>>docs: http://api.jqueryui.com/position/
+//>>demos: http://jqueryui.com/position/
+
+
+  ( function() {
+    var cachedScrollbarWidth,
+      max = Math.max,
+      abs = Math.abs,
+      rhorizontal = /left|center|right/,
+      rvertical = /top|center|bottom/,
+      roffset = /[\+\-]\d+(\.[\d]+)?%?/,
+      rposition = /^\w+/,
+      rpercent = /%$/,
+      _position = $.fn.position;
+
+    function getOffsets( offsets, width, height ) {
+      return [
+        parseFloat( offsets[ 0 ] ) * ( rpercent.test( offsets[ 0 ] ) ? width / 100 : 1 ),
+        parseFloat( offsets[ 1 ] ) * ( rpercent.test( offsets[ 1 ] ) ? height / 100 : 1 )
+      ];
+    }
+
+    function parseCss( element, property ) {
+      return parseInt( $.css( element, property ), 10 ) || 0;
+    }
+
+    function getDimensions( elem ) {
+      var raw = elem[ 0 ];
+      if ( raw.nodeType === 9 ) {
+        return {
+          width: elem.width(),
+          height: elem.height(),
+          offset: { top: 0, left: 0 }
+        };
+      }
+      if ( $.isWindow( raw ) ) {
+        return {
+          width: elem.width(),
+          height: elem.height(),
+          offset: { top: elem.scrollTop(), left: elem.scrollLeft() }
+        };
+      }
+      if ( raw.preventDefault ) {
+        return {
+          width: 0,
+          height: 0,
+          offset: { top: raw.pageY, left: raw.pageX }
+        };
+      }
+      return {
+        width: elem.outerWidth(),
+        height: elem.outerHeight(),
+        offset: elem.offset()
+      };
+    }
+
+    $.position = {
+      scrollbarWidth: function() {
+        if ( cachedScrollbarWidth !== undefined ) {
+          return cachedScrollbarWidth;
+        }
+        var w1, w2,
+          div = $( "<div " +
+            "style='display:block;position:absolute;width:50px;height:50px;overflow:hidden;'>" +
+            "<div style='height:100px;width:auto;'></div></div>" ),
+          innerDiv = div.children()[ 0 ];
+
+        $( "body" ).append( div );
+        w1 = innerDiv.offsetWidth;
+        div.css( "overflow", "scroll" );
+
+        w2 = innerDiv.offsetWidth;
+
+        if ( w1 === w2 ) {
+          w2 = div[ 0 ].clientWidth;
+        }
+
+        div.remove();
+
+        return ( cachedScrollbarWidth = w1 - w2 );
+      },
+      getScrollInfo: function( within ) {
+        var overflowX = within.isWindow || within.isDocument ? "" :
+            within.element.css( "overflow-x" ),
+          overflowY = within.isWindow || within.isDocument ? "" :
+            within.element.css( "overflow-y" ),
+          hasOverflowX = overflowX === "scroll" ||
+            ( overflowX === "auto" && within.width < within.element[ 0 ].scrollWidth ),
+          hasOverflowY = overflowY === "scroll" ||
+            ( overflowY === "auto" && within.height < within.element[ 0 ].scrollHeight );
+        return {
+          width: hasOverflowY ? $.position.scrollbarWidth() : 0,
+          height: hasOverflowX ? $.position.scrollbarWidth() : 0
+        };
+      },
+      getWithinInfo: function( element ) {
+        var withinElement = $( element || window ),
+          isWindow = $.isWindow( withinElement[ 0 ] ),
+          isDocument = !!withinElement[ 0 ] && withinElement[ 0 ].nodeType === 9,
+          hasOffset = !isWindow && !isDocument;
+        return {
+          element: withinElement,
+          isWindow: isWindow,
+          isDocument: isDocument,
+          offset: hasOffset ? $( element ).offset() : { left: 0, top: 0 },
+          scrollLeft: withinElement.scrollLeft(),
+          scrollTop: withinElement.scrollTop(),
+          width: withinElement.outerWidth(),
+          height: withinElement.outerHeight()
+        };
+      }
+    };
+
+    $.fn.position = function( options ) {
+      if ( !options || !options.of ) {
+        return _position.apply( this, arguments );
+      }
+
+      // Make a copy, we don't want to modify arguments
+      options = $.extend( {}, options );
+
+      var atOffset, targetWidth, targetHeight, targetOffset, basePosition, dimensions,
+        target = $( options.of ),
+        within = $.position.getWithinInfo( options.within ),
+        scrollInfo = $.position.getScrollInfo( within ),
+        collision = ( options.collision || "flip" ).split( " " ),
+        offsets = {};
+
+      dimensions = getDimensions( target );
+      if ( target[ 0 ].preventDefault ) {
+
+        // Force left top to allow flipping
+        options.at = "left top";
+      }
+      targetWidth = dimensions.width;
+      targetHeight = dimensions.height;
+      targetOffset = dimensions.offset;
+
+      // Clone to reuse original targetOffset later
+      basePosition = $.extend( {}, targetOffset );
+
+      // Force my and at to have valid horizontal and vertical positions
+      // if a value is missing or invalid, it will be converted to center
+      $.each( [ "my", "at" ], function() {
+        var pos = ( options[ this ] || "" ).split( " " ),
+          horizontalOffset,
+          verticalOffset;
+
+        if ( pos.length === 1 ) {
+          pos = rhorizontal.test( pos[ 0 ] ) ?
+            pos.concat( [ "center" ] ) :
+            rvertical.test( pos[ 0 ] ) ?
+              [ "center" ].concat( pos ) :
+              [ "center", "center" ];
+        }
+        pos[ 0 ] = rhorizontal.test( pos[ 0 ] ) ? pos[ 0 ] : "center";
+        pos[ 1 ] = rvertical.test( pos[ 1 ] ) ? pos[ 1 ] : "center";
+
+        // Calculate offsets
+        horizontalOffset = roffset.exec( pos[ 0 ] );
+        verticalOffset = roffset.exec( pos[ 1 ] );
+        offsets[ this ] = [
+          horizontalOffset ? horizontalOffset[ 0 ] : 0,
+          verticalOffset ? verticalOffset[ 0 ] : 0
+        ];
+
+        // Reduce to just the positions without the offsets
+        options[ this ] = [
+          rposition.exec( pos[ 0 ] )[ 0 ],
+          rposition.exec( pos[ 1 ] )[ 0 ]
+        ];
+      } );
+
+      // Normalize collision option
+      if ( collision.length === 1 ) {
+        collision[ 1 ] = collision[ 0 ];
+      }
+
+      if ( options.at[ 0 ] === "right" ) {
+        basePosition.left += targetWidth;
+      } else if ( options.at[ 0 ] === "center" ) {
+        basePosition.left += targetWidth / 2;
+      }
+
+      if ( options.at[ 1 ] === "bottom" ) {
+        basePosition.top += targetHeight;
+      } else if ( options.at[ 1 ] === "center" ) {
+        basePosition.top += targetHeight / 2;
+      }
+
+      atOffset = getOffsets( offsets.at, targetWidth, targetHeight );
+      basePosition.left += atOffset[ 0 ];
+      basePosition.top += atOffset[ 1 ];
+
+      return this.each( function() {
+        var collisionPosition, using,
+          elem = $( this ),
+          elemWidth = elem.outerWidth(),
+          elemHeight = elem.outerHeight(),
+          marginLeft = parseCss( this, "marginLeft" ),
+          marginTop = parseCss( this, "marginTop" ),
+          collisionWidth = elemWidth + marginLeft + parseCss( this, "marginRight" ) +
+            scrollInfo.width,
+          collisionHeight = elemHeight + marginTop + parseCss( this, "marginBottom" ) +
+            scrollInfo.height,
+          position = $.extend( {}, basePosition ),
+          myOffset = getOffsets( offsets.my, elem.outerWidth(), elem.outerHeight() );
+
+        if ( options.my[ 0 ] === "right" ) {
+          position.left -= elemWidth;
+        } else if ( options.my[ 0 ] === "center" ) {
+          position.left -= elemWidth / 2;
+        }
+
+        if ( options.my[ 1 ] === "bottom" ) {
+          position.top -= elemHeight;
+        } else if ( options.my[ 1 ] === "center" ) {
+          position.top -= elemHeight / 2;
+        }
+
+        position.left += myOffset[ 0 ];
+        position.top += myOffset[ 1 ];
+
+        collisionPosition = {
+          marginLeft: marginLeft,
+          marginTop: marginTop
+        };
+
+        $.each( [ "left", "top" ], function( i, dir ) {
+          if ( $.ui.position[ collision[ i ] ] ) {
+            $.ui.position[ collision[ i ] ][ dir ]( position, {
+              targetWidth: targetWidth,
+              targetHeight: targetHeight,
+              elemWidth: elemWidth,
+              elemHeight: elemHeight,
+              collisionPosition: collisionPosition,
+              collisionWidth: collisionWidth,
+              collisionHeight: collisionHeight,
+              offset: [ atOffset[ 0 ] + myOffset[ 0 ], atOffset [ 1 ] + myOffset[ 1 ] ],
+              my: options.my,
+              at: options.at,
+              within: within,
+              elem: elem
+            } );
+          }
+        } );
+
+        if ( options.using ) {
+
+          // Adds feedback as second argument to using callback, if present
+          using = function( props ) {
+            var left = targetOffset.left - position.left,
+              right = left + targetWidth - elemWidth,
+              top = targetOffset.top - position.top,
+              bottom = top + targetHeight - elemHeight,
+              feedback = {
+                target: {
+                  element: target,
+                  left: targetOffset.left,
+                  top: targetOffset.top,
+                  width: targetWidth,
+                  height: targetHeight
+                },
+                element: {
+                  element: elem,
+                  left: position.left,
+                  top: position.top,
+                  width: elemWidth,
+                  height: elemHeight
+                },
+                horizontal: right < 0 ? "left" : left > 0 ? "right" : "center",
+                vertical: bottom < 0 ? "top" : top > 0 ? "bottom" : "middle"
+              };
+            if ( targetWidth < elemWidth && abs( left + right ) < targetWidth ) {
+              feedback.horizontal = "center";
+            }
+            if ( targetHeight < elemHeight && abs( top + bottom ) < targetHeight ) {
+              feedback.vertical = "middle";
+            }
+            if ( max( abs( left ), abs( right ) ) > max( abs( top ), abs( bottom ) ) ) {
+              feedback.important = "horizontal";
+            } else {
+              feedback.important = "vertical";
+            }
+            options.using.call( this, props, feedback );
+          };
+        }
+
+        elem.offset( $.extend( position, { using: using } ) );
+      } );
+    };
+
+    $.ui.position = {
+      fit: {
+        left: function( position, data ) {
+          var within = data.within,
+            withinOffset = within.isWindow ? within.scrollLeft : within.offset.left,
+            outerWidth = within.width,
+            collisionPosLeft = position.left - data.collisionPosition.marginLeft,
+            overLeft = withinOffset - collisionPosLeft,
+            overRight = collisionPosLeft + data.collisionWidth - outerWidth - withinOffset,
+            newOverRight;
+
+          // Element is wider than within
+          if ( data.collisionWidth > outerWidth ) {
+
+            // Element is initially over the left side of within
+            if ( overLeft > 0 && overRight <= 0 ) {
+              newOverRight = position.left + overLeft + data.collisionWidth - outerWidth -
+                withinOffset;
+              position.left += overLeft - newOverRight;
+
+              // Element is initially over right side of within
+            } else if ( overRight > 0 && overLeft <= 0 ) {
+              position.left = withinOffset;
+
+              // Element is initially over both left and right sides of within
+            } else {
+              if ( overLeft > overRight ) {
+                position.left = withinOffset + outerWidth - data.collisionWidth;
+              } else {
+                position.left = withinOffset;
+              }
+            }
+
+            // Too far left -> align with left edge
+          } else if ( overLeft > 0 ) {
+            position.left += overLeft;
+
+            // Too far right -> align with right edge
+          } else if ( overRight > 0 ) {
+            position.left -= overRight;
+
+            // Adjust based on position and margin
+          } else {
+            position.left = max( position.left - collisionPosLeft, position.left );
+          }
+        },
+        top: function( position, data ) {
+          var within = data.within,
+            withinOffset = within.isWindow ? within.scrollTop : within.offset.top,
+            outerHeight = data.within.height,
+            collisionPosTop = position.top - data.collisionPosition.marginTop,
+            overTop = withinOffset - collisionPosTop,
+            overBottom = collisionPosTop + data.collisionHeight - outerHeight - withinOffset,
+            newOverBottom;
+
+          // Element is taller than within
+          if ( data.collisionHeight > outerHeight ) {
+
+            // Element is initially over the top of within
+            if ( overTop > 0 && overBottom <= 0 ) {
+              newOverBottom = position.top + overTop + data.collisionHeight - outerHeight -
+                withinOffset;
+              position.top += overTop - newOverBottom;
+
+              // Element is initially over bottom of within
+            } else if ( overBottom > 0 && overTop <= 0 ) {
+              position.top = withinOffset;
+
+              // Element is initially over both top and bottom of within
+            } else {
+              if ( overTop > overBottom ) {
+                position.top = withinOffset + outerHeight - data.collisionHeight;
+              } else {
+                position.top = withinOffset;
+              }
+            }
+
+            // Too far up -> align with top
+          } else if ( overTop > 0 ) {
+            position.top += overTop;
+
+            // Too far down -> align with bottom edge
+          } else if ( overBottom > 0 ) {
+            position.top -= overBottom;
+
+            // Adjust based on position and margin
+          } else {
+            position.top = max( position.top - collisionPosTop, position.top );
+          }
+        }
+      },
+      flip: {
+        left: function( position, data ) {
+          var within = data.within,
+            withinOffset = within.offset.left + within.scrollLeft,
+            outerWidth = within.width,
+            offsetLeft = within.isWindow ? within.scrollLeft : within.offset.left,
+            collisionPosLeft = position.left - data.collisionPosition.marginLeft,
+            overLeft = collisionPosLeft - offsetLeft,
+            overRight = collisionPosLeft + data.collisionWidth - outerWidth - offsetLeft,
+            myOffset = data.my[ 0 ] === "left" ?
+              -data.elemWidth :
+              data.my[ 0 ] === "right" ?
+                data.elemWidth :
+                0,
+            atOffset = data.at[ 0 ] === "left" ?
+              data.targetWidth :
+              data.at[ 0 ] === "right" ?
+                -data.targetWidth :
+                0,
+            offset = -2 * data.offset[ 0 ],
+            newOverRight,
+            newOverLeft;
+
+          if ( overLeft < 0 ) {
+            newOverRight = position.left + myOffset + atOffset + offset + data.collisionWidth -
+              outerWidth - withinOffset;
+            if ( newOverRight < 0 || newOverRight < abs( overLeft ) ) {
+              position.left += myOffset + atOffset + offset;
+            }
+          } else if ( overRight > 0 ) {
+            newOverLeft = position.left - data.collisionPosition.marginLeft + myOffset +
+              atOffset + offset - offsetLeft;
+            if ( newOverLeft > 0 || abs( newOverLeft ) < overRight ) {
+              position.left += myOffset + atOffset + offset;
+            }
+          }
+        },
+        top: function( position, data ) {
+          var within = data.within,
+            withinOffset = within.offset.top + within.scrollTop,
+            outerHeight = within.height,
+            offsetTop = within.isWindow ? within.scrollTop : within.offset.top,
+            collisionPosTop = position.top - data.collisionPosition.marginTop,
+            overTop = collisionPosTop - offsetTop,
+            overBottom = collisionPosTop + data.collisionHeight - outerHeight - offsetTop,
+            top = data.my[ 1 ] === "top",
+            myOffset = top ?
+              -data.elemHeight :
+              data.my[ 1 ] === "bottom" ?
+                data.elemHeight :
+                0,
+            atOffset = data.at[ 1 ] === "top" ?
+              data.targetHeight :
+              data.at[ 1 ] === "bottom" ?
+                -data.targetHeight :
+                0,
+            offset = -2 * data.offset[ 1 ],
+            newOverTop,
+            newOverBottom;
+          if ( overTop < 0 ) {
+            newOverBottom = position.top + myOffset + atOffset + offset + data.collisionHeight -
+              outerHeight - withinOffset;
+            if ( newOverBottom < 0 || newOverBottom < abs( overTop ) ) {
+              position.top += myOffset + atOffset + offset;
+            }
+          } else if ( overBottom > 0 ) {
+            newOverTop = position.top - data.collisionPosition.marginTop + myOffset + atOffset +
+              offset - offsetTop;
+            if ( newOverTop > 0 || abs( newOverTop ) < overBottom ) {
+              position.top += myOffset + atOffset + offset;
+            }
+          }
+        }
+      },
+      flipfit: {
+        left: function() {
+          $.ui.position.flip.left.apply( this, arguments );
+          $.ui.position.fit.left.apply( this, arguments );
+        },
+        top: function() {
+          $.ui.position.flip.top.apply( this, arguments );
+          $.ui.position.fit.top.apply( this, arguments );
+        }
+      }
+    };
+
+  } )();
+
+  var position = $.ui.position;
+
+
+  /*!
+ * jQuery UI :data 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: :data Selector
+//>>group: Core
+//>>description: Selects elements which have data stored under the specified key.
+//>>docs: http://api.jqueryui.com/data-selector/
+
+
+  var data = $.extend( $.expr[ ":" ], {
+    data: $.expr.createPseudo ?
+      $.expr.createPseudo( function( dataName ) {
+        return function( elem ) {
+          return !!$.data( elem, dataName );
+        };
+      } ) :
+
+      // Support: jQuery <1.8
+      function( elem, i, match ) {
+        return !!$.data( elem, match[ 3 ] );
+      }
+  } );
+
+  /*!
+ * jQuery UI Disable Selection 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: disableSelection
+//>>group: Core
+//>>description: Disable selection of text content within the set of matched elements.
+//>>docs: http://api.jqueryui.com/disableSelection/
+
+// This file is deprecated
+
+
+  var disableSelection = $.fn.extend( {
+    disableSelection: ( function() {
+      var eventType = "onselectstart" in document.createElement( "div" ) ?
+        "selectstart" :
+        "mousedown";
+
+      return function() {
+        return this.on( eventType + ".ui-disableSelection", function( event ) {
+          event.preventDefault();
+        } );
+      };
+    } )(),
+
+    enableSelection: function() {
+      return this.off( ".ui-disableSelection" );
+    }
+  } );
+
+
+  /*!
+ * jQuery UI Focusable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: :focusable Selector
+//>>group: Core
+//>>description: Selects elements which can be focused.
+//>>docs: http://api.jqueryui.com/focusable-selector/
+
+
+
+// Selectors
+  $.ui.focusable = function( element, hasTabindex ) {
+    var map, mapName, img, focusableIfVisible, fieldset,
+      nodeName = element.nodeName.toLowerCase();
+
+    if ( "area" === nodeName ) {
+      map = element.parentNode;
+      mapName = map.name;
+      if ( !element.href || !mapName || map.nodeName.toLowerCase() !== "map" ) {
+        return false;
+      }
+      img = $( "img[usemap='#" + mapName + "']" );
+      return img.length > 0 && img.is( ":visible" );
+    }
+
+    if ( /^(input|select|textarea|button|object)$/.test( nodeName ) ) {
+      focusableIfVisible = !element.disabled;
+
+      if ( focusableIfVisible ) {
+
+        // Form controls within a disabled fieldset are disabled.
+        // However, controls within the fieldset's legend do not get disabled.
+        // Since controls generally aren't placed inside legends, we skip
+        // this portion of the check.
+        fieldset = $( element ).closest( "fieldset" )[ 0 ];
+        if ( fieldset ) {
+          focusableIfVisible = !fieldset.disabled;
+        }
+      }
+    } else if ( "a" === nodeName ) {
+      focusableIfVisible = element.href || hasTabindex;
+    } else {
+      focusableIfVisible = hasTabindex;
+    }
+
+    return focusableIfVisible && $( element ).is( ":visible" ) && visible( $( element ) );
+  };
+
+// Support: IE 8 only
+// IE 8 doesn't resolve inherit to visible/hidden for computed values
+  function visible( element ) {
+    var visibility = element.css( "visibility" );
+    while ( visibility === "inherit" ) {
+      element = element.parent();
+      visibility = element.css( "visibility" );
+    }
+    return visibility !== "hidden";
+  }
+
+  $.extend( $.expr[ ":" ], {
+    focusable: function( element ) {
+      return $.ui.focusable( element, $.attr( element, "tabindex" ) != null );
+    }
+  } );
+
+  var focusable = $.ui.focusable;
+
+
+
+
+// Support: IE8 Only
+// IE8 does not support the form attribute and when it is supplied. It overwrites the form prop
+// with a string, so we need to find the proper form.
+  var form = $.fn.form = function() {
+    return typeof this[ 0 ].form === "string" ? this.closest( "form" ) : $( this[ 0 ].form );
+  };
+
+
+  /*!
+ * jQuery UI Form Reset Mixin 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: Form Reset Mixin
+//>>group: Core
+//>>description: Refresh input widgets when their form is reset
+//>>docs: http://api.jqueryui.com/form-reset-mixin/
+
+
+
+  var formResetMixin = $.ui.formResetMixin = {
+    _formResetHandler: function() {
+      var form = $( this );
+
+      // Wait for the form reset to actually happen before refreshing
+      setTimeout( function() {
+        var instances = form.data( "ui-form-reset-instances" );
+        $.each( instances, function() {
+          this.refresh();
+        } );
+      } );
+    },
+
+    _bindFormResetHandler: function() {
+      this.form = this.element.form();
+      if ( !this.form.length ) {
+        return;
+      }
+
+      var instances = this.form.data( "ui-form-reset-instances" ) || [];
+      if ( !instances.length ) {
+
+        // We don't use _on() here because we use a single event handler per form
+        this.form.on( "reset.ui-form-reset", this._formResetHandler );
+      }
+      instances.push( this );
+      this.form.data( "ui-form-reset-instances", instances );
+    },
+
+    _unbindFormResetHandler: function() {
+      if ( !this.form.length ) {
+        return;
+      }
+
+      var instances = this.form.data( "ui-form-reset-instances" );
+      instances.splice( $.inArray( this, instances ), 1 );
+      if ( instances.length ) {
+        this.form.data( "ui-form-reset-instances", instances );
+      } else {
+        this.form
+          .removeData( "ui-form-reset-instances" )
+          .off( "reset.ui-form-reset" );
+      }
+    }
+  };
+
+
+  /*!
+ * jQuery UI Support for jQuery core 1.7.x 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ *
+ */
+
+//>>label: jQuery 1.7 Support
+//>>group: Core
+//>>description: Support version 1.7.x of jQuery core
+
+
+
+// Support: jQuery 1.7 only
+// Not a great way to check versions, but since we only support 1.7+ and only
+// need to detect <1.8, this is a simple check that should suffice. Checking
+// for "1.7." would be a bit safer, but the version string is 1.7, not 1.7.0
+// and we'll never reach 1.70.0 (if we do, we certainly won't be supporting
+// 1.7 anymore). See #11197 for why we're not using feature detection.
+  if ( $.fn.jquery.substring( 0, 3 ) === "1.7" ) {
+
+    // Setters for .innerWidth(), .innerHeight(), .outerWidth(), .outerHeight()
+    // Unlike jQuery Core 1.8+, these only support numeric values to set the
+    // dimensions in pixels
+    $.each( [ "Width", "Height" ], function( i, name ) {
+      var side = name === "Width" ? [ "Left", "Right" ] : [ "Top", "Bottom" ],
+        type = name.toLowerCase(),
+        orig = {
+          innerWidth: $.fn.innerWidth,
+          innerHeight: $.fn.innerHeight,
+          outerWidth: $.fn.outerWidth,
+          outerHeight: $.fn.outerHeight
+        };
+
+      function reduce( elem, size, border, margin ) {
+        $.each( side, function() {
+          size -= parseFloat( $.css( elem, "padding" + this ) ) || 0;
+          if ( border ) {
+            size -= parseFloat( $.css( elem, "border" + this + "Width" ) ) || 0;
+          }
+          if ( margin ) {
+            size -= parseFloat( $.css( elem, "margin" + this ) ) || 0;
+          }
+        } );
+        return size;
+      }
+
+      $.fn[ "inner" + name ] = function( size ) {
+        if ( size === undefined ) {
+          return orig[ "inner" + name ].call( this );
+        }
+
+        return this.each( function() {
+          $( this ).css( type, reduce( this, size ) + "px" );
+        } );
+      };
+
+      $.fn[ "outer" + name ] = function( size, margin ) {
+        if ( typeof size !== "number" ) {
+          return orig[ "outer" + name ].call( this, size );
+        }
+
+        return this.each( function() {
+          $( this ).css( type, reduce( this, size, true, margin ) + "px" );
+        } );
+      };
+    } );
+
+    $.fn.addBack = function( selector ) {
+      return this.add( selector == null ?
+        this.prevObject : this.prevObject.filter( selector )
+      );
+    };
+  }
+
+  ;
+  /*!
+ * jQuery UI Keycode 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: Keycode
+//>>group: Core
+//>>description: Provide keycodes as keynames
+//>>docs: http://api.jqueryui.com/jQuery.ui.keyCode/
+
+
+  var keycode = $.ui.keyCode = {
+    BACKSPACE: 8,
+    COMMA: 188,
+    DELETE: 46,
+    DOWN: 40,
+    END: 35,
+    ENTER: 13,
+    ESCAPE: 27,
+    HOME: 36,
+    LEFT: 37,
+    PAGE_DOWN: 34,
+    PAGE_UP: 33,
+    PERIOD: 190,
+    RIGHT: 39,
+    SPACE: 32,
+    TAB: 9,
+    UP: 38
+  };
+
+
+
+
+// Internal use only
+  var escapeSelector = $.ui.escapeSelector = ( function() {
+    var selectorEscape = /([!"#$%&'()*+,./:;<=>?@[\]^`{|}~])/g;
+    return function( selector ) {
+      return selector.replace( selectorEscape, "\\$1" );
+    };
+  } )();
+
+
+  /*!
+ * jQuery UI Labels 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: labels
+//>>group: Core
+//>>description: Find all the labels associated with a given input
+//>>docs: http://api.jqueryui.com/labels/
+
+
+
+  var labels = $.fn.labels = function() {
+    var ancestor, selector, id, labels, ancestors;
+
+    // Check control.labels first
+    if ( this[ 0 ].labels && this[ 0 ].labels.length ) {
+      return this.pushStack( this[ 0 ].labels );
+    }
+
+    // Support: IE <= 11, FF <= 37, Android <= 2.3 only
+    // Above browsers do not support control.labels. Everything below is to support them
+    // as well as document fragments. control.labels does not work on document fragments
+    labels = this.eq( 0 ).parents( "label" );
+
+    // Look for the label based on the id
+    id = this.attr( "id" );
+    if ( id ) {
+
+      // We don't search against the document in case the element
+      // is disconnected from the DOM
+      ancestor = this.eq( 0 ).parents().last();
+
+      // Get a full set of top level ancestors
+      ancestors = ancestor.add( ancestor.length ? ancestor.siblings() : this.siblings() );
+
+      // Create a selector for the label based on the id
+      selector = "label[for='" + $.ui.escapeSelector( id ) + "']";
+
+      labels = labels.add( ancestors.find( selector ).addBack( selector ) );
+
+    }
+
+    // Return whatever we have found for labels
+    return this.pushStack( labels );
+  };
+
+
+  /*!
+ * jQuery UI Scroll Parent 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: scrollParent
+//>>group: Core
+//>>description: Get the closest ancestor element that is scrollable.
+//>>docs: http://api.jqueryui.com/scrollParent/
+
+
+
+  var scrollParent = $.fn.scrollParent = function( includeHidden ) {
+    var position = this.css( "position" ),
+      excludeStaticParent = position === "absolute",
+      overflowRegex = includeHidden ? /(auto|scroll|hidden)/ : /(auto|scroll)/,
+      scrollParent = this.parents().filter( function() {
+        var parent = $( this );
+        if ( excludeStaticParent && parent.css( "position" ) === "static" ) {
+          return false;
+        }
+        return overflowRegex.test( parent.css( "overflow" ) + parent.css( "overflow-y" ) +
+          parent.css( "overflow-x" ) );
+      } ).eq( 0 );
+
+    return position === "fixed" || !scrollParent.length ?
+      $( this[ 0 ].ownerDocument || document ) :
+      scrollParent;
+  };
+
+
+  /*!
+ * jQuery UI Tabbable 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: :tabbable Selector
+//>>group: Core
+//>>description: Selects elements which can be tabbed to.
+//>>docs: http://api.jqueryui.com/tabbable-selector/
+
+
+
+  var tabbable = $.extend( $.expr[ ":" ], {
+    tabbable: function( element ) {
+      var tabIndex = $.attr( element, "tabindex" ),
+        hasTabindex = tabIndex != null;
+      return ( !hasTabindex || tabIndex >= 0 ) && $.ui.focusable( element, hasTabindex );
+    }
+  } );
+
+
+  /*!
+ * jQuery UI Unique ID 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: uniqueId
+//>>group: Core
+//>>description: Functions to generate and remove uniqueId's
+//>>docs: http://api.jqueryui.com/uniqueId/
+
+
+
+  var uniqueId = $.fn.extend( {
+    uniqueId: ( function() {
+      var uuid = 0;
+
+      return function() {
+        return this.each( function() {
+          if ( !this.id ) {
+            this.id = "ui-id-" + ( ++uuid );
+          }
+        } );
+      };
+    } )(),
+
+    removeUniqueId: function() {
+      return this.each( function() {
+        if ( /^ui-id-\d+$/.test( this.id ) ) {
+          $( this ).removeAttr( "id" );
+        }
+      } );
+    }
+  } );
+
+
+// jscs:disable maximumLineLength
+  /* jscs:disable requireCamelCaseOrUpperCaseIdentifiers */
+  /*!
+ * jQuery UI Datepicker 1.12.1
+ * http://jqueryui.com
+ *
+ * Copyright jQuery Foundation and other contributors
+ * Released under the MIT license.
+ * http://jquery.org/license
+ */
+
+//>>label: Datepicker
+//>>group: Widgets
+//>>description: Displays a calendar from an input or inline for selecting dates.
+//>>docs: http://api.jqueryui.com/datepicker/
+//>>demos: http://jqueryui.com/datepicker/
+//>>css.structure: ../../themes/base/core.css
+//>>css.structure: ../../themes/base/datepicker.css
+//>>css.theme: ../../themes/base/theme.css
+
+
+
+  $.extend( $.ui, { datepicker: { version: "1.12.1" } } );
+
+  var datepicker_instActive;
+
+  function datepicker_getZindex( elem ) {
+    var position, value;
+    while ( elem.length && elem[ 0 ] !== document ) {
+
+      // Ignore z-index if position is set to a value where z-index is ignored by the browser
+      // This makes behavior of this function consistent across browsers
+      // WebKit always returns auto if the element is positioned
+      position = elem.css( "position" );
+      if ( position === "absolute" || position === "relative" || position === "fixed" ) {
+
+        // IE returns 0 when zIndex is not specified
+        // other browsers return a string
+        // we ignore the case of nested elements with an explicit value of 0
+        // <div style="z-index: -10;"><div style="z-index: 0;"></div></div>
+        value = parseInt( elem.css( "zIndex" ), 10 );
+        if ( !isNaN( value ) && value !== 0 ) {
+          return value;
+        }
+      }
+      elem = elem.parent();
+    }
+
+    return 0;
+  }
+  /* Date picker manager.
+   Use the singleton instance of this class, $.datepicker, to interact with the date picker.
+   Settings for (groups of) date pickers are maintained in an instance object,
+   allowing multiple different settings on the same page. */
+
+  function Datepicker() {
+    this._curInst = null; // The current instance in use
+    this._keyEvent = false; // If the last event was a key event
+    this._disabledInputs = []; // List of date picker inputs that have been disabled
+    this._datepickerShowing = false; // True if the popup picker is showing , false if not
+    this._inDialog = false; // True if showing within a "dialog", false if not
+    this._mainDivId = "ui-datepicker-div"; // The ID of the main datepicker division
+    this._inlineClass = "ui-datepicker-inline"; // The name of the inline marker class
+    this._appendClass = "ui-datepicker-append"; // The name of the append marker class
+    this._triggerClass = "ui-datepicker-trigger"; // The name of the trigger marker class
+    this._dialogClass = "ui-datepicker-dialog"; // The name of the dialog marker class
+    this._disableClass = "ui-datepicker-disabled"; // The name of the disabled covering marker class
+    this._unselectableClass = "ui-datepicker-unselectable"; // The name of the unselectable cell marker class
+    this._currentClass = "ui-datepicker-current-day"; // The name of the current day marker class
+    this._dayOverClass = "ui-datepicker-days-cell-over"; // The name of the day hover marker class
+    this.regional = []; // Available regional settings, indexed by language code
+    this.regional[ "" ] = { // Default regional settings
+      closeText: "Done", // Display text for close link
+      prevText: "Prev", // Display text for previous month link
+      nextText: "Next", // Display text for next month link
+      currentText: "Today", // Display text for current month link
+      monthNames: [ "January","February","March","April","May","June",
+        "July","August","September","October","November","December" ], // Names of months for drop-down and formatting
+      monthNamesShort: [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" ], // For formatting
+      dayNames: [ "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday" ], // For formatting
+      dayNamesShort: [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ], // For formatting
+      dayNamesMin: [ "Su","Mo","Tu","We","Th","Fr","Sa" ], // Column headings for days starting at Sunday
+      weekHeader: "Wk", // Column header for week of the year
+      dateFormat: "mm/dd/yy", // See format options on parseDate
+      firstDay: 0, // The first day of the week, Sun = 0, Mon = 1, ...
+      isRTL: false, // True if right-to-left language, false if left-to-right
+      showMonthAfterYear: false, // True if the year select precedes month, false for month then year
+      yearSuffix: "" // Additional text to append to the year in the month headers
+    };
+    this._defaults = { // Global defaults for all the date picker instances
+      showOn: "focus", // "focus" for popup on focus,
+      // "button" for trigger button, or "both" for either
+      showAnim: "fadeIn", // Name of jQuery animation for popup
+      showOptions: {}, // Options for enhanced animations
+      defaultDate: null, // Used when field is blank: actual date,
+      // +/-number for offset from today, null for today
+      appendText: "", // Display text following the input box, e.g. showing the format
+      buttonText: "...", // Text for trigger button
+      buttonImage: "", // URL for trigger button image
+      buttonImageOnly: false, // True if the image appears alone, false if it appears on a button
+      hideIfNoPrevNext: false, // True to hide next/previous month links
+      // if not applicable, false to just disable them
+      navigationAsDateFormat: false, // True if date formatting applied to prev/today/next links
+      gotoCurrent: false, // True if today link goes back to current selection instead
+      changeMonth: false, // True if month can be selected directly, false if only prev/next
+      changeYear: false, // True if year can be selected directly, false if only prev/next
+      yearRange: "c-10:c+10", // Range of years to display in drop-down,
+      // either relative to today's year (-nn:+nn), relative to currently displayed year
+      // (c-nn:c+nn), absolute (nnnn:nnnn), or a combination of the above (nnnn:-n)
+      showOtherMonths: false, // True to show dates in other months, false to leave blank
+      selectOtherMonths: false, // True to allow selection of dates in other months, false for unselectable
+      showWeek: false, // True to show week of the year, false to not show it
+      calculateWeek: this.iso8601Week, // How to calculate the week of the year,
+      // takes a Date and returns the number of the week for it
+      shortYearCutoff: "+10", // Short year values < this are in the current century,
+      // > this are in the previous century,
+      // string value starting with "+" for current year + value
+      minDate: null, // The earliest selectable date, or null for no limit
+      maxDate: null, // The latest selectable date, or null for no limit
+      duration: "fast", // Duration of display/closure
+      beforeShowDay: null, // Function that takes a date and returns an array with
+      // [0] = true if selectable, false if not, [1] = custom CSS class name(s) or "",
+      // [2] = cell title (optional), e.g. $.datepicker.noWeekends
+      beforeShow: null, // Function that takes an input field and
+      // returns a set of custom settings for the date picker
+      onSelect: null, // Define a callback function when a date is selected
+      onChangeMonthYear: null, // Define a callback function when the month or year is changed
+      onClose: null, // Define a callback function when the datepicker is closed
+      numberOfMonths: 1, // Number of months to show at a time
+      showCurrentAtPos: 0, // The position in multipe months at which to show the current month (starting at 0)
+      stepMonths: 1, // Number of months to step back/forward
+      stepBigMonths: 12, // Number of months to step back/forward for the big links
+      altField: "", // Selector for an alternate field to store selected dates into
+      altFormat: "", // The date format to use for the alternate field
+      constrainInput: true, // The input is constrained by the current date format
+      showButtonPanel: false, // True to show button panel, false to not show it
+      autoSize: false, // True to size the input for the date format, false to leave as is
+      disabled: false // The initial disabled state
+    };
+    $.extend( this._defaults, this.regional[ "" ] );
+    this.regional.en = $.extend( true, {}, this.regional[ "" ] );
+    this.regional[ "en-US" ] = $.extend( true, {}, this.regional.en );
+    this.dpDiv = datepicker_bindHover( $( "<div id='" + this._mainDivId + "' class='ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>" ) );
+  }
+
+  $.extend( Datepicker.prototype, {
+    /* Class name added to elements to indicate already configured with a date picker. */
+    markerClassName: "hasDatepicker",
+
+    //Keep track of the maximum number of rows displayed (see #7043)
+    maxRows: 4,
+
+    // TODO rename to "widget" when switching to widget factory
+    _widgetDatepicker: function() {
+      return this.dpDiv;
+    },
+
+    /* Override the default settings for all instances of the date picker.
+	 * @param  settings  object - the new settings to use as defaults (anonymous object)
+	 * @return the manager object
+	 */
+    setDefaults: function( settings ) {
+      datepicker_extendRemove( this._defaults, settings || {} );
+      return this;
+    },
+
+    /* Attach the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 * @param  settings  object - the new settings to use for this date picker instance (anonymous)
+	 */
+    _attachDatepicker: function( target, settings ) {
+      var nodeName, inline, inst;
+      nodeName = target.nodeName.toLowerCase();
+      inline = ( nodeName === "div" || nodeName === "span" );
+      if ( !target.id ) {
+        this.uuid += 1;
+        target.id = "dp" + this.uuid;
+      }
+      inst = this._newInst( $( target ), inline );
+      inst.settings = $.extend( {}, settings || {} );
+      if ( nodeName === "input" ) {
+        this._connectDatepicker( target, inst );
+      } else if ( inline ) {
+        this._inlineDatepicker( target, inst );
+      }
+    },
+
+    /* Create a new instance object. */
+    _newInst: function( target, inline ) {
+      var id = target[ 0 ].id.replace( /([^A-Za-z0-9_\-])/g, "\\\\$1" ); // escape jQuery meta chars
+      return { id: id, input: target, // associated target
+        selectedDay: 0, selectedMonth: 0, selectedYear: 0, // current selection
+        drawMonth: 0, drawYear: 0, // month being drawn
+        inline: inline, // is datepicker inline or not
+        dpDiv: ( !inline ? this.dpDiv : // presentation div
+          datepicker_bindHover( $( "<div class='" + this._inlineClass + " ui-datepicker ui-widget ui-widget-content ui-helper-clearfix ui-corner-all'></div>" ) ) ) };
+    },
+
+    /* Attach the date picker to an input field. */
+    _connectDatepicker: function( target, inst ) {
+      var input = $( target );
+      inst.append = $( [] );
+      inst.trigger = $( [] );
+      if ( input.hasClass( this.markerClassName ) ) {
+        return;
+      }
+      this._attachments( input, inst );
+      input.addClass( this.markerClassName ).on( "keydown", this._doKeyDown ).
+      on( "keypress", this._doKeyPress ).on( "keyup", this._doKeyUp );
+      this._autoSize( inst );
+      $.data( target, "datepicker", inst );
+
+      //If disabled option is true, disable the datepicker once it has been attached to the input (see ticket #5665)
+      if ( inst.settings.disabled ) {
+        this._disableDatepicker( target );
+      }
+    },
+
+    /* Make attachments based on settings. */
+    _attachments: function( input, inst ) {
+      var showOn, buttonText, buttonImage,
+        appendText = this._get( inst, "appendText" ),
+        isRTL = this._get( inst, "isRTL" );
+
+      if ( inst.append ) {
+        inst.append.remove();
+      }
+      if ( appendText ) {
+        inst.append = $( "<span class='" + this._appendClass + "'>" + appendText + "</span>" );
+        input[ isRTL ? "before" : "after" ]( inst.append );
+      }
+
+      input.off( "focus", this._showDatepicker );
+
+      if ( inst.trigger ) {
+        inst.trigger.remove();
+      }
+
+      showOn = this._get( inst, "showOn" );
+      if ( showOn === "focus" || showOn === "both" ) { // pop-up date picker when in the marked field
+        input.on( "focus", this._showDatepicker );
+      }
+      if ( showOn === "button" || showOn === "both" ) { // pop-up date picker when button clicked
+        buttonText = this._get( inst, "buttonText" );
+        buttonImage = this._get( inst, "buttonImage" );
+        inst.trigger = $( this._get( inst, "buttonImageOnly" ) ?
+          $( "<img/>" ).addClass( this._triggerClass ).
+          attr( { src: buttonImage, alt: buttonText, title: buttonText } ) :
+          $( "<button type='button'></button>" ).addClass( this._triggerClass ).
+          html( !buttonImage ? buttonText : $( "<img/>" ).attr(
+            { src:buttonImage, alt:buttonText, title:buttonText } ) ) );
+        input[ isRTL ? "before" : "after" ]( inst.trigger );
+        inst.trigger.on( "click", function() {
+          if ( $.datepicker._datepickerShowing && $.datepicker._lastInput === input[ 0 ] ) {
+            $.datepicker._hideDatepicker();
+          } else if ( $.datepicker._datepickerShowing && $.datepicker._lastInput !== input[ 0 ] ) {
+            $.datepicker._hideDatepicker();
+            $.datepicker._showDatepicker( input[ 0 ] );
+          } else {
+            $.datepicker._showDatepicker( input[ 0 ] );
+          }
+          return false;
+        } );
+      }
+    },
+
+    /* Apply the maximum length for the date format. */
+    _autoSize: function( inst ) {
+      if ( this._get( inst, "autoSize" ) && !inst.inline ) {
+        var findMax, max, maxI, i,
+          date = new Date( 2009, 12 - 1, 20 ), // Ensure double digits
+          dateFormat = this._get( inst, "dateFormat" );
+
+        if ( dateFormat.match( /[DM]/ ) ) {
+          findMax = function( names ) {
+            max = 0;
+            maxI = 0;
+            for ( i = 0; i < names.length; i++ ) {
+              if ( names[ i ].length > max ) {
+                max = names[ i ].length;
+                maxI = i;
+              }
+            }
+            return maxI;
+          };
+          date.setMonth( findMax( this._get( inst, ( dateFormat.match( /MM/ ) ?
+            "monthNames" : "monthNamesShort" ) ) ) );
+          date.setDate( findMax( this._get( inst, ( dateFormat.match( /DD/ ) ?
+            "dayNames" : "dayNamesShort" ) ) ) + 20 - date.getDay() );
+        }
+        inst.input.attr( "size", this._formatDate( inst, date ).length );
+      }
+    },
+
+    /* Attach an inline date picker to a div. */
+    _inlineDatepicker: function( target, inst ) {
+      var divSpan = $( target );
+      if ( divSpan.hasClass( this.markerClassName ) ) {
+        return;
+      }
+      divSpan.addClass( this.markerClassName ).append( inst.dpDiv );
+      $.data( target, "datepicker", inst );
+      this._setDate( inst, this._getDefaultDate( inst ), true );
+      this._updateDatepicker( inst );
+      this._updateAlternate( inst );
+
+      //If disabled option is true, disable the datepicker before showing it (see ticket #5665)
+      if ( inst.settings.disabled ) {
+        this._disableDatepicker( target );
+      }
+
+      // Set display:block in place of inst.dpDiv.show() which won't work on disconnected elements
+      // http://bugs.jqueryui.com/ticket/7552 - A Datepicker created on a detached div has zero height
+      inst.dpDiv.css( "display", "block" );
+    },
+
+    /* Pop-up the date picker in a "dialog" box.
+	 * @param  input element - ignored
+	 * @param  date	string or Date - the initial date to display
+	 * @param  onSelect  function - the function to call when a date is selected
+	 * @param  settings  object - update the dialog date picker instance's settings (anonymous object)
+	 * @param  pos int[2] - coordinates for the dialog's position within the screen or
+	 *					event - with x/y coordinates or
+	 *					leave empty for default (screen centre)
+	 * @return the manager object
+	 */
+    _dialogDatepicker: function( input, date, onSelect, settings, pos ) {
+      var id, browserWidth, browserHeight, scrollX, scrollY,
+        inst = this._dialogInst; // internal instance
+
+      if ( !inst ) {
+        this.uuid += 1;
+        id = "dp" + this.uuid;
+        this._dialogInput = $( "<input type='text' id='" + id +
+          "' style='position: absolute; top: -100px; width: 0px;'/>" );
+        this._dialogInput.on( "keydown", this._doKeyDown );
+        $( "body" ).append( this._dialogInput );
+        inst = this._dialogInst = this._newInst( this._dialogInput, false );
+        inst.settings = {};
+        $.data( this._dialogInput[ 0 ], "datepicker", inst );
+      }
+      datepicker_extendRemove( inst.settings, settings || {} );
+      date = ( date && date.constructor === Date ? this._formatDate( inst, date ) : date );
+      this._dialogInput.val( date );
+
+      this._pos = ( pos ? ( pos.length ? pos : [ pos.pageX, pos.pageY ] ) : null );
+      if ( !this._pos ) {
+        browserWidth = document.documentElement.clientWidth;
+        browserHeight = document.documentElement.clientHeight;
+        scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+        scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+        this._pos = // should use actual width/height below
+          [ ( browserWidth / 2 ) - 100 + scrollX, ( browserHeight / 2 ) - 150 + scrollY ];
+      }
+
+      // Move input on screen for focus, but hidden behind dialog
+      this._dialogInput.css( "left", ( this._pos[ 0 ] + 20 ) + "px" ).css( "top", this._pos[ 1 ] + "px" );
+      inst.settings.onSelect = onSelect;
+      this._inDialog = true;
+      this.dpDiv.addClass( this._dialogClass );
+      this._showDatepicker( this._dialogInput[ 0 ] );
+      if ( $.blockUI ) {
+        $.blockUI( this.dpDiv );
+      }
+      $.data( this._dialogInput[ 0 ], "datepicker", inst );
+      return this;
+    },
+
+    /* Detach a datepicker from its control.
+	 * @param  target	element - the target input field or division or span
+	 */
+    _destroyDatepicker: function( target ) {
+      var nodeName,
+        $target = $( target ),
+        inst = $.data( target, "datepicker" );
+
+      if ( !$target.hasClass( this.markerClassName ) ) {
+        return;
+      }
+
+      nodeName = target.nodeName.toLowerCase();
+      $.removeData( target, "datepicker" );
+      if ( nodeName === "input" ) {
+        inst.append.remove();
+        inst.trigger.remove();
+        $target.removeClass( this.markerClassName ).
+        off( "focus", this._showDatepicker ).
+        off( "keydown", this._doKeyDown ).
+        off( "keypress", this._doKeyPress ).
+        off( "keyup", this._doKeyUp );
+      } else if ( nodeName === "div" || nodeName === "span" ) {
+        $target.removeClass( this.markerClassName ).empty();
+      }
+
+      if ( datepicker_instActive === inst ) {
+        datepicker_instActive = null;
+      }
+    },
+
+    /* Enable the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 */
+    _enableDatepicker: function( target ) {
+      var nodeName, inline,
+        $target = $( target ),
+        inst = $.data( target, "datepicker" );
+
+      if ( !$target.hasClass( this.markerClassName ) ) {
+        return;
+      }
+
+      nodeName = target.nodeName.toLowerCase();
+      if ( nodeName === "input" ) {
+        target.disabled = false;
+        inst.trigger.filter( "button" ).
+        each( function() { this.disabled = false; } ).end().
+        filter( "img" ).css( { opacity: "1.0", cursor: "" } );
+      } else if ( nodeName === "div" || nodeName === "span" ) {
+        inline = $target.children( "." + this._inlineClass );
+        inline.children().removeClass( "ui-state-disabled" );
+        inline.find( "select.ui-datepicker-month, select.ui-datepicker-year" ).
+        prop( "disabled", false );
+      }
+      this._disabledInputs = $.map( this._disabledInputs,
+        function( value ) { return ( value === target ? null : value ); } ); // delete entry
+    },
+
+    /* Disable the date picker to a jQuery selection.
+	 * @param  target	element - the target input field or division or span
+	 */
+    _disableDatepicker: function( target ) {
+      var nodeName, inline,
+        $target = $( target ),
+        inst = $.data( target, "datepicker" );
+
+      if ( !$target.hasClass( this.markerClassName ) ) {
+        return;
+      }
+
+      nodeName = target.nodeName.toLowerCase();
+      if ( nodeName === "input" ) {
+        target.disabled = true;
+        inst.trigger.filter( "button" ).
+        each( function() { this.disabled = true; } ).end().
+        filter( "img" ).css( { opacity: "0.5", cursor: "default" } );
+      } else if ( nodeName === "div" || nodeName === "span" ) {
+        inline = $target.children( "." + this._inlineClass );
+        inline.children().addClass( "ui-state-disabled" );
+        inline.find( "select.ui-datepicker-month, select.ui-datepicker-year" ).
+        prop( "disabled", true );
+      }
+      this._disabledInputs = $.map( this._disabledInputs,
+        function( value ) { return ( value === target ? null : value ); } ); // delete entry
+      this._disabledInputs[ this._disabledInputs.length ] = target;
+    },
+
+    /* Is the first field in a jQuery collection disabled as a datepicker?
+	 * @param  target	element - the target input field or division or span
+	 * @return boolean - true if disabled, false if enabled
+	 */
+    _isDisabledDatepicker: function( target ) {
+      if ( !target ) {
+        return false;
+      }
+      for ( var i = 0; i < this._disabledInputs.length; i++ ) {
+        if ( this._disabledInputs[ i ] === target ) {
+          return true;
+        }
+      }
+      return false;
+    },
+
+    /* Retrieve the instance data for the target control.
+	 * @param  target  element - the target input field or division or span
+	 * @return  object - the associated instance data
+	 * @throws  error if a jQuery problem getting data
+	 */
+    _getInst: function( target ) {
+      try {
+        return $.data( target, "datepicker" );
+      }
+      catch ( err ) {
+        throw "Missing instance data for this datepicker";
+      }
+    },
+
+    /* Update or retrieve the settings for a date picker attached to an input field or division.
+	 * @param  target  element - the target input field or division or span
+	 * @param  name	object - the new settings to update or
+	 *				string - the name of the setting to change or retrieve,
+	 *				when retrieving also "all" for all instance settings or
+	 *				"defaults" for all global defaults
+	 * @param  value   any - the new value for the setting
+	 *				(omit if above is an object or to retrieve a value)
+	 */
+    _optionDatepicker: function( target, name, value ) {
+      var settings, date, minDate, maxDate,
+        inst = this._getInst( target );
+
+      if ( arguments.length === 2 && typeof name === "string" ) {
+        return ( name === "defaults" ? $.extend( {}, $.datepicker._defaults ) :
+          ( inst ? ( name === "all" ? $.extend( {}, inst.settings ) :
+            this._get( inst, name ) ) : null ) );
+      }
+
+      settings = name || {};
+      if ( typeof name === "string" ) {
+        settings = {};
+        settings[ name ] = value;
+      }
+
+      if ( inst ) {
+        if ( this._curInst === inst ) {
+          this._hideDatepicker();
+        }
+
+        date = this._getDateDatepicker( target, true );
+        minDate = this._getMinMaxDate( inst, "min" );
+        maxDate = this._getMinMaxDate( inst, "max" );
+        datepicker_extendRemove( inst.settings, settings );
+
+        // reformat the old minDate/maxDate values if dateFormat changes and a new minDate/maxDate isn't provided
+        if ( minDate !== null && settings.dateFormat !== undefined && settings.minDate === undefined ) {
+          inst.settings.minDate = this._formatDate( inst, minDate );
+        }
+        if ( maxDate !== null && settings.dateFormat !== undefined && settings.maxDate === undefined ) {
+          inst.settings.maxDate = this._formatDate( inst, maxDate );
+        }
+        if ( "disabled" in settings ) {
+          if ( settings.disabled ) {
+            this._disableDatepicker( target );
+          } else {
+            this._enableDatepicker( target );
+          }
+        }
+        this._attachments( $( target ), inst );
+        this._autoSize( inst );
+        this._setDate( inst, date );
+        this._updateAlternate( inst );
+        this._updateDatepicker( inst );
+      }
+    },
+
+    // Change method deprecated
+    _changeDatepicker: function( target, name, value ) {
+      this._optionDatepicker( target, name, value );
+    },
+
+    /* Redraw the date picker attached to an input field or division.
+	 * @param  target  element - the target input field or division or span
+	 */
+    _refreshDatepicker: function( target ) {
+      var inst = this._getInst( target );
+      if ( inst ) {
+        this._updateDatepicker( inst );
+      }
+    },
+
+    /* Set the dates for a jQuery selection.
+	 * @param  target element - the target input field or division or span
+	 * @param  date	Date - the new date
+	 */
+    _setDateDatepicker: function( target, date ) {
+      var inst = this._getInst( target );
+      if ( inst ) {
+        this._setDate( inst, date );
+        this._updateDatepicker( inst );
+        this._updateAlternate( inst );
+      }
+    },
+
+    /* Get the date(s) for the first entry in a jQuery selection.
+	 * @param  target element - the target input field or division or span
+	 * @param  noDefault boolean - true if no default date is to be used
+	 * @return Date - the current date
+	 */
+    _getDateDatepicker: function( target, noDefault ) {
+      var inst = this._getInst( target );
+      if ( inst && !inst.inline ) {
+        this._setDateFromField( inst, noDefault );
+      }
+      return ( inst ? this._getDate( inst ) : null );
+    },
+
+    /* Handle keystrokes. */
+    _doKeyDown: function( event ) {
+      var onSelect, dateStr, sel,
+        inst = $.datepicker._getInst( event.target ),
+        handled = true,
+        isRTL = inst.dpDiv.is( ".ui-datepicker-rtl" );
+
+      inst._keyEvent = true;
+      if ( $.datepicker._datepickerShowing ) {
+        switch ( event.keyCode ) {
+          case 9: $.datepicker._hideDatepicker();
+            handled = false;
+            break; // hide on tab out
+          case 13: sel = $( "td." + $.datepicker._dayOverClass + ":not(." +
+            $.datepicker._currentClass + ")", inst.dpDiv );
+            if ( sel[ 0 ] ) {
+              $.datepicker._selectDay( event.target, inst.selectedMonth, inst.selectedYear, sel[ 0 ] );
+            }
+
+            onSelect = $.datepicker._get( inst, "onSelect" );
+            if ( onSelect ) {
+              dateStr = $.datepicker._formatDate( inst );
+
+              // Trigger custom callback
+              onSelect.apply( ( inst.input ? inst.input[ 0 ] : null ), [ dateStr, inst ] );
+            } else {
+              $.datepicker._hideDatepicker();
+            }
+
+            return false; // don't submit the form
+          case 27: $.datepicker._hideDatepicker();
+            break; // hide on escape
+          case 33: $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+            -$.datepicker._get( inst, "stepBigMonths" ) :
+            -$.datepicker._get( inst, "stepMonths" ) ), "M" );
+            break; // previous month/year on page up/+ ctrl
+          case 34: $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+            +$.datepicker._get( inst, "stepBigMonths" ) :
+            +$.datepicker._get( inst, "stepMonths" ) ), "M" );
+            break; // next month/year on page down/+ ctrl
+          case 35: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._clearDate( event.target );
+          }
+            handled = event.ctrlKey || event.metaKey;
+            break; // clear on ctrl or command +end
+          case 36: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._gotoToday( event.target );
+          }
+            handled = event.ctrlKey || event.metaKey;
+            break; // current on ctrl or command +home
+          case 37: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._adjustDate( event.target, ( isRTL ? +1 : -1 ), "D" );
+          }
+            handled = event.ctrlKey || event.metaKey;
+
+            // -1 day on ctrl or command +left
+            if ( event.originalEvent.altKey ) {
+              $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+                -$.datepicker._get( inst, "stepBigMonths" ) :
+                -$.datepicker._get( inst, "stepMonths" ) ), "M" );
+            }
+
+            // next month/year on alt +left on Mac
+            break;
+          case 38: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._adjustDate( event.target, -7, "D" );
+          }
+            handled = event.ctrlKey || event.metaKey;
+            break; // -1 week on ctrl or command +up
+          case 39: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._adjustDate( event.target, ( isRTL ? -1 : +1 ), "D" );
+          }
+            handled = event.ctrlKey || event.metaKey;
+
+            // +1 day on ctrl or command +right
+            if ( event.originalEvent.altKey ) {
+              $.datepicker._adjustDate( event.target, ( event.ctrlKey ?
+                +$.datepicker._get( inst, "stepBigMonths" ) :
+                +$.datepicker._get( inst, "stepMonths" ) ), "M" );
+            }
+
+            // next month/year on alt +right
+            break;
+          case 40: if ( event.ctrlKey || event.metaKey ) {
+            $.datepicker._adjustDate( event.target, +7, "D" );
+          }
+            handled = event.ctrlKey || event.metaKey;
+            break; // +1 week on ctrl or command +down
+          default: handled = false;
+        }
+      } else if ( event.keyCode === 36 && event.ctrlKey ) { // display the date picker on ctrl+home
+        $.datepicker._showDatepicker( this );
+      } else {
+        handled = false;
+      }
+
+      if ( handled ) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    },
+
+    /* Filter entered characters - based on date format. */
+    _doKeyPress: function( event ) {
+      var chars, chr,
+        inst = $.datepicker._getInst( event.target );
+
+      if ( $.datepicker._get( inst, "constrainInput" ) ) {
+        chars = $.datepicker._possibleChars( $.datepicker._get( inst, "dateFormat" ) );
+        chr = String.fromCharCode( event.charCode == null ? event.keyCode : event.charCode );
+        return event.ctrlKey || event.metaKey || ( chr < " " || !chars || chars.indexOf( chr ) > -1 );
+      }
+    },
+
+    /* Synchronise manual entry and field/alternate field. */
+    _doKeyUp: function( event ) {
+      var date,
+        inst = $.datepicker._getInst( event.target );
+
+      if ( inst.input.val() !== inst.lastVal ) {
+        try {
+          date = $.datepicker.parseDate( $.datepicker._get( inst, "dateFormat" ),
+            ( inst.input ? inst.input.val() : null ),
+            $.datepicker._getFormatConfig( inst ) );
+
+          if ( date ) { // only if valid
+            $.datepicker._setDateFromField( inst );
+            $.datepicker._updateAlternate( inst );
+            $.datepicker._updateDatepicker( inst );
+          }
+        }
+        catch ( err ) {
+        }
+      }
+      return true;
+    },
+
+    /* Pop-up the date picker for a given input field.
+	 * If false returned from beforeShow event handler do not show.
+	 * @param  input  element - the input field attached to the date picker or
+	 *					event - if triggered by focus
+	 */
+    _showDatepicker: function( input ) {
+      input = input.target || input;
+      if ( input.nodeName.toLowerCase() !== "input" ) { // find from button/image trigger
+        input = $( "input", input.parentNode )[ 0 ];
+      }
+
+      if ( $.datepicker._isDisabledDatepicker( input ) || $.datepicker._lastInput === input ) { // already here
+        return;
+      }
+
+      var inst, beforeShow, beforeShowSettings, isFixed,
+        offset, showAnim, duration;
+
+      inst = $.datepicker._getInst( input );
+      if ( $.datepicker._curInst && $.datepicker._curInst !== inst ) {
+        $.datepicker._curInst.dpDiv.stop( true, true );
+        if ( inst && $.datepicker._datepickerShowing ) {
+          $.datepicker._hideDatepicker( $.datepicker._curInst.input[ 0 ] );
+        }
+      }
+
+      beforeShow = $.datepicker._get( inst, "beforeShow" );
+      beforeShowSettings = beforeShow ? beforeShow.apply( input, [ input, inst ] ) : {};
+      if ( beforeShowSettings === false ) {
+        return;
+      }
+      datepicker_extendRemove( inst.settings, beforeShowSettings );
+
+      inst.lastVal = null;
+      $.datepicker._lastInput = input;
+      $.datepicker._setDateFromField( inst );
+
+      if ( $.datepicker._inDialog ) { // hide cursor
+        input.value = "";
+      }
+      if ( !$.datepicker._pos ) { // position below input
+        $.datepicker._pos = $.datepicker._findPos( input );
+        $.datepicker._pos[ 1 ] += input.offsetHeight; // add the height
+      }
+
+      isFixed = false;
+      $( input ).parents().each( function() {
+        isFixed |= $( this ).css( "position" ) === "fixed";
+        return !isFixed;
+      } );
+
+      offset = { left: $.datepicker._pos[ 0 ], top: $.datepicker._pos[ 1 ] };
+      $.datepicker._pos = null;
+
+      //to avoid flashes on Firefox
+      inst.dpDiv.empty();
+
+      // determine sizing offscreen
+      inst.dpDiv.css( { position: "absolute", display: "block", top: "-1000px" } );
+      $.datepicker._updateDatepicker( inst );
+
+      // fix width for dynamic number of date pickers
+      // and adjust position before showing
+      offset = $.datepicker._checkOffset( inst, offset, isFixed );
+      inst.dpDiv.css( { position: ( $.datepicker._inDialog && $.blockUI ?
+          "static" : ( isFixed ? "fixed" : "absolute" ) ), display: "none",
+        left: offset.left + "px", top: offset.top + "px" } );
+
+      if ( !inst.inline ) {
+        showAnim = $.datepicker._get( inst, "showAnim" );
+        duration = $.datepicker._get( inst, "duration" );
+        inst.dpDiv.css( "z-index", datepicker_getZindex( $( input ) ) + 1 );
+        $.datepicker._datepickerShowing = true;
+
+        if ( $.effects && $.effects.effect[ showAnim ] ) {
+          inst.dpDiv.show( showAnim, $.datepicker._get( inst, "showOptions" ), duration );
+        } else {
+          inst.dpDiv[ showAnim || "show" ]( showAnim ? duration : null );
+        }
+
+        if ( $.datepicker._shouldFocusInput( inst ) ) {
+          inst.input.trigger( "focus" );
+        }
+
+        $.datepicker._curInst = inst;
+      }
+    },
+
+    /* Generate the date picker content. */
+    _updateDatepicker: function( inst ) {
+      this.maxRows = 4; //Reset the max number of rows being displayed (see #7043)
+      datepicker_instActive = inst; // for delegate hover events
+      inst.dpDiv.empty().append( this._generateHTML( inst ) );
+      this._attachHandlers( inst );
+
+      var origyearshtml,
+        numMonths = this._getNumberOfMonths( inst ),
+        cols = numMonths[ 1 ],
+        width = 17,
+        activeCell = inst.dpDiv.find( "." + this._dayOverClass + " a" );
+
+      if ( activeCell.length > 0 ) {
+        datepicker_handleMouseover.apply( activeCell.get( 0 ) );
+      }
+
+      inst.dpDiv.removeClass( "ui-datepicker-multi-2 ui-datepicker-multi-3 ui-datepicker-multi-4" ).width( "" );
+      if ( cols > 1 ) {
+        inst.dpDiv.addClass( "ui-datepicker-multi-" + cols ).css( "width", ( width * cols ) + "em" );
+      }
+      inst.dpDiv[ ( numMonths[ 0 ] !== 1 || numMonths[ 1 ] !== 1 ? "add" : "remove" ) +
+      "Class" ]( "ui-datepicker-multi" );
+      inst.dpDiv[ ( this._get( inst, "isRTL" ) ? "add" : "remove" ) +
+      "Class" ]( "ui-datepicker-rtl" );
+
+      if ( inst === $.datepicker._curInst && $.datepicker._datepickerShowing && $.datepicker._shouldFocusInput( inst ) ) {
+        inst.input.trigger( "focus" );
+      }
+
+      // Deffered render of the years select (to avoid flashes on Firefox)
+      if ( inst.yearshtml ) {
+        origyearshtml = inst.yearshtml;
+        setTimeout( function() {
+
+          //assure that inst.yearshtml didn't change.
+          if ( origyearshtml === inst.yearshtml && inst.yearshtml ) {
+            inst.dpDiv.find( "select.ui-datepicker-year:first" ).replaceWith( inst.yearshtml );
+          }
+          origyearshtml = inst.yearshtml = null;
+        }, 0 );
+      }
+    },
+
+    // #6694 - don't focus the input if it's already focused
+    // this breaks the change event in IE
+    // Support: IE and jQuery <1.9
+    _shouldFocusInput: function( inst ) {
+      return inst.input && inst.input.is( ":visible" ) && !inst.input.is( ":disabled" ) && !inst.input.is( ":focus" );
+    },
+
+    /* Check positioning to remain on screen. */
+    _checkOffset: function( inst, offset, isFixed ) {
+      var dpWidth = inst.dpDiv.outerWidth(),
+        dpHeight = inst.dpDiv.outerHeight(),
+        inputWidth = inst.input ? inst.input.outerWidth() : 0,
+        inputHeight = inst.input ? inst.input.outerHeight() : 0,
+        viewWidth = document.documentElement.clientWidth + ( isFixed ? 0 : $( document ).scrollLeft() ),
+        viewHeight = document.documentElement.clientHeight + ( isFixed ? 0 : $( document ).scrollTop() );
+
+      offset.left -= ( this._get( inst, "isRTL" ) ? ( dpWidth - inputWidth ) : 0 );
+      offset.left -= ( isFixed && offset.left === inst.input.offset().left ) ? $( document ).scrollLeft() : 0;
+      offset.top -= ( isFixed && offset.top === ( inst.input.offset().top + inputHeight ) ) ? $( document ).scrollTop() : 0;
+
+      // Now check if datepicker is showing outside window viewport - move to a better place if so.
+      offset.left -= Math.min( offset.left, ( offset.left + dpWidth > viewWidth && viewWidth > dpWidth ) ?
+        Math.abs( offset.left + dpWidth - viewWidth ) : 0 );
+      offset.top -= Math.min( offset.top, ( offset.top + dpHeight > viewHeight && viewHeight > dpHeight ) ?
+        Math.abs( dpHeight + inputHeight ) : 0 );
+
+      return offset;
+    },
+
+    /* Find an object's position on the screen. */
+    _findPos: function( obj ) {
+      var position,
+        inst = this._getInst( obj ),
+        isRTL = this._get( inst, "isRTL" );
+
+      while ( obj && ( obj.type === "hidden" || obj.nodeType !== 1 || $.expr.filters.hidden( obj ) ) ) {
+        obj = obj[ isRTL ? "previousSibling" : "nextSibling" ];
+      }
+
+      position = $( obj ).offset();
+      return [ position.left, position.top ];
+    },
+
+    /* Hide the date picker from view.
+	 * @param  input  element - the input field attached to the date picker
+	 */
+    _hideDatepicker: function( input ) {
+      var showAnim, duration, postProcess, onClose,
+        inst = this._curInst;
+
+      if ( !inst || ( input && inst !== $.data( input, "datepicker" ) ) ) {
+        return;
+      }
+
+      if ( this._datepickerShowing ) {
+        showAnim = this._get( inst, "showAnim" );
+        duration = this._get( inst, "duration" );
+        postProcess = function() {
+          $.datepicker._tidyDialog( inst );
+        };
+
+        // DEPRECATED: after BC for 1.8.x $.effects[ showAnim ] is not needed
+        if ( $.effects && ( $.effects.effect[ showAnim ] || $.effects[ showAnim ] ) ) {
+          inst.dpDiv.hide( showAnim, $.datepicker._get( inst, "showOptions" ), duration, postProcess );
+        } else {
+          inst.dpDiv[ ( showAnim === "slideDown" ? "slideUp" :
+            ( showAnim === "fadeIn" ? "fadeOut" : "hide" ) ) ]( ( showAnim ? duration : null ), postProcess );
+        }
+
+        if ( !showAnim ) {
+          postProcess();
+        }
+        this._datepickerShowing = false;
+
+        onClose = this._get( inst, "onClose" );
+        if ( onClose ) {
+          onClose.apply( ( inst.input ? inst.input[ 0 ] : null ), [ ( inst.input ? inst.input.val() : "" ), inst ] );
+        }
+
+        this._lastInput = null;
+        if ( this._inDialog ) {
+          this._dialogInput.css( { position: "absolute", left: "0", top: "-100px" } );
+          if ( $.blockUI ) {
+            $.unblockUI();
+            $( "body" ).append( this.dpDiv );
+          }
+        }
+        this._inDialog = false;
+      }
+    },
+
+    /* Tidy up after a dialog display. */
+    _tidyDialog: function( inst ) {
+      inst.dpDiv.removeClass( this._dialogClass ).off( ".ui-datepicker-calendar" );
+    },
+
+    /* Close date picker if clicked elsewhere. */
+    _checkExternalClick: function( event ) {
+      if ( !$.datepicker._curInst ) {
+        return;
+      }
+
+      var $target = $( event.target ),
+        inst = $.datepicker._getInst( $target[ 0 ] );
+
+      if ( ( ( $target[ 0 ].id !== $.datepicker._mainDivId &&
+          $target.parents( "#" + $.datepicker._mainDivId ).length === 0 &&
+          !$target.hasClass( $.datepicker.markerClassName ) &&
+          !$target.closest( "." + $.datepicker._triggerClass ).length &&
+          $.datepicker._datepickerShowing && !( $.datepicker._inDialog && $.blockUI ) ) ) ||
+        ( $target.hasClass( $.datepicker.markerClassName ) && $.datepicker._curInst !== inst ) ) {
+        $.datepicker._hideDatepicker();
+      }
+    },
+
+    /* Adjust one of the date sub-fields. */
+    _adjustDate: function( id, offset, period ) {
+      var target = $( id ),
+        inst = this._getInst( target[ 0 ] );
+
+      if ( this._isDisabledDatepicker( target[ 0 ] ) ) {
+        return;
+      }
+      this._adjustInstDate( inst, offset +
+        ( period === "M" ? this._get( inst, "showCurrentAtPos" ) : 0 ), // undo positioning
+        period );
+      this._updateDatepicker( inst );
+    },
+
+    /* Action for current link. */
+    _gotoToday: function( id ) {
+      var date,
+        target = $( id ),
+        inst = this._getInst( target[ 0 ] );
+
+      if ( this._get( inst, "gotoCurrent" ) && inst.currentDay ) {
+        inst.selectedDay = inst.currentDay;
+        inst.drawMonth = inst.selectedMonth = inst.currentMonth;
+        inst.drawYear = inst.selectedYear = inst.currentYear;
+      } else {
+        date = new Date();
+        inst.selectedDay = date.getDate();
+        inst.drawMonth = inst.selectedMonth = date.getMonth();
+        inst.drawYear = inst.selectedYear = date.getFullYear();
+      }
+      this._notifyChange( inst );
+      this._adjustDate( target );
+    },
+
+    /* Action for selecting a new month/year. */
+    _selectMonthYear: function( id, select, period ) {
+      var target = $( id ),
+        inst = this._getInst( target[ 0 ] );
+
+      inst[ "selected" + ( period === "M" ? "Month" : "Year" ) ] =
+        inst[ "draw" + ( period === "M" ? "Month" : "Year" ) ] =
+          parseInt( select.options[ select.selectedIndex ].value, 10 );
+
+      this._notifyChange( inst );
+      this._adjustDate( target );
+    },
+
+    /* Action for selecting a day. */
+    _selectDay: function( id, month, year, td ) {
+      var inst,
+        target = $( id );
+
+      if ( $( td ).hasClass( this._unselectableClass ) || this._isDisabledDatepicker( target[ 0 ] ) ) {
+        return;
+      }
+
+      inst = this._getInst( target[ 0 ] );
+      inst.selectedDay = inst.currentDay = $( "a", td ).html();
+      inst.selectedMonth = inst.currentMonth = month;
+      inst.selectedYear = inst.currentYear = year;
+      this._selectDate( id, this._formatDate( inst,
+        inst.currentDay, inst.currentMonth, inst.currentYear ) );
+    },
+
+    /* Erase the input field and hide the date picker. */
+    _clearDate: function( id ) {
+      var target = $( id );
+      this._selectDate( target, "" );
+    },
+
+    /* Update the input field with the selected date. */
+    _selectDate: function( id, dateStr ) {
+      var onSelect,
+        target = $( id ),
+        inst = this._getInst( target[ 0 ] );
+
+      dateStr = ( dateStr != null ? dateStr : this._formatDate( inst ) );
+      if ( inst.input ) {
+        inst.input.val( dateStr );
+      }
+      this._updateAlternate( inst );
+
+      onSelect = this._get( inst, "onSelect" );
+      if ( onSelect ) {
+        onSelect.apply( ( inst.input ? inst.input[ 0 ] : null ), [ dateStr, inst ] );  // trigger custom callback
+      } else if ( inst.input ) {
+        inst.input.trigger( "change" ); // fire the change event
+      }
+
+      if ( inst.inline ) {
+        this._updateDatepicker( inst );
+      } else {
+        this._hideDatepicker();
+        this._lastInput = inst.input[ 0 ];
+        if ( typeof( inst.input[ 0 ] ) !== "object" ) {
+          inst.input.trigger( "focus" ); // restore focus
+        }
+        this._lastInput = null;
+      }
+    },
+
+    /* Update any alternate field to synchronise with the main field. */
+    _updateAlternate: function( inst ) {
+      var altFormat, date, dateStr,
+        altField = this._get( inst, "altField" );
+
+      if ( altField ) { // update alternate field too
+        altFormat = this._get( inst, "altFormat" ) || this._get( inst, "dateFormat" );
+        date = this._getDate( inst );
+        dateStr = this.formatDate( altFormat, date, this._getFormatConfig( inst ) );
+        $( altField ).val( dateStr );
+      }
+    },
+
+    /* Set as beforeShowDay function to prevent selection of weekends.
+	 * @param  date  Date - the date to customise
+	 * @return [boolean, string] - is this date selectable?, what is its CSS class?
+	 */
+    noWeekends: function( date ) {
+      var day = date.getDay();
+      return [ ( day > 0 && day < 6 ), "" ];
+    },
+
+    /* Set as calculateWeek to determine the week of the year based on the ISO 8601 definition.
+	 * @param  date  Date - the date to get the week for
+	 * @return  number - the number of the week within the year that contains this date
+	 */
+    iso8601Week: function( date ) {
+      var time,
+        checkDate = new Date( date.getTime() );
+
+      // Find Thursday of this week starting on Monday
+      checkDate.setDate( checkDate.getDate() + 4 - ( checkDate.getDay() || 7 ) );
+
+      time = checkDate.getTime();
+      checkDate.setMonth( 0 ); // Compare with Jan 1
+      checkDate.setDate( 1 );
+      return Math.floor( Math.round( ( time - checkDate ) / 86400000 ) / 7 ) + 1;
+    },
+
+    /* Parse a string value into a date object.
+	 * See formatDate below for the possible formats.
+	 *
+	 * @param  format string - the expected format of the date
+	 * @param  value string - the date in the above format
+	 * @param  settings Object - attributes include:
+	 *					shortYearCutoff  number - the cutoff year for determining the century (optional)
+	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+	 *					monthNames		string[12] - names of the months (optional)
+	 * @return  Date - the extracted date value or null if value is blank
+	 */
+    parseDate: function( format, value, settings ) {
+      if ( format == null || value == null ) {
+        throw "Invalid arguments";
+      }
+
+      value = ( typeof value === "object" ? value.toString() : value + "" );
+      if ( value === "" ) {
+        return null;
+      }
+
+      var iFormat, dim, extra,
+        iValue = 0,
+        shortYearCutoffTemp = ( settings ? settings.shortYearCutoff : null ) || this._defaults.shortYearCutoff,
+        shortYearCutoff = ( typeof shortYearCutoffTemp !== "string" ? shortYearCutoffTemp :
+          new Date().getFullYear() % 100 + parseInt( shortYearCutoffTemp, 10 ) ),
+        dayNamesShort = ( settings ? settings.dayNamesShort : null ) || this._defaults.dayNamesShort,
+        dayNames = ( settings ? settings.dayNames : null ) || this._defaults.dayNames,
+        monthNamesShort = ( settings ? settings.monthNamesShort : null ) || this._defaults.monthNamesShort,
+        monthNames = ( settings ? settings.monthNames : null ) || this._defaults.monthNames,
+        year = -1,
+        month = -1,
+        day = -1,
+        doy = -1,
+        literal = false,
+        date,
+
+        // Check whether a format character is doubled
+        lookAhead = function( match ) {
+          var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+          if ( matches ) {
+            iFormat++;
+          }
+          return matches;
+        },
+
+        // Extract a number from the string value
+        getNumber = function( match ) {
+          var isDoubled = lookAhead( match ),
+            size = ( match === "@" ? 14 : ( match === "!" ? 20 :
+              ( match === "y" && isDoubled ? 4 : ( match === "o" ? 3 : 2 ) ) ) ),
+            minSize = ( match === "y" ? size : 1 ),
+            digits = new RegExp( "^\\d{" + minSize + "," + size + "}" ),
+            num = value.substring( iValue ).match( digits );
+          if ( !num ) {
+            throw "Missing number at position " + iValue;
+          }
+          iValue += num[ 0 ].length;
+          return parseInt( num[ 0 ], 10 );
+        },
+
+        // Extract a name from the string value and convert to an index
+        getName = function( match, shortNames, longNames ) {
+          var index = -1,
+            names = $.map( lookAhead( match ) ? longNames : shortNames, function( v, k ) {
+              return [ [ k, v ] ];
+            } ).sort( function( a, b ) {
+              return -( a[ 1 ].length - b[ 1 ].length );
+            } );
+
+          $.each( names, function( i, pair ) {
+            var name = pair[ 1 ];
+            if ( value.substr( iValue, name.length ).toLowerCase() === name.toLowerCase() ) {
+              index = pair[ 0 ];
+              iValue += name.length;
+              return false;
+            }
+          } );
+          if ( index !== -1 ) {
+            return index + 1;
+          } else {
+            throw "Unknown name at position " + iValue;
+          }
+        },
+
+        // Confirm that a literal character matches the string value
+        checkLiteral = function() {
+          if ( value.charAt( iValue ) !== format.charAt( iFormat ) ) {
+            throw "Unexpected literal at position " + iValue;
+          }
+          iValue++;
+        };
+
+      for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+        if ( literal ) {
+          if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+            literal = false;
+          } else {
+            checkLiteral();
+          }
+        } else {
+          switch ( format.charAt( iFormat ) ) {
+            case "d":
+              day = getNumber( "d" );
+              break;
+            case "D":
+              getName( "D", dayNamesShort, dayNames );
+              break;
+            case "o":
+              doy = getNumber( "o" );
+              break;
+            case "m":
+              month = getNumber( "m" );
+              break;
+            case "M":
+              month = getName( "M", monthNamesShort, monthNames );
+              break;
+            case "y":
+              year = getNumber( "y" );
+              break;
+            case "@":
+              date = new Date( getNumber( "@" ) );
+              year = date.getFullYear();
+              month = date.getMonth() + 1;
+              day = date.getDate();
+              break;
+            case "!":
+              date = new Date( ( getNumber( "!" ) - this._ticksTo1970 ) / 10000 );
+              year = date.getFullYear();
+              month = date.getMonth() + 1;
+              day = date.getDate();
+              break;
+            case "'":
+              if ( lookAhead( "'" ) ) {
+                checkLiteral();
+              } else {
+                literal = true;
+              }
+              break;
+            default:
+              checkLiteral();
+          }
+        }
+      }
+
+      if ( iValue < value.length ) {
+        extra = value.substr( iValue );
+        if ( !/^\s+/.test( extra ) ) {
+          throw "Extra/unparsed characters found in date: " + extra;
+        }
+      }
+
+      if ( year === -1 ) {
+        year = new Date().getFullYear();
+      } else if ( year < 100 ) {
+        year += new Date().getFullYear() - new Date().getFullYear() % 100 +
+          ( year <= shortYearCutoff ? 0 : -100 );
+      }
+
+      if ( doy > -1 ) {
+        month = 1;
+        day = doy;
+        do {
+          dim = this._getDaysInMonth( year, month - 1 );
+          if ( day <= dim ) {
+            break;
+          }
+          month++;
+          day -= dim;
+        } while ( true );
+      }
+
+      date = this._daylightSavingAdjust( new Date( year, month - 1, day ) );
+      if ( date.getFullYear() !== year || date.getMonth() + 1 !== month || date.getDate() !== day ) {
+        throw "Invalid date"; // E.g. 31/02/00
+      }
+      return date;
+    },
+
+    /* Standard date formats. */
+    ATOM: "yy-mm-dd", // RFC 3339 (ISO 8601)
+    COOKIE: "D, dd M yy",
+    ISO_8601: "yy-mm-dd",
+    RFC_822: "D, d M y",
+    RFC_850: "DD, dd-M-y",
+    RFC_1036: "D, d M y",
+    RFC_1123: "D, d M yy",
+    RFC_2822: "D, d M yy",
+    RSS: "D, d M y", // RFC 822
+    TICKS: "!",
+    TIMESTAMP: "@",
+    W3C: "yy-mm-dd", // ISO 8601
+
+    _ticksTo1970: ( ( ( 1970 - 1 ) * 365 + Math.floor( 1970 / 4 ) - Math.floor( 1970 / 100 ) +
+      Math.floor( 1970 / 400 ) ) * 24 * 60 * 60 * 10000000 ),
+
+    /* Format a date object into a string value.
+	 * The format can be combinations of the following:
+	 * d  - day of month (no leading zero)
+	 * dd - day of month (two digit)
+	 * o  - day of year (no leading zeros)
+	 * oo - day of year (three digit)
+	 * D  - day name short
+	 * DD - day name long
+	 * m  - month of year (no leading zero)
+	 * mm - month of year (two digit)
+	 * M  - month name short
+	 * MM - month name long
+	 * y  - year (two digit)
+	 * yy - year (four digit)
+	 * @ - Unix timestamp (ms since 01/01/1970)
+	 * ! - Windows ticks (100ns since 01/01/0001)
+	 * "..." - literal text
+	 * '' - single quote
+	 *
+	 * @param  format string - the desired format of the date
+	 * @param  date Date - the date value to format
+	 * @param  settings Object - attributes include:
+	 *					dayNamesShort	string[7] - abbreviated names of the days from Sunday (optional)
+	 *					dayNames		string[7] - names of the days from Sunday (optional)
+	 *					monthNamesShort string[12] - abbreviated names of the months (optional)
+	 *					monthNames		string[12] - names of the months (optional)
+	 * @return  string - the date in the above format
+	 */
+    formatDate: function( format, date, settings ) {
+      if ( !date ) {
+        return "";
+      }
+
+      var iFormat,
+        dayNamesShort = ( settings ? settings.dayNamesShort : null ) || this._defaults.dayNamesShort,
+        dayNames = ( settings ? settings.dayNames : null ) || this._defaults.dayNames,
+        monthNamesShort = ( settings ? settings.monthNamesShort : null ) || this._defaults.monthNamesShort,
+        monthNames = ( settings ? settings.monthNames : null ) || this._defaults.monthNames,
+
+        // Check whether a format character is doubled
+        lookAhead = function( match ) {
+          var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+          if ( matches ) {
+            iFormat++;
+          }
+          return matches;
+        },
+
+        // Format a number, with leading zero if necessary
+        formatNumber = function( match, value, len ) {
+          var num = "" + value;
+          if ( lookAhead( match ) ) {
+            while ( num.length < len ) {
+              num = "0" + num;
+            }
+          }
+          return num;
+        },
+
+        // Format a name, short or long as requested
+        formatName = function( match, value, shortNames, longNames ) {
+          return ( lookAhead( match ) ? longNames[ value ] : shortNames[ value ] );
+        },
+        output = "",
+        literal = false;
+
+      if ( date ) {
+        for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+          if ( literal ) {
+            if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+              literal = false;
+            } else {
+              output += format.charAt( iFormat );
+            }
+          } else {
+            switch ( format.charAt( iFormat ) ) {
+              case "d":
+                output += formatNumber( "d", date.getDate(), 2 );
+                break;
+              case "D":
+                output += formatName( "D", date.getDay(), dayNamesShort, dayNames );
+                break;
+              case "o":
+                output += formatNumber( "o",
+                  Math.round( ( new Date( date.getFullYear(), date.getMonth(), date.getDate() ).getTime() - new Date( date.getFullYear(), 0, 0 ).getTime() ) / 86400000 ), 3 );
+                break;
+              case "m":
+                output += formatNumber( "m", date.getMonth() + 1, 2 );
+                break;
+              case "M":
+                output += formatName( "M", date.getMonth(), monthNamesShort, monthNames );
+                break;
+              case "y":
+                output += ( lookAhead( "y" ) ? date.getFullYear() :
+                  ( date.getFullYear() % 100 < 10 ? "0" : "" ) + date.getFullYear() % 100 );
+                break;
+              case "@":
+                output += date.getTime();
+                break;
+              case "!":
+                output += date.getTime() * 10000 + this._ticksTo1970;
+                break;
+              case "'":
+                if ( lookAhead( "'" ) ) {
+                  output += "'";
+                } else {
+                  literal = true;
+                }
+                break;
+              default:
+                output += format.charAt( iFormat );
+            }
+          }
+        }
+      }
+      return output;
+    },
+
+    /* Extract all possible characters from the date format. */
+    _possibleChars: function( format ) {
+      var iFormat,
+        chars = "",
+        literal = false,
+
+        // Check whether a format character is doubled
+        lookAhead = function( match ) {
+          var matches = ( iFormat + 1 < format.length && format.charAt( iFormat + 1 ) === match );
+          if ( matches ) {
+            iFormat++;
+          }
+          return matches;
+        };
+
+      for ( iFormat = 0; iFormat < format.length; iFormat++ ) {
+        if ( literal ) {
+          if ( format.charAt( iFormat ) === "'" && !lookAhead( "'" ) ) {
+            literal = false;
+          } else {
+            chars += format.charAt( iFormat );
+          }
+        } else {
+          switch ( format.charAt( iFormat ) ) {
+            case "d": case "m": case "y": case "@":
+              chars += "0123456789";
+              break;
+            case "D": case "M":
+              return null; // Accept anything
+            case "'":
+              if ( lookAhead( "'" ) ) {
+                chars += "'";
+              } else {
+                literal = true;
+              }
+              break;
+            default:
+              chars += format.charAt( iFormat );
+          }
+        }
+      }
+      return chars;
+    },
+
+    /* Get a setting value, defaulting if necessary. */
+    _get: function( inst, name ) {
+      return inst.settings[ name ] !== undefined ?
+        inst.settings[ name ] : this._defaults[ name ];
+    },
+
+    /* Parse existing date and initialise date picker. */
+    _setDateFromField: function( inst, noDefault ) {
+      if ( inst.input.val() === inst.lastVal ) {
+        return;
+      }
+
+      var dateFormat = this._get( inst, "dateFormat" ),
+        dates = inst.lastVal = inst.input ? inst.input.val() : null,
+        defaultDate = this._getDefaultDate( inst ),
+        date = defaultDate,
+        settings = this._getFormatConfig( inst );
+
+      try {
+        date = this.parseDate( dateFormat, dates, settings ) || defaultDate;
+      } catch ( event ) {
+        dates = ( noDefault ? "" : dates );
+      }
+      inst.selectedDay = date.getDate();
+      inst.drawMonth = inst.selectedMonth = date.getMonth();
+      inst.drawYear = inst.selectedYear = date.getFullYear();
+      inst.currentDay = ( dates ? date.getDate() : 0 );
+      inst.currentMonth = ( dates ? date.getMonth() : 0 );
+      inst.currentYear = ( dates ? date.getFullYear() : 0 );
+      this._adjustInstDate( inst );
+    },
+
+    /* Retrieve the default date shown on opening. */
+    _getDefaultDate: function( inst ) {
+      return this._restrictMinMax( inst,
+        this._determineDate( inst, this._get( inst, "defaultDate" ), new Date() ) );
+    },
+
+    /* A date may be specified as an exact value or a relative one. */
+    _determineDate: function( inst, date, defaultDate ) {
+      var offsetNumeric = function( offset ) {
+          var date = new Date();
+          date.setDate( date.getDate() + offset );
+          return date;
+        },
+        offsetString = function( offset ) {
+          try {
+            return $.datepicker.parseDate( $.datepicker._get( inst, "dateFormat" ),
+              offset, $.datepicker._getFormatConfig( inst ) );
+          }
+          catch ( e ) {
+
+            // Ignore
+          }
+
+          var date = ( offset.toLowerCase().match( /^c/ ) ?
+              $.datepicker._getDate( inst ) : null ) || new Date(),
+            year = date.getFullYear(),
+            month = date.getMonth(),
+            day = date.getDate(),
+            pattern = /([+\-]?[0-9]+)\s*(d|D|w|W|m|M|y|Y)?/g,
+            matches = pattern.exec( offset );
+
+          while ( matches ) {
+            switch ( matches[ 2 ] || "d" ) {
+              case "d" : case "D" :
+                day += parseInt( matches[ 1 ], 10 ); break;
+              case "w" : case "W" :
+                day += parseInt( matches[ 1 ], 10 ) * 7; break;
+              case "m" : case "M" :
+                month += parseInt( matches[ 1 ], 10 );
+                day = Math.min( day, $.datepicker._getDaysInMonth( year, month ) );
+                break;
+              case "y": case "Y" :
+                year += parseInt( matches[ 1 ], 10 );
+                day = Math.min( day, $.datepicker._getDaysInMonth( year, month ) );
+                break;
+            }
+            matches = pattern.exec( offset );
+          }
+          return new Date( year, month, day );
+        },
+        newDate = ( date == null || date === "" ? defaultDate : ( typeof date === "string" ? offsetString( date ) :
+          ( typeof date === "number" ? ( isNaN( date ) ? defaultDate : offsetNumeric( date ) ) : new Date( date.getTime() ) ) ) );
+
+      newDate = ( newDate && newDate.toString() === "Invalid Date" ? defaultDate : newDate );
+      if ( newDate ) {
+        newDate.setHours( 0 );
+        newDate.setMinutes( 0 );
+        newDate.setSeconds( 0 );
+        newDate.setMilliseconds( 0 );
+      }
+      return this._daylightSavingAdjust( newDate );
+    },
+
+    /* Handle switch to/from daylight saving.
+	 * Hours may be non-zero on daylight saving cut-over:
+	 * > 12 when midnight changeover, but then cannot generate
+	 * midnight datetime, so jump to 1AM, otherwise reset.
+	 * @param  date  (Date) the date to check
+	 * @return  (Date) the corrected date
+	 */
+    _daylightSavingAdjust: function( date ) {
+      if ( !date ) {
+        return null;
+      }
+      date.setHours( date.getHours() > 12 ? date.getHours() + 2 : 0 );
+      return date;
+    },
+
+    /* Set the date(s) directly. */
+    _setDate: function( inst, date, noChange ) {
+      var clear = !date,
+        origMonth = inst.selectedMonth,
+        origYear = inst.selectedYear,
+        newDate = this._restrictMinMax( inst, this._determineDate( inst, date, new Date() ) );
+
+      inst.selectedDay = inst.currentDay = newDate.getDate();
+      inst.drawMonth = inst.selectedMonth = inst.currentMonth = newDate.getMonth();
+      inst.drawYear = inst.selectedYear = inst.currentYear = newDate.getFullYear();
+      if ( ( origMonth !== inst.selectedMonth || origYear !== inst.selectedYear ) && !noChange ) {
+        this._notifyChange( inst );
+      }
+      this._adjustInstDate( inst );
+      if ( inst.input ) {
+        inst.input.val( clear ? "" : this._formatDate( inst ) );
+      }
+    },
+
+    /* Retrieve the date(s) directly. */
+    _getDate: function( inst ) {
+      var startDate = ( !inst.currentYear || ( inst.input && inst.input.val() === "" ) ? null :
+        this._daylightSavingAdjust( new Date(
+          inst.currentYear, inst.currentMonth, inst.currentDay ) ) );
+      return startDate;
+    },
+
+    /* Attach the onxxx handlers.  These are declared statically so
+	 * they work with static code transformers like Caja.
+	 */
+    _attachHandlers: function( inst ) {
+      var stepMonths = this._get( inst, "stepMonths" ),
+        id = "#" + inst.id.replace( /\\\\/g, "\\" );
+      inst.dpDiv.find( "[data-handler]" ).map( function() {
+        var handler = {
+          prev: function() {
+            $.datepicker._adjustDate( id, -stepMonths, "M" );
+          },
+          next: function() {
+            $.datepicker._adjustDate( id, +stepMonths, "M" );
+          },
+          hide: function() {
+            $.datepicker._hideDatepicker();
+          },
+          today: function() {
+            $.datepicker._gotoToday( id );
+          },
+          selectDay: function() {
+            $.datepicker._selectDay( id, +this.getAttribute( "data-month" ), +this.getAttribute( "data-year" ), this );
+            return false;
+          },
+          selectMonth: function() {
+            $.datepicker._selectMonthYear( id, this, "M" );
+            return false;
+          },
+          selectYear: function() {
+            $.datepicker._selectMonthYear( id, this, "Y" );
+            return false;
+          }
+        };
+        $( this ).on( this.getAttribute( "data-event" ), handler[ this.getAttribute( "data-handler" ) ] );
+      } );
+    },
+
+    /* Generate the HTML for the current state of the date picker. */
+    _generateHTML: function( inst ) {
+      var maxDraw, prevText, prev, nextText, next, currentText, gotoDate,
+        controls, buttonPanel, firstDay, showWeek, dayNames, dayNamesMin,
+        monthNames, monthNamesShort, beforeShowDay, showOtherMonths,
+        selectOtherMonths, defaultDate, html, dow, row, group, col, selectedDate,
+        cornerClass, calender, thead, day, daysInMonth, leadDays, curRows, numRows,
+        printDate, dRow, tbody, daySettings, otherMonth, unselectable,
+        tempDate = new Date(),
+        today = this._daylightSavingAdjust(
+          new Date( tempDate.getFullYear(), tempDate.getMonth(), tempDate.getDate() ) ), // clear time
+        isRTL = this._get( inst, "isRTL" ),
+        showButtonPanel = this._get( inst, "showButtonPanel" ),
+        hideIfNoPrevNext = this._get( inst, "hideIfNoPrevNext" ),
+        navigationAsDateFormat = this._get( inst, "navigationAsDateFormat" ),
+        numMonths = this._getNumberOfMonths( inst ),
+        showCurrentAtPos = this._get( inst, "showCurrentAtPos" ),
+        stepMonths = this._get( inst, "stepMonths" ),
+        isMultiMonth = ( numMonths[ 0 ] !== 1 || numMonths[ 1 ] !== 1 ),
+        currentDate = this._daylightSavingAdjust( ( !inst.currentDay ? new Date( 9999, 9, 9 ) :
+          new Date( inst.currentYear, inst.currentMonth, inst.currentDay ) ) ),
+        minDate = this._getMinMaxDate( inst, "min" ),
+        maxDate = this._getMinMaxDate( inst, "max" ),
+        drawMonth = inst.drawMonth - showCurrentAtPos,
+        drawYear = inst.drawYear;
+
+      if ( drawMonth < 0 ) {
+        drawMonth += 12;
+        drawYear--;
+      }
+      if ( maxDate ) {
+        maxDraw = this._daylightSavingAdjust( new Date( maxDate.getFullYear(),
+          maxDate.getMonth() - ( numMonths[ 0 ] * numMonths[ 1 ] ) + 1, maxDate.getDate() ) );
+        maxDraw = ( minDate && maxDraw < minDate ? minDate : maxDraw );
+        while ( this._daylightSavingAdjust( new Date( drawYear, drawMonth, 1 ) ) > maxDraw ) {
+          drawMonth--;
+          if ( drawMonth < 0 ) {
+            drawMonth = 11;
+            drawYear--;
+          }
+        }
+      }
+      inst.drawMonth = drawMonth;
+      inst.drawYear = drawYear;
+
+      prevText = this._get( inst, "prevText" );
+      prevText = ( !navigationAsDateFormat ? prevText : this.formatDate( prevText,
+        this._daylightSavingAdjust( new Date( drawYear, drawMonth - stepMonths, 1 ) ),
+        this._getFormatConfig( inst ) ) );
+
+      prev = ( this._canAdjustMonth( inst, -1, drawYear, drawMonth ) ?
+        "<a class='ui-datepicker-prev ui-corner-all' data-handler='prev' data-event='click'" +
+        " title='" + prevText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w" ) + "'>" + prevText + "</span></a>" :
+        ( hideIfNoPrevNext ? "" : "<a class='ui-datepicker-prev ui-corner-all ui-state-disabled' title='" + prevText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "e" : "w" ) + "'>" + prevText + "</span></a>" ) );
+
+      nextText = this._get( inst, "nextText" );
+      nextText = ( !navigationAsDateFormat ? nextText : this.formatDate( nextText,
+        this._daylightSavingAdjust( new Date( drawYear, drawMonth + stepMonths, 1 ) ),
+        this._getFormatConfig( inst ) ) );
+
+      next = ( this._canAdjustMonth( inst, +1, drawYear, drawMonth ) ?
+        "<a class='ui-datepicker-next ui-corner-all' data-handler='next' data-event='click'" +
+        " title='" + nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e" ) + "'>" + nextText + "</span></a>" :
+        ( hideIfNoPrevNext ? "" : "<a class='ui-datepicker-next ui-corner-all ui-state-disabled' title='" + nextText + "'><span class='ui-icon ui-icon-circle-triangle-" + ( isRTL ? "w" : "e" ) + "'>" + nextText + "</span></a>" ) );
+
+      currentText = this._get( inst, "currentText" );
+      gotoDate = ( this._get( inst, "gotoCurrent" ) && inst.currentDay ? currentDate : today );
+      currentText = ( !navigationAsDateFormat ? currentText :
+        this.formatDate( currentText, gotoDate, this._getFormatConfig( inst ) ) );
+
+      controls = ( !inst.inline ? "<button type='button' class='ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all' data-handler='hide' data-event='click'>" +
+        this._get( inst, "closeText" ) + "</button>" : "" );
+
+      buttonPanel = ( showButtonPanel ) ? "<div class='ui-datepicker-buttonpane ui-widget-content'>" + ( isRTL ? controls : "" ) +
+        ( this._isInRange( inst, gotoDate ) ? "<button type='button' class='ui-datepicker-current ui-state-default ui-priority-secondary ui-corner-all' data-handler='today' data-event='click'" +
+          ">" + currentText + "</button>" : "" ) + ( isRTL ? "" : controls ) + "</div>" : "";
+
+      firstDay = parseInt( this._get( inst, "firstDay" ), 10 );
+      firstDay = ( isNaN( firstDay ) ? 0 : firstDay );
+
+      showWeek = this._get( inst, "showWeek" );
+      dayNames = this._get( inst, "dayNames" );
+      dayNamesMin = this._get( inst, "dayNamesMin" );
+      monthNames = this._get( inst, "monthNames" );
+      monthNamesShort = this._get( inst, "monthNamesShort" );
+      beforeShowDay = this._get( inst, "beforeShowDay" );
+      showOtherMonths = this._get( inst, "showOtherMonths" );
+      selectOtherMonths = this._get( inst, "selectOtherMonths" );
+      defaultDate = this._getDefaultDate( inst );
+      html = "";
+
+      for ( row = 0; row < numMonths[ 0 ]; row++ ) {
+        group = "";
+        this.maxRows = 4;
+        for ( col = 0; col < numMonths[ 1 ]; col++ ) {
+          selectedDate = this._daylightSavingAdjust( new Date( drawYear, drawMonth, inst.selectedDay ) );
+          cornerClass = " ui-corner-all";
+          calender = "";
+          if ( isMultiMonth ) {
+            calender += "<div class='ui-datepicker-group";
+            if ( numMonths[ 1 ] > 1 ) {
+              switch ( col ) {
+                case 0: calender += " ui-datepicker-group-first";
+                  cornerClass = " ui-corner-" + ( isRTL ? "right" : "left" ); break;
+                case numMonths[ 1 ] - 1: calender += " ui-datepicker-group-last";
+                  cornerClass = " ui-corner-" + ( isRTL ? "left" : "right" ); break;
+                default: calender += " ui-datepicker-group-middle"; cornerClass = ""; break;
+              }
+            }
+            calender += "'>";
+          }
+          calender += "<div class='ui-datepicker-header ui-widget-header ui-helper-clearfix" + cornerClass + "'>" +
+            ( /all|left/.test( cornerClass ) && row === 0 ? ( isRTL ? next : prev ) : "" ) +
+            ( /all|right/.test( cornerClass ) && row === 0 ? ( isRTL ? prev : next ) : "" ) +
+            this._generateMonthYearHeader( inst, drawMonth, drawYear, minDate, maxDate,
+              row > 0 || col > 0, monthNames, monthNamesShort ) + // draw month headers
+            "</div><table class='ui-datepicker-calendar'><thead>" +
+            "<tr>";
+          thead = ( showWeek ? "<th class='ui-datepicker-week-col'>" + this._get( inst, "weekHeader" ) + "</th>" : "" );
+          for ( dow = 0; dow < 7; dow++ ) { // days of the week
+            day = ( dow + firstDay ) % 7;
+            thead += "<th scope='col'" + ( ( dow + firstDay + 6 ) % 7 >= 5 ? " class='ui-datepicker-week-end'" : "" ) + ">" +
+              "<span title='" + dayNames[ day ] + "'>" + dayNamesMin[ day ] + "</span></th>";
+          }
+          calender += thead + "</tr></thead><tbody>";
+          daysInMonth = this._getDaysInMonth( drawYear, drawMonth );
+          if ( drawYear === inst.selectedYear && drawMonth === inst.selectedMonth ) {
+            inst.selectedDay = Math.min( inst.selectedDay, daysInMonth );
+          }
+          leadDays = ( this._getFirstDayOfMonth( drawYear, drawMonth ) - firstDay + 7 ) % 7;
+          curRows = Math.ceil( ( leadDays + daysInMonth ) / 7 ); // calculate the number of rows to generate
+          numRows = ( isMultiMonth ? this.maxRows > curRows ? this.maxRows : curRows : curRows ); //If multiple months, use the higher number of rows (see #7043)
+          this.maxRows = numRows;
+          printDate = this._daylightSavingAdjust( new Date( drawYear, drawMonth, 1 - leadDays ) );
+          for ( dRow = 0; dRow < numRows; dRow++ ) { // create date picker rows
+            calender += "<tr>";
+            tbody = ( !showWeek ? "" : "<td class='ui-datepicker-week-col'>" +
+              this._get( inst, "calculateWeek" )( printDate ) + "</td>" );
+            for ( dow = 0; dow < 7; dow++ ) { // create date picker days
+              daySettings = ( beforeShowDay ?
+                beforeShowDay.apply( ( inst.input ? inst.input[ 0 ] : null ), [ printDate ] ) : [ true, "" ] );
+              otherMonth = ( printDate.getMonth() !== drawMonth );
+              unselectable = ( otherMonth && !selectOtherMonths ) || !daySettings[ 0 ] ||
+                ( minDate && printDate < minDate ) || ( maxDate && printDate > maxDate );
+              tbody += "<td class='" +
+                ( ( dow + firstDay + 6 ) % 7 >= 5 ? " ui-datepicker-week-end" : "" ) + // highlight weekends
+                ( otherMonth ? " ui-datepicker-other-month" : "" ) + // highlight days from other months
+                ( ( printDate.getTime() === selectedDate.getTime() && drawMonth === inst.selectedMonth && inst._keyEvent ) || // user pressed key
+                ( defaultDate.getTime() === printDate.getTime() && defaultDate.getTime() === selectedDate.getTime() ) ?
+
+                  // or defaultDate is current printedDate and defaultDate is selectedDate
+                  " " + this._dayOverClass : "" ) + // highlight selected day
+                ( unselectable ? " " + this._unselectableClass + " ui-state-disabled" : "" ) +  // highlight unselectable days
+                ( otherMonth && !showOtherMonths ? "" : " " + daySettings[ 1 ] + // highlight custom dates
+                  ( printDate.getTime() === currentDate.getTime() ? " " + this._currentClass : "" ) + // highlight selected day
+                  ( printDate.getTime() === today.getTime() ? " ui-datepicker-today" : "" ) ) + "'" + // highlight today (if different)
+                ( ( !otherMonth || showOtherMonths ) && daySettings[ 2 ] ? " title='" + daySettings[ 2 ].replace( /'/g, "&#39;" ) + "'" : "" ) + // cell title
+                ( unselectable ? "" : " data-handler='selectDay' data-event='click' data-month='" + printDate.getMonth() + "' data-year='" + printDate.getFullYear() + "'" ) + ">" + // actions
+                ( otherMonth && !showOtherMonths ? "&#xa0;" : // display for other months
+                  ( unselectable ? "<span class='ui-state-default'>" + printDate.getDate() + "</span>" : "<a class='ui-state-default" +
+                    ( printDate.getTime() === today.getTime() ? " ui-state-highlight" : "" ) +
+                    ( printDate.getTime() === currentDate.getTime() ? " ui-state-active" : "" ) + // highlight selected day
+                    ( otherMonth ? " ui-priority-secondary" : "" ) + // distinguish dates from other months
+                    "' href='#'>" + printDate.getDate() + "</a>" ) ) + "</td>"; // display selectable date
+              printDate.setDate( printDate.getDate() + 1 );
+              printDate = this._daylightSavingAdjust( printDate );
+            }
+            calender += tbody + "</tr>";
+          }
+          drawMonth++;
+          if ( drawMonth > 11 ) {
+            drawMonth = 0;
+            drawYear++;
+          }
+          calender += "</tbody></table>" + ( isMultiMonth ? "</div>" +
+            ( ( numMonths[ 0 ] > 0 && col === numMonths[ 1 ] - 1 ) ? "<div class='ui-datepicker-row-break'></div>" : "" ) : "" );
+          group += calender;
+        }
+        html += group;
+      }
+      html += buttonPanel;
+      inst._keyEvent = false;
+      return html;
+    },
+
+    /* Generate the month and year header. */
+    _generateMonthYearHeader: function( inst, drawMonth, drawYear, minDate, maxDate,
+                                        secondary, monthNames, monthNamesShort ) {
+
+      var inMinYear, inMaxYear, month, years, thisYear, determineYear, year, endYear,
+        changeMonth = this._get( inst, "changeMonth" ),
+        changeYear = this._get( inst, "changeYear" ),
+        showMonthAfterYear = this._get( inst, "showMonthAfterYear" ),
+        html = "<div class='ui-datepicker-title'>",
+        monthHtml = "";
+
+      // Month selection
+      if ( secondary || !changeMonth ) {
+        monthHtml += "<span class='ui-datepicker-month'>" + monthNames[ drawMonth ] + "</span>";
+      } else {
+        inMinYear = ( minDate && minDate.getFullYear() === drawYear );
+        inMaxYear = ( maxDate && maxDate.getFullYear() === drawYear );
+        monthHtml += "<select class='ui-datepicker-month' data-handler='selectMonth' data-event='change'>";
+        for ( month = 0; month < 12; month++ ) {
+          if ( ( !inMinYear || month >= minDate.getMonth() ) && ( !inMaxYear || month <= maxDate.getMonth() ) ) {
+            monthHtml += "<option value='" + month + "'" +
+              ( month === drawMonth ? " selected='selected'" : "" ) +
+              ">" + monthNamesShort[ month ] + "</option>";
+          }
+        }
+        monthHtml += "</select>";
+      }
+
+      if ( !showMonthAfterYear ) {
+        html += monthHtml + ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" );
+      }
+
+      // Year selection
+      if ( !inst.yearshtml ) {
+        inst.yearshtml = "";
+        if ( secondary || !changeYear ) {
+          html += "<span class='ui-datepicker-year'>" + drawYear + "</span>";
+        } else {
+
+          // determine range of years to display
+          years = this._get( inst, "yearRange" ).split( ":" );
+          thisYear = new Date().getFullYear();
+          determineYear = function( value ) {
+            var year = ( value.match( /c[+\-].*/ ) ? drawYear + parseInt( value.substring( 1 ), 10 ) :
+              ( value.match( /[+\-].*/ ) ? thisYear + parseInt( value, 10 ) :
+                parseInt( value, 10 ) ) );
+            return ( isNaN( year ) ? thisYear : year );
+          };
+          year = determineYear( years[ 0 ] );
+          endYear = Math.max( year, determineYear( years[ 1 ] || "" ) );
+          year = ( minDate ? Math.max( year, minDate.getFullYear() ) : year );
+          endYear = ( maxDate ? Math.min( endYear, maxDate.getFullYear() ) : endYear );
+          inst.yearshtml += "<select class='ui-datepicker-year' data-handler='selectYear' data-event='change'>";
+          for ( ; year <= endYear; year++ ) {
+            inst.yearshtml += "<option value='" + year + "'" +
+              ( year === drawYear ? " selected='selected'" : "" ) +
+              ">" + year + "</option>";
+          }
+          inst.yearshtml += "</select>";
+
+          html += inst.yearshtml;
+          inst.yearshtml = null;
+        }
+      }
+
+      html += this._get( inst, "yearSuffix" );
+      if ( showMonthAfterYear ) {
+        html += ( secondary || !( changeMonth && changeYear ) ? "&#xa0;" : "" ) + monthHtml;
+      }
+      html += "</div>"; // Close datepicker_header
+      return html;
+    },
+
+    /* Adjust one of the date sub-fields. */
+    _adjustInstDate: function( inst, offset, period ) {
+      var year = inst.selectedYear + ( period === "Y" ? offset : 0 ),
+        month = inst.selectedMonth + ( period === "M" ? offset : 0 ),
+        day = Math.min( inst.selectedDay, this._getDaysInMonth( year, month ) ) + ( period === "D" ? offset : 0 ),
+        date = this._restrictMinMax( inst, this._daylightSavingAdjust( new Date( year, month, day ) ) );
+
+      inst.selectedDay = date.getDate();
+      inst.drawMonth = inst.selectedMonth = date.getMonth();
+      inst.drawYear = inst.selectedYear = date.getFullYear();
+      if ( period === "M" || period === "Y" ) {
+        this._notifyChange( inst );
+      }
+    },
+
+    /* Ensure a date is within any min/max bounds. */
+    _restrictMinMax: function( inst, date ) {
+      var minDate = this._getMinMaxDate( inst, "min" ),
+        maxDate = this._getMinMaxDate( inst, "max" ),
+        newDate = ( minDate && date < minDate ? minDate : date );
+      return ( maxDate && newDate > maxDate ? maxDate : newDate );
+    },
+
+    /* Notify change of month/year. */
+    _notifyChange: function( inst ) {
+      var onChange = this._get( inst, "onChangeMonthYear" );
+      if ( onChange ) {
+        onChange.apply( ( inst.input ? inst.input[ 0 ] : null ),
+          [ inst.selectedYear, inst.selectedMonth + 1, inst ] );
+      }
+    },
+
+    /* Determine the number of months to show. */
+    _getNumberOfMonths: function( inst ) {
+      var numMonths = this._get( inst, "numberOfMonths" );
+      return ( numMonths == null ? [ 1, 1 ] : ( typeof numMonths === "number" ? [ 1, numMonths ] : numMonths ) );
+    },
+
+    /* Determine the current maximum date - ensure no time components are set. */
+    _getMinMaxDate: function( inst, minMax ) {
+      return this._determineDate( inst, this._get( inst, minMax + "Date" ), null );
+    },
+
+    /* Find the number of days in a given month. */
+    _getDaysInMonth: function( year, month ) {
+      return 32 - this._daylightSavingAdjust( new Date( year, month, 32 ) ).getDate();
+    },
+
+    /* Find the day of the week of the first of a month. */
+    _getFirstDayOfMonth: function( year, month ) {
+      return new Date( year, month, 1 ).getDay();
+    },
+
+    /* Determines if we should allow a "next/prev" month display change. */
+    _canAdjustMonth: function( inst, offset, curYear, curMonth ) {
+      var numMonths = this._getNumberOfMonths( inst ),
+        date = this._daylightSavingAdjust( new Date( curYear,
+          curMonth + ( offset < 0 ? offset : numMonths[ 0 ] * numMonths[ 1 ] ), 1 ) );
+
+      if ( offset < 0 ) {
+        date.setDate( this._getDaysInMonth( date.getFullYear(), date.getMonth() ) );
+      }
+      return this._isInRange( inst, date );
+    },
+
+    /* Is the given date in the accepted range? */
+    _isInRange: function( inst, date ) {
+      var yearSplit, currentYear,
+        minDate = this._getMinMaxDate( inst, "min" ),
+        maxDate = this._getMinMaxDate( inst, "max" ),
+        minYear = null,
+        maxYear = null,
+        years = this._get( inst, "yearRange" );
+      if ( years ) {
+        yearSplit = years.split( ":" );
+        currentYear = new Date().getFullYear();
+        minYear = parseInt( yearSplit[ 0 ], 10 );
+        maxYear = parseInt( yearSplit[ 1 ], 10 );
+        if ( yearSplit[ 0 ].match( /[+\-].*/ ) ) {
+          minYear += currentYear;
+        }
+        if ( yearSplit[ 1 ].match( /[+\-].*/ ) ) {
+          maxYear += currentYear;
+        }
+      }
+
+      return ( ( !minDate || date.getTime() >= minDate.getTime() ) &&
+        ( !maxDate || date.getTime() <= maxDate.getTime() ) &&
+        ( !minYear || date.getFullYear() >= minYear ) &&
+        ( !maxYear || date.getFullYear() <= maxYear ) );
+    },
+
+    /* Provide the configuration settings for formatting/parsing. */
+    _getFormatConfig: function( inst ) {
+      var shortYearCutoff = this._get( inst, "shortYearCutoff" );
+      shortYearCutoff = ( typeof shortYearCutoff !== "string" ? shortYearCutoff :
+        new Date().getFullYear() % 100 + parseInt( shortYearCutoff, 10 ) );
+      return { shortYearCutoff: shortYearCutoff,
+        dayNamesShort: this._get( inst, "dayNamesShort" ), dayNames: this._get( inst, "dayNames" ),
+        monthNamesShort: this._get( inst, "monthNamesShort" ), monthNames: this._get( inst, "monthNames" ) };
+    },
+
+    /* Format the given date for display. */
+    _formatDate: function( inst, day, month, year ) {
+      if ( !day ) {
+        inst.currentDay = inst.selectedDay;
+        inst.currentMonth = inst.selectedMonth;
+        inst.currentYear = inst.selectedYear;
+      }
+      var date = ( day ? ( typeof day === "object" ? day :
+          this._daylightSavingAdjust( new Date( year, month, day ) ) ) :
+        this._daylightSavingAdjust( new Date( inst.currentYear, inst.currentMonth, inst.currentDay ) ) );
+      return this.formatDate( this._get( inst, "dateFormat" ), date, this._getFormatConfig( inst ) );
+    }
+  } );
+
+  /*
+ * Bind hover events for datepicker elements.
+ * Done via delegate so the binding only occurs once in the lifetime of the parent div.
+ * Global datepicker_instActive, set by _updateDatepicker allows the handlers to find their way back to the active picker.
+ */
+  function datepicker_bindHover( dpDiv ) {
+    var selector = "button, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-calendar td a";
+    return dpDiv.on( "mouseout", selector, function() {
+      $( this ).removeClass( "ui-state-hover" );
+      if ( this.className.indexOf( "ui-datepicker-prev" ) !== -1 ) {
+        $( this ).removeClass( "ui-datepicker-prev-hover" );
+      }
+      if ( this.className.indexOf( "ui-datepicker-next" ) !== -1 ) {
+        $( this ).removeClass( "ui-datepicker-next-hover" );
+      }
+    } )
+      .on( "mouseover", selector, datepicker_handleMouseover );
+  }
+
+  function datepicker_handleMouseover() {
+    if ( !$.datepicker._isDisabledDatepicker( datepicker_instActive.inline ? datepicker_instActive.dpDiv.parent()[ 0 ] : datepicker_instActive.input[ 0 ] ) ) {
+      $( this ).parents( ".ui-datepicker-calendar" ).find( "a" ).removeClass( "ui-state-hover" );
+      $( this ).addClass( "ui-state-hover" );
+      if ( this.className.indexOf( "ui-datepicker-prev" ) !== -1 ) {
+        $( this ).addClass( "ui-datepicker-prev-hover" );
+      }
+      if ( this.className.indexOf( "ui-datepicker-next" ) !== -1 ) {
+        $( this ).addClass( "ui-datepicker-next-hover" );
+      }
+    }
+  }
+
+  /* jQuery extend now ignores nulls! */
+  function datepicker_extendRemove( target, props ) {
+    $.extend( target, props );
+    for ( var name in props ) {
+      if ( props[ name ] == null ) {
+        target[ name ] = props[ name ];
+      }
+    }
+    return target;
+  }
+
+  /* Invoke the datepicker functionality.
+   @param  options  string - a command, optionally followed by additional parameters or
+					Object - settings for attaching new datepicker functionality
+   @return  jQuery object */
+  $.fn.datepicker = function( options ) {
+
+    /* Verify an empty collection wasn't passed - Fixes #6976 */
+    if ( !this.length ) {
+      return this;
+    }
+
+    /* Initialise the date picker. */
+    if ( !$.datepicker.initialized ) {
+      $( document ).on( "mousedown", $.datepicker._checkExternalClick );
+      $.datepicker.initialized = true;
+    }
+
+    /* Append datepicker main container to body if not exist. */
+    if ( $( "#" + $.datepicker._mainDivId ).length === 0 ) {
+      $( "body" ).append( $.datepicker.dpDiv );
+    }
+
+    var otherArgs = Array.prototype.slice.call( arguments, 1 );
+    if ( typeof options === "string" && ( options === "isDisabled" || options === "getDate" || options === "widget" ) ) {
+      return $.datepicker[ "_" + options + "Datepicker" ].
+      apply( $.datepicker, [ this[ 0 ] ].concat( otherArgs ) );
+    }
+    if ( options === "option" && arguments.length === 2 && typeof arguments[ 1 ] === "string" ) {
+      return $.datepicker[ "_" + options + "Datepicker" ].
+      apply( $.datepicker, [ this[ 0 ] ].concat( otherArgs ) );
+    }
+    return this.each( function() {
+      typeof options === "string" ?
+        $.datepicker[ "_" + options + "Datepicker" ].
+        apply( $.datepicker, [ this ].concat( otherArgs ) ) :
+        $.datepicker._attachDatepicker( this, options );
+    } );
+  };
+
+  $.datepicker = new Datepicker(); // singleton instance
+  $.datepicker.initialized = false;
+  $.datepicker.uuid = new Date().getTime();
+  $.datepicker.version = "1.12.1";
+
+  var widgetsDatepicker = $.datepicker;
+
+
+
+
+}));

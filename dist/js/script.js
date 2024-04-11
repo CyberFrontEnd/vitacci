@@ -60,7 +60,6 @@ $(document).ready(function () {
     animationSpeed: 'fast',
     updateHash: false,
   });
-
 });
 
 
@@ -334,5 +333,102 @@ $(document).ready(function () {
     // Update active tab
     $('.personal .tabs .tab').removeClass('active');
     $(this).addClass('active');
+  });
+
+  // Start popup
+  var popupDiv = $('<div>').addClass('popupVisible');
+
+  function showPopup() {
+    $('body').prepend(popupDiv).addClass('hide');
+
+    popupDiv.on('click', function() {
+      $(this).remove();
+      $('body').removeClass('hide');
+      $('.popupBlock').removeClass('active');
+    });
+  }
+
+  $('.orderStatusBottom__href').on('click', (event)=> {
+    event.preventDefault();
+    showPopup();
+    $('.popupBlock').addClass('active');
+  });
+
+  $('.popupBlock__closed, .popupBlockBottom__no').on('click', ()=> {
+    $('body').removeClass('hide');
+    $('.popupBlock').removeClass('active');
+    popupDiv.remove();
+  });
+
+  $('.orderNumber__closed').on('click', function () {
+    $(this).parents('.orderNumber').fadeOut();
+  });
+
+  // Start form input
+  $('.input-container input').each(function () {
+    $(this).on('focus blur', function (e) {
+      $(this).siblings('label').toggleClass('active', e.type === 'focus' || this.value.length > 0);
+    }).trigger('blur'); // Trigger blur to handle pre-filled inputs
+  });
+
+
+  // Start intlTelInput
+  function phoneMask(){
+    $('.phone_mask').intlTelInput({
+      utilsScript: "js/utils.js",
+      preferredCountries: ["ru", "by", "ua", "kz"]
+    });
+  }
+
+  phoneMask();
+
+
+  // Start calendar
+  $.datepicker.regional['ru'] = {
+    closeText: 'Закрыть',
+    prevText: '<Пред',
+    nextText: 'След>',
+    currentText: 'Сегодня',
+    monthNames: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+      'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    monthNamesShort: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
+      'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
+    dayNames: ['воскресенье', 'понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота'],
+    dayNamesShort: ['вск', 'пнд', 'втр', 'срд', 'чтв', 'птн', 'сбт'],
+    dayNamesMin: ['Вс', 'Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб'],
+    weekHeader: 'Нед',
+    dateFormat: 'dd.mm.yy',
+    firstDay: 1,
+    setDate: '2016-02-09',
+    isRTL: false,
+    showMonthAfterYear: false,
+    yearSuffix: ''
+  };
+  $.datepicker.setDefaults($.datepicker.regional['ru']);
+
+  $("#datepicker").datepicker({
+    inline: true,
+    changeMonth: true,
+    changeYear: true,
+    yearRange: '1930:+0',
+    maxDate: '-18Y'
+  });
+
+
+  // Start personal
+  $('.myDataRedact__redact').on('click', function () {
+    $('.myDataRedact').fadeOut();
+    $('.myDataSave').fadeIn();
+  });
+
+  $('.myDataSave__save').on('click', function () {
+    $('.myDataRedact').fadeIn();
+    $('.myDataSave').fadeOut();
+  });
+
+
+  $('#ajax-tab-container').easytabs({
+    animationSpeed: 'fast',
+    updateHash: false,
   });
 });
