@@ -3404,6 +3404,18 @@ Start sliderBlock
   margin: 0 !important;
 }
 
+.sliderBlockSlider .slick-slide > a {
+  display: block;
+  height: 550px;
+}
+
+.sliderBlockSlider .slick-slide > a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 .slick-dots {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8284,6 +8296,7 @@ Start personal
   right: 20px;
 }
 
+.myDataSave__address,
 .myDataSave__save,
 .myDataRedact__redact {
   cursor: pointer;
@@ -8481,6 +8494,108 @@ Start personal
   margin: 0 10px;
   display: flex;
   justify-content: space-between;
+}
+
+.myAddressBlock {
+  border-top: 1px solid rgb(245, 245, 245);
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.myAddressBlock:first-of-type {
+  padding-top: 0;
+  border-top: none;
+}
+
+.myAddressBlockLeft {
+  max-width: 640px;
+  width: 100%;
+}
+
+.myAddressBlockRight {
+  max-width: 150px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.myAddressBlockLeft__title {
+  color: #141414;
+  font: normal bold 20px 'Manrope', sans-serif;
+  padding-bottom: 10px;
+  height: 32px;
+  overflow: hidden;
+}
+
+.myAddressBlockLeft__paragraf {
+  color: #141414;
+  font: normal 500 16px 'Manrope', sans-serif;
+  height: 70px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.myAddressBlockAddInput__save,
+.myAddressBlockRight li a {
+  color: rgb(20, 20, 20);
+  font: normal normal 14px 'Manrope', sans-serif;
+  border-bottom: 1px solid;
+  padding-bottom: 5px;
+}
+
+.myAddressBlockAdd .input-container {
+  max-width: 100%;
+}
+
+.myAddressBlockAdd textarea {
+  border: none;
+  max-width: 100%;
+  width: 100%;
+  resize: none;
+  border-bottom: 1px solid #bcbcbc;
+  height: 70px;
+  font: normal 500 16px 'Manrope', sans-serif;
+  margin-bottom: 10px;
+  color: #202020;
+}
+
+.myAddressBlockAdd {
+  display: none;
+}
+
+.myAddressBlockAdd textarea::-moz-placeholder {
+  color: #bcbcbc;
+  font: normal 500 16px 'Manrope', sans-serif;
+}
+
+.myAddressBlockAdd textarea::-webkit-input-placeholder {
+  color: #bcbcbc;
+  font: normal 500 16px 'Manrope', sans-serif;
+}
+
+.myAddressBlockAdd textarea:-ms-input-placeholder {
+  color: #bcbcbc;
+  font: normal 500 16px 'Manrope', sans-serif;
+}
+
+.myAddressBlockAddInput .input-container {
+  max-width: 660px;
+  width: 100%;
+  margin: 0;
+}
+
+.myAddressBlockAddInput {
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.myAddressBlockAddInput .input-container label {
+  font: normal bold 20px 'Manrope', sans-serif;
+  color: #bcbcbc;
+}
+
+.myAddressBlockAddInput .input-container input {
+  height: 35px;
+  border-bottom: 1px solid #bcbcbc;
 }
 
 /*

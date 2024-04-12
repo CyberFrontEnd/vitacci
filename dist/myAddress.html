@@ -1698,128 +1698,68 @@
         <li class="tab"><a href="myData.html">Мои данные</a></li>
         <li class="tab active"><a href="myAddress.html">Мои адреса</a></li>
         <li class="tab"><a href="favorite.html">Избранное</a></li>
+        <li class="tab"><a href="sale.html">Личная скидка</a></li>
     </ul>
 
     <div class='panel-container'>
         <div class="content">
             <form enctype="text/plain" action="#" class="myData">
-                <div class="myDataRedact">
-                    <ul class="myDataRedactList flex">
+                <div class="myAddressBlock flex">
+                    <address class="myAddressBlockLeft">
+                        <div class="myAddressBlockLeft__title">Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1 Адрес 1</div>
+                        <p class="myAddressBlockLeft__paragraf">642684, Нижегородская область, город Орехово-Зуево, пер. Косиора, 28 642684, Нижегородская область, город
+                            Орехово-Зуево, пер. Косиора, 28 642684, Нижегородская область, город Орехово-Зуево, пер. Косиора, 28 642684, Нижегородская область, город
+                            Орехово-Зуево, пер. Косиора, 28</p>
+                    </address>
+
+                    <ul class="myAddressBlockRight flex">
                         <li>
-                            <div class="myDataRedactList__name">Имя</div>
-                            <div class="myDataRedactList__info">Анна</div>
+                            <a href="#">Изменить</a>
                         </li>
 
                         <li>
-                            <div class="myDataRedactList__name">Фамилия</div>
-                            <div class="myDataRedactList__info">Авдеева</div>
-                        </li>
-
-                        <li>
-                            <div class="myDataRedactList__name">E-mail</div>
-                            <div class="myDataRedactList__info">- - -</div>
+                            <a href="#">Удалить</a>
                         </li>
                     </ul>
-
-                    <ul class="myDataRedactList flex">
-                        <li>
-                            <div class="myDataRedactList__name">Пол</div>
-                            <div class="myDataRedactList__info">Женский</div>
-                        </li>
-
-                        <li>
-                            <div class="myDataRedactList__name">Дата рождения</div>
-                            <div class="myDataRedactList__info">01.01.1965</div>
-                        </li>
-
-                        <li>
-                            <div class="myDataRedactList__name">Номер телефона</div>
-                            <div class="myDataRedactList__info">+7 (999) 999-99-99</div>
-                        </li>
-
-                        <li class="myDataRedactList__password">
-                            <div class="myDataRedactList__name">Пароль</div>
-                            <div class="myDataRedactList__info">*******************</div>
-                        </li>
-                    </ul>
-
-                    <button type="button" class="myDataRedact__redact flex" aria-label="Редактировать">Редактировать</button>
                 </div>
 
-                <div class="myDataSave">
-                    <ul class="myDataSaveList flex">
-                        <li>
-                            <div class="input-container">
-                                <input type="text" id="name" required>
-                                <label for="name">Имя</label>
-                            </div>
-                        </li>
+                <div class="myAddressBlock flex">
+                    <address class="myAddressBlockLeft">
+                        <div class="myAddressBlockLeft__title">Работа</div>
+                        <p class="myAddressBlockLeft__paragraf">642684, Нижегородская область, город Орехово-Зуево, пер. 1905 года, 17</p>
+                    </address>
 
+                    <ul class="myAddressBlockRight flex">
                         <li>
-                            <div class="input-container">
-                                <input type="text" id="surname" required>
-                                <label for="surname">Фамилия</label>
-                            </div>
+                            <a href="#">Изменить</a>
                         </li>
 
                         <li>
-                            <div class="pol">Пол</div>
-                            <div class="custom-select">
-                                <div class="select-selected">Женский</div>
-
-                                <div class="select-items">
-                                    <div class="select-itemsIn">
-                                        <span class="select-itemsIn__name">Женский</span>
-
-                                        <span class="select-itemsIn__name">Мужской</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="myDataSaveList__calendar">
-                            <div class="pol">Дата рождения</div>
-                            <input placeholder="14.04.1988" id="datepicker" type="text">
-                        </li>
-
-                        <li class="myDataSaveListWidth">
-                            <div class="input-container">
-                                <input type="text" class="phone_mask" id="tel">
-                                <label for="tel" class="phone_maskLabel">Номер телефона</label>
-                            </div>
-                        </li>
-
-                        <li class="myDataSaveListWidth">
-                            <div class="input-container">
-                                <input type="email" id="email" required>
-                                <label for="email">E-mail</label>
-                            </div>
-                        </li>
-
-                        <li class="myDataSaveListWidth">
-                            <div class="input-container">
-                                <input type="password" id="password" required>
-                                <label for="password">Пароль</label>
-                            </div>
-                        </li>
-
-                        <li class="myDataSaveListWidth">
-                            <div class="input-container">
-                                <input type="password" id="passwordValid" required class="mistake">
-                                <label for="passwordValid" class="mistake">Повторите пароль</label>
-                                <div class="mistakeText">Пароли не совпадают</div>
-                            </div>
+                            <a href="#">Удалить</a>
                         </li>
                     </ul>
-
-                    <button type="button" class="myDataSave__save flex" aria-label="Сохранить">Сохранить</button>
                 </div>
+
+
+                <div class="myAddressBlockAdd">
+                    <div class="myAddressBlockAddInput flex">
+                        <div class="input-container">
+                            <input type="text" id="name" >
+                            <label for="name">Введите название</label>
+                        </div>
+
+                        <a href="#" class="myAddressBlockAddInput__save">Сохранить адрес</a>
+                    </div>
+
+                    <textarea placeholder="Введите адрес"></textarea>
+                </div>
+
+                <button type="button" class="myDataSave__address flex" aria-label="Добавить адрес">Добавить адрес</button>
             </form>
         </div>
     </div>
 </section>
 <!--End personal-->
-
 
 <!--Start footer-->
 <footer class="footer">
@@ -2099,7 +2039,6 @@
     </div>
 </footer>
 <!--End footer-->
-
 
 <script src="js/JqueryPlugins.js"></script>
 <script src="js/script.js"></script>
