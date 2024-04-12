@@ -320,21 +320,6 @@ $(document).ready(function () {
   });
 
 
-  //Start tab personal
-  $('.personal .tabs .tab').click(function () {
-    var tabNumber = $(this).data('tab');
-
-    // Hide all contents
-    $('.personal .contents .content').removeClass('active');
-
-    // Show the selected content
-    $('.personal .contents .content[data-tab="' + tabNumber + '"]').addClass('active');
-
-    // Update active tab
-    $('.personal .tabs .tab').removeClass('active');
-    $(this).addClass('active');
-  });
-
   // Start popup
   var popupDiv = $('<div>').addClass('popupVisible');
 
@@ -424,11 +409,5 @@ $(document).ready(function () {
   $('.myDataSave__save').on('click', function () {
     $('.myDataRedact').fadeIn();
     $('.myDataSave').fadeOut();
-  });
-
-
-  $('#ajax-tab-container').easytabs({
-    animationSpeed: 'fast',
-    updateHash: false,
   });
 });
