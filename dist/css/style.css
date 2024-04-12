@@ -5801,7 +5801,7 @@ Start favorite
   color: rgb(20, 20, 20);
   font: normal 500 14px 'Manrope', sans-serif;
   background: #ffffff;
-  padding: 3px 5px;
+  padding: 5px 8px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -8111,7 +8111,7 @@ Start personal
 }
 
 .personal .sliderBlockContent {
-  max-width: 97.6%;
+  max-width: 1860px;
   width: 100%;
   margin: 0 auto;
 }
@@ -8596,6 +8596,15 @@ Start personal
 .myAddressBlockAddInput .input-container input {
   height: 35px;
   border-bottom: 1px solid #bcbcbc;
+}
+
+.sale__title {
+  max-width: 1860px;
+  width: 100%;
+  margin: 0 auto 20px;
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  display: block;
 }
 
 /*
