@@ -8643,7 +8643,7 @@ Start personal
 }
 
 .personalEmpty {
-  color: rgb(20,20,20);
+  color: rgb(20, 20, 20);
   font: normal bold 50px 'Manrope', sans-serif;
   margin: 0 auto;
   width: 100%;
@@ -9701,6 +9701,28 @@ Start responsive
 }
 
 @media (max-width: 880px) {
+  .myAddressBlockLeft {
+    max-width: 75%;
+  }
+
+  .myAddressBlockLeft__title {
+    font-size: 16px;
+    height: 25px;
+  }
+
+  .myAddressBlockLeft__paragraf {
+    font-size: 14px;
+    height: 75px;
+  }
+
+  .myAddressBlockRight {
+    max-width: 22%;
+  }
+
+  .myAddressBlockAddInput .input-container {
+    max-width: 78%;
+  }
+
   .personal {
     max-width: 90%;
   }
@@ -10715,6 +10737,34 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .myAddressBlockLeft__title {
+    font-size: 13px;
+    height: 20px;
+  }
+
+  .myAddressBlockLeft__paragraf {
+    font-size: 13px;
+  }
+
+  .myAddressBlockRight li a {
+    font-size: 10px;
+    padding: 3px 9px;
+    background: #F5F5F5;
+    border-bottom: none;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-weight: 500;
+  }
+
+  .myAddressBlockLeft {
+    max-width: 70%;
+  }
+
+  .myAddressBlockRight {
+    max-width: 24%;
+  }
+
   .orderNumber__title {
     display: none;
   }
@@ -10743,7 +10793,7 @@ Start responsive
     font-size: 13px;
   }
 
-  .popupBlock__title{
+  .popupBlock__title {
     font-size: 20px;
   }
 
@@ -11477,6 +11527,18 @@ Start responsive
 }
 
 @media (max-width: 620px) {
+  .myAddressBlockAddInput .input-container {
+    max-width: 70%;
+  }
+
+  .myData {
+    padding: 10px;
+  }
+
+  .myAddressBlockRight {
+    max-width: 28%;
+  }
+
   .orderNumber .basketBlockBodyItemLeft {
     max-width: 260px;
   }
@@ -11612,6 +11674,23 @@ Start responsive
 
   .personal .tabs {
     width: 460px;
+    margin: 0 0 30px;
+  }
+
+  .myAddressBlockLeft {
+    max-width: 100%;
+  }
+
+  .myAddressBlockLeft__title {
+    width: 71%;
+    height: 100%;
+    max-height: 35px;
+  }
+
+  .myAddressBlockRight {
+    position: absolute;
+    right: 0;
+    max-width: 130px;
   }
 
   .mobilScroll::-webkit-scrollbar-track {
@@ -12356,6 +12435,18 @@ Start responsive
 }
 
 @media (max-width: 440px) {
+  .myAddressBlockAddInput .input-container {
+    max-width: 60%;
+  }
+
+  .myAddressBlockAddInput__save {
+    font-size: 12px;
+  }
+
+  .myAddressBlockLeft__title {
+    max-width: 65%;
+  }
+
   .guaranteMetis__title {
     font-size: 16px;
   }
@@ -12547,6 +12638,17 @@ Start responsive
 }
 
 @media (max-width: 350px) {
+  .myAddressBlockLeft__title{
+    max-width: 58%;
+    font-size: 12px;
+  }
+
+  .myAddressBlockLeft__paragraf {
+    font-size: 12px;
+    height: 100%;
+    max-height: 82px;
+  }
+
   .orderNumber .basketBlockBodyItemLeft__href {
     max-width: 80px;
   }
