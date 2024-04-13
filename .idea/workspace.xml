@@ -7,8 +7,7 @@
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/favorite.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/favorite.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sale.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/myData.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/myData.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,12 +73,16 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="QodanaReportsService">
-    <option name="descriptions">
-      <ReportDescription localRun="true" path="C:\Users\user\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="8589d281-8743-4497-b505-50cb7c858e3d" reportId="vitacci/qodana/2024-04-02" />
-    </option>
-  </component>
   <component name="RunManager">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -187,7 +190,8 @@
       <workItem from="1712734585093" duration="12485000" />
       <workItem from="1712805185802" duration="19030000" />
       <workItem from="1712843399229" duration="4797000" />
-      <workItem from="1712900373294" duration="9542000" />
+      <workItem from="1712900373294" duration="12526000" />
+      <workItem from="1712988820394" duration="1772000" />
     </task>
     <servers />
   </component>
