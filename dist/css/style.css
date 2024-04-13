@@ -8123,6 +8123,7 @@ Start personal
   max-width: 840px;
   width: 100%;
   margin: 0 auto 20px;
+  background: #FFFFFF;
 }
 
 .content.active .orderNumber {
@@ -8606,6 +8607,50 @@ Start personal
   color: rgb(20, 20, 20);
   font: normal bold 40px 'Manrope', sans-serif;
   display: block;
+}
+
+.orderNumberMobil {
+  padding: 10px 15px 5px;
+  background: #F5F5F5;
+  position: relative;
+  display: none;
+}
+
+.orderNumberMobil .orderNumber__title {
+  color: #141414;
+  font: normal bold 16px 'Manrope', sans-serif;
+  margin-bottom: 5px;
+}
+
+.orderNumberMobil__text {
+  color: #141414;
+  font: normal 400 13px 'Manrope', sans-serif;
+  margin-bottom: 10px;
+}
+
+.orderNumberMobil__status {
+  background: #FFFFFF;
+  padding: 5px 10px;
+  color: #141414;
+  font: normal 500 10px 'Manrope', sans-serif;
+  display: inline;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.personalEmpty {
+  color: rgb(20,20,20);
+  font: normal bold 50px 'Manrope', sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
 }
 
 /*
@@ -9131,6 +9176,22 @@ Start responsive
   .basketBlockBodyItemLeft {
     max-width: 58%;
     width: 100%;
+  }
+
+  .orderNumber .basketBlockBodyItemLeft {
+    max-width: 300px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeft__href {
+    max-width: 95px;
+  }
+
+  .orderNumber .basketBlockBodyItemRight {
+    max-width: 250px;
+  }
+
+  .orderNumber .basketBlockBodyItemRightBottom {
+    justify-content: flex-end;
   }
 
   .basketBlockBodyItemRight {
@@ -10072,6 +10133,10 @@ Start responsive
   .contacts .map iframe {
     height: 490px;
   }
+
+  .orderNumber .sliderBlockSliderTopHeart {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 810px) {
@@ -10157,6 +10222,10 @@ Start responsive
 }
 
 @media (max-width: 780px) {
+  .personalEmpty {
+    font-size: 40px;
+  }
+
   .lookBookTab {
     margin-top: 20px;
   }
@@ -10646,6 +10715,68 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .orderNumber__title {
+    display: none;
+  }
+
+  .orderNumber__closed {
+    top: 15px;
+  }
+
+  .orderNumber .basketBlockBodyItem:first-of-type {
+    border-top: none;
+    margin-top: 10px;
+    padding-top: 0;
+  }
+
+  .orderNumber__num {
+    font-size: 14px;
+  }
+
+  .orderStatus__ends,
+  .orderStatus__title {
+    display: none;
+  }
+
+  .orderStatusBtn__href {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .popupBlock__title{
+    font-size: 20px;
+  }
+
+  .popupBlock {
+    max-width: 90%;
+  }
+
+  .orderNumber .basketBlockBodyItem:last-of-type {
+    border-bottom: none;
+  }
+
+  .orderNumber {
+    border: none;
+    padding: 0;
+  }
+
+  .orderNumberMobil .orderNumber__title,
+  .orderNumberMobil {
+    display: block;
+  }
+
+  .orderNumberMobil .orderNumber__title {
+
+  }
+
+  .orderNumber .basketBlockBodyItemRightBottom {
+    bottom: 20px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeftRightSize {
+    margin-top: 30px;
+  }
+
   .personalTop__title {
     font-size: 20px;
   }
@@ -11346,6 +11477,20 @@ Start responsive
 }
 
 @media (max-width: 620px) {
+  .orderNumber .basketBlockBodyItemLeft {
+    max-width: 260px;
+  }
+
+  .orderNumber .basketBlockBodyItemRight {
+    max-width: 160px;
+  }
+
+  .orderNumber {
+    border: none;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
   .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after,
   .guaranteMetis .has-arrow::after {
     right: 6em !important;
@@ -11440,6 +11585,27 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .personalEmpty {
+    font-size: 30px;
+  }
+
+  .orderNumber .basketBlockBodyItemRight {
+    max-width: 80px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeft {
+    max-width: 280px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeftRight {
+    width: 60%;
+  }
+
+  .orderNumber .basketBlockBodyItemLeft__href {
+    max-width: 95px;
+    width: 100%;
+  }
+
   .mobilScroll {
     overflow: auto;
   }
@@ -12255,6 +12421,14 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .orderNumber .basketBlockBodyItemLeft {
+    max-width: 240px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeftRight {
+    max-width: 100px;
+  }
+
   .news__title {
     font-size: 20px;
   }
@@ -12373,6 +12547,14 @@ Start responsive
 }
 
 @media (max-width: 350px) {
+  .orderNumber .basketBlockBodyItemLeft__href {
+    max-width: 80px;
+  }
+
+  .orderNumber .basketBlockBodyItemLeft {
+    max-width: 190px;
+  }
+
   .mobilSlider .sliderBlockSlider .slick-slide img,
   .mobilSlider .itemLeft__video,
   .mobilSlider .sliderBlockSlider {
