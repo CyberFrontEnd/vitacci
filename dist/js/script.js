@@ -415,4 +415,8 @@ $(document).ready(function () {
   $('.myDataSave__address').on('click', function () {
     $('.myAddressBlockAdd').slideToggle();
   });
+
+  $('[data-fancybox]').fancybox({
+    autoFocus: false,
+  });
 });
