@@ -8703,6 +8703,10 @@ Start responsive
 }
 
 @media (max-width: 1880px) {
+  .personal .sliderBlockContent {
+    max-width: 97%;
+  }
+
   .lookBookContent {
     max-width: 96%;
   }
@@ -9101,7 +9105,7 @@ Start responsive
   }
 
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
-    height: 300px;
+    height: 375px;
   }
 
   .headerBottomMenuListContent:before {
@@ -9199,7 +9203,7 @@ Start responsive
   }
 
   .sliderBlockSliderTopHeart {
-    margin-right: 1%;
+    margin-right: 5%;
   }
 
   .basketBlockBodyItemRightBottom {
@@ -9391,6 +9395,11 @@ Start responsive
   .orderRight .basketBlockBodyItem {
     padding-right: 0;
   }
+
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 360px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -9502,9 +9511,29 @@ Start responsive
   .headerBottomSearchFormCatalogFilter {
     max-width: 290px;
   }
+
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 300px;
+  }
+
+  .sliderBlockSliderTopSale__sale,
+  .sliderBlockSliderTopSale__procent,
+  .sliderBlockSliderTopSale__new {
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 970px) {
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 250px;
+  }
+
+  .personal .sliderBlockContent {
+    max-width: 100%;
+  }
+
   .size {
     max-width: 90%;
   }
@@ -10162,6 +10191,22 @@ Start responsive
 }
 
 @media (max-width: 810px) {
+  .personal .sliderBlockContent .sliderBlockMain {
+    max-width: 32.6%;
+  }
+
+  .personal .sliderBlockSlider .slick-slide, .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 320px;
+  }
+
+  .personal .sliderBlockContent .sliderBlockMain:nth-child(4n+4) {
+    margin-right: 1%;
+  }
+
+  .personal .sliderBlockContent .sliderBlockMain:nth-child(3n+3) {
+    margin-right: 0;
+  }
+
   .orderLeft {
     max-width: 100%;
   }
@@ -10734,9 +10779,23 @@ Start responsive
   .statusFormInput input {
     height: 50px;
   }
+
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 280px;
+  }
 }
 
 @media (max-width: 690px) {
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 270px;
+  }
+
+  .personal .sliderBlockContent .sliderBlockSlider {
+    height: 270px;
+  }
+
   .myAddressBlockLeft__title {
     font-size: 13px;
     height: 20px;
@@ -11527,6 +11586,12 @@ Start responsive
 }
 
 @media (max-width: 620px) {
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a,
+  .personal .sliderBlockContent .sliderBlockSlider {
+    height: 240px;
+  }
+
   .myAddressBlockAddInput .input-container {
     max-width: 70%;
   }
@@ -11647,6 +11712,16 @@ Start responsive
 }
 
 @media (max-width: 540px) {
+  .personal .sliderBlockContent .sliderBlockMain {
+    max-width: 48%;
+  }
+
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a,
+  .personal .sliderBlockContent .sliderBlockSlider {
+    height: 290px;
+  }
+
   .personalEmpty {
     font-size: 30px;
   }
@@ -12432,6 +12507,10 @@ Start responsive
   .lookBookTab .etabs li:first-of-type {
     margin-left: 0;
   }
+
+  .personal .sliderBlockContent .sliderBlockMain .radioList {
+    justify-content: flex-start;
+  }
 }
 
 @media (max-width: 440px) {
@@ -12512,6 +12591,12 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a,
+  .personal .sliderBlockContent .sliderBlockSlider {
+    height: 240px;
+  }
+
   .orderNumber .basketBlockBodyItemLeft {
     max-width: 240px;
   }
@@ -12638,7 +12723,7 @@ Start responsive
 }
 
 @media (max-width: 350px) {
-  .myAddressBlockLeft__title{
+  .myAddressBlockLeft__title {
     max-width: 58%;
     font-size: 12px;
   }
