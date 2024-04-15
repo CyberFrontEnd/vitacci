@@ -4546,7 +4546,7 @@ Start sliderBlock
 }
 
 .sliderBlockSliderTopHeart {
-  margin-right: 12px;
+  margin-right: 20px;
 }
 
 .sliderBlockSliderTopHeart .checkmark.heart {
@@ -9696,6 +9696,174 @@ End personal
   max-width: 280px;
   width: 100%;
   height: 50px;
+}
+
+.multi-vertical {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.personalSaleSlider {
+  margin: 0 auto 100px;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.personalSaleSliderBlock {
+  max-width: 400px;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #141414;
+}
+
+.personalSaleSliderBlock__title {
+  color: rgb(20, 20, 20);
+  font: normal bold 40px 'Manrope', sans-serif;
+  padding-left: 10px;
+}
+
+.personalSaleSliderBlockCenter__title {
+  text-align: center;
+  color: #000;
+  font: normal bold 24px 'Manrope', sans-serif;
+}
+
+.personalSaleSliderBlockCenter {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.personalSaleSliderBlockBottom {
+  margin-top: 50px;
+  margin-left: 15px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.personalSaleSliderBlockBottomLeft__text {
+  color: rgb(20, 20, 20);
+  font: normal 500 14px 'Manrope', sans-serif;
+}
+
+.personalSaleSliderBlockBottom__href {
+  color: #141414;
+  font: normal 400 14px 'Manrope', sans-serif;
+  margin: 0 10px 0 0;
+  border-bottom: 1px solid;
+}
+
+.mySwiperNav__text.base {
+  color: #000;
+  font: normal bold 14px 'Manrope', sans-serif;
+  position: relative;
+  left: -15px;
+}
+
+.mySwiperNav__text.num {
+  color: #000;
+  font: normal bold 14px 'Manrope', sans-serif;
+}
+
+.mySwiperNav__dot {
+  position: relative;
+}
+
+.mySwiperNav__dot.base {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  margin: 5px 0;
+}
+
+.mySwiperNav__dot:after {
+  content: "";
+  width: 165px;
+  height: 1px;
+  background: url('../images/icon41.svg') no-repeat top center;
+  display: block;
+  position: absolute;
+  top: 11px;
+  left: 21px;
+}
+
+.personalSaleSlider .mySwiper {
+  padding-top: 50px;
+  max-width: 800px !important;
+  width: 100% !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.mySwiperNav__text {
+  color: #808080;
+  font: normal 500 14px 'Manrope', sans-serif;
+}
+
+.mySwiperNav__text.classic {
+  color: #808080;
+  font: normal 500 14px 'Manrope', sans-serif;
+  position: relative;
+  left: -30px;
+}
+
+.mySwiperNav__text.classic.gold {
+  left: -18px;
+}
+
+.mySwiperNav__text.classicNum {
+  position: relative;
+  left: 0;
+}
+
+.mySwiperNav__dot.classic {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #808080;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  margin: 5px 0;
+}
+
+.mySwiper .swiper-slide {
+  cursor: pointer;
+}
+
+.swiper-wrapper .swiper-slide.swiper-slide.swiper-slide-thumb-active:last-of-type .mySwiperNav__text.classic {
+  font-weight: bold;
+  color: #000;
+}
+
+.swiper-wrapper .swiper-slide:last-of-type .mySwiperNav__dot:after {
+  display: none;
+}
+
+.swiper-wrapper .swiper-slide.swiper-slide.swiper-slide-thumb-active:last-of-type .mySwiperNav__dot.gold {
+  border: 1px solid #000000;
+}
+
+.swiper-wrapper .swiper-slide.swiper-slide.swiper-slide-thumb-active:last-of-type .mySwiperNav__dot.gold:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #000;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.swiper-wrapper .swiper-slide.swiper-slide.swiper-slide-thumb-active:last-of-type .classicNum {
+  font-weight: bold;
+  color: #000;
 }
 
 /*
