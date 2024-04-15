@@ -4,13 +4,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content=" " name="description">
-    <meta content=" " name="keywords">
+    <meta content="Каталог" name="description">
+    <meta content="Каталог" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
-<!--    <link href="css/fonts.css" rel="stylesheet">-->
-<!--    <link href="css/slick.css" rel="stylesheet">-->
-<!--    <link href="css/metis.css" rel="stylesheet">-->
 
     <title>Каталог</title>
 </head>
@@ -21,8 +18,8 @@
 <div class="searchPopup">
     <form action="#" class="searchPopupForm flex">
         <input placeholder="Поиск" type="text">
-        <button type="submit" class="searchPopupForm__submit">Найти</button>
-        <button type="button" class="searchPopup__closed"></button>
+        <button type="submit" class="searchPopupForm__submit" aria-label="Найти">Найти</button>
+        <button type="button" class="searchPopup__closed" aria-label="Закрыть"></button>
     </form>
 
     <div class="searchPopupContent flex">
@@ -1225,7 +1222,10 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed"></button>
+        <div class="basketBlockClosed">
+            <a href="#" class="orderStatusBottom__href">Удалить все</a>
+            <button type="button" class="basketBlockTop__closed" aria-label="Закрыть"></button>
+        </div>
     </div>
 
     <div class="basketBlockBody">
@@ -1603,15 +1603,25 @@
             <div class="basketBlockBottomTotal__right">7 194 ₽</div>
         </div>
 
-        <button type="submit" class="basketBlockBottom__btn flex">Оформить заказ</button>
+        <button type="submit" class="basketBlockBottom__btn flex" aria-label="Оформить заказ">Оформить заказ</button>
     </div>
 </div>
 <!--End basketBlock-->
 
+<form action="" enctype="text/plain" class="popupBlock">
+    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+    <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
+
+    <div class="popupBlockBottom flex">
+        <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+    </div>
+</form>
+
 <!--Start hederMenuMobil-->
 <div class="hederMenuMobil">
     <div class="hederMenuMobilTop flex">
-        <button type="button" class="hederMenuMobil__closed"></button>
+        <button type="button" class="hederMenuMobil__closed" aria-label="Закрыть"></button>
 
         <a href="#" class="hederMenuMobilTop__logo">
             <img src="images/logoMobil.svg" alt="">
@@ -2344,7 +2354,7 @@
 
             <div class="headerBottomSearchFormCatalogFilter flex">
                 <div class="headerBottomSearchForm__input flex">
-                    <button type="button" class="headerBottomSearchForm__btn"></button>
+                    <button type="button" class="headerBottomSearchForm__btn" aria-label="Искать"></button>
                     <input placeholder="Поиск" type="text">
                 </div>
 
@@ -5354,12 +5364,6 @@
 </footer>
 <!--End footer-->
 
-
-<!--<script src="js/jquery-3.4.1.min.js"></script>-->
-<!--<script src="js/slick.js"></script>-->
-<!--<script src="js/slickSetting.js"></script>-->
-<!--<script src="js/metis.js"></script>-->
-<!--<script src="js/script.js"></script>-->
 
 <script src="js/JqueryPlugins.js"></script>
 <script src="js/script.js"></script>

@@ -4,12 +4,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content=" " name="description">
-    <meta content=" " name="keywords">
+    <meta content="оформление заказа - выбор способа доставки" name="description">
+    <meta content="оформление заказа - выбор способа доставки" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
-
 
     <title>оформление заказа - выбор способа доставки</title>
 </head>
@@ -20,8 +18,8 @@
 <div class="searchPopup">
     <form action="#" class="searchPopupForm flex">
         <input placeholder="Поиск" type="text">
-        <button type="submit" class="searchPopupForm__submit">Найти</button>
-        <button type="button" class="searchPopup__closed"></button>
+        <button type="submit" class="searchPopupForm__submit" aria-label="Найти">Найти</button>
+        <button type="button" class="searchPopup__closed" aria-label="Закрыть"></button>
     </form>
 
     <div class="searchPopupContent flex">
@@ -974,7 +972,7 @@
                     <div class="select-items">
                         <form action="" class="select-itemsForm">
                             <input placeholder="Поиск" type="text">
-                            <button type="button" class="select-itemsForm__clear"></button>
+                            <button type="button" class="select-itemsForm__clear" aria-label="Очистить"></button>
                         </form>
 
                         <div class="select-itemsIn">
@@ -1031,7 +1029,7 @@
     </div>
 
     <div class="headerMiddle flex">
-        <button type="button" class="headerMiddleMobil">
+        <button type="button" class="headerMiddleMobil" aria-label="Закрыть">
             <span></span>
             <span></span>
             <span></span>
@@ -1115,7 +1113,7 @@
 <!--Start hederMenuMobil-->
 <div class="hederMenuMobil">
     <div class="hederMenuMobilTop flex">
-        <button type="button" class="hederMenuMobil__closed"></button>
+        <button type="button" class="hederMenuMobil__closed" aria-label="Закрыть"></button>
 
         <a href="#" class="hederMenuMobilTop__logo">
             <img src="images/logoMobil.svg" alt="">
@@ -1303,7 +1301,10 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed"></button>
+        <div class="basketBlockClosed">
+            <a href="#" class="orderStatusBottom__href">Удалить все</a>
+            <button type="button" class="basketBlockTop__closed" aria-label="Закрыть"></button>
+        </div>
     </div>
 
     <div class="basketBlockBody">
@@ -1681,10 +1682,20 @@
             <div class="basketBlockBottomTotal__right">7 194 ₽</div>
         </div>
 
-        <button type="submit" class="basketBlockBottom__btn flex">Оформить заказ</button>
+        <button type="submit" class="basketBlockBottom__btn flex" aria-label="Оформить заказ">Оформить заказ</button>
     </div>
 </div>
 <!--End basketBlock-->
+
+<form action="" enctype="text/plain" class="popupBlock">
+    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+    <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
+
+    <div class="popupBlockBottom flex">
+        <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+    </div>
+</form>
 
 <!--Start order-->
 <section class="order flex">
@@ -2290,10 +2301,7 @@
 <!--End footer-->
 
 
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/slickSetting.js"></script>
-<script src="js/metis.js"></script>
+<script src="js/JqueryPlugins.js"></script>
 <script src="js/script.js"></script>
 
 </body>
