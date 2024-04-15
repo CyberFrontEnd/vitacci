@@ -9141,6 +9141,7 @@ Start personal
   margin-bottom: 20px;
 }
 
+.orderStatusBottom__href2,
 .orderStatusBottom__href {
   color: #141414;
   font: normal 500 14px 'Manrope', sans-serif;
@@ -9637,6 +9638,65 @@ Start personal
 End personal
 ############*/
 
+
+.popupBlockBlack {
+  max-width: 600px !important;
+  width: 100% !important;
+  background: #141414 !important;
+  padding-bottom: 80px !important;
+}
+
+.popupBlockBlack__paragraf {
+  color: #FFFFFF;
+  font: normal 700 20px 'Manrope', sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  padding: 0 !important;
+  color: #FFFFFF;
+  top: 30px !important;
+  right: 10px !important;
+}
+
+.popupBlockBlackList {
+  max-width: 310px;
+  width: 100%;
+  justify-content: space-between;
+  margin: 50px auto 0;
+}
+
+.popupBlockBlack_back,
+.popupBlockBlackList li a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #FFFFFF;
+  color: #141414;
+  font: normal 500 14px 'Manrope', sans-serif;
+  padding: 9px 20px;
+}
+
+.popupBlockBlack_back {
+  margin: 40px auto 0;
+  max-width: 280px;
+  width: 100%;
+  height: 50px;
+}
 
 /*
 Start responsive
@@ -12824,6 +12884,15 @@ Start responsive
 
   .sliderBlockContentSale .sliderBlockSliderTopSale {
     bottom: -150px;
+  }
+
+  .popupBlockBlack__paragraf {
+    font-size: 16px;
+  }
+
+  .popupBlockBlack {
+    max-width: 90% !important;
+    padding: 20px 15px 80px !important;
   }
 }
 

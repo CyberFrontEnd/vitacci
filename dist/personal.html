@@ -1687,7 +1687,7 @@
 </div>
 <!--End basketBlock-->
 
-<form action="" enctype="text/plain" class="popupBlock">
+<form action="" enctype="text/plain" class="popupBlock" >
     <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
     <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
 
@@ -1944,7 +1944,7 @@
                         <div class="orderStatus__ends">В работе</div>
                     </div>
 
-                    <a href="#" class="orderStatusBottom__href">Отменить заказ</a>
+                    <a href="#" class="orderStatusBottom__href2" data-fancybox="" data-src="#hidden-content5">Отменить заказ</a>
                 </div>
             </div>
         </div>
@@ -1952,13 +1952,12 @@
 </section>
 <!--End personal-->
 
-<form action="" enctype="text/plain" class="popupBlock">
-    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+<form action="" enctype="text/plain" class="popupBlockBlack" style="display: none;" id="hidden-content5">
     <div class="popupBlock__title">Вы уверены, что хотите отменить заказ?</div>
 
     <div class="popupBlockBottom flex">
         <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
-        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет" data-fancybox-close>Нет</button>
     </div>
 </form>
 
