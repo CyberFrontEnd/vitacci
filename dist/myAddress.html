@@ -18,8 +18,8 @@
 <div class="searchPopup">
     <form action="#" class="searchPopupForm flex">
         <input placeholder="Поиск" type="text" aria-label="search">
-        <button type="submit" class="searchPopupForm__submit" aria-label="Btn search">Найти</button>
-        <button type="button" class="searchPopup__closed" aria-label="closed"></button>
+        <button type="submit" class="searchPopupForm__submit" aria-label="Найти">Найти</button>
+        <button type="button" class="searchPopup__closed" aria-label="Закрыть"></button>
     </form>
 
     <div class="searchPopupContent flex">
@@ -1301,7 +1301,10 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed" aria-label="Closed basket"></button>
+        <div class="basketBlockClosed">
+            <a href="#" class="orderStatusBottom__href">Удалить все</a>
+            <button type="button" class="basketBlockTop__closed" aria-label="Закрыть"></button>
+        </div>
     </div>
 
     <div class="basketBlockBody">
@@ -1683,6 +1686,16 @@
     </div>
 </div>
 <!--End basketBlock-->
+
+<form action="" enctype="text/plain" class="popupBlock">
+    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+    <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
+
+    <div class="popupBlockBottom flex">
+        <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+    </div>
+</form>
 
 <!--Start personal-->
 <section class="personal">
