@@ -1301,7 +1301,10 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed"></button>
+        <div class="basketBlockClosed">
+            <a href="#" class="orderStatusBottom__href">Удалить все</a>
+            <button type="button" class="basketBlockTop__closed" aria-label="Закрыть"></button>
+        </div>
     </div>
 
     <div class="basketBlockBody">
@@ -1684,6 +1687,16 @@
 </div>
 <!--End basketBlock-->
 
+<form action="" enctype="text/plain" class="popupBlock">
+    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+    <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
+
+    <div class="popupBlockBottom flex">
+        <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+    </div>
+</form>
+
 <!--Start news2-->
 <section class="news2">
     <h1 class="news__title">Зачем менять уход, если зимой летишь в жаркие страны?</h1>
@@ -2051,10 +2064,7 @@
 <!--End footer-->
 
 
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/slickSetting.js"></script>
-<script src="js/metis.js"></script>
+<script src="js/JqueryPlugins.js"></script>
 <script src="js/script.js"></script>
 
 </body>
