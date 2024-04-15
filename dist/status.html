@@ -8,7 +8,6 @@
     <meta content="Гарантия и уход, оплаты, изменения получателя" name="keywords">
 
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/intlTelInput.css" rel="stylesheet">
 
     <title>Статус доставки</title>
 </head>
@@ -1302,7 +1301,10 @@
             <span class="basketBlockTop__basketItem">6 товаров</span>
         </div>
 
-        <button type="button" class="basketBlockTop__closed"></button>
+        <div class="basketBlockClosed">
+            <a href="#" class="orderStatusBottom__href">Удалить все</a>
+            <button type="button" class="basketBlockTop__closed" aria-label="Закрыть"></button>
+        </div>
     </div>
 
     <div class="basketBlockBody">
@@ -1685,6 +1687,16 @@
 </div>
 <!--End basketBlock-->
 
+<form action="" enctype="text/plain" class="popupBlock">
+    <button type="button" aria-label="Закрыть попап" class="popupBlock__closed"></button>
+    <div class="popupBlock__title">Вы уверены, что хотите удалить все товары из корзины?</div>
+
+    <div class="popupBlockBottom flex">
+        <button type="submit" class="popupBlockBottom__yes flex" aria-label="Да">Да</button>
+        <button type="button" class="popupBlockBottom__no flex" aria-label="Нет">Нет</button>
+    </div>
+</form>
+
 <!--Start status-->
 <section class="status">
     <div class="menuMobil">
@@ -2038,13 +2050,7 @@
 <!--End footer-->
 
 
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/slick.js"></script>
-<script src="js/slickSetting.js"></script>
-<script src="js/metis.js"></script>
-<script src="js/migrate.js"></script>
-<script src="js/intlTelInput.js"></script>
-<script src="js/intlTelInputSetting.js"></script>
+<script src="js/JqueryPlugins.js"></script>
 <script src="js/script.js"></script>
 
 </body>
