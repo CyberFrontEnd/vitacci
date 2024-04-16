@@ -401,26 +401,25 @@ $(document).ready(function () {
 
 
   // Start personal
-  $('.myDataRedact__redact').on('click', function () {
+  $('.myDataRedact__redact').on('click', () => {
     $('.myDataRedact').fadeOut();
     $('.myDataSave').fadeIn();
   });
 
-  $('.myDataSave__save').on('click', function () {
+  $('.myDataSave__save').on('click', () => {
     $('.myDataRedact').fadeIn();
     $('.myDataSave').fadeOut();
   });
 
   // Start myDataSave__address
-  $('.myDataSave__address').on('click', function () {
+  $('.myDataSave__address').on('click', () => {
     $('.myAddressBlockAdd').slideToggle();
   });
 
   $('[data-fancybox]').fancybox({
     autoFocus: false,
   });
-
-
   // Start slider slick
+
 
 });
