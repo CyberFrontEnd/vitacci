@@ -9875,6 +9875,10 @@ End personal
   transform: rotate(180deg);
 }
 
+.personal .tab a span {
+  color: #F43249;
+  padding-left: 5px;
+}
 
 /*
 Start responsive
@@ -10798,6 +10802,16 @@ Start responsive
   .sliderBlockSliderTopSale__new {
     font-size: 12px;
   }
+
+  .personal .sliderBlock__title {
+    font-size: 30px;
+  }
+
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a,
+  .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 250px;
+  }
 }
 
 @media (max-width: 970px) {
@@ -11047,7 +11061,7 @@ Start responsive
   }
 
   .sliderBlockContentSale .sliderBlockSlider, .sliderBlockContentSale .sliderBlockSlider .slick-slide, .sliderBlockContentSale .sliderBlockSlider .slick-slide > a {
-    height: 320px;
+    height: 350px;
   }
 
   .personal .sliderBlockTop .sliderBlock__title {
@@ -11581,6 +11595,22 @@ Start responsive
   .personalSaleSliderBlock {
     height: 200px;
   }
+
+  .personalSaleSlider {
+    margin-bottom: 50px;
+  }
+
+  .orderNumber {
+    max-width: 95%;
+  }
+
+  .myData {
+    max-width: 95%;
+  }
+
+  .personal .sliderBlockContent {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 810px) {
@@ -11588,8 +11618,10 @@ Start responsive
     max-width: 32.6%;
   }
 
-  .personal .sliderBlockSlider .slick-slide, .personal .sliderBlockSlider .slick-slide > a, .personal .headerBottomMenuListContent .sliderBlockSlider {
-    height: 320px;
+  .personal .sliderBlockSlider .slick-slide,
+  .personal .sliderBlockSlider .slick-slide > a,
+  .personal .headerBottomMenuListContent .sliderBlockSlider {
+    height: 350px;
   }
 
   .personal .sliderBlockContent .sliderBlockMain:nth-child(4n+4) {
@@ -11683,7 +11715,11 @@ Start responsive
   .personal .sliderBlockContentSale .sliderBlockSlider .slick-slide,
   .personal .sliderBlockContentSale .sliderBlockSlider .slick-slide > a,
   .personal .sliderBlockContentSale .headerBottomMenuListContent .sliderBlockSlider {
-    height: 248px;
+    height: 348px;
+  }
+
+  .personal .sliderBlockTop .sliderBlock__title {
+    font-size: 25px;
   }
 }
 
@@ -11942,7 +11978,11 @@ Start responsive
   }
 
   .sliderBlockTop {
-    margin-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .sliderBlockContentSale {
+    padding-top: 20px;
   }
 
   .sliderBlock__href {
@@ -12193,17 +12233,17 @@ Start responsive
   .personal .sliderBlockContentSale .sliderBlockSlider .slick-slide,
   .personal .sliderBlockContentSale .sliderBlockSlider .slick-slide > a,
   .personal .sliderBlockContentSale .headerBottomMenuListContent .sliderBlockSlider {
-    height: 200px;
+    height: 310px;
   }
 
   .sliderBlockContentSale .sliderBlockSlider,
   .sliderBlockContentSale .sliderBlockSlider .slick-slide,
   .sliderBlockContentSale .sliderBlockSlider .slick-slide > a {
-    height: 210px;
+    height: 320px;
   }
 
   .sliderBlockContentSale .sliderBlockSliderTopSale {
-    bottom: -130px;
+    bottom: -240px;
   }
 
   .personalSaleSlider {
@@ -12368,7 +12408,7 @@ Start responsive
   }
 
   .personal .tabs {
-    max-width: 480px;
+    max-width: 500px;
   }
 
   .myDataRedactList__name {
@@ -13326,7 +13366,7 @@ Start responsive
   }
 
   .personal .tabs {
-    width: 460px;
+    width: 590px;
     margin: 0 0 30px;
   }
 
