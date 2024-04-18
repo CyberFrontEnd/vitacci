@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/css/original.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/original.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/email.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/email.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/lookbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lookbook.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/size.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/size.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +31,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/dist/css/style.css" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="JsbtTreeLayoutManager">
     <layout place="tools.popupGulp">
@@ -203,6 +208,8 @@
       <workItem from="1713272511745" duration="74000" />
       <workItem from="1713275262541" duration="121000" />
       <workItem from="1713280514843" duration="7664000" />
+      <workItem from="1713341064315" duration="360000" />
+      <workItem from="1713344916634" duration="12913000" />
     </task>
     <servers />
   </component>
