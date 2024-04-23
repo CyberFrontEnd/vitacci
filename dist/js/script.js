@@ -425,4 +425,22 @@ $(document).ready(function () {
   window.addEventListener('load',function(){
     document.querySelector('body').classList.add("loaded")
   });
+
+
+
+  const swiper = new Swiper(".mySwiper", {
+    spaceBetween: 0,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  const swiper2 = new Swiper(".mySwiper2", {
+    slidesPerView: 3,
+    spaceBetween: 10,
+    centeredSlides: true,
+    thumbs: {
+      swiper: swiper,
+    },
+  });
 });
