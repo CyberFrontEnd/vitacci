@@ -422,4 +422,7 @@ $(document).ready(function () {
   // Start slider slick
 
 
+  window.addEventListener('load',function(){
+    document.querySelector('body').classList.add("loaded")
+  });
 });
