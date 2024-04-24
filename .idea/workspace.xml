@@ -6,41 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/arrange.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/arrange.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/indexBasket.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/indexBasket.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/item2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/item3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/JqueryPlugins.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/JqueryPlugins.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/fancyboxSetting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/form.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/metis.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/migrate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/slick.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/slickSetting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/tab.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/tabSetting.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/lookbook.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/lookbook.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/myAddress.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/myAddress.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/myData.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/myData.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order5.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/personal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/popup.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/popup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/program.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/program.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/refund.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/refund.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/sale.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/sale.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +64,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/projects/guram/vitacci/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/fight&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/guram/vitacci&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -132,7 +99,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-php-predefined-ba97393d7c68-6f8e3395a2b4-com.jetbrains.php.sharedIndexes-PS-233.14808.18" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PS-241.15989.102" />
+        <option value="bundled-php-predefined-ba97393d7c68-c76157a7178b-com.jetbrains.php.sharedIndexes-PS-241.15989.102" />
       </set>
     </attachedChunks>
   </component>
@@ -246,7 +214,10 @@
       <workItem from="1713602957994" duration="19000" />
       <workItem from="1713870505596" duration="1640000" />
       <workItem from="1713873274829" duration="4221000" />
-      <workItem from="1713883325566" duration="771000" />
+      <workItem from="1713883325566" duration="1733000" />
+      <workItem from="1713947163742" duration="78000" />
+      <workItem from="1713947251302" duration="17000" />
+      <workItem from="1713947341761" duration="45000" />
     </task>
     <servers />
   </component>
