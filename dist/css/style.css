@@ -412,6 +412,7 @@ Start header
   align-items: center;
   margin-top: 0;
   cursor: pointer;
+  position: relative;
 }
 
 .headerMiddleRight__favorite {
@@ -1604,7 +1605,7 @@ End footer
 }
 
 .popupSize.active {
-  z-index: 9999999;
+  z-index: 99999999999;
 }
 
 .popupSizeTop,
@@ -3209,6 +3210,7 @@ video::-webkit-media-controls {
 }
 
 .itemRightBlockBtn__btn {
+  cursor: pointer;
   max-width: 280px;
   width: 100%;
   height: 50px;
@@ -6827,6 +6829,43 @@ End personal
   color: #FFFFFF;
 }
 
+@keyframes flyHeart {
+  0% {
+    transform: translate(25px, -10px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(200px, -610px) scale(2);
+    opacity: 0;
+  }
+}
+
+.containerHeart {
+  position: absolute;
+  display: none;
+  animation-duration: 5s;
+  animation: flyHeart 1s forwards;
+}
+
+#basketNum {
+  position: absolute;
+  z-index: 1;
+  background: #000000;
+  color: #ffffff;
+  border-radius: 100px;
+  font: normal 300 10px 'Magneto', sans-serif;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
+
+.heart-icon {
+  color: red;
+}
+
 /*
 Start responsive
 ################*/
@@ -7121,6 +7160,17 @@ Start responsive
 }
 
 @media (max-width: 1700px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(150px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .sliderBlockContentSale .sliderBlockSlider,
   .sliderBlockContentSale .sliderBlockSlider .slick-slide,
   .sliderBlockContentSale .sliderBlockSlider .slick-slide > a {
@@ -7153,6 +7203,17 @@ Start responsive
 }
 
 @media (max-width: 1600px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(100px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .orderDeliver .orderLeft {
     max-width: 49%;
   }
@@ -7221,6 +7282,17 @@ Start responsive
 }
 
 @media (max-width: 1460px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(60px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .popupSizeText p {
     margin-left: 2%;
     max-width: 750px;
@@ -7246,6 +7318,17 @@ Start responsive
 }
 
 @media (max-width: 1350px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(40px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .popupSizeText p {
     max-width: 600px;
     font-size: 16px;
@@ -7453,6 +7536,18 @@ Start responsive
 }
 
 @media (max-width: 1130px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-20px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .catalogRight .sliderBlockMain {
     max-width: 32%;
   }
@@ -9325,6 +9420,22 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(30px, -610px) scale(2);
+      opacity: 0;
+    }
+  }
+
+  .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
+    margin-top: 80px;
+  }
+
   .sizeTables .sizeTablesBody span {
     width: 10%;
   }
@@ -10439,6 +10550,18 @@ Start responsive
     padding: 20px 10px;
   }
 
+  @keyframes flyHeart {
+    0% {
+      transform: translate(-25px, -10px) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-30px, -810px) scale(2);
+      opacity: 0;
+    }
+  }
+
   .sliderBlock .sliderBlockSlider,
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
     height: 250px;
@@ -11356,6 +11479,22 @@ Start responsive
 }
 
 @media (max-width: 480px) {
+  @keyframes flyHeart {
+    0% {
+      transform: translate(-30px, -10px) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(-30px, -850px) scale(2);
+      opacity: 0;
+    }
+  }
+
+  .itemRightBlockColor .radioList {
+    margin-left: 10px;
+  }
+
   .sliderBlock .sliderBlockTop {
     margin-bottom: 10px;
   }

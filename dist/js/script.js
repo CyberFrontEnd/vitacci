@@ -427,7 +427,7 @@ $(document).ready(function () {
   });
 
 
-
+// Start slider on the page sale
   const swiper = new Swiper(".mySwiper", {
     spaceBetween: 0,
     slidesPerView: 4,
@@ -443,4 +443,34 @@ $(document).ready(function () {
       swiper: swiper,
     },
   });
+
+
+  // Start basket counter heart on item page
+    let count = parseInt($('#basketNum').text());
+    if(isNaN(count)) {
+      count = 0;
+      $('#basketNum').hide();
+    }
+
+    $('#sendHeart').click(function(){
+      if ($(this).prop('disabled')) {
+        return;
+      }
+
+      $(this).prop('disabled', true).text('В корзине');
+
+
+      let $heart = $('.containerHeart');
+      $heart.show().css('opacity', 1);
+
+
+      setTimeout(function(){
+        $heart.hide();
+        // Increment counter
+        count++;
+        $('#basketNum').text(count).show();
+      }, 500);
+
+  });
+
 });
