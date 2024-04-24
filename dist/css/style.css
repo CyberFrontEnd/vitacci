@@ -6821,6 +6821,12 @@ End personal
   color: #FFFFFF !important;
 }
 
+.popupBlockBlack .input-container input {
+  background: none;
+  border-bottom: 1px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
 /*
 Start responsive
 ################*/

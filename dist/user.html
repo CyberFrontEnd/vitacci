@@ -2471,7 +2471,18 @@
 
             <div class="footerTopMailing">
                 <div class="footerTopMailing__title">Подпишитесь на нашу рассылку и получите скидку 10%</div>
-                <a href="#" class="footerTopMailing__btn flex">Подписаться</a>
+                <a href="#" class="footerTopMailing__btn flex" data-fancybox="" data-src="#subscribe">Подписаться</a>
+
+                <div class="popupBlockBlack" style="display: none;" id="subscribe">
+                    <h2 class="popupBlock__title">Укажите ваш e-mail</h2>
+
+                    <div class="input-container">
+                        <input type="email" id="email" required>
+                        <label for="email">Введите ваш email</label>
+                    </div>
+
+                    <a href="#" class="popupBlockBlack_back">Подписаться</a>
+                </div>
             </div>
         </div>
     </div>
