@@ -6330,6 +6330,8 @@ End personal
 }
 
 .popupBlockBlack_back {
+  border: none;
+  cursor: pointer;
   margin: 40px auto 0;
   max-width: 280px;
   width: 100%;
