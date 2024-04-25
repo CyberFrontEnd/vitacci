@@ -6870,7 +6870,9 @@ End personal
   background: #000000;
   color: #ffffff;
   border-radius: 100px;
-  font: normal 300 10px 'Magneto', sans-serif;
+  font-family: 'Magneto', sans-serif;
+  font-style: normal;
+  font-size: 10px;
   width: 20px;
   height: 20px;
   display: flex;
@@ -6880,7 +6882,7 @@ End personal
 }
 
 .heart-icon {
-  color: red;
+  color: black;
 }
 
 .registerPopupPassword__title {
@@ -6955,6 +6957,10 @@ End personal
 
 .orderNumberContent .sliderBlockSliderTopHeart {
   margin-right: 0 !important;
+}
+
+.headerMiddleRightProfileSelects__name.formOrderTop__href {
+  border-bottom: none;
 }
 
 /*

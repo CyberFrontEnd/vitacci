@@ -452,13 +452,6 @@ $(document).ready(function () {
     }
 
     $('#sendHeart').click(function(){
-      if ($(this).prop('disabled')) {
-        return;
-      }
-
-      $(this).prop('disabled', true).text('В корзине');
-
-
       let $heart = $('.containerHeart');
       $heart.show().css('opacity', 1);
 
