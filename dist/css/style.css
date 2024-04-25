@@ -1397,6 +1397,7 @@ End footer
   top: 3px;
 }
 
+.registerPopupPassword,
 .registerPopup,
 .hederMenuMobil {
   position: fixed;
@@ -1406,7 +1407,7 @@ End footer
   max-width: 380px;
   width: 100%;
   height: 100%;
-  z-index: 999999;
+  z-index: 999;
   padding: 40px 30px;
   transform: translate(-200%);
   -webkit-transition: all, 0.5s;
@@ -1419,6 +1420,7 @@ End footer
   z-index: 99999999999;
 }
 
+.registerPopupPassword.active,
 .registerPopup.active,
 .hederMenuMobil.active {
   transform: translate(0);
@@ -1431,8 +1433,16 @@ End footer
   background: #ffffff;
 }
 
+.registerPopupPassword.active,
 .registerPopup.active {
   transform: translate(0, 0);
+}
+
+.registerPopupPassword {
+  background: #FFFFFF;
+  left: auto;
+  right: 0;
+  transform: translate(0, -200%);
 }
 
 .hederMenuMobilTop {
@@ -1559,6 +1569,10 @@ End footer
   width: 100%;
   height: 100%;
   z-index: 999999;
+}
+
+.bgClick.active {
+  z-index: 99;
 }
 
 .hide {
@@ -3909,6 +3923,7 @@ Start order
   margin-top: 15px;
 }
 
+.registerPopupPassword__closed,
 .registerPopup__closed {
   z-index: 99999;
   position: absolute;
@@ -6864,6 +6879,80 @@ End personal
 
 .heart-icon {
   color: red;
+}
+
+.registerPopupPassword__title {
+  text-transform: uppercase;
+  color: rgba(128, 128, 128, 1);
+  font: normal 600 14px 'Manrope', sans-serif;
+  padding-left: 20px;
+  position: absolute;
+  top: 17px;
+  left: 0;
+  border-bottom: 1px solid rgb(245, 245, 245);
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.registerPopupPasswordForm {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.registerPopupPasswordForm .input-container {
+  max-width: 100%;
+}
+
+.registerPopupPasswordForm__btn {
+  margin-top: 50px;
+  background: #000;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font: normal normal 14px 'Magneto', sans-serif;
+  cursor: pointer;
+  border: none;
+}
+
+.registerPopupPasswordForm__text {
+  font: normal 500 10px 'Magneto', sans-serif;
+  color: #000;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.popupBlock__text {
+  text-align: center;
+  color: #FFFFFF;
+  font: normal normal 14px 'Magneto', sans-serif;
+  margin-top: 30px;
+  line-height: 25px;
+}
+
+.popupBlockBottom__recovery {
+  padding: 10px 20px;
+  cursor: pointer;
+  background: #FFFFFF;
+  font: normal 500 12px 'Magneto', sans-serif;
+  text-align: center;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+
+.popupBlockBlackRecovery {
+  padding-bottom: 20px !important;
+}
+
+.popupBlockBlackRecovery .popupBlock__title {
+  margin-top: 50px !important;
+}
+
+.orderNumberContent .sliderBlockSliderTopHeart {
+  margin-right: 0 !important;
 }
 
 /*

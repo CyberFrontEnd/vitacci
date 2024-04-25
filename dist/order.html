@@ -1009,8 +1009,8 @@
                 </div>
 
                 <div class="input-container">
-                    <input type="email" id="email" required class="mistake">
-                    <label for="email" class="mistake">Еmail</label>
+                    <input type="email" id="email2" required class="mistake">
+                    <label for="email2" class="mistake">Еmail</label>
                     <div class="mistakeText">E-mail введен не верно</div>
                 </div>
 
@@ -1043,6 +1043,32 @@
             </form>
         </div>
     </div>
+</div>
+
+<div class="registerPopupPassword">
+    <div class="registerPopupPassword__closed"></div>
+
+    <form action="" class="registerPopupPasswordForm">
+        <div class="input-container">
+            <input type="email" id="emailrecovery" required>
+            <label for="emailrecovery">Введите ваш email</label>
+        </div>
+
+        <button type="button" class="registerPopupPasswordForm__btn" aria-label="Войти" data-fancybox="" data-src="#recovery">Войти</button>
+
+        <div class="registerPopupPasswordForm__text">Нажав на кнопку &laquo;войти&raquo;, Вы даете свое согласие на обработку персональных данных</div>
+    </form>
+
+    <div class="registerPopupPassword__title">Восстановление пароля</div>
+
+    <form action="" enctype="text/plain" class="popupBlockBlack popupBlockBlackRecovery" id="recovery" style="display: none;">
+        <div class="popupBlock__title">Пароль успешно восстановлен</div>
+        <p class="popupBlock__text">Вся информация выслана на почту, зайдите в почту и следуйте инструкциям далее</p>
+
+        <div class="popupBlockBottom flex">
+            <button type="button" class="popupBlockBottom__recovery flex" aria-label="Закрыть" data-fancybox-close="">Закрыть</button>
+        </div>
+    </form>
 </div>
 
 <!--Start header-->

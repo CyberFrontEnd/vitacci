@@ -117,7 +117,7 @@ $(document).ready(function () {
 
   $('.bgClick').on('click', function () {
     $(this).removeClass('active');
-    $('.hederMenuMobil, .registerPopup').removeClass('active');
+    $('.hederMenuMobil, .registerPopup, .registerPopupPassword').removeClass('active');
     $('body').removeClass('hide');
   });
 
@@ -297,7 +297,6 @@ $(document).ready(function () {
     e.preventDefault();
     $('.registerPopup, .bgClick').addClass('active');
     $('body').addClass('hide');
-
   });
 
   $('.registerPopup__closed').on('click', (e) => {
@@ -473,4 +472,18 @@ $(document).ready(function () {
 
   });
 
+
+  $('.rememberPassword').on('click', (e) => {
+    e.preventDefault();
+    $('.registerPopupPassword').addClass('active');
+  });
+
+  $('.registerPopupPassword__closed').on('click',  () => {
+    $('.registerPopupPassword').removeClass('active');
+  });
+
+
+  $('.popupBlockBottom__recovery').on('click', () => {
+    $('.registerPopupPassword').removeClass('active');
+  });
 });
