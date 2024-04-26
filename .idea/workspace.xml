@@ -7,9 +7,8 @@
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/indexBasket.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/indexBasket.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +65,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;js.buildTools.gulp.gulp_package_dir&quot;: &quot;C:/projects/guram/vitacci/node_modules/gulp&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/guram/vitacci&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/projects/paralaks&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -243,7 +242,17 @@
       <workItem from="1713983950432" duration="156000" />
       <workItem from="1714024098758" duration="6026000" />
       <workItem from="1714035654692" duration="521000" />
-      <workItem from="1714037304051" duration="1019000" />
+      <workItem from="1714037304051" duration="1136000" />
+      <workItem from="1714040339992" duration="14000" />
+      <workItem from="1714040587452" duration="304000" />
+      <workItem from="1714127039318" duration="23000" />
+      <workItem from="1714128037167" duration="2000" />
+      <workItem from="1714128571663" duration="101000" />
+      <workItem from="1714128694104" duration="148000" />
+      <workItem from="1714128983577" duration="9000" />
+      <workItem from="1714150491266" duration="10000" />
+      <workItem from="1714151618413" duration="239000" />
+      <workItem from="1714154727863" duration="1091000" />
     </task>
     <servers />
   </component>

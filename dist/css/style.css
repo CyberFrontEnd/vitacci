@@ -5085,10 +5085,6 @@ End guarante
 /*
 Start questionMetis
 ###################*/
-.questionMetis {
-
-}
-
 .questionMetis .has-arrow::after {
   width: 10px !important;
   height: 10px !important;
@@ -5097,6 +5093,19 @@ Start questionMetis
 
 .questionMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {
   right: -1em !important;
+}
+
+.guarante .metismenu .has-arrow[aria-expanded=true]::after {
+  right: 16em !important;
+}
+
+.questionMetis.metismenu .has-arrow[aria-expanded=true]::after {
+  right: 1em !important;
+}
+
+
+.hederMenuMobilBody .metismenu .has-arrow[aria-expanded=true]::after {
+  top: 53% !important
 }
 
 /*
@@ -8792,6 +8801,10 @@ Start responsive
 }
 
 @media (max-width: 810px) {
+  .guarante .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 10em !important;
+  }
+
   .sizeTables li span {
     font-size: 12px;
   }
@@ -9517,6 +9530,7 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+
   @keyframes flyHeart {
     0% {
       transform: translate(25px, -10px) scale(1);
@@ -10450,6 +10464,10 @@ Start responsive
 }
 
 @media (max-width: 620px) {
+  .guarante .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 6em !important;
+  }
+
   .tablesScroll {
     overflow-x: scroll;
     max-width: 100%;
@@ -10511,9 +10529,14 @@ Start responsive
     margin-bottom: 0;
   }
 
-  .guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after,
+  .guaranteMetis .mm-active > .has-arrow::after,
+  .metismenu .has-arrow[aria-expanded=true]::after,
   .guaranteMetis .has-arrow::after {
     right: 6em !important;
+  }
+
+  .catalogContent .metismenu .mm-active > .has-arrow::after {
+    right: -1em !important;
   }
 
   .newsSlider .slick-next.slick-arrow {
@@ -11576,6 +11599,10 @@ Start responsive
 }
 
 @media (max-width: 480px) {
+  .guarante .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 3em !important;
+  }
+
   @keyframes flyHeart {
     0% {
       transform: translate(-30px, -10px) scale(1);
@@ -11708,6 +11735,10 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .guarante .metismenu .has-arrow[aria-expanded=true]::after {
+    right: 0 !important;
+  }
+
   .statusForm .intl-tel-input .country-list {
     width: 300px;
   }
