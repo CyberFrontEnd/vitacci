@@ -6972,6 +6972,14 @@ End personal
   border-bottom: none;
 }
 
+.metismenuNot .metismenuIn {
+  display: none;
+}
+
+.metismenuNot .has-arrow {
+  cursor: pointer;
+}
+
 /*
 Start responsive
 ################*/

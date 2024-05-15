@@ -479,4 +479,9 @@ $(document).ready(function () {
   $('.popupBlockBottom__recovery').on('click', () => {
     $('.registerPopupPassword').removeClass('active');
   });
+
+
+  $('.metismenuNot .has-arrow').on('click', function () {
+    $(this).parents(".metismenuNot li").find('.metismenuIn').slideToggle();
+  });
 });
