@@ -1136,6 +1136,7 @@ Start sliderBlock
   max-width: 96%;
   width: 100%;
   justify-content: space-between;
+  height: 100%;
 }
 
 .sliderBlockSlider .slick-slide {
@@ -2386,7 +2387,11 @@ Start catalogMain
 }
 
 .sliderBlockSliderBottom__href {
-  max-width: 100%;
+  position: absolute;
+  bottom: 40px;
+  opacity: 0;
+  transition: all, 0.5s;
+  max-width: 95%;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -2394,6 +2399,10 @@ Start catalogMain
   color: rgb(20, 20, 20);
   font: normal 500 14px 'Manrope', sans-serif;
   height: 60px;
+}
+
+.sliderBlockSliderTop:hover .sliderBlockSliderBottom__href {
+  opacity: 1;
 }
 
 .catalogRight__load {
