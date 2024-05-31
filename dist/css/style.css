@@ -1455,6 +1455,8 @@ End footer
   max-width: 80%;
   width: 100%;
   margin-left: 30px;
+  margin-top: -14px;
+  margin-bottom: 10px;
 }
 
 .hederMenuMobilTopList li a {
@@ -1463,6 +1465,10 @@ End footer
   text-transform: uppercase;
   border-bottom: 1px solid transparent;
   padding-bottom: 5px;
+}
+
+.hederMenuMobilTopList li.active a {
+  border-bottom: 1px solid;
 }
 
 .hederMenuMobil__closed {
@@ -6979,6 +6985,8 @@ End personal
 .metismenuNot .has-arrow {
   cursor: pointer;
 }
+
+
 
 /*
 Start responsive

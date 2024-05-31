@@ -60,6 +60,11 @@ $(document).ready(function () {
     animationSpeed: 'fast',
     updateHash: false,
   });
+
+  $('#tab-container2').easytabs({
+    animationSpeed: 'fast',
+    updateHash: false,
+  });
 });
 
 
