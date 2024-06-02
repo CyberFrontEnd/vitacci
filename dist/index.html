@@ -730,6 +730,21 @@
 
                             <div class="headerBottomMenuListContentRight flex">
                                 <div class="sliderBlockMain">
+                                    <div class="sliderBlockSliderTop flex">
+                                        <div class="sliderBlockSliderTopSale flex">
+                                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                        </div>
+
+                                        <div class="sliderBlockSliderTopHeart">
+                                            <label class="blockCheckbox">
+                                                <input type="checkbox" name="heart">
+                                                <span class="checkmark heart"></span>
+                                            </label>
+                                        </div>
+                                        <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                                    </div>
+
                                     <div class="slider sliderBlockSlider">
                                         <div>
                                             <a href="#">
@@ -856,6 +871,21 @@
                                 </div>
 
                                 <div class="sliderBlockMain">
+                                    <div class="sliderBlockSliderTop flex">
+                                        <div class="sliderBlockSliderTopSale flex">
+                                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                        </div>
+
+                                        <div class="sliderBlockSliderTopHeart">
+                                            <label class="blockCheckbox">
+                                                <input type="checkbox" name="heart">
+                                                <span class="checkmark heart"></span>
+                                            </label>
+                                        </div>
+                                        <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                                    </div>
+
                                     <div class="slider sliderBlockSlider">
                                         <div>
                                             <a href="#">
@@ -976,6 +1006,21 @@
                                 </div>
 
                                 <div class="sliderBlockMain">
+                                    <div class="sliderBlockSliderTop flex">
+                                        <div class="sliderBlockSliderTopSale flex">
+                                            <div class="sliderBlockSliderTopSale__procent">-30%</div>
+                                            <div class="sliderBlockSliderTopSale__sale">Sale</div>
+                                        </div>
+
+                                        <div class="sliderBlockSliderTopHeart">
+                                            <label class="blockCheckbox">
+                                                <input type="checkbox" name="heart">
+                                                <span class="checkmark heart"></span>
+                                            </label>
+                                        </div>
+                                        <a href="#" class="sliderBlockSliderBottom__href flex">Подробнее</a>
+                                    </div>
+
                                     <div class="slider sliderBlockSlider">
                                         <div>
                                             <a href="#">
@@ -1144,6 +1189,78 @@
     </div>
 </header>
 <!--End header-->
+
+<div class="registerPopup">
+    <div class="registerPopup__closed"></div>
+
+    <div class="registerPopupTab" id="tab-container">
+        <ul class="etabs flex">
+            <li class="tab"><a href="#enter">Вход</a></li>
+            <li class="tab"><a href="#register">Регистрация</a></li>
+        </ul>
+
+        <div id="enter">
+            <form action="#" class="enterForm">
+                <div class="input-container">
+                    <input type="email" id="name" required class="mistake">
+                    <label for="name" class="mistake">Введите ваш email</label>
+                    <div class="mistakeText">E-mail введен не верно</div>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password" required>
+                    <label for="password">Введите пароль</label>
+                    <a href="" class="rememberPassword">Я не помню пароль</a>
+                </div>
+
+                <button type="submit" class="enterForm__send flex" aria-label="Войти">Войти</button>
+                <p class="enterForm__text">Нажимая на кнопку «Войти», Вы даете согласие на обработку персональных данных</p>
+            </form>
+        </div>
+
+        <div id="register">
+            <form action="#" class="enterForm">
+                <div class="input-container">
+                    <input type="email" id="name2" required>
+                    <label for="name2">Имя</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="email" id="email2" required class="mistake">
+                    <label for="email2" class="mistake">Еmail</label>
+                    <div class="mistakeText">E-mail введен не верно</div>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" class="phone_mask" id="tel">
+                    <label for="tel" class="phone_maskLabel">Номер телефона</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password2" required>
+                    <label for="password2">Придумайте пароль</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="password" id="password3" required>
+                    <label for="password3">Повторите пароль</label>
+                </div>
+
+                <div class="enterFormCheckbox">
+                    <label class="blockCheckbox">
+                        <span class="enterFormCheckbox__title">Я соглашаюсь на обработку персональных данных в соответствии с <a href="#">Пользовательским соглашением</a></span>
+
+                        <input type="checkbox" name="" tabindex="0">
+                        <span class="checkmark heart"></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="enterForm__send flex" aria-label="Зарегистрироваться">Зарегистрироваться</button>
+                <p class="enterForm__text">Нажимая на кнопку «Зарегистрироваться», Вы даете согласие на обработку персональных данных</p>
+            </form>
+        </div>
+    </div>
+</div>
 
 <!--Start basketBlock-->
 <div class="basketBlock">
@@ -1558,7 +1675,7 @@
             <img src="images/logoMobil.svg" alt="" loading="lazy">
         </a>
 
-        <a href="#" class="hederMenuMobilTop__user">
+        <a href="#" class="hederMenuMobilTop__user formOrderTop__href">
             <img src="images/icon16.svg" alt="" loading="lazy">
         </a>
 
@@ -2030,6 +2147,32 @@
     </div>
 </div>
 <!--End hederMenuMobil-->
+
+<div class="registerPopupPassword">
+    <div class="registerPopupPassword__closed"></div>
+
+    <form action="" class="registerPopupPasswordForm">
+        <div class="input-container">
+            <input type="email" id="emailrecovery" required>
+            <label for="emailrecovery">Введите ваш email</label>
+        </div>
+
+        <button type="button" class="registerPopupPasswordForm__btn" aria-label="Отправить" data-fancybox="" data-src="#recovery">Отправить</button>
+
+        <div class="registerPopupPasswordForm__text">Нажав на кнопку &laquo;войти&raquo;, Вы даете свое согласие на обработку персональных данных</div>
+    </form>
+
+    <div class="registerPopupPassword__title">Восстановление пароля</div>
+
+    <form action="" enctype="text/plain" class="popupBlockBlack popupBlockBlackRecovery" id="recovery" style="display: none;">
+        <div class="popupBlock__title">Восстановление пароля</div>
+        <p class="popupBlock__text">Вся информация выслана на почту, зайдите в почту и следуйте инструкциям далее</p>
+
+        <div class="popupBlockBottom flex">
+            <button type="button" class="popupBlockBottom__recovery flex" aria-label="Закрыть" data-fancybox-close="">Закрыть</button>
+        </div>
+    </form>
+</div>
 
 <!--Start collectionTop-->
 <div class="collectionTop flex">

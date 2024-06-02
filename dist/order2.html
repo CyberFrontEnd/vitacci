@@ -1131,7 +1131,7 @@
             <img src="images/logoMobil.svg" alt="" loading="lazy">
         </a>
 
-        <a href="#" class="hederMenuMobilTop__user">
+        <a href="#" class="hederMenuMobilTop__user formOrderTop__href">
             <img src="images/icon16.svg" alt="" loading="lazy">
         </a>
 
@@ -1304,6 +1304,32 @@
     </div>
 </div>
 <!--End hederMenuMobil-->
+
+<div class="registerPopupPassword">
+    <div class="registerPopupPassword__closed"></div>
+
+    <form action="" class="registerPopupPasswordForm">
+        <div class="input-container">
+            <input type="email" id="emailrecovery" required>
+            <label for="emailrecovery">Введите ваш email</label>
+        </div>
+
+        <button type="button" class="registerPopupPasswordForm__btn" aria-label="Отправить" data-fancybox="" data-src="#recovery">Отправить</button>
+
+        <div class="registerPopupPasswordForm__text">Нажав на кнопку &laquo;войти&raquo;, Вы даете свое согласие на обработку персональных данных</div>
+    </form>
+
+    <div class="registerPopupPassword__title">Восстановление пароля</div>
+
+    <form action="" enctype="text/plain" class="popupBlockBlack popupBlockBlackRecovery" id="recovery" style="display: none;">
+        <div class="popupBlock__title">Восстановление пароля</div>
+        <p class="popupBlock__text">Вся информация выслана на почту, зайдите в почту и следуйте инструкциям далее</p>
+
+        <div class="popupBlockBottom flex">
+            <button type="button" class="popupBlockBottom__recovery flex" aria-label="Закрыть" data-fancybox-close="">Закрыть</button>
+        </div>
+    </form>
+</div>
 
 <!--Start basketBlock-->
 <div class="basketBlock">
@@ -1727,8 +1753,24 @@
                 <div class="orderUserName">
                     <div class="orderUserName__title">Анна Петрова</div>
                     <div class="orderUserName__num">+7 (916) 123-45-67</div>
-                    <div class="orderUserName__edit"></div>
+                    <div class="orderUserName__edit" data-fancybox="" data-src="#order"></div>
                 </div>
+            </div>
+
+            <div class="popupBlockBlack" style="display: none;" id="order">
+                <h2 class="popupBlock__title">Редактировать</h2>
+
+                <div class="input-container">
+                    <input type="text" id="name" required>
+                    <label for="name">Имя</label>
+                </div>
+
+                <div class="input-container">
+                    <input type="text" class="phone_mask" id="tel">
+                    <label for="tel" class="phone_maskLabel">Номер телефона</label>
+                </div>
+
+                <button type="button" aria-label="Сохранить" class="popupBlockBlack_back">Сохранить</button>
             </div>
 
             <div class="formOrderPrice">

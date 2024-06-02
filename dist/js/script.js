@@ -131,6 +131,11 @@ $(document).ready(function () {
     $('.hederMenuMobil, .bgClick').removeClass('active');
   });
 
+  $('.hederMenuMobilTop__user.formOrderTop__href').on('click', function () {
+    $('body').removeClass('hide');
+    $('.hederMenuMobil, .bgClick').removeClass('active');
+  });
+
   //Start num basket
   $('.minus').click(function () {
     let $input = $(this).parent().find('input');
