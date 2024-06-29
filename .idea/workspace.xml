@@ -7,6 +7,11 @@
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/favorite.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/favorite.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -267,6 +272,20 @@
       <workItem from="1717319581612" duration="2341000" />
       <workItem from="1717329142968" duration="5314000" />
       <workItem from="1717414372266" duration="440000" />
+      <workItem from="1717478045872" duration="903000" />
+      <workItem from="1717478992689" duration="4000" />
+      <workItem from="1717486788673" duration="256000" />
+      <workItem from="1718113232659" duration="2486000" />
+      <workItem from="1718179785452" duration="1450000" />
+      <workItem from="1718183464148" duration="326000" />
+      <workItem from="1718184376449" duration="1462000" />
+      <workItem from="1718190643951" duration="950000" />
+      <workItem from="1718348957581" duration="718000" />
+      <workItem from="1718787929815" duration="1366000" />
+      <workItem from="1718803737631" duration="67000" />
+      <workItem from="1719398084017" duration="2315000" />
+      <workItem from="1719402935949" duration="1316000" />
+      <workItem from="1719588862403" duration="1483000" />
     </task>
     <servers />
   </component>

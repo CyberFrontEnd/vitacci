@@ -215,6 +215,9 @@ Start header
   justify-content: space-between;
   margin-right: 60px;
 }
+.it .headerTopRight {
+  max-width: 240px;
+}
 
 .headerTopRight li a {
   color: #ffffff;
@@ -1078,6 +1081,23 @@ Start sliderBlock
   width: 0;
 }
 
+#register .blockCheckbox input {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  opacity: 1;
+  width: 16px;
+  height: 16px;
+}
+
+#register .enterFormCheckbox .checkmark {
+  background: #FFFFFF;
+}
+
+#register .blockCheckbox input:checked ~ .checkmark {
+  background: #000;
+}
+
 .checkmark {
   position: absolute;
   top: 0;
@@ -1259,6 +1279,19 @@ Start footer
   background: #000000;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 100px;
+}
+.wrapp {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.wrapp .footer,
+.wrapp .header {
+  width: 100%;
+  max-width: 100%;
 }
 
 .footerBottom {
@@ -1306,6 +1339,7 @@ Start footer
   width: 100%;
   margin: 0 auto;
   justify-content: flex-end;
+  margin-bottom: 30px;
 }
 
 .footerTopIn {
@@ -1425,7 +1459,9 @@ End footer
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
 }
-
+.registerPopupPassword{
+  z-index: 99999;
+}
 .hederMenuMobil {
   z-index: 99999999999;
 }
@@ -1521,7 +1557,8 @@ End footer
   margin-bottom: 15px;
 }
 
-.metismenu .has-arrow {
+.metismenu .has-arrow,
+.metismenu .link{
   text-transform: uppercase;
   color: #ffffff;
   font: normal 500 14px 'Manrope', sans-serif;
@@ -1929,7 +1966,9 @@ End footer
 .basketBlockBodyItemRightBottom__delete:before {
   content: url("../images/icon19.svg");
 }
-
+.basketBlockBodyItemRightBottom__delete{
+  padding-left: 10px;
+}
 .basketBlockBodyItemRightBottom__delete span {
   color: rgb(128, 128, 128);
   font: normal 500 12px 'Manrope', sans-serif;
@@ -4681,7 +4720,7 @@ Start brands
 .brandsIn {
   max-width: 840px;
   width: 100%;
-  margin: 30px auto 100px;
+  margin: 30px auto 0;
 }
 
 .brands__desc {
@@ -7079,7 +7118,7 @@ Start responsive
     height: 60%;
   }
 
-  .map iframe {
+  .map .iframe {
     width: 112%;
   }
 
@@ -7284,7 +7323,7 @@ Start responsive
 }
 
 @media (max-width: 1780px) {
-  .map iframe {
+  .map .iframe {
     width: 105%;
   }
 
@@ -7315,7 +7354,7 @@ Start responsive
     left: -2%;
   }
 
-  .map iframe {
+  .map .iframe {
     width: 98%;
   }
 
@@ -7331,7 +7370,7 @@ Start responsive
     max-width: 48%;
   }
 
-  .map iframe {
+  .map .iframe {
     width: 100%;
   }
 }
@@ -8794,7 +8833,7 @@ Start responsive
     max-width: 100%;
   }
 
-  .contacts .map iframe {
+  .contacts .map .iframe {
     height: 490px;
   }
 
@@ -9614,7 +9653,6 @@ Start responsive
 }
 
 @media (max-width: 690px) {
-
   @keyframes flyHeart {
     0% {
       transform: translate(25px, -10px) scale(1);
@@ -9664,7 +9702,7 @@ Start responsive
   }
 
   .basketBlockBodyItemRightBottom {
-    max-width: 50px;
+    max-width: 60px;
   }
 
   .basketBlockClosed .orderStatusBottom__href {
@@ -10472,7 +10510,7 @@ Start responsive
     display: block;
   }
 
-  .contacts .map iframe {
+  .contacts .map .iframe {
     height: 300px;
   }
 
@@ -11339,11 +11377,11 @@ Start responsive
   }
 
   .basketBlockBodyItemLeft {
-    max-width: 278px;
+    max-width: 75%;
   }
 
   .basketBlockBodyItemLeftRight {
-    width: 58%;
+    width: 50%;
   }
 
   .searchPopup .sliderBlockSlider .slick-slide, .searchPopup .sliderBlockSlider .slick-slide a, .searchPopup .headerBottomMenuListContent .sliderBlockSlider {
@@ -11646,6 +11684,10 @@ Start responsive
     display: none;
   }
 
+  .basketBlockBodyItemRight__price {
+    font-size: 14px;
+  }
+
   .personalSaleSliderBlockBottomLeft {
     display: -webkit-box;
     display: -webkit-flex;
@@ -11774,7 +11816,11 @@ Start responsive
   }
 
   .basketBlockBodyItemRight {
-    max-width: 60px;
+    max-width: 24%;
+  }
+
+  .basketBlockBodyItemRightBottom {
+    max-width: 55px;
   }
 
   .searchPopupForm__submit {
@@ -11919,7 +11965,7 @@ Start responsive
   }
 
   .basketBlockBodyItemLeft {
-    max-width: 235px;
+    max-width: 220px;
   }
 
   .basketBlockBodyItem {

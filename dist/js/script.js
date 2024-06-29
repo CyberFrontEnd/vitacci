@@ -494,4 +494,12 @@ $(document).ready(function () {
   $('.metismenuNot .has-arrow').on('click', function () {
     $(this).parents(".metismenuNot li").find('.metismenuIn').slideToggle();
   });
+
+
+  // Привязка события для изменений
+  $('.js-delivery-address').on('change', function(e) {
+    e.preventDefault();
+    let id = $(this).val();
+    console.log('Changed value:', id);
+  });
 });
