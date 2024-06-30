@@ -428,7 +428,6 @@ $(document).ready(function () {
   $('[data-fancybox]').fancybox({
     autoFocus: false,
   });
-  // Start slider slick
 
 
   window.addEventListener('load',function(){

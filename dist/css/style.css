@@ -1102,8 +1102,8 @@ Start sliderBlock
   position: absolute;
   top: 0;
   left: 0;
-  height: 16px;
-  width: 16px;
+  height: 15px;
+  width: 15px;
   border-radius: 100px;
 }
 
@@ -1119,12 +1119,13 @@ Start sliderBlock
 
 .blockCheckbox .checkmark:after,
 .blockCheckbox .checkmark.selected{
-  left: -5px;
-  top: -5px;
-  width: 20px;
-  height: 20px;
-  border: solid #bcbcbc;
+  left: 0;
+  top: 0;
+  width: 19px;
+  height: 19px;
+  border: 2px solid #4e4e4e;
   border-radius: 100px;
+  margin: -4px 0 0 -4px;
 }
 
 .checkmark.red {
@@ -1502,9 +1503,9 @@ End footer
 
 .hederMenuMobilTopList {
   justify-content: space-between;
-  max-width: 80%;
+  max-width: 100%;
   width: 100%;
-  margin-left: 30px;
+  margin-left: 0;
 }
 
 .hederMenuMobilTopList li a {
@@ -1521,7 +1522,7 @@ End footer
   background: none;
   border: none;
   position: relative;
-  top: 3px;
+  top: -15px;
 }
 
 .hederMenuMobil__closed:before {
@@ -3856,7 +3857,6 @@ Start order
 .formOrderTop__href {
   color: rgb(20, 20, 20);
   font: normal 400 14px 'Manrope', sans-serif;
-  border-bottom: 1px solid rgb(20, 20, 20);
 }
 
 .formOrder__data {
@@ -6477,10 +6477,10 @@ End personal
 
 .personalSaleSlider .mySwiper {
   padding-top: 50px;
-  max-width: 800px !important;
+  max-width: 850px !important;
   width: 100% !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 
 .mySwiperNav__text {
@@ -6491,8 +6491,7 @@ End personal
 .mySwiperNav__text.classic {
   color: #808080;
   font: normal 500 14px 'Manrope', sans-serif;
-  position: relative;
-  left: -30px;
+  position: relative;;
 }
 
 .mySwiperNav__text.classic.gold {
@@ -7024,6 +7023,10 @@ End personal
   top: 330px;
 }
 
+.hederMenuMobilTop .headerMiddleRightProfile {
+  display: none;
+}
+
 /*
 Start responsive
 ################*/
@@ -7085,7 +7088,7 @@ Start responsive
   }
 
   .sliderBlockTop {
-    max-width: 100%;
+    max-width: 96%;
   }
 
   .sliderBlockContentSale,
@@ -9907,7 +9910,7 @@ Start responsive
   }
 
   .menuMobil {
-    max-width: 100%;
+    max-width: 95%;
   }
 
   .programm__title {
@@ -9919,6 +9922,13 @@ Start responsive
   }
 
   .menuMobilSelectContent {
+    width: 95%;
+  }
+
+  .status.arrange .menuMobilSelectContent,
+  .guarante .menuMobilSelectContent,
+  .size .menuMobilSelectContent,
+  .status.refund .menuMobilSelectContent {
     width: 90%;
   }
 
@@ -10138,7 +10148,7 @@ Start responsive
   }
 
   .headerMiddleRight__favorite {
-    margin-top: 0;
+    margin-top: -3px;
   }
 
   .headerMiddleMobil span {
@@ -10164,7 +10174,7 @@ Start responsive
 
   .basketHeader {
     position: relative;
-    top: -5px;
+    top: -1px;
   }
 
   .sliderBlockSlider .slick-dots {
@@ -11295,17 +11305,13 @@ Start responsive
     font-size: 10px;
   }
 
-  .headerMiddleRightProfile,
-  .headerMiddleRight__favorite {
-    display: none;
-  }
-
   .headerMiddleRight {
-    max-width: 70px;
+    max-width: 180px;
   }
 
   .headerMiddleRight__search {
     display: block;
+    top: 6px;
   }
 
   .sliderBlockSlider .slick-dots {
@@ -11323,10 +11329,8 @@ Start responsive
     top: 15px;
   }
 
-  .hederMenuMobilTop__user {
-    position: absolute;
-    top: 10px;
-    right: 20px;
+  .hederMenuMobilTop__user.formOrderTop__href {
+    border-bottom: none !important;
   }
 
   .hederMenuMobilTopList {
@@ -11401,7 +11405,7 @@ Start responsive
   }
 
   .headerMiddle__logo {
-    left: 1%;
+    left: -2%;
   }
 
   .catalogRight .sliderBlockSliderTopSale {
@@ -11730,6 +11734,21 @@ Start responsive
   .mySwiperNav__dot:after {
     width: 125px !important;
   }
+
+  .hederMenuMobilTop .headerMiddleRightProfile {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 9px;
+  }
+
+  .hederMenuMobilTop .headerMiddleRightProfile .headerMiddleRightProfileSelects__name:before {
+    content: url('../images/icon16.svg');
+  }
+
+  .hederMenuMobilTop .headerMiddleRightProfile .headerMiddleRightProfileSelectsIn {
+    right: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -11835,6 +11854,22 @@ Start responsive
     display: none;
   }
 
+  .popupBlockBlack_back, .popupBlockBlackList li a{
+    font-size: 12px;
+  }
+
+  .popupBlockBlackList {
+    max-width: 90%;
+  }
+
+  .popupBlockBlack__paragraf {
+    font-size: 14px;
+  }
+
+  .popupBlock__title {
+    font-size: 16px;
+  }
+
   .catalogNavList li {
     margin: 0;
   }
@@ -11873,6 +11908,10 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .popupBlockBlackList {
+    max-width: 100%;
+  }
+
   .searchPopupRight .sliderBlockSliderBottom__href {
     top: 150px;
   }
@@ -12034,9 +12073,25 @@ Start responsive
   .mySwiperNav__dot:after {
     width: 77px !important;
   }
+
+  .headerMiddleRight {
+    max-width: 140px;
+  }
+
+  .headerMiddleRightProfileSelectsIn {
+    right: -75px;
+  }
 }
 
 @media (max-width: 350px) {
+  .popupBlockBlackList {
+    max-width: 100%;
+  }
+
+  .popupBlockBlack {
+    max-width: 100% !important;
+  }
+
   .basketBlockTop {
     padding: 20px 7px;
   }
