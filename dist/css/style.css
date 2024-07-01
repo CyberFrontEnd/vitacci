@@ -1442,6 +1442,12 @@ End footer
   top: 3px;
 }
 
+.headerMiddleRight .headerMiddleRight__search_modif {
+  display: block;
+  top: 8px;
+  left: -10px;
+}
+
 .registerPopupPassword,
 .registerPopup,
 .hederMenuMobil {
@@ -5036,6 +5042,7 @@ Start guarante
 }
 
 .guaranteMetis__title {
+  width: 75%;
   color: #000;
   font: normal bold 24px 'Manrope', sans-serif;
   text-align: center;
@@ -8655,7 +8662,7 @@ Start responsive
   }
 
   .headerMiddleRight {
-    max-width: 230px;
+    max-width: 245px;
   }
 
   .sliderBlockSlider .slick-dots {
@@ -9076,7 +9083,7 @@ Start responsive
 
   .guaranteMetis .has-arrow::after {
     top: 43% !important;
-    right: 10em !important;
+    right: 0 !important;
   }
 
   /*.guaranteMetis .mm-active > .has-arrow::after, .metismenu .has-arrow[aria-expanded=true]::after {*/
@@ -10665,6 +10672,10 @@ Start responsive
   .metismenu .has-arrow[aria-expanded=true]::after,
   .guaranteMetis .has-arrow::after {
     right: 6em !important;
+  }
+
+  .guaranteMetis .has-arrow::after {
+    right: 0 !important;
   }
 
   .catalogContent .metismenu .mm-active > .has-arrow::after {
