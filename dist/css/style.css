@@ -422,7 +422,7 @@ Start header
 }
 
 .headerMiddleRight__favorite {
-  padding-top: 6px;
+  padding-top: 3px;
 }
 
 .basketHeader__btn:before {
@@ -431,9 +431,37 @@ Start header
   top: 5px;
 }
 
+.headerMiddleRight__text,
 .basketHeader__btn span {
   color: #000000;
-  font: normal 500 14px 'Manrope', sans-serif;
+  font: normal 500 12px 'Manrope', sans-serif;
+  position: absolute;
+  margin-top: 45px;
+  margin-left: -11px;
+  opacity: 0;
+  transition: all, 0.5s;
+}
+
+.hederMenuMobilTop__user .headerMiddleRight__text {
+  margin-top: 32px;
+  margin-left: -54px;
+}
+
+.headerMiddleRight__favorite .headerMiddleRight__text {
+  margin-top: 30px;
+  margin-left: -47px;
+}
+
+.headerMiddleRight__search_modif .headerMiddleRight__text {
+  margin-top: 25px;
+  margin-left: -4px;
+}
+
+.headerMiddleRight__search_modif:hover .headerMiddleRight__text,
+.headerMiddleRight__favorite:hover .headerMiddleRight__text,
+.hederMenuMobilTop__user:hover .headerMiddleRight__text,
+.basketHeader__btn:hover span {
+  opacity: 1;
 }
 
 .headerMiddleRightProfile .select-selected {
@@ -7033,6 +7061,11 @@ End personal
 
 .hederMenuMobilTop .headerMiddleRightProfile {
   display: none;
+}
+
+.headerBottomSearchFormLeft {
+  position: relative;
+  z-index: 99999;
 }
 
 /*
