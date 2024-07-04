@@ -4491,11 +4491,12 @@ Start order
 .pickupSearch__block input:checked ~ .checkmark:before {
   content: "";
   display: block;
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   position: relative;
-  top: 2px;
-  left: 2px;
+  margin: 2px 0 0 2px;
+  top: 0;
+  left: 0;
   background: #000;
   -webkit-border-radius: 100px;
   -moz-border-radius: 100px;

@@ -6,24 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/arrange.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/arrange.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/contacts.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/contacts.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/guarante.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/guarante.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/news2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/news2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order2.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order3.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/order4.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order4.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/order5.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/order5.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/personal.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/personal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/program.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/program.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/question.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/status.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/status.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/user.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -302,7 +286,10 @@
       <workItem from="1719655470664" duration="610000" />
       <workItem from="1719680827130" duration="9113000" />
       <workItem from="1719711988005" duration="4241000" />
-      <workItem from="1719823695435" duration="3802000" />
+      <workItem from="1719823695435" duration="4681000" />
+      <workItem from="1719930699788" duration="1480000" />
+      <workItem from="1719987157645" duration="7623000" />
+      <workItem from="1720073495452" duration="818000" />
     </task>
     <servers />
   </component>
