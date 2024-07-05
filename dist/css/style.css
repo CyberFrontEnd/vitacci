@@ -423,6 +423,7 @@ Start header
 
 .headerMiddleRight__favorite {
   padding-top: 3px;
+  position: relative;
 }
 
 .basketHeader__btn:before {
@@ -472,7 +473,7 @@ Start header
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-top: 2px;
+  margin-top: 0;
 }
 
 .headerMiddleRightProfileSelects__name span {
@@ -489,7 +490,8 @@ Start header
   width: 260px;
   padding: 20px 10px;
   position: absolute;
-  top: 110px;
+  top: 100px;
+  right: 35px;
   display: none;
   z-index: 999;
 }
@@ -6942,6 +6944,7 @@ End personal
   animation: flyHeart 1s forwards;
 }
 
+#basketNum2,
 #basketNum,
 .favoritesNum{
   position: absolute;
@@ -7066,6 +7069,13 @@ End personal
 .headerBottomSearchFormLeft {
   position: relative;
   z-index: 99999;
+}
+.headerMiddleRightProfileSelects__name .headerMiddleRight__text {
+  font-size: 12px;
+  margin-left: -2px;
+}
+.headerMiddleRightProfileSelects__name:hover .headerMiddleRight__text {
+  opacity: 1;
 }
 
 /*
@@ -10153,7 +10163,7 @@ Start responsive
   }
 
   .headerMiddleRight {
-    max-width: 140px;
+    max-width: 33%;
   }
 
   .headerMiddle__logo {
@@ -10215,7 +10225,11 @@ Start responsive
 
   .basketHeader {
     position: relative;
-    top: -1px;
+    top: -4px;
+  }
+
+  .headerMiddleRight .headerMiddleRight__search_modif {
+    top: 4px;
   }
 
   .sliderBlockSlider .slick-dots {
@@ -12120,7 +12134,7 @@ Start responsive
   }
 
   .headerMiddleRight {
-    max-width: 140px;
+    max-width: 120px;
   }
 
   .headerMiddleRightProfileSelectsIn {
