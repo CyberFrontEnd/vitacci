@@ -22,11 +22,11 @@
 
 <div class="bgClick"></div>
 
-<div class="loader-wrapper">
-    <div class="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-</div>
+<!--<div class="loader-wrapper">-->
+<!--    <div class="loader"></div>-->
+<!--    <div class="loader-section section-left"></div>-->
+<!--    <div class="loader-section section-right"></div>-->
+<!--</div>-->
 
 <div class="searchPopup">
     <form action="#" class="searchPopupForm flex">
@@ -1768,7 +1768,32 @@
                     <span class="formOrderPriceTotal__price">7 194 ₽</span>
                 </div>
 
-                <a href="#" class="deliverFormBlockForm__btn flex">Оформить заказ</a>
+                <a href="#" data-fancybox="" data-src="#hidden-content" class="deliverFormBlockForm__btn flex">Оформить заказ</a>
+
+                <div class="popupBlockBlack" style="display: none;" id="hidden-content">
+                    <h2 class="popupBlock__title">Получатель: Анна Петрова</h2>
+
+                    <p class="popupBlockBlack__paragraf">Для оформления заказа вам необходимо подтвердить ваш номер телефона</p>
+
+                    <p class="popupBlockBlack__paragraf">+7 (916) 123-45-67</p>
+
+                    <a href="#" class="sendCode"><span>Получить код на SMS</span></a>
+
+
+                    <div class="popupBlockBlackCode">
+                        <input placeholder="Введите код" required type="text" class="codeSMS" maxlength="5" pattern="\d*" title="Только цифры">
+
+                        <p class="popupBlockBlackCode__error">Вы 3 раза подряд ввели не верный код. Попробуйте снова через 3 минуты.</p>
+
+                        <div class="popupBlockBlack__paragraf">Получить новый код через
+                            <span id="timer">01:00</span>
+                        </div>
+
+                        <a href="#" id="targetElement"><span>Получить новый код</span></a>
+
+                        <a href="#" class="orderSubmit flex">Отправить</a>
+                    </div>
+                </div>
 
                 <span class="formOrderPriceTotal__desc">Нажимая на кнопку «Оформить заказ», Вы даете согласие на обработку персональных данных</span>
             </div>
@@ -2353,5 +2378,6 @@
 <script src="js/metis.js"></script>
 <script src="js/tab.js"></script>
 <script src="js/script.js"></script>
+
 </body>
 </html>

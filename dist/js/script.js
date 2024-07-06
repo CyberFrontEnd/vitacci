@@ -501,4 +501,35 @@ $(document).ready(function () {
     let id = $(this).val();
     console.log('Changed value:', id);
   });
+
+  $('.sendCode').on('click',  (event) => {
+    event.preventDefault();
+    $('.popupBlockBlackCode').slideDown();
+    $('.codeSMS').addClass('block');
+  });
+
+  // таймер Получить новый код через
+  let totalTime = 60; // 1 минута = 60 секунд
+  let timerInterval = setInterval(function() {
+    totalTime--;
+
+    const minutes = Math.floor(totalTime / 60);
+    let seconds = totalTime % 60;
+
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+
+    $('#timer').text(minutes + ':' + seconds);
+
+    if (totalTime <= 0) {
+      clearInterval(timerInterval);
+      $('#targetElement').addClass('active');
+    }
+  }, 1000);
+
+  // Только цыфры водит буквы не пускает вводить
+  $('.codeSMS').on('input', function() {
+    this.value = this.value.replace(/[^0-9]/g, '');
+  });
 });
