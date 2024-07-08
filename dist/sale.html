@@ -1711,11 +1711,6 @@
                             </div>
 
                             <div class="personalSaleSliderBlockBottom flex">
-                                <div class="personalSaleSliderBlockBottomLeft">
-                                    <div class="personalSaleSliderBlockBottomLeft__text">Сумма накоплений</div>
-                                    <div class="personalSaleSliderBlockBottomLeft__text">50 000 руб.</div>
-                                </div>
-
                                 <a href="#" class="personalSaleSliderBlockBottom__href">История заказов</a>
                             </div>
                         </div>
@@ -1731,10 +1726,10 @@
                             </div>
 
                             <div class="personalSaleSliderBlockBottom flex">
-                                <div class="personalSaleSliderBlockBottomLeft">
-                                    <div class="personalSaleSliderBlockBottomLeft__text">Сумма накоплений</div>
-                                    <div class="personalSaleSliderBlockBottomLeft__text">100 000 руб.</div>
-                                </div>
+                                <!--                                <div class="personalSaleSliderBlockBottomLeft">-->
+                                <!--                                    <div class="personalSaleSliderBlockBottomLeft__text">Сумма накоплений</div>-->
+                                <!--                                    <div class="personalSaleSliderBlockBottomLeft__text">100 000 руб.</div>-->
+                                <!--                                </div>-->
 
                                 <a href="#" class="personalSaleSliderBlockBottom__href">История заказов</a>
                             </div>
@@ -1751,11 +1746,6 @@
                             </div>
 
                             <div class="personalSaleSliderBlockBottom flex">
-                                <div class="personalSaleSliderBlockBottomLeft">
-                                    <div class="personalSaleSliderBlockBottomLeft__text">Сумма накоплений</div>
-                                    <div class="personalSaleSliderBlockBottomLeft__text">150 000 руб.</div>
-                                </div>
-
                                 <a href="#" class="personalSaleSliderBlockBottom__href">История заказов</a>
                             </div>
                         </div>
@@ -1771,11 +1761,6 @@
                             </div>
 
                             <div class="personalSaleSliderBlockBottom flex">
-                                <div class="personalSaleSliderBlockBottomLeft">
-                                    <div class="personalSaleSliderBlockBottomLeft__text">Сумма накоплений</div>
-                                    <div class="personalSaleSliderBlockBottomLeft__text">200 000 руб.</div>
-                                </div>
-
                                 <a href="#" class="personalSaleSliderBlockBottom__href">История заказов</a>
                             </div>
                         </div>
@@ -1787,32 +1772,53 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <div class="mySwiperNav">
-                            <div class="mySwiperNav__text base">Базовая</div>
-                            <div class="mySwiperNav__dot base"></div>
-                            <div class="mySwiperNav__text num">5%</div>
+                            <div class="mySwiperNav__text base flex">Базовая
+                                <div class="mySwiperNav__text num">5%</div>
+                            </div>
+                            <div class="mySwiperNav__dot classic"></div>
+
+                            <div class="mySwiperRub flex">
+                                <p class="mySwiperRub__text flex"><span> от 0 </span> до 150 000 <span> руб </span> <span class="mySwiperRubModif__rub"> ₽ </span></p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="mySwiperNav">
-                            <div class="mySwiperNav__text classic">Классическая</div>
+                            <div class="mySwiperNav__text classic flex">Классическая
+                                <div class="mySwiperNav__text classicNum">5%</div>
+                            </div>
+
                             <div class="mySwiperNav__dot classic"></div>
-                            <div class="mySwiperNav__text classicNum">5%</div>
+
+                            <div class="mySwiperRub mySwiperRubModif flex">
+                                <p class="mySwiperRub__text flex"><span> от 150 000 </span> до 300 000 <span> руб </span> <span class="mySwiperRubModif__rub"> ₽ </span></p>
+                            </div>
                         </div>
                     </div>
 
                     <div class="swiper-slide">
                         <div class="mySwiperNav">
-                            <div class="mySwiperNav__text classic">Серебряная</div>
+                            <div class="mySwiperNav__text classic flex">Серебряная
+                                <div class="mySwiperNav__text classicNum">15%</div>
+                            </div>
                             <div class="mySwiperNav__dot classic"></div>
-                            <div class="mySwiperNav__text classicNum">15%</div>
+
+                            <div class="mySwiperRub mySwiperRubModif2 flex">
+                                <p class="mySwiperRub__text flex"><span> от 300 000 </span> до 450 000 <span> руб </span> <span class="mySwiperRubModif__rub"> ₽ </span></p>
+                            </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
                         <div class="mySwiperNav">
-                            <div class="mySwiperNav__text classic gold">Золотая</div>
+                            <div class="mySwiperNav__text classic gold flex">Золотая
+                                <div class="mySwiperNav__text classicNum gold">20%</div>
+                            </div>
                             <div class="mySwiperNav__dot classic gold"></div>
-                            <div class="mySwiperNav__text classicNum gold">20%</div>
+
+                            <div class="mySwiperRub mySwiperRubModif3 flex">
+                                <p class="mySwiperRub__text flex"> свыше 450 000 <span> руб </span> <span class="mySwiperRubModif__rub"> ₽ </span></p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1820,6 +1826,17 @@
         </div>
     </div>
 
+
+    <p class="priceText">Сумма ваших выкупленных товаров</p>
+    <p class="priceText2">145 000 руб</p>
+
+    <div class="bonus">
+        <div class="bonusIn">
+            <h3 class="bonus__title">Совершите покупки еще на 0 ₽ и получите уровень скидки</h3>
+            <p class="bonus__price">30%</p>
+            <a href="#" class="bonus__href flex">Перейти к покупкам</a>
+        </div>
+    </div>
 
     <div class="sliderBlockTop flex">
         <h2 class="sliderBlock__title">Экслюзивные скидки</h2>

@@ -6425,7 +6425,7 @@ End personal
 }
 
 .personalSaleSlider {
-  margin: 0 auto 100px;
+  margin: 0 auto;
   max-width: 1400px;
   width: 100%;
   position: relative;
@@ -6454,7 +6454,7 @@ End personal
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .personalSaleSliderBlockBottom {
@@ -6486,6 +6486,7 @@ End personal
 .mySwiperNav__text.num {
   color: #000;
   font: normal bold 14px 'Manrope', sans-serif;
+  margin-left: 5px;
 }
 
 .mySwiperNav__dot {
@@ -6539,6 +6540,7 @@ End personal
 .mySwiperNav__text.classicNum {
   position: relative;
   left: 0;
+  margin-left: 5px;
 }
 
 .mySwiperNav__dot.classic {
@@ -6590,6 +6592,7 @@ End personal
   color: #000;
 }
 
+.swiper-slide.swiper-slide-thumb-active .mySwiperRub .mySwiperRub__text,
 .swiper-slide.swiper-slide-thumb-active .mySwiperNav__text.classicNum,
 .swiper-slide.swiper-slide-thumb-active .mySwiperNav__text.classic {
   font-weight: bold;
@@ -7163,6 +7166,99 @@ End personal
   font-size: 20px;
   margin-top: 10px;
 }
+
+.mySwiperRub {
+  position: relative;
+  margin-left: -50px;
+}
+
+.mySwiperRub__text {
+  font-size: 13px;
+  color: #000;
+}
+
+.mySwiperRubModif {
+  margin-left: -70px;
+}
+
+.mySwiperRubModif2 {
+  margin-left: -50px;
+}
+
+.mySwiperRubModif3 {
+  margin-left: -20px;
+}
+
+.priceText {
+  text-align: center;
+  margin-top: 65px;
+  font: normal 500 20px 'Manrope', sans-serif;
+  margin-bottom: 20px;
+}
+
+.mySwiperRubModif__rub {
+  display: none;
+}
+
+.bonus {
+  margin: 0 auto 50px;
+  max-width: 100%;
+  width: 100%;
+  background: #efefef;
+  padding: 20px;
+}
+
+.bonus__title {
+  color: #141414;
+  font: normal 700 20px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.bonus__text {
+  color: #141414;
+  font: normal normal 18px 'Manrope', sans-serif;
+  text-align: center;
+}
+
+.bonus__price {
+  color: #141414;
+  font: normal bold 24px 'Manrope', sans-serif;
+  margin-bottom: 12px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.bonus__href {
+  color: #FFFFFF;
+  font: normal 400 18px 'Manrope', sans-serif;
+  max-width: 100%;
+  width: 100%;
+  height: 50px;
+  background: #141414;
+  justify-content: center;
+  align-items: center;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.bonusIn {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.mySwiperRub__text span {
+  margin-left: 5px;
+  margin-right: 3px;
+}
+
+.priceText2 {
+  text-align: center;
+  font: normal normal 24px 'Manrope', sans-serif;
+  margin-bottom: 70px;
+}
+
 
 /*
 Start responsive
@@ -8467,6 +8563,10 @@ Start responsive
 }
 
 @media (max-width: 880px) {
+  .personalSaleSlider:before, .personalSaleSlider:after {
+    height: 220px;
+  }
+
   .headerBottomMenuListContentRight .sliderBlockSliderBottom__href {
     top: 200px;
   }
@@ -9002,8 +9102,16 @@ Start responsive
     max-width: 60px;
   }
 
-  .mySwiper .swiper-slide:last-of-type {
-    width: 30px !important;
+  .mySwiperRubModif2 {
+    margin-left: -71px;
+  }
+
+  .mySwiperRubModif {
+    margin-left: -80px;
+  }
+
+  .mySwiperRubModif3 {
+    margin-left: -65px;
   }
 
   .personal .tabs {
@@ -9748,6 +9856,9 @@ Start responsive
 }
 
 @media (max-width: 720px) {
+  .mySwiper .swiper-slide {
+    width: 18% !important;
+  }
   .sizeTables .sizeTablesBody span {
     width: 66px;
   }
@@ -9783,12 +9894,29 @@ Start responsive
   }
 
   .personalSaleSlider .mySwiper {
-    max-width: 85% !important;
+    max-width: 90% !important;
     margin-left: 45px;
   }
 
   .mySwiperNav__dot:after {
-    width: 165px;
+    width: 140px;
+  }
+
+  .mySwiperRub__text span {
+    display: none;
+  }
+
+  .mySwiperRub__text span.mySwiperRubModif__rub {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  .mySwiperRubModif {
+    margin-left: -35px;
+  }
+
+  .mySwiperRubModif2 {
+    margin-left: -33px;
   }
 }
 
@@ -10700,11 +10828,11 @@ Start responsive
   }
 
   .mySwiperNav__dot:after {
-    width: 157px !important;
+    width: 125px !important;
   }
 
-  .mySwiperNav__dot:after {
-    width: 130px;
+  .mySwiperRub__text {
+    font-size: 11px;
   }
 
   .mySwiperNav__text {
@@ -10733,6 +10861,13 @@ Start responsive
     left: 29.6%;
     width: 5px;
     height: 5px;
+  }
+
+  .priceText {
+    font-size: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 50px;
   }
 }
 
@@ -10938,7 +11073,7 @@ Start responsive
   }
 
   .mySwiperNav__dot:after {
-    width: 135px !important;
+    width: 105px !important;
   }
 
   .headerBottomMenuListContent .sliderBlockSlider {
@@ -11825,10 +11960,6 @@ Start responsive
     margin-left: -210px !important;
   }
 
-  .mySwiperNav__dot:after {
-    width: 120px;
-  }
-
   .personalSaleSliderBlock__title {
     font-size: 16px;
   }
@@ -11881,7 +12012,7 @@ Start responsive
   }
 
   .mySwiperNav__dot:after {
-    width: 125px !important;
+    width: 95px !important;
   }
 
   .hederMenuMobilTop .headerMiddleRightProfile {
@@ -11934,12 +12065,16 @@ Start responsive
   }
 
   .personalSaleSlider .mySwiper {
-    margin-left: 4%;
+    margin-left: 1%;
     max-width: 52% !important;
   }
 
   .mySwiperNav__dot:after {
     width: 96px !important;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 23% !important;
   }
 }
 
@@ -12216,7 +12351,16 @@ Start responsive
 
   .personalSaleSlider .mySwiper {
     max-width: 44% !important;
-    margin-left: 3%;
+    margin-left: 0;
+    padding-left: 20px !important;
+  }
+
+  .mySwiperRub {
+    margin-left: -20px;
+  }
+
+  .mySwiperNav__text {
+    left: -23px;
   }
 
   .mySwiperNav__dot:after {
