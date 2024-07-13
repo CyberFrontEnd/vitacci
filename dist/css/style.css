@@ -7263,6 +7263,13 @@ End personal
 /*
 Start responsive
 ################*/
+@media (min-width: 1970px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 21px;
+    height: 21px;
+  }
+}
+
 @media (min-width: 1920px) {
   .basketBlockBottom {
     position: absolute;
@@ -10869,6 +10876,10 @@ Start responsive
     padding-right: 5%;
     margin-bottom: 50px;
   }
+
+  .headerBottomSearchFormLeftMobil__btn {
+    margin-top: -25px;
+  }
 }
 
 @media (max-width: 620px) {
@@ -11036,6 +11047,19 @@ Start responsive
 
   .headerBottomSearchFormLeft {
     max-width: 30px;
+  }
+
+  .catalogFilter .headerBottomSearchFormLeft {
+    /*max-width: 100%;*/
+  }
+
+  .catalogFilter {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*height: 900px;*/
+    /*z-index: 99;*/
+    /*left: 0;*/
   }
 
   .statusForm .intl-tel-input .country-list {
