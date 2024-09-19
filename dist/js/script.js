@@ -131,6 +131,12 @@ $(document).ready(function () {
     $('.hederMenuMobil, .bgClick').removeClass('active');
   });
 
+  $('.registerPopupPasswordForm__btn').on('click', ()=> {
+    $('.registerPopupPassword').removeClass('active');
+    $('.registerPopup, .bgClick').removeClass('active');
+    $('body').removeClass('hide');
+  });
+
   $('.hederMenuMobilTop__user.formOrderTop__href').on('click', function () {
     $('body').removeClass('hide');
     $('.hederMenuMobil, .bgClick').removeClass('active');
@@ -483,7 +489,6 @@ $(document).ready(function () {
   $('.registerPopupPassword__closed').on('click',  () => {
     $('.registerPopupPassword').removeClass('active');
   });
-
 
   $('.popupBlockBottom__recovery').on('click', () => {
     $('.registerPopupPassword').removeClass('active');

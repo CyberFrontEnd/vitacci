@@ -191,6 +191,11 @@ input[type="text"]:focus:-ms-input-placeholder {
 /*
 Start header
 ###########*/
+.header {
+  position: relative;
+  z-index: 9999;
+}
+
 .headerTop {
   background: #000;
   justify-content: space-between;
@@ -1497,14 +1502,14 @@ End footer
   transition: all, 0.5s;
 }
 .registerPopupPassword{
-  z-index: 99999;
+  z-index: 999999999999;
 }
 .hederMenuMobil {
   z-index: 99999999999;
 }
 
 .registerPopup {
-  z-index: 99999;
+  z-index: 9999999999;
 }
 
 .registerPopupPassword.active,
@@ -1662,7 +1667,7 @@ End footer
 }
 
 .bgClick.active {
-  z-index: 99;
+  z-index: 999999;
 }
 
 .hide {
@@ -6363,6 +6368,8 @@ End personal
   width: 100% !important;
   background: #141414 !important;
   padding-bottom: 80px !important;
+  position: relative;
+  z-index: 99999999999999999999999999999999;
 }
 
 .popupBlockBlack__paragraf {
@@ -6935,7 +6942,7 @@ End personal
     opacity: 1;
   }
   100% {
-    transform: translate(200px, -610px) scale(2);
+    transform: translate(280px, -610px) scale(2);
     opacity: 0;
   }
 }
@@ -7071,7 +7078,6 @@ End personal
 
 .headerBottomSearchFormLeft {
   position: relative;
-  z-index: 99999;
 }
 
 .headerMiddleRightProfileSelects__name .headerMiddleRight__text {
@@ -7582,7 +7588,7 @@ Start responsive
       opacity: 1;
     }
     100% {
-      transform: translate(150px, -610px) scale(2);
+      transform: translate(200px, -610px) scale(2);
       opacity: 0;
     }
   }
@@ -7633,7 +7639,7 @@ Start responsive
       opacity: 1;
     }
     100% {
-      transform: translate(100px, -610px) scale(2);
+      transform: translate(150px, -610px) scale(2);
       opacity: 0;
     }
   }
@@ -7714,7 +7720,7 @@ Start responsive
       opacity: 1;
     }
     100% {
-      transform: translate(60px, -610px) scale(2);
+      transform: translate(120px, -610px) scale(2);
       opacity: 0;
     }
   }
@@ -7758,7 +7764,7 @@ Start responsive
       opacity: 1;
     }
     100% {
-      transform: translate(40px, -610px) scale(2);
+      transform: translate(100px, -610px) scale(2);
       opacity: 0;
     }
   }
@@ -7864,6 +7870,18 @@ Start responsive
 
   .itemLeft__item {
     height: 700px;
+  }
+
+  @keyframes flyHeart {
+    0% {
+      transform: translate(25px, -10px) scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translate(60px, -610px) scale(2);
+      opacity: 0;
+    }
   }
 }
 
@@ -7988,7 +8006,7 @@ Start responsive
     }
 
     100% {
-      transform: translate(-20px, -610px) scale(2);
+      transform: translate(50px, -610px) scale(2);
       opacity: 0;
     }
   }
