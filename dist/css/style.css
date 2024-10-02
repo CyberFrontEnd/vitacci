@@ -107,6 +107,7 @@ html, body {
   scroll-behavior: smooth;
   background-color: #ffffff;
   height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -197,7 +198,7 @@ Start header
 }
 
 .headerTop {
-  background: #000;
+  background: #141414;
   justify-content: space-between;
 }
 
@@ -206,7 +207,9 @@ Start header
   color: #ffffff;
   font: normal 500 16px 'Manrope', sans-serif;
   position: relative;
-  left: -60px;
+  left: -120px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
 .headerTopLeft {
@@ -262,6 +265,12 @@ Start header
   content: url("../images/icon6.svg");
   margin: 4px 7px 0 0;
 }
+
+.select-selected.select-lang:before {
+  content: url("../images/lang.svg");
+  margin: 4px 7px 0 0;
+}
+
 
 .select-selected:after {
   content: url("../images/icon7.svg");
@@ -691,7 +700,7 @@ Start header
   max-width: 100%;
   width: 100%;
   position: absolute;
-  top: 178px;
+  top: 170px;
   left: 0;
   z-index: 2;
   visibility: hidden;
@@ -985,24 +994,17 @@ Start sliderBlock
 }
 
 .slick-dots {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: row;
-  flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-top: -12px;
 }
 
 .slick-dots li {
-  width: 24.11% !important;
+  flex-grow: 1;
+  max-width: 25%;
   border-radius: 0 !important;
   margin: 0 2px !important;
   height: 4px !important;
@@ -1017,6 +1019,7 @@ Start sliderBlock
   background: #141414 !important;
   opacity: .4 !important;
 }
+
 
 .slick-dots li button {
   display: none;
@@ -1120,17 +1123,22 @@ Start sliderBlock
   position: absolute;
   top: 6px;
   left: 0;
-  opacity: 1;
+  opacity: 0;
   width: 16px;
   height: 16px;
+  border: none;
 }
 
+.statusForm .enterFormCheckbox .checkmark,
 #register .enterFormCheckbox .checkmark {
-  background: #FFFFFF;
+  border: 1px solid #808080 !important;
+  border-radius: 2px !important;
 }
 
+.statusForm .blockCheckbox input:checked ~ .checkmark,
 #register .blockCheckbox input:checked ~ .checkmark {
-  background: #000;
+  background: #141414 url('../images/icon42.svg') no-repeat center !important;
+  border: 1px solid transparent !important;
 }
 
 .checkmark {
@@ -1198,7 +1206,7 @@ Start sliderBlock
   left: 0;
   right: 0;
   margin: 0 auto;
-  max-width: 90%;
+  max-width: 100%;
   width: 100%;
   justify-content: space-between;
   z-index: 1;
@@ -1210,7 +1218,7 @@ Start sliderBlock
 
 .sliderBlockSliderTopSale__sale,
 .sliderBlockSliderTopSale__procent {
-  background: #000;
+  background: #141414;
   color: #ffffff;
   font: normal 500 14px 'Manrope', sans-serif;
   padding: 5px;
@@ -1218,7 +1226,7 @@ Start sliderBlock
 }
 
 .sliderBlockSliderTopSale__sale {
-  background: red;
+  background-color: #F43249;
 }
 
 .sliderBlockSliderTopSale div {
@@ -1226,7 +1234,7 @@ Start sliderBlock
 }
 
 .sliderBlockSliderTopHeart {
-  margin-right: 0;
+  margin-right: 20px;
 }
 
 .sliderBlockSliderTopHeart .checkmark.heart {
@@ -1312,7 +1320,7 @@ End app
 Start footer
 ###########*/
 .footer {
-  background: #000000;
+  background: #141414;
   padding-top: 50px;
   padding-bottom: 50px;
   margin-top: 100px;
@@ -1388,7 +1396,7 @@ Start footer
   text-transform: uppercase;
   color: #ffffff;
   font: normal 500 14px 'Manrope', sans-serif;
-  line-height: 50px;
+  line-height: 30px;
 }
 
 .footerTopMailing {
@@ -1410,6 +1418,7 @@ Start footer
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
   transition: all, 0.5s;
+  margin-top: 15px;
 }
 
 .footerTopMailing__btn:hover {
@@ -1684,7 +1693,7 @@ End footer
   top: 0;
   right: 0;
   z-index: 999999;
-  transform: translate(0, -300%);
+  transform: translate(0, -200%);
   -webkit-transition: all, 0.5s;
   -moz-transition: all, 0.5s;
   -o-transition: all, 0.5s;
@@ -1972,7 +1981,7 @@ End footer
 }
 
 .basketBlockBodyItemRight {
-  width: 190px;
+  width: 197px;
   justify-content: flex-end;
   position: relative;
   height: 136px;
@@ -2449,7 +2458,7 @@ Start catalogMain
 
 .sliderBlockSliderBottom__href {
   position: absolute;
-  top: 420px;
+  top: 460px;
   left: 0;
   right: 0;
   opacity: 0;
@@ -4177,9 +4186,13 @@ Start order
 }
 
 .enterFormCheckbox .checkmark {
-  border: 1px solid rgb(128, 128, 128);
   border-radius: 2px;
   top: 6px;
+  border: none;
+}
+
+.enterFormCheckbox input {
+  opacity: 0;
 }
 
 .enterFormCheckbox .blockCheckbox input:checked ~ .checkmark:after {
@@ -5090,6 +5103,7 @@ Start guarante
 
 .guaranteMetis {
   margin-top: 80px;
+  margin-bottom: 200px;
 }
 
 .guaranteMetis .has-arrow::after {
@@ -5725,7 +5739,7 @@ End status
 }
 
 .trends {
-  max-width: 840px;
+  max-width: 1500px;
   width: 100%;
   margin: 0 auto 100px;
 }
@@ -6521,6 +6535,30 @@ End personal
   left: 21px;
 }
 
+
+.activeBlock .mySwiperRub__text,
+.activeBlock .mySwiperNav__text {
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.activeBlock .mySwiperNav__dot.classic {
+  border: 1px solid transparent;
+  background: #141414;
+}
+
+.activeBlock .mySwiperNav .mySwiperNav__dot.classic:before {
+  content: "" !important;
+  position: absolute !important;
+  width: 6px !important;
+  height: 6px !important;
+  background: #FFFFFF !important;
+  border-radius: 100px !important;
+  top: 6px !important;
+  left: 6px !important;
+  z-index: 1 !important;
+}
+
 .personalSaleSlider .mySwiper {
   padding-top: 50px;
   max-width: 850px !important;
@@ -7265,6 +7303,10 @@ End personal
   margin-bottom: 70px;
 }
 
+.sliderBlockSliderTopSale {
+  margin-left: 20px;
+}
+
 
 /*
 Start responsive
@@ -7285,6 +7327,60 @@ Start responsive
 
   .basketBlockBody {
     height: 78%;
+  }
+}
+
+@media (min-width: 2129px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 20px;
+  }
+
+  .checkmark {
+    left: 1px;
+  }
+}
+
+@media (min-width: 2395px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkmark {
+    left: 1px;
+  }
+}
+
+@media (min-width: 2555px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 20px;
+    height: 20px;
+  }
+
+  .checkmark {
+    left: 1px;
+  }
+}
+
+@media (min-width: 2870px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 24px;
+    height: 24px;
+    margin: -6px 0 0 -6px;
+  }
+}
+
+@media (min-width: 3830px) {
+  .checkmark {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 5755px) {
+  .blockCheckbox .checkmark:after, .blockCheckbox .checkmark.selected {
+    width: 22px;
+    height: 22px;
   }
 }
 
@@ -7441,7 +7537,7 @@ Start responsive
   }
 
   .sliderItem .slick-slide {
-    max-width: 45%;
+    max-width: 50%;
   }
 
   .collectionTop {
@@ -7483,7 +7579,7 @@ Start responsive
   }
 
   .sliderBlockSliderTop {
-    max-width: 94%;
+    max-width: 100%;
   }
 
   .headerBottomMenuListContent:before {
@@ -7714,6 +7810,10 @@ Start responsive
 }
 
 @media (max-width: 1460px) {
+  .sliderBlockSliderTopSale {
+    margin-left: 15px;
+  }
+
   @keyframes flyHeart {
     0% {
       transform: translate(25px, -10px) scale(1);
@@ -7819,7 +7919,7 @@ Start responsive
   }
 
   .sliderBlockSliderTopHeart {
-    margin-right: 0;
+    margin-right: 15px;
   }
 
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
@@ -7870,18 +7970,6 @@ Start responsive
 
   .itemLeft__item {
     height: 700px;
-  }
-
-  @keyframes flyHeart {
-    0% {
-      transform: translate(25px, -10px) scale(1);
-      opacity: 1;
-    }
-
-    100% {
-      transform: translate(60px, -610px) scale(2);
-      opacity: 0;
-    }
   }
 }
 
@@ -7945,10 +8033,6 @@ Start responsive
     width: 42%;
   }
 
-  .sliderBlockSliderTopHeart {
-    margin-right: 2%;
-  }
-
   .basketBlockBodyItemRightBottom {
     max-width: 100%;
     width: 100%;
@@ -7991,6 +8075,10 @@ Start responsive
   .sliderBlockContentSale .sliderBlockSliderTopSale__sale,
   .sliderBlockContentSale .sliderBlockSliderTopSale__procent {
     font-size: 11px;
+  }
+
+  .sliderBlockSliderBottom__href {
+    top: 285px;
   }
 }
 
@@ -8201,6 +8289,10 @@ Start responsive
     top: 165px;
     height: 40px;
   }
+
+  .sliderBlockSliderBottom__href {
+    top: 285px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -8332,6 +8424,10 @@ Start responsive
   .personal .sliderBlockSlider .slick-slide > a,
   .personal .headerBottomMenuListContent .sliderBlockSlider {
     height: 250px;
+  }
+
+  .sliderBlockSliderBottom__href {
+    top: 285px;
   }
 }
 
@@ -8543,14 +8639,10 @@ Start responsive
   }
 
   .sliderBlockSliderTop {
-    max-width: 94%;
+    max-width: 100%;
     left: 0;
     right: 0;
     margin: 0 auto;
-  }
-
-  .sliderBlockSliderTopHeart {
-    margin-right: 5px;
   }
 
   .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
@@ -8585,6 +8677,10 @@ Start responsive
   .itemLeft__item {
     height: 380px;
   }
+
+  .sliderBlockSliderBottom__href {
+    top: 285px;
+  }
 }
 
 @media (max-width: 880px) {
@@ -8601,7 +8697,7 @@ Start responsive
 
   .sliderBlockSliderBottom__href {
     height: 40px;
-    top: 210px;
+    top: 225px;
   }
 
   .sizeTables li b {
@@ -9325,6 +9421,7 @@ Start responsive
     position: absolute;
     top: 0;
     left: 0;
+    margin-left: 10px;
   }
   .headerBottomMenuListContent .sliderBlockSlider .slick-slide,
   .headerBottomMenuListContent .sliderBlockSlider .slick-slide > a,
@@ -9946,6 +10043,13 @@ Start responsive
 }
 
 @media (max-width: 690px) {
+  .activeBlock .mySwiperNav .mySwiperNav__dot.classic:before {
+    top: 4px !important;
+    left: 4px !important;
+    width: 5px !important;
+    height: 5px !important;
+  }
+
   @keyframes flyHeart {
     0% {
       transform: translate(25px, -10px) scale(1);
@@ -11123,11 +11227,15 @@ Start responsive
   }
 
   .sliderBlockSliderBottom__href {
-    top: 160px;
+    top: 182px;
   }
 }
 
 @media (max-width: 540px) {
+  .sliderBlockSliderBottom__href {
+    top: 184px;
+  }
+
   .basketBlockTop {
     padding: 20px 10px;
   }
@@ -11586,7 +11694,11 @@ Start responsive
   }
 
   .sliderItem a img {
-    height: 200px;
+    height: auto;
+  }
+
+  .sliderItem .slick-slide {
+    max-width: 49%;
   }
 
   .collectionTopLeftItem .slick-slide img {
@@ -11641,7 +11753,7 @@ Start responsive
   }
 
   .sliderBlockSlider .slick-dots {
-    bottom: 8px;
+    bottom: 5px;
   }
 
   .hederMenuMobil__closed {
