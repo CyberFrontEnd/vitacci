@@ -983,6 +983,10 @@ Start sliderBlock
 }
 
 .sliderBlockSlider .slick-slide > a img {
+  -webkit-transition: all, 0.5s;
+  -moz-transition: all, 0.5s;
+  -o-transition: all, 0.5s;
+  transition: all, 0.5s;
   width: 100%;
   height: 100%;
   display: block;
@@ -1216,6 +1220,8 @@ Start sliderBlock
   position: relative;
 }
 
+.sliderBlockSliderTopSale__xit,
+.sliderBlockSliderTopSale__news,
 .sliderBlockSliderTopSale__sale,
 .sliderBlockSliderTopSale__procent {
   background: #141414;
@@ -1227,6 +1233,16 @@ Start sliderBlock
 
 .sliderBlockSliderTopSale__sale {
   background-color: #F43249;
+}
+
+.sliderBlockSliderTopSale__news {
+  background: #EAD200;
+  font: normal 500 14px 'Manrope', sans-serif;
+  color: #141414;
+}
+
+.sliderBlockSliderTopSale__xit {
+  background: #156064;
 }
 
 .sliderBlockSliderTopSale div {
@@ -7307,6 +7323,30 @@ End personal
   margin-left: 20px;
 }
 
+.catalogRight .sliderBlockSliderBottom {
+  bottom: 60px;
+}
+
+.sliderBlockSlider .slick-slide:hover > a img {
+  transform: translate(0, -80px);
+}
+
+.catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  height: 60px;
+}
 
 /*
 Start responsive
@@ -7387,6 +7427,10 @@ Start responsive
 @media (max-width: 1900px) {
   .sliderBlockSliderBottom__href {
     top: 380px;
+  }
+
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 430px;
   }
 
   .searchPopupRight .sliderBlockSliderBottom__href {
@@ -7721,6 +7765,14 @@ Start responsive
 }
 
 @media (max-width: 1600px) {
+  .sliderBlockSliderTopSale {
+    margin-left: 10px;
+  }
+
+  .sliderBlockSliderTopHeart {
+    margin-right: 10px;
+  }
+
   .headerBottomMenuListContentRight .sliderBlockSliderBottom__href {
     top: 290px;
   }
@@ -7777,9 +7829,17 @@ Start responsive
   .orderRight {
     max-width: 48%;
   }
+
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 330px;
+  }
 }
 
 @media (max-width: 1500px) {
+  .sliderBlockSliderTopSale div{
+    font-size: 12px;
+  }
+
   .headerBottomMenuListContentLeft {
     margin-left: 20px;
   }
@@ -7811,7 +7871,7 @@ Start responsive
 
 @media (max-width: 1460px) {
   .sliderBlockSliderTopSale {
-    margin-left: 15px;
+    margin-left: 5px;
   }
 
   @keyframes flyHeart {
@@ -7850,6 +7910,10 @@ Start responsive
 }
 
 @media (max-width: 1350px) {
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 300px;
+  }
+
   .sliderBlockSliderBottom__href {
     top: 265px;
   }
@@ -7919,7 +7983,7 @@ Start responsive
   }
 
   .sliderBlockSliderTopHeart {
-    margin-right: 15px;
+    margin-right: 7px;
   }
 
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
@@ -7974,6 +8038,9 @@ Start responsive
 }
 
 @media (max-width: 1270px) {
+  .sliderBlockSliderTopSale div {
+    margin-bottom: 5px;
+  }
   .headerBottomMenuListContent:before {
     height: 439px;
   }
@@ -8296,6 +8363,10 @@ Start responsive
 }
 
 @media (max-width: 1050px) {
+  .sliderBlockSliderTopSale div {
+    font-size: 11px;
+  }
+
   .orderText {
     font-size: 12px;
     line-height: 20px;
@@ -8432,6 +8503,10 @@ Start responsive
 }
 
 @media (max-width: 970px) {
+  .sliderBlockSliderTopSale div {
+    font-size: 12px;
+  }
+
   .table li b {
     width: 9%;
   }
@@ -8681,9 +8756,21 @@ Start responsive
   .sliderBlockSliderBottom__href {
     top: 285px;
   }
+
+  .catalogRight .sliderBlockSliderBottom {
+    bottom: 50px;
+  }
 }
 
 @media (max-width: 880px) {
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 230px;
+  }
+
+  .sliderBlockSlider .slick-slide:hover > a img {
+    transform: translate(0, -50px);
+  }
+
   .personalSaleSlider:before, .personalSaleSlider:after {
     height: 220px;
   }
@@ -9094,7 +9181,7 @@ Start responsive
 
   .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
     height: 40px;
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
   }
 
@@ -9423,6 +9510,8 @@ Start responsive
     left: 0;
     margin-left: 10px;
   }
+
+
   .headerBottomMenuListContent .sliderBlockSlider .slick-slide,
   .headerBottomMenuListContent .sliderBlockSlider .slick-slide > a,
   .headerBottomMenuListContent .sliderBlockSlider {
@@ -9643,8 +9732,9 @@ Start responsive
 
   .sliderBlockSliderTopSale {
     position: absolute;
-    bottom: -210px;
     left: 0;
+    max-width: 70%;
+    width: 100%;
   }
 
   .sliderBlockSliderTopSale__video {
@@ -9974,6 +10064,12 @@ Start responsive
 
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
     height: 280px;
+  }
+
+  .catalogRight .sliderBlockSliderTopSale {
+    bottom: 0;
+    width: 80%;
+    margin-left: 5px;
   }
 }
 
@@ -11002,9 +11098,17 @@ Start responsive
   .headerBottomSearchFormLeftMobil__btn {
     margin-top: -25px;
   }
+
+  .catalogRight .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
+    margin-top: 0;
+  }
 }
 
 @media (max-width: 620px) {
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 195px;
+  }
+
   .guarante .metismenu .has-arrow[aria-expanded=true]::after {
     right: 6em !important;
   }
@@ -11163,25 +11267,8 @@ Start responsive
     height: 250px;
   }
 
-  .sliderBlockSliderTopSale {
-    bottom: -183px;
-  }
-
   .headerBottomSearchFormLeft {
     max-width: 30px;
-  }
-
-  .catalogFilter .headerBottomSearchFormLeft {
-    /*max-width: 100%;*/
-  }
-
-  .catalogFilter {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*width: 100%;*/
-    /*height: 900px;*/
-    /*z-index: 99;*/
-    /*left: 0;*/
   }
 
   .statusForm .intl-tel-input .country-list {
@@ -11229,11 +11316,27 @@ Start responsive
   .sliderBlockSliderBottom__href {
     top: 182px;
   }
+
+  .catalogRight .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
+    margin-top: 2px;
+  }
 }
 
 @media (max-width: 540px) {
+  .sliderBlockSliderTopSale {
+    margin-left: 5px;
+  }
+
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 220px;
+  }
+
+  .catalogRight .sliderBlockSlider .slick-slide a.sliderBlockSliderBottom__href {
+    margin-top: 5px;
+  }
+
   .sliderBlockSliderBottom__href {
-    top: 184px;
+    top: 174px;
   }
 
   .basketBlockTop {
@@ -11255,10 +11358,6 @@ Start responsive
   .sliderBlock .sliderBlockSlider,
   .sliderBlockSlider .slick-slide, .sliderBlockSlider .slick-slide a, .headerBottomMenuListContent .sliderBlockSlider {
     height: 250px;
-  }
-
-  .sliderBlock .sliderBlockSliderTopSale {
-    bottom: -180px;
   }
 
   .personal .sliderBlockTop .sliderBlock__title {
@@ -11723,14 +11822,6 @@ Start responsive
     font-size: 16px;
   }
 
-  .sliderBlockSliderTopSale {
-    bottom: -230px;
-  }
-
-  .sliderBlockSliderTopSale div {
-    font-size: 10px;
-  }
-
   .headerTopRight {
     max-width: 120px;
   }
@@ -11846,10 +11937,6 @@ Start responsive
     left: -2%;
   }
 
-  .catalogRight .sliderBlockSliderTopSale {
-    bottom: -185px;
-  }
-
   .catalogRight .sliderBlockMain {
     max-width: 48%;
   }
@@ -11865,10 +11952,6 @@ Start responsive
 
   .catalogRight .sliderBlockSlider {
     height: 280px;
-  }
-
-  .catalogRight .sliderBlockSliderTopSale {
-    bottom: -216px;
   }
 
   .catalogRight__load {
@@ -12233,6 +12316,16 @@ Start responsive
 }
 
 @media (max-width: 440px) {
+  .sliderBlockSliderTopSale {
+    top: -14px;
+    margin-left: 0;
+  }
+
+  .sliderBlockSliderTopHeart {
+    position: absolute;
+    top: 0;
+  }
+
   .myAddressBlockAddInput .input-container {
     max-width: 60%;
   }
@@ -12318,10 +12411,6 @@ Start responsive
     justify-content: space-between;
   }
 
-  .catalogRight .sliderBlockContent .sliderBlockSliderTopSale {
-    bottom: -140px;
-  }
-
   .mobilSlider .sliderBlockSlider .slick-slide img,
   .mobilSlider .itemLeft__video,
   .mobilSlider .sliderBlockSlider {
@@ -12346,6 +12435,11 @@ Start responsive
 }
 
 @media (max-width: 400px) {
+  .catalogRight .sliderBlockSlider .sliderBlockSliderBottom__href {
+    top: 160px;
+  }
+
+
   .popupBlockBlackList {
     max-width: 100%;
   }
@@ -12426,10 +12520,6 @@ Start responsive
 
   .custom-select {
     padding: 0 5px;
-  }
-
-  .sliderBlockSliderTopSale {
-    bottom: -170px;
   }
 
   .sliderBlockSlider .slick-dots {
