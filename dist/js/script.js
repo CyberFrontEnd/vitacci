@@ -288,8 +288,10 @@ $(document).ready(function () {
 
 // Start video button
   $(".itemLeft__play").click(function () {
-    const video = $(this).closest('.itemLeft').find(".itemLeft__video").get(0);
+    const video = $(this).closest('.itemLeft__item').find(".itemLeft__video").get(0);
+
     $(this).toggleClass('pause');
+
     if (video.paused) {
       video.play();
     } else {

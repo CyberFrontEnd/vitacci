@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ea6fe055-4fd3-4773-8eb1-90f2ebc7a41b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/catalog.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/catalog.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/images/icon30.svg" beforeDir="false" afterPath="$PROJECT_DIR$/dist/images/icon30.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/item.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/item.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/video/video.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/dist/video/video.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -336,7 +337,10 @@
       <workItem from="1728112398808" duration="1434000" />
       <workItem from="1728113850345" duration="2404000" />
       <workItem from="1728117236884" duration="365000" />
-      <workItem from="1728301357019" duration="2329000" />
+      <workItem from="1728301357019" duration="2775000" />
+      <workItem from="1728385397036" duration="2235000" />
+      <workItem from="1728897225881" duration="2371000" />
+      <workItem from="1728921759278" duration="3584000" />
     </task>
     <servers />
   </component>
